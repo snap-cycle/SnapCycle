@@ -1,9 +1,11 @@
 
 import React from 'react';
-  
+import Navbar from '../components/Navbar';
+
 const Team = () => {
   return (
     <div>
+      <Navbar/>
       <h1>Our Team</h1>
       <p>Aidan, Harry, Luai, Gabe</p>
 

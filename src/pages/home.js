@@ -5,11 +5,16 @@ import TextBlock from '../textblock';
 import blacklogo from '../resources/blacklogo.png'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
    return (
-    <div className='Home'>
+    <div className='Home'>  
       <Parallax pages={3} style={{ top: '0', left: '0' }} class="animation">
+      <ParallaxLayer sticky={{start:0.0, end:3.0}}>
+      <Navbar/>
+
+        </ParallaxLayer>
         <ParallaxLayer offset={0.4} speed={0.25}>
           <div class="animation_layer parallax" id=""></div>
         </ParallaxLayer>
@@ -45,9 +50,6 @@ const Home = () => {
           <TextBlock />
         </ParallaxLayer>
         <ParallaxLayer offset={2.7} speed={0.0}>
-          < Link to="/demo">
-            <button className='button-30' role="button">Demo</button>
-          </Link>
         </ParallaxLayer>
         
       </Parallax>

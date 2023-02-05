@@ -2,12 +2,25 @@
 .Home {
   font-family: Inter;
   font-size: 15vh;
+  font-weight: 700;
   color: black;
   text-align: center;
   display: flex;
   justify-content: center;
-  background-image: url('/src/resources/underwater2.jpg');
+  flex-direction: column;
+
 }
+
+.HomeRow {
+  font-family: Inter;
+  font-size: 15vh;  
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 
 .animation, .animation_layer{
   height: 100vh;
@@ -46,6 +59,7 @@
   margin-top: 0;
   background-size: auto;
 }
+
 #mountain2{
   background-image: url(/src/resources/mountain2.png);
   height: 100vh;
@@ -69,15 +83,23 @@
 #invertedmountain3{
   background-image: url(/src/resources/mountain2.png);
   height: 100vh;
-  width: 100vw;
+  width: 100vw; 
   background-repeat: no-repeat;
   transform:scale(-1);
+}
+#white{
+  background-color: white;
 }
 
 #back{
   background-color: #002b33;
   height: 30vh;
   width: 100vw;
+}
+#rightwaterbottle{
+  background-image: url(/src/resources/waterbottle.png);
+  background-repeat: no-repeat;
+  margin-left: 40vw;
 }
 
 p{
@@ -127,4 +149,22 @@ p{
 .button-30:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.blackBack{
+  font-size: 10vmin;
+  background-color: black;
+  color: white;
+}
+.whiteBack{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+.resultContent{
+  font-size: 5vmin;
 }
