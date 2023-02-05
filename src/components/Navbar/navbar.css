@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+.Navbar {
+  font-family: Inter;
+  font-size: 15vh;
+  color: black;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  width: 100vw;
+}
+
+  
+
+.NavbarLeft{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 1vw;
+    height: 5vh;
+    width: 100vw;
+}
+
+.NavbarRight{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 5vw;
+    column-gap: 3vw;
+    height: 5vh;   
+    width: 100vw;
+}
+
+img{
+    object-fit: contain;
+    height: 5vh;
+}
+
+
