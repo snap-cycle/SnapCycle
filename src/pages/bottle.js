@@ -44,6 +44,7 @@ const Bottle = () => {
           </div>
         </div>
       </ParallaxLayer>
+
     </Parallax>
   </div>
   );
