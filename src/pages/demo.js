@@ -1,10 +1,11 @@
 
 import React from 'react';
+import FileUpload from '../components/fileUpload/fileUpload';
 const Demo = () => {
   return (
     <div>
-      <h1>Demo</h1>
-    </div>
+      <FileUpload/>
+    </div>  
   );
 };
   
