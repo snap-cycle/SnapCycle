@@ -3,6 +3,8 @@ import Reacts from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import TextBlock from '../textblock';
 import blacklogo from '../resources/blacklogo.png'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
    return (
@@ -42,6 +44,12 @@ const Home = () => {
         <ParallaxLayer offset={1.3} speed={0.25}>
           <TextBlock />
         </ParallaxLayer>
+        <ParallaxLayer offset={2.7} speed={0.0}>
+          < Link to="/demo">
+            <button className='button-30' role="button">Demo</button>
+          </Link>
+        </ParallaxLayer>
+        
       </Parallax>
     </div>
   );

@@ -3,15 +3,14 @@ import React from 'react';
   
 const Team = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'Right',
-        alignItems: 'Right',
-        height: '100vh'
-      }}
-    >
-      <h1>Team</h1>
+    <div>
+      <h1>Our Team</h1>
+      <p>Aidan, Harry, Luai, Gabe</p>
+
+      <h1>Our Mission</h1>
+      <p>Within the last year only 8% of total discarded plastics were recycled!</p>
+      <p>We hope to tackle the recycling issue from the ground up, revolutionizing recycling as we know it</p>
+      
     </div>
   );
 };

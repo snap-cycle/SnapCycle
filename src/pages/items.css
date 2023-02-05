@@ -1,89 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
-.Home {
+.Item {
   font-family: Inter;
-  font-size: 15vh;
+  font-size: 15vmin;
   color: black;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-image: url('/src/resources/underwater2.jpg');
+
 }
 
-.animation, .animation_layer{
-  height: 100vh;
+.ItemRight{
+    display: flex;
+    justify-content: end;
 }
 
-.animation{
-  display: block;
-  position: relative;
-  z-index: 10;
+.ItemProperties{
+    font-family: Inter;
+    font-size: 15vmin;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: -10vw;
+
 }
 
-.animation_layer{
-  background-position: bottom center;
-  width: 100vw;
-  height: 100vh;
-  background-repeat: repeat-x;
-  position: absolute;
+.ItemName{
+    font-family: Inter;
+    font-size: 15vmin;
+    color: black;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: -10vw;
 }
 
-.animation_layer.parallax{
-  position: fixed;
-}
-
-.centerlogo{
-  margin-top: 5vh;
-  width: 20vw;
-  height: 20vh;
-}
-
-
-#blacklogo{
-  background-image: url(/src/resources/blacklogo.png);
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  margin-top: 0;
-  background-size: auto;
-}
-#mountain2{
-  background-image: url(/src/resources/mountain2.png);
-  height: 100vh;
-  width: 100vw;
-  background-repeat:no-repeat;
-}
-#mountain3{
-  background-image: url(/src/resources/mountain2.png);
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  transform: scaleX(-1);
-}
-#invertedmountain2{
-  background-image: url(/src/resources/mountain2.png);
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  transform: scaleY(-1);
-}
-#invertedmountain3{
-  background-image: url(/src/resources/mountain2.png);
-  height: 100vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  transform:scale(-1);
-}
-
-#back{
-  background-color: #002b33;
-  height: 30vh;
-  width: 100vw;
-}
 
 p{
-  font-size: 15vmin;
+    font-family: Inter;
+    font-size: 5vmin;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
 }
 
+h1{
+    font-family: Inter;
+    font-size: 10vmin;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* CSS */
 .button-30 {
   align-items: center;
   appearance: none;
@@ -127,4 +104,11 @@ p{
 .button-30:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.webcam{
+    width: 100vw;
+    height: 70vh;
+    margin-top: -2.5vh;
+    margin-bottom: -12.5vh;
 }
