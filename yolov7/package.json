@@ -1,0 +1,16 @@
+{
+  "name": "testnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.3",
+    "webcam-easy": "^1.0.5"
+  }
+}
