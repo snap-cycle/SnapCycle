@@ -52,7 +52,7 @@
 
 
 #blacklogo{
-  background-image: url(/src/resources/blacklogo.png);
+  background-image: url(/src/assets/blacklogo.png);
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
@@ -61,27 +61,27 @@
 }
 
 #mountain2{
-  background-image: url(/src/resources/mountain2.png);
+  background-image: url(/src/assets/mountain2.png);
   height: 100vh;
   width: 100vw;
   background-repeat:no-repeat;
 }
 #mountain3{
-  background-image: url(/src/resources/mountain2.png);
+  background-image: url(/src/assets/mountain2.png);
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   transform: scaleX(-1);
 }
 #invertedmountain2{
-  background-image: url(/src/resources/mountain2.png);
+  background-image: url(/src/assets/mountain2.png);
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   transform: scaleY(-1);
 }
 #invertedmountain3{
-  background-image: url(/src/resources/mountain2.png);
+  background-image: url(/src/assets/mountain2.png);
   height: 100vh;
   width: 100vw; 
   background-repeat: no-repeat;
@@ -97,7 +97,7 @@
   width: 100vw;
 }
 #rightwaterbottle{
-  background-image: url(/src/resources/waterbottle.png);
+  background-image: url(/src/assets/waterbottle.png);
   background-repeat: no-repeat;
   margin-left: 40vw;
 }

@@ -1,13 +1,8 @@
 import React from 'react';
-import '../Navbar/navbar.css'; 
-import blacklogo from '../../resources/blacklogo.png';
-import {
-  Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-} from './NavbarElements';
-  
+import '../styles/navbar.css';
+import blacklogo from '../assets/blacklogo.png';
+import {Bars, Nav, NavLink, NavMenu,} from './NavbarElements';
+
 const Navbar = () => {
   return (
     <>

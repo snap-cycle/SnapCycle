@@ -1,11 +1,6 @@
-import './home.css'
-import Reacts from 'react';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import TextBlock from '../textblock';
-import blacklogo from '../resources/blacklogo.png'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import '../styles/Home.css'
+import {Parallax, ParallaxLayer} from '@react-spring/parallax'
+import Navbar from './Navbar';
 
 const Bottle = () => {
   return (

@@ -1,6 +1,6 @@
-import './App.css';
+import '../styles/App.css';
 
-function TextBlock() {
+function HomeInfo() {
     return (
         <div>
             <div>
@@ -16,4 +16,4 @@ function TextBlock() {
     );
 }
 
-export default TextBlock;
+export default HomeInfo;

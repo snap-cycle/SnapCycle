@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../resources/mountain2.png');
+  background-image: url('../assets/mountain2.png');
   width: 100vw;
   height: 100vh;
 
