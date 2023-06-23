@@ -5,15 +5,13 @@ import {Bars, Nav, NavLink, NavMenu,} from './NavbarElements';
 
 const Navbar = () => {
   return (
-    <>
       <Nav className='Navbar'>
         <div className='NavbarLeft'>
           <img src={blacklogo}/>
           SnapCycle
         </div>
         <div className='NavbarRight'>
-          <Bars />
-  
+          <Bars/>
             <NavMenu>
             <NavLink to='/' activeStyle>
                 Home
@@ -26,9 +24,7 @@ const Navbar = () => {
               </NavLink>
             </NavMenu>
         </div>
-        
       </Nav>
-    </>
   );
 };
   

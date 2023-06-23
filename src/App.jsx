@@ -9,15 +9,14 @@ import Bottle from './components/Bottle';
 function App() {
   return (
     <div className='App'>
-
-    <Router>
-      <Routes>
-        <Route exact path='/' element={<Home/>} />
-        <Route path='/team' element={<Team/>} />
-        <Route path='/demo' element={<Demo/>} />
-        <Route path='/bottle' element={<Bottle/>} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home/>} />
+          <Route path='/team' element={<Team/>} />
+          <Route path='/demo' element={<Demo/>} />
+          <Route path='/bottle' element={<Bottle/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
