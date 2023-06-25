@@ -21,7 +21,7 @@ app.geometry(f"{window_width}x{window_height}")
 def cameraSetup():
     # Create a label to set space for the camera
     label_widget = Label(app)
-    label_widget.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
+    label_widget.grid(row=0, column=0, columnspan=2, padx=10, pady=[10,0])
 
     # Capture the video frame by frame
     _, frame = vid.read()
@@ -68,7 +68,7 @@ def deleteSetup():
 
 # Creates a button to open the camera in the GUI app
 cameraButton = Button(app, text="Open Camera", command=cameraSetup)
-cameraButton.grid(row=1, column=0, padx=105, pady=0, sticky="ns")
+cameraButton.grid(row=1, column=0, padx=105, pady=40)
 
 # Creates a button to capture the image (initially hidden)
 captureButton = Button(app, text="Take Picture", command=captureSetup)
