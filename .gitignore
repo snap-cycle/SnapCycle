@@ -8,6 +8,7 @@
 #runs
 /detection/runs
 /detection/images
+/detection/__pycache__
 
 # testing
 /coverage

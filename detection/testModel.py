@@ -1,7 +1,5 @@
 from tkinter import *
-import os
 import cv2
-import shutil
 from PIL import Image, ImageTk
 from runModel import runModel, fileManager
 
@@ -14,13 +12,14 @@ vid.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 
 # Create a GUI app
 app = Tk()
+app.title("Image Capture and AI model test")
 
 # Bind the app with Escape keyboard to quit app whenever pressed
 app.bind('<Escape>', lambda e: app.quit())
 
 # Set the starting width and height of the application window
 window_width = 300
-window_height = 150
+window_height = 110
 app.geometry(f"{window_width}x{window_height}")
 
 # Create a label and display it on app
@@ -71,7 +70,7 @@ def deleteSetup():
 
 # Creates a button to open the camera in the GUI app
 cameraButton = Button(app, text="Open Camera", command=cameraSetup)
-cameraButton.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
+cameraButton.grid(row=1, column=0, padx=105, pady=0, sticky="n")
 
 # Creates a button to capture the image (initially hidden)
 captureButton = Button(app, text="Take Picture", command=captureSetup)
