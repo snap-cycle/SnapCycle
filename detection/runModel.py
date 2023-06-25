@@ -8,7 +8,7 @@ def fileManager(maxFolders):
 
     # Checks the count of folders in each run folder, such as detect and train, and deletes them if over maxFolders
     for item in os.listdir(baseFolderPath):
-        itemPath = os.path.join(baseFolderPath, item)                               #path of current folder, and takes count of it
+        itemPath = os.path.join(baseFolderPath, item)                #path of current folder, and takes count of it
         folderCount = len(os.listdir(itemPath))
         if folderCount >= maxFolders:
             print(itemPath, "Has reached the max folder count, deleting folders.")
