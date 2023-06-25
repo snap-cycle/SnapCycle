@@ -14,7 +14,7 @@ app = Tk()
 app.title("Image Capture and AI model test")
 app.bind('<Escape>', lambda e: app.quit())
 window_width = 300
-window_height = 110
+window_height = 90
 app.geometry(f"{window_width}x{window_height}")
 
 # Create a label to set space for the camera
@@ -40,7 +40,7 @@ def updateCamera():
     app.geometry("")
 
     # Repeat the same process after every 10 milliseconds
-    label_widget.after(10, cameraSetup)
+    label_widget.after(10, updateCamera)
 
 # Sets up camera and buttons
 def cameraSetup():
@@ -71,7 +71,7 @@ def deleteSetup():
 
 # Creates a button to open the camera in the GUI app
 cameraButton = Button(app, text="Open Camera", command=cameraSetup)
-cameraButton.grid(row=1, column=0, padx=105, pady=40)
+cameraButton.grid(row=1, column=0, padx=105, pady=0)
 
 # Creates a button to capture the image (initially hidden)
 captureButton = Button(app, text="Take Picture", command=captureSetup)
