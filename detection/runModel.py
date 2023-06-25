@@ -3,10 +3,8 @@ import shutil
 import os
 
 # Sets runs folder to be ready for new run
-def fileManager():
+def fileManager(maxFolders):
     baseFolderPath = './runs'
-    maxFolders = 10
-    folderCount = 0
 
     # Checks the count of folders in each run folder, such as detect and train, and deletes them if over maxFolders
     for item in os.listdir(baseFolderPath):
@@ -19,6 +17,8 @@ def fileManager():
 
 # run model on capture image 
 def runModel():
+    fileManager(10)
+    
     # load pretrained model
     model = YOLO("./yolov8n.pt") 
 
@@ -26,8 +26,5 @@ def runModel():
     sourcePath = './images/capture.jpg'
     model.predict(task = 'detect', source = sourcePath, save = True)
     
-def main():
-    fileManager()
-    runModel()
-
-main()
+#uncomment this when you want to run this file, otherwise it must stay commented for imports to work
+#runModel()
