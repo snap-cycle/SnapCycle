@@ -17,12 +17,12 @@ window_width = 300
 window_height = 110
 app.geometry(f"{window_width}x{window_height}")
 
-# Create a function to open the camera and display it in the label_widget on the app
-def cameraSetup():
-    # Create a label to set space for the camera
-    label_widget = Label(app)
-    label_widget.grid(row=0, column=0, columnspan=2, padx=10, pady=[10,0])
+# Create a label to set space for the camera
+label_widget = Label(app)
+label_widget.grid(row=0, column=0, columnspan=2, padx=10, pady=[10,0])
 
+# Constantly updates camera to most recent frame
+def updateCamera():
     # Capture the video frame by frame
     _, frame = vid.read()
 
@@ -42,10 +42,12 @@ def cameraSetup():
     # Repeat the same process after every 10 milliseconds
     label_widget.after(10, cameraSetup)
 
-    # Remove the "open camera" button, and display the "Take Picture" and "Delete Pictures" buttons
+# Sets up camera and buttons
+def cameraSetup():
     cameraButton.grid_remove()
     captureButton.grid(row=1, column=0, padx=10, pady=10)
     deleteButton.grid(row=1, column=1, padx=10, pady=10)
+    updateCamera()
 
 #opens the result in the users default image viewer
 def openPicture():
@@ -63,6 +65,7 @@ def captureSetup():
     runModel()
     openPicture()
 
+# Deletes all runs
 def deleteSetup():
     fileManager(0)
 
