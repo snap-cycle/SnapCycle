@@ -5,7 +5,7 @@ from PIL import Image
 
 # Sets runs folder to be ready for new run
 def fileManager(maxFolders):
-    baseFolderPath = './runs'
+    baseFolderPath = './detection/runs'
 
     # Checks the count of folders in each run folder, such as detect and train, and deletes them if over maxFolders
     for item in os.listdir(baseFolderPath):
@@ -44,7 +44,7 @@ def calculateRelScore(coords, imageXBar, imageYBar, confScore):
 
 # Iterates through each object detected and calculates relevancy score of object
 def getMainObject(results):
-    image = Image.open("./images/capture.jpg")       
+    image = Image.open("./detection/images/capture.jpg")       
     imageWidth, imageHeight = image.size
     imageXBar, imageYBar = imageWidth/2, imageHeight/2
     result = results[0]
@@ -77,9 +77,9 @@ def getMainObject(results):
 def runModel():
     # Readies directories and runs model
     fileManager(10)
-    model = YOLO("./yolov8n.pt") 
-    sourcePath = './images/capture.jpg'
-    results = model.predict(task = 'detect', source = sourcePath, save = True)
+    model = YOLO("./detection/yolov8n.pt") 
+    sourcePath = './detection/images/capture.jpg'
+    results = model.predict(task = 'detect', source = sourcePath, save = True, project = "./detection/runs/detect")
 
     # Checks if no objects were dectected, or what the main object detected is
     if (noObjects(results)):
@@ -89,4 +89,4 @@ def runModel():
         print("The main object detected is", detectedObject)
     
 #uncomment this when you want to run this file, otherwise it must stay commented for imports to work
-runModel()
+# runModel()

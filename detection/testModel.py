@@ -51,7 +51,7 @@ def cameraSetup():
 
 #opens the result in the users default image viewer
 def openPicture():
-    folderPath = './runs/detect'
+    folderPath = './detection/runs/detect'
     folderList = os.listdir(folderPath)
     file = os.path.join(folderPath, folderList[-1]) + '/capture.jpg'
     image = Image.open(file)
@@ -60,7 +60,7 @@ def openPicture():
 # Captures the video frame, saves it, runs the model, then opens the result
 def captureSetup():
     _, frame = vid.read()
-    path = "images/capture.jpg"
+    path = "detection/images/capture.jpg"
     cv2.imwrite(path, frame)
     runModel()
     openPicture()
