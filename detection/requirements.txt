@@ -1,0 +1,4 @@
+###### to install all needed libraries: pip install -r requirements.txt ######
+ultralytics>=8.0.121
+tk>=0.1.0
+pillow>=9.5.0
