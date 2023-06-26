@@ -2,6 +2,9 @@
 ### All recent changes related to SnapCyle are documented here.
 <br></br>
 
+### **Version 0.3.0**
+Added feature to extract main object detected in an image
+
 ### **Version 0.2.0**
 Added detection model and testing file to capture images and use model
 
