@@ -5,10 +5,11 @@
 /.pnp
 .pnp.js
 
-#runs
+# Project Stuff
 /detection/runs
 /detection/images
 /detection/__pycache__
+/.idea
 
 # testing
 /coverage
