@@ -18,3 +18,5 @@ def resumeTraining():
 # trainNewModel()
 # trainPreTrainedModel()
 # resumeTraining()
+
+# Use ClearML for logging and data tracking
