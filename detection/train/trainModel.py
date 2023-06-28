@@ -19,4 +19,6 @@ def resumeTraining():
 # trainPreTrainedModel()
 # resumeTraining()
 
+# Use Roboflow or google API or other websites to find data
+# Use Roboflow to annotate all the images and export them
 # Use ClearML for logging and data tracking
