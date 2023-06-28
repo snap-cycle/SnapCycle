@@ -1,0 +1,4 @@
+*
+!.gitignore
+
+#This folder is used to hold the dataset to train the model. This file is used to allow the empty folder to be pushed.
