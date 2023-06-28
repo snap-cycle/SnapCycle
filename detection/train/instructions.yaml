@@ -1,0 +1,10 @@
+path:  ./detection/train/data
+train: ./detection/train/data/train
+valid: ./detection/train/data/valid
+
+#Classes
+nc: 5# replace according to your number of classes
+
+#classes names
+#replace all class names list with your classes names
+names: ['person', 'bicycle', 'car', 'motorcycle', 'airplane']

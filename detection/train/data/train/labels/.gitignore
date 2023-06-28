@@ -1,0 +1,4 @@
+*
+!.gitignore
+
+# Folder that holds all labels of the train dataset. This file is used to push the directories, but not the data.

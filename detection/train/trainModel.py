@@ -1,14 +1,18 @@
 from ultralytics import YOLO
 
-# Loads and trains model. Trains on Single CPU and GPU
+'''
+* Loads and trains model. Trains on Single CPU and GPU.
+* The .yaml file gives instructions on pathway to data, and what categories the data will be in
+* Two datasets. train trains the model, valid tests the strength of model during training.
+* Optionally, a third dataset called test can be used to test the strength after the training
+'''
 def trainNewModel():
-
     model = YOLO('yolov8n.yaml')
-    model.train(data='coco128.yaml', epochs=100, imgsz=640)
+    model.train(data='instructions.yaml', epochs=100, imgsz=640)
 
 def trainPreTrainedModel():
     model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
-    model.train(data='coco128.yaml', epochs=100, imgsz=640)
+    model.train(data='instructions.yaml', epochs=100, imgsz=640)
 
 def resumeTraining():
     model = YOLO('path/to/last.pt')  # load a partially trained model
