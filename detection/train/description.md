@@ -1,7 +1,7 @@
 # Understanding Training
 
 ### General Description
-* Each of the train functions loads and trains model. Trains on Single CPU and GPU.
+* Each of the train functions loads and trains model. Trains on Single CPU and GPU and detects automatically.
 * The .yaml file gives instructions on pathway to data, and what categories the data will be in.
 * Two datasets are used. **train** trains the model, **valid** tests the strength of model during training.
 * Optionally, a third dataset called test can be used to test the strength after the training.
