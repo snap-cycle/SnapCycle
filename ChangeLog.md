@@ -2,6 +2,9 @@
 ### All recent changes related to SnapCyle are documented here.
 <br></br>
 
+### **Version 0.4.0**
+Added rest of training configurations, now dataset is all that is needed to start training
+
 ### **Version 0.3.0**
 Added feature to extract main object detected in an image
 
