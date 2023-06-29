@@ -1,6 +1,6 @@
-path:  ./detection/train/data
-train: ./detection/train/data/train
-valid: ./detection/train/data/valid
+path:  /Users/luaih/Coding-Projects/SnapCycle/SnapCycle-Repo/detection/train/data
+train: train/images
+valid: valid/images
 
 #Classes
 nc: 5# replace according to your number of classes
