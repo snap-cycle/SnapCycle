@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className='NavbarRight'>
           <Bars/>
             <NavMenu>
-            <NavLink to='/' activeStyle>
+            <NavLink to='/snapcycle' activeStyle>
                 Home
               </NavLink>
               <NavLink to='/demo' activeStyle>
