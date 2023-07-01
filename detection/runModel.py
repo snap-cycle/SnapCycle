@@ -89,4 +89,4 @@ def runModel():
         print("The main object detected is", detectedObject)
     
 #uncomment this when you want to run this file, otherwise it must stay commented for imports to work
-runModel()
+# runModel()
