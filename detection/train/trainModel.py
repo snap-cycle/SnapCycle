@@ -23,4 +23,5 @@ def resumeTraining():
 
 # trainPreTrainedModel()
 
+# Do a little bit more of video research then:
 # Set up clearML, and start setting up dataset

@@ -28,8 +28,12 @@ def trainNewModel():
 ## Training pretrained model
 ``` Python
 def trainPreTrainedModel():
-    model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
-    model.train(data='instructions.yaml', epochs=100, imgsz=640, batch=16, patience=50)
+    # Call ClearML init before YOLOv8
+    task = Task.init(project_name="YOLOv8", task_name="detection_training", tags=['YOLOv8'])
+
+    model = YOLO('yolov8n.pt')  # load a pretrained model, can either be yolo's or someone elses
+    model.train(data='instructions.yaml', epochs=100, imgsz=640,
+                batch=16, patience=50)
 ```
 * Trains model based off a pretrained model/weight that already knows some patterns. Good if we have a large dataset or have similar pattern to pretrained model
 * People like to say that you load weights to train your model on a pretrained model. Weights means the same thing as a pretrained model, such as yolov8n.pt
