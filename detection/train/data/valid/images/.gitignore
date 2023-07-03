@@ -1,4 +1,0 @@
-*
-!.gitignore
-
-# Folder that holds all images of the valid dataset. This file is used to push the directories, but not the data.

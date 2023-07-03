@@ -3,4 +3,3 @@
 ultralytics>=8.0.121
 tk>=0.1.0
 pillow>=9.5.0
-clearml>=1.11.1

@@ -1,11 +1,11 @@
 # Understanding Training
 
 ### Training Description
-* Each of the train functions loads and trains model. Trains on Single CPU and GPU and detects automatically.
-* Need a CUDA enabled GPU to train on GPU. intel is not CUDA compatible :/
-* The .yaml file gives instructions on pathway to data, and what categories the data will be in.
+* We are using a google colab file to train the model as it offers a GPU for free. This is because we need a CUDA enabled GPU to train on GPU, and intel is not CUDA compatible.
 * Two datasets are used. **train** trains the model, **valid** tests the strength of model during training.
 * Optionally, a third dataset called test can be used to test the strength after the training.
+* Dataset we are using is available at https://universe.roboflow.com/snapcycle/snapcycle/dataset/1
+* The .yaml file gives instructions on the data, such as pathway and classes of objects.
 
 ### Results Description
 * A lot of graphs and images are produced that will let you know how the training is done. Here are some guidelines.
