@@ -1,11 +1,16 @@
 # Understanding Training
 
-### General Description
+### Training Description
 * Each of the train functions loads and trains model. Trains on Single CPU and GPU and detects automatically.
 * Need a CUDA enabled GPU to train on GPU. intel is not CUDA compatible :/
 * The .yaml file gives instructions on pathway to data, and what categories the data will be in.
 * Two datasets are used. **train** trains the model, **valid** tests the strength of model during training.
 * Optionally, a third dataset called test can be used to test the strength after the training.
+
+### Results Description
+* A lot of graphs and images are produced that will let you know how the training is done. Here are some guidelines.
+* Loss graphs are produced. Train was good if the loss is consistently going down.
+* Val batches are produced from the val image set. If the objects are detected in them, train was good.
 
 ### Guidelines of what is recommended
 * Epochs are the number of passes through a dataset. Standard amount is 100
