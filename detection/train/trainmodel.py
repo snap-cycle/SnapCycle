@@ -7,7 +7,8 @@ Original file is located at
 
 #Train Model
 
-We are training the model in google colab as they allow for a free GPU to be used. This makes the training process faster. This is the colab notebook, which can be saved and used on google colab.
+We are training the model in google colab as they allow for a free GPU to be used. This makes the training process faster. 
+This is the colab notebook, which can be saved and used on google colab. It is in .py form as github handles .ipynb weirdly.
 """
 
 
