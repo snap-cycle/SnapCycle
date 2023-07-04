@@ -1,7 +1,7 @@
 # Understanding Training
 
 ### Training Description
-* We are using a google colab file to train the model as it offers a GPU for free. This is because we need a CUDA enabled GPU to train on GPU, and intel is not CUDA compatible.
+* We are using a google colab file to train the model as it offers a GPU for free. This is because we need a CUDA enabled GPU to train on GPU, and intel is not CUDA compatible. However, colab has a cooldown so use it wisely.
 * Two datasets are used. **train** trains the model, **valid** tests the strength of model during training.
 * Optionally, a third dataset called test can be used to test the strength after the training.
 * Dataset we are using is available at https://universe.roboflow.com/snapcycle/snapcycle/dataset/1
@@ -24,7 +24,7 @@
 ``` Python
 def trainNewModel():
     model = YOLO('yolov8n.yaml')
-    model.train(data='instructions.yaml', epochs=100, imgsz=640, batch=16, patience=50)
+    model.train(data='data.yaml', epochs=100, imgsz=640, batch=16, patience=50)
 ```
 * Trains new model from scratch. This is better if we have a small dataset or have a pattern that is completely different than the pretrained models
 * To give an idea of what a large dataset is, COCO and Object365 are large datasets that have over 150,000 images. So it would be a good idea to just use a pretrained model.
@@ -37,7 +37,7 @@ def trainPreTrainedModel():
     task = Task.init(project_name="YOLOv8", task_name="detection_training", tags=['YOLOv8'])
 
     model = YOLO('yolov8n.pt')  # load a pretrained model, can either be yolo's or someone elses
-    model.train(data='instructions.yaml', epochs=100, imgsz=640,
+    model.train(data='data.yaml', epochs=100, imgsz=640,
                 batch=16, patience=50)
 ```
 * Trains model based off a pretrained model/weight that already knows some patterns. Good if we have a large dataset or have similar pattern to pretrained model
