@@ -77,7 +77,7 @@ def getMainObject(results):
 def runModel():
     # Readies directories and runs model
     fileManager(10)
-    model = YOLO("./detection/yolov8m.pt") 
+    model = YOLO("./detection/snapModel.pt") 
     sourcePath = './detection/images/capture.jpg'
     results = model.predict(task = 'detect', source = sourcePath, save = True, project = "./detection/runs/detect")
 
@@ -89,4 +89,4 @@ def runModel():
         print("The main object detected is", detectedObject)
     
 #uncomment this when you want to run this file, otherwise it must stay commented for imports to work
-runModel()
+# runModel()

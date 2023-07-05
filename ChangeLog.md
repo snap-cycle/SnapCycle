@@ -2,6 +2,9 @@
 ### All recent changes related to SnapCyle are documented here.
 <br></br>
 
+### **Version 0.5.0**
+Switched training to google colab, added custom trained model for SnapCycle, `snapModel.pt`
+
 ### **Version 0.4.0**
 Added rest of training configurations, now dataset is all that is needed to start training
 
