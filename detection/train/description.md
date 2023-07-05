@@ -17,8 +17,13 @@
 * Batch size is number of image samples processed before the model is updated. Standard batch size is 16, but can be raised to 32.
 * For best results, 2000 boxes per class. However, 500 images is also good.
 * Standard image size is 640. If an image is not this size, it will automatically be resized so do not worry.
-* Patience is number of epochs model waits before stopping due to no significance improvement, standard is 50.
-* Roboflow is best for finding images and annotation, clearML is best for logging.
+* Roboflow is best for finding images and annotation.
+
+### Current standards being used
+* For each class, 500 train images and 150 valid images are used. 
+* For each class, 16 background train images and 4 background valid images are used.
+* Link to dataset is https://app.roboflow.com/snapcycle, let me know if you want access.
+* We are using a pretrained model from yolov8, such as yolov8n or yolov8m.
 
 ## Training new model
 ``` Python
