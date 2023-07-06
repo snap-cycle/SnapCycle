@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Team from './pages/Team';
 import Demo from './pages/Demo';
-import Bottle from './components/Bottle';
+import Result from './pages/Result';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route exact path='/snapcycle' element={<Home/>} />
           <Route path='/team' element={<Team/>} />
           <Route path='/demo' element={<Demo/>} />
-          <Route path='/bottle' element={<Bottle/>} />
+          <Route path='/result' element={<Result/>} />
         </Routes>
       </Router>
     </div>

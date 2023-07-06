@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/navbar.css';
-import blacklogo from '../assets/blacklogo.png';
+import blacklogo from '../assets/BlackLogo.png';
 import {Bars, Nav, NavLink, NavMenu,} from './NavbarElements';
 
 const Navbar = () => {
   return (
       <Nav className='Navbar'>
         <div className='NavbarLeft'>
-          <img src={blacklogo}/>
+          <img src={blacklogo} alt="Black Logo"/>
           SnapCycle
         </div>
         <div className='NavbarRight'>

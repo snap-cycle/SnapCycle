@@ -51,8 +51,8 @@
 }
 
 
-#blacklogo{
-  background-image: url(/src/assets/blacklogo.png);
+#BlackLogo{
+  background-image: url(/src/assets/BlackLogo.png);
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
