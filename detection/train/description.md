@@ -24,6 +24,7 @@
 * For each class, 16 background train images and 4 background valid images are used.
 * Link to dataset is https://app.roboflow.com/snapcycle, let me know if you want access.
 * We are using a pretrained model from yolov8, such as yolov8n or yolov8m.
+* nano takes 0.2 s, medium takes 1 s, large takes 2.5 s.
 
 ## Training new model
 ``` Python
@@ -44,3 +45,6 @@ def trainPreTrainedModel():
 ```
 * Trains model based off a pretrained model/weight that already knows some patterns. Good if we have a large dataset or have similar pattern to pretrained model
 * People like to say that you load weights to train your model on a pretrained model. Weights means the same thing as a pretrained model, such as yolov8n.pt
+
+* beer can, pop can, vegetable can, soup/sauce can, tuna can
+* 130 total per type
