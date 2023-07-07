@@ -1,7 +1,7 @@
 import '../styles/Home.css'
 import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 import HomeInfo from '../components/HomeInfo';
-import BlackLogo from '../assets/BlackLogo.png'
+import BlackLogo from '../assets/branding/BlackLogo.png'
 import Navbar from '../components/Navbar';
 
 const OldHome = () => {

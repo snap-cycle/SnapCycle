@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/navbar.css';
-import BlackLogo from '../assets/BlackLogo.png';
+import BlackLogo from '../assets/branding/BlackLogo.png';
 import {Bars, Nav, NavLink, NavMenu,} from './NavbarElements';
 
 const Navbar = () => {
