@@ -34,7 +34,5 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   column-gap: 3vw;   
-  width: 100vw;
 `;
