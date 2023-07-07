@@ -3,7 +3,7 @@ import {NavLink as Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  font-family: Inter;
+  font-family: Inter,serif;
   font-size: 3vh;
   color: black;
   text-align: center;
@@ -34,7 +34,7 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  justif-content: center;
+  justify-content: center;
   column-gap: 3vw;   
-  width = 100vw;
+  width: 100vw;
 `;
