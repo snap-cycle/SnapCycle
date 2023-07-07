@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
-.Navbar {
-  font-family: Inter;
-  font-size: 15vh;
-  color: black;
-  background-color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  height: 5vh;
-  width: 100vw;
-}
 
-  
+.Navbar {
+    font-family: Inter, serif;
+    font-size: 15vh;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    width: 100vw;
+    z-index: 100;
+    position: relative;
+}
 
 .NavbarLeft{
     display: flex;
