@@ -25,7 +25,7 @@
 ---
 
 ### Current standards being used
-* For each class, 500 train images and 150 valid images are used. 
+* For each class, 1000 train images and 250 valid images will be used.
 * For each class, 16 background train images and 4 background valid images are used.
 * Link to dataset is https://app.roboflow.com/snapcycle, let me know if you want access.
 * We are using a pretrained model from yolov8, such as yolov8n or yolov8m.
