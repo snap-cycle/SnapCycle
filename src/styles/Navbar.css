@@ -2,7 +2,7 @@
 
 .Navbar {
     font-family: Inter, serif;
-    font-size: 15vh;
+    font-size: 3vh;
     font-weight: 400;
     color: black;
     background-color: white;
@@ -11,8 +11,6 @@
     justify-content: center;
     height: 5vh;
     width: 100vw;
-    z-index: 100;
-    position: relative;
 }
 
 .NavbarLeft{
@@ -32,6 +30,14 @@
     column-gap: 3vw;
     height: 5vh;   
     width: 100vw;
+}
+
+.NavbarItem{
+
+}
+
+.NavbarItem:hover{
+    cursor: pointer;
 }
 
 img{

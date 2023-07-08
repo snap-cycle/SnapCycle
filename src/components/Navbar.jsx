@@ -1,25 +1,35 @@
 import React from 'react';
+import BlackLogo from "../assets/branding/BlackLogo.png";
 import '../styles/Navbar.css';
-import BlackLogo from '../assets/branding/BlackLogo.png';
-import {Bars, Nav, NavLink, NavMenu,} from './NavbarElements';
+import {useNavigate, useLocation} from "react-router-dom";
 
 const Navbar = () => {
+    let navigate = useNavigate();
+    const goToHome = () => {
+        navigate("/");
+    }
+    const goToDemo = () => {
+        navigate("/demo");
+    }
+    const goToTeam = () => {
+        navigate("/team");
+    }
+
+    const location = useLocation();
+
     return (
-        <Nav className='Navbar'>
-            <div className='NavbarLeft'>
+        <div className="Navbar">
+            <div className="NavbarLeft">
                 <img src={BlackLogo} alt="Black Logo"/>
                 SnapCycle
             </div>
-            <div className='NavbarRight'>
-                <Bars/>
-                <NavMenu>
-                    <NavLink to='/' activeStyle>Home</NavLink>
-                    <NavLink to='/demo' activeStyle>Demo</NavLink>
-                    <NavLink to='/team' activeStyle>Team</NavLink>
-                </NavMenu>
+            <div className="NavbarRight">
+                <div className="NavbarItem" onClick={goToHome}>Home</div>
+                <div className="NavbarItem" onClick={goToDemo}>Demo</div>
+                <div className="NavbarItem" onClick={goToTeam}>Team</div>
             </div>
-        </Nav>
+        </div>
     );
-};
-  
+}
+
 export default Navbar;
