@@ -18,11 +18,10 @@ const Navbar = () => {
             </div>
             <div className="NavbarPagesContainer">
                 <div className="NavbarPages" onClick={() => goToLocation("/")}>Home</div>
-                <div className="NavbarPages" onClick={() => goToLocation("/demo")}>Demo</div>
                 <div className="NavbarPages" onClick={() => goToLocation("/team")}>Team</div>
             </div>
             <div className="NavbarAdditionalContainer">
-                <div className="NavbarAdditional">Try it out!</div>
+                <div className="NavbarAdditional" onClick={() => goToLocation("/demo")}>Demo</div>
             </div>
         </div>
     );
