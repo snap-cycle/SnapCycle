@@ -1,7 +1,7 @@
 import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import '../styles/Navbar.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import OutlineButton from "./OutlineButton";
 
 const Navbar = () => {
@@ -11,6 +11,9 @@ const Navbar = () => {
         navigate(location);
     }
 
+    const location = useLocation();
+    console.log(location.pathname)
+
     return (
         <div className="Navbar">
             <div className="NavbarLogo">
@@ -18,8 +21,8 @@ const Navbar = () => {
                 SnapCycle
             </div>
             <div className="NavbarPagesContainer">
-                <div className="NavbarPages" onClick={() => goToLocation("/")}>Home</div>
-                <div className="NavbarPages" onClick={() => goToLocation("/team")}>Team</div>
+                <div className={location.pathname === "/" ? "NavbarPagesActive" : "NavbarPages"} onClick={() => goToLocation("/")}>Home</div>
+                <div className={location.pathname === "/team" ? "NavbarPagesActive" : "NavbarPages"} onClick={() => goToLocation("/team")}>Team</div>
             </div>
             <div className="NavbarAdditionalContainer">
                 <OutlineButton title="Demo" destination="/demo"/>

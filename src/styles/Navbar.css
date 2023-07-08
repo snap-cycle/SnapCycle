@@ -26,13 +26,16 @@
 }
 
 .NavbarPages{
-    color: #6B6A69;
+    color: black;
 }
-
 
 .NavbarPages:hover{
     cursor: pointer;
     color: black;
+}
+
+.NavbarPagesActive{
+    color: #0096FF;
 }
 
 .NavbarLogo{
