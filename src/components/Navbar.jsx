@@ -12,14 +12,17 @@ const Navbar = () => {
 
     return (
         <div className="Navbar">
-            <div className="NavbarLeft">
-                <img src={BlackLogo} alt="Black Logo"/>
+            <div className="NavbarLogo">
+                <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogoImage" onClick={() => goToLocation("/")}/>
                 SnapCycle
             </div>
-            <div className="NavbarRight">
-                <div className="NavbarItem" onClick={() => goToLocation("/")}>Home</div>
-                <div className="NavbarItem" onClick={() => goToLocation("/demo")}>Demo</div>
-                <div className="NavbarItem" onClick={() => goToLocation("/team")}>Team</div>
+            <div className="NavbarPagesContainer">
+                <div className="NavbarPages" onClick={() => goToLocation("/")}>Home</div>
+                <div className="NavbarPages" onClick={() => goToLocation("/demo")}>Demo</div>
+                <div className="NavbarPages" onClick={() => goToLocation("/team")}>Team</div>
+            </div>
+            <div className="NavbarAdditionalContainer">
+                <div className="NavbarAdditional">Try it out!</div>
             </div>
         </div>
     );

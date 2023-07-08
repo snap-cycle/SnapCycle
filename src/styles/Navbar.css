@@ -5,44 +5,59 @@
     font-size: 3vh;
     font-weight: 400;
     color: black;
-    background-color: white;
     text-align: center;
     display: flex;
+    height: 7.5vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    scrollbar-gutter: stable;
+    padding: 0 2vmax;
+}
+
+.NavbarPagesContainer{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    height: 5vh;
-    width: 100vw;
-}
-
-.NavbarLeft{
-    display: flex;
     align-items: center;
-    justify-content: start;
-    column-gap: 1vw;
-    height: 5vh;
-    width: 100vw;
+    align-content: center;
+    gap: 2vw;
 }
 
-.NavbarRight{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-right: 5vw;
-    column-gap: 3vw;
-    height: 5vh;   
-    width: 100vw;
-}
-
-.NavbarItem{
+.NavbarPages{
 
 }
 
-.NavbarItem:hover{
+.NavbarPages:hover{
     cursor: pointer;
 }
 
-img{
+.NavbarLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+}
+
+.NavbarLogoImage{
     object-fit: contain;
     height: 5vh;
+}
+
+.NavbarAdditionalContainer{
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.NavbarAdditional{
+    padding-right: 2vw;
 }
 
 
