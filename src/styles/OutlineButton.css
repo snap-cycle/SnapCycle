@@ -1,0 +1,21 @@
+.OutlineButton{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: white;
+    font-weight: 600;
+    border: 2px black solid;
+    border-radius: 2vmax;
+    padding: 0.25vmax 0.5vmax;
+    margin-right: 1vmax;
+}
+
+.OutlineButton:hover{
+    background-color: black;
+    color: white;
+    transition: color;
+    transition-duration: 0.2s;
+}
+

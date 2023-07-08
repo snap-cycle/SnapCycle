@@ -2,6 +2,7 @@ import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import '../styles/Navbar.css';
 import { useNavigate } from "react-router-dom";
+import OutlineButton from "./OutlineButton";
 
 const Navbar = () => {
     let navigate = useNavigate();
@@ -21,7 +22,7 @@ const Navbar = () => {
                 <div className="NavbarPages" onClick={() => goToLocation("/team")}>Team</div>
             </div>
             <div className="NavbarAdditionalContainer">
-                <div className="NavbarAdditional" onClick={() => goToLocation("/demo")}>Demo</div>
+                <OutlineButton title="Demo" destination="/demo"/>
             </div>
         </div>
     );
