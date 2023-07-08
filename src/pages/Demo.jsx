@@ -2,8 +2,11 @@ import React from 'react';
 import Navbar from "../components/Navbar";
 
 const Demo = () => {
+
+
+
     return (
-        <div className='Home'>
+        <div>
             <Navbar/>
             <title>Demo</title>
         </div>

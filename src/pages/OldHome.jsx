@@ -4,6 +4,9 @@ import BlackLogo from '../assets/branding/BlackLogo.png'
 import Navbar from '../components/Navbar';
 
 const OldHome = () => {
+
+
+
    return (
     <div className='Home'>
         <Parallax pages={3} style={{ top: '0', left: '0' }} class="animation">

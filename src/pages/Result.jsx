@@ -3,6 +3,9 @@ import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 import Navbar from '../components/Navbar';
 
 const Result = () => {
+
+
+
   return (
     <div className='Home'>
     <Parallax pages={2.0} style={{ top: '0', left: '0' }} class="animation">
