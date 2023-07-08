@@ -45,6 +45,7 @@
 .NavbarLogoImage{
     object-fit: contain;
     height: 5vh;
+    margin: 0.5vmax;
 }
 
 .NavbarAdditionalContainer{
