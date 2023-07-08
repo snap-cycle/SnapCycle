@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from "../components/Navbar";
-
+import '../styles/Demo.css';
 const Demo = () => {
 
 
 
     return (
-        <div>
-            <Navbar/>
-            <h1>Demo</h1>
+        <div className="background">
+            <div className="lds-circle">
+                <div></div>
+            </div>
         </div>
     );
 };
