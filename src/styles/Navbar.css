@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     scrollbar-gutter: stable;
-    padding: 0 2vmax;
+    padding: 1vmax 2vmax;
 }
 
 .NavbarPagesContainer{
@@ -26,11 +26,13 @@
 }
 
 .NavbarPages{
-
+    color: #6B6A69;
 }
+
 
 .NavbarPages:hover{
     cursor: pointer;
+    color: black;
 }
 
 .NavbarLogo{
