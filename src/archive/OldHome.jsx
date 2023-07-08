@@ -1,5 +1,5 @@
 import {Parallax, ParallaxLayer} from '@react-spring/parallax'
-import HomeInfo from '../components/HomeInfo';
+import HomeInfo from './HomeInfo';
 import BlackLogo from '../assets/branding/BlackLogo.png'
 import Navbar from '../components/Navbar';
 
