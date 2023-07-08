@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import '../styles/App.css';
-
+import '../styles/Home.css';
 const Home = () => {
 
 
@@ -9,7 +8,18 @@ const Home = () => {
     return (
         <div>
             <Navbar/>
-            <h1>Home</h1>
+            <div className="Panel">
+                <h1>Home</h1>
+            </div>
+            <div className="Panel">
+                Panel 1
+            </div>
+            <div className="Panel">
+                Panel 2
+            </div>
+            <div className="Panel">
+                Panel 3
+            </div>
         </div>
     )
 }

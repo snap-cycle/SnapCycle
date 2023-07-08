@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/navbar.css';
+import '../styles/Navbar.css';
 import BlackLogo from '../assets/branding/BlackLogo.png';
 import {Bars, Nav, NavLink, NavMenu,} from './NavbarElements';
 
