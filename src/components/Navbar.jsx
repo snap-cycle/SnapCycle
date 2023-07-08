@@ -1,21 +1,14 @@
 import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import '../styles/Navbar.css';
-import {useNavigate, useLocation} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     let navigate = useNavigate();
-    const goToHome = () => {
-        navigate("/");
-    }
-    const goToDemo = () => {
-        navigate("/demo");
-    }
-    const goToTeam = () => {
-        navigate("/team");
-    }
 
-    const location = useLocation();
+    const goToLocation = (location) => {
+        navigate(location);
+    }
 
     return (
         <div className="Navbar">
@@ -24,9 +17,9 @@ const Navbar = () => {
                 SnapCycle
             </div>
             <div className="NavbarRight">
-                <div className="NavbarItem" onClick={goToHome}>Home</div>
-                <div className="NavbarItem" onClick={goToDemo}>Demo</div>
-                <div className="NavbarItem" onClick={goToTeam}>Team</div>
+                <div className="NavbarItem" onClick={() => goToLocation("/")}>Home</div>
+                <div className="NavbarItem" onClick={() => goToLocation("/demo")}>Demo</div>
+                <div className="NavbarItem" onClick={() => goToLocation("/team")}>Team</div>
             </div>
         </div>
     );
