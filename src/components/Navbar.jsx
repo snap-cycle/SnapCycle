@@ -7,21 +7,15 @@ const Navbar = () => {
     return (
         <Nav className='Navbar'>
             <div className='NavbarLeft'>
-              <img src={BlackLogo} alt="Black Logo"/>
-              SnapCycle
+                <img src={BlackLogo} alt="Black Logo"/>
+                SnapCycle
             </div>
             <div className='NavbarRight'>
-              <Bars/>
+                <Bars/>
                 <NavMenu>
-                <NavLink to='/' activeStyle>
-                    Home
-                  </NavLink>
-                  <NavLink to='/demo' activeStyle>
-                    Demo
-                  </NavLink>
-                  <NavLink to='/team' activeStyle>
-                    Team
-                  </NavLink>
+                    <NavLink to='/' activeStyle>Home</NavLink>
+                    <NavLink to='/demo' activeStyle>Demo</NavLink>
+                    <NavLink to='/team' activeStyle>Team</NavLink>
                 </NavMenu>
             </div>
         </Nav>

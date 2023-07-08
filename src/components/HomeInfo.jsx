@@ -3,7 +3,6 @@ import '../styles/App.css';
 function HomeInfo() {
     return (
         <div>
-            <br/>
             <h1 className='AppHeader'>What is SnapCycle?</h1>
             <p className='AppContent'>
             Intelligent Recycling<br/><br/>
