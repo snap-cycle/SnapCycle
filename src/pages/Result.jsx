@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Home.css'
 import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 import Navbar from '../components/Navbar';
 

@@ -22,13 +22,13 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: lightblue;
+    color: #0096FF;
   }
 `;
   
 export const Bars = styled(FaBars)`
   display: none;
-  color: #808080;
+  color: #0096FF;
 `;
   
 export const NavMenu = styled.div`

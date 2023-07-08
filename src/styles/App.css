@@ -8,19 +8,15 @@
   overflow-x: hidden; 
 }
 
-.AppContent{
-  font-family: Inter, serif;
-  font-size: 10vmin;
-  color: black;
-  text-align: center;
-  overflow-x: hidden; 
+p{
+  font-size: 5vmin;
 }
 
-.AppHeader{
-  font-family: Inter, serif;
-  width: 100vw;
-  font-size: 20vmin;
-  color: black;
-  text-align: center;
-  overflow-x: hidden; 
+title{
+  font-size: 30vmin;
 }
+
+h1{
+  font-size: 20vmin;
+}
+

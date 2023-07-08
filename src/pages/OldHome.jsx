@@ -1,4 +1,3 @@
-import '../styles/Home.css'
 import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 import HomeInfo from '../components/HomeInfo';
 import BlackLogo from '../assets/branding/BlackLogo.png'
