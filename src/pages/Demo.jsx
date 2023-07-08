@@ -8,7 +8,7 @@ const Demo = () => {
     return (
         <div>
             <Navbar/>
-            <title>Demo</title>
+            <h1>Demo</h1>
         </div>
     );
 };

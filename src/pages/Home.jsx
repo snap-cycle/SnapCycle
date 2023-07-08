@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <Navbar/>
-            <title>Home</title>
+            <h1>Home</h1>
         </div>
     )
 }

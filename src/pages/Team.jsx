@@ -8,12 +8,12 @@ const Team = () => {
     return (
         <div>
             <Navbar/>
-            <h1>Our Team</h1>
+            <h2>Our Team</h2>
             <p>Aidan, <s>Harry</s>, Luai, Gabe</p>
-            <h1>Our Mission</h1>
+            <h2>Our Mission</h2>
             <p>Within the last year only 8% of total discarded plastics were recycled!</p>
             <p>We hope to tackle the recycling issue from the ground up, revolutionizing recycling as we know it</p>
-            <h1>Contact Us</h1>
+            <h2>Contact Us</h2>
             <p>aidanfr@live.ca</p>
         </div>
     );
