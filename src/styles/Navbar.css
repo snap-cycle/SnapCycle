@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     scrollbar-gutter: stable;
-    padding: 1vmax 2vmax;
+    padding: 1vh 3vw 1vh 1vw;
 }
 
 .NavbarPagesContainer{
