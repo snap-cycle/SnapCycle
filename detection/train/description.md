@@ -19,7 +19,7 @@
 ### Guidelines of what is recommended
 * Epochs are the number of passes through a dataset. Standard amount is 100
 * Batch size is number of image samples processed before the model is updated. Standard batch size is 16.
-* For best results, 2000 boxes per class. However, 500 images is also good.
+* For best results, 2000 bounding boxes per class.
 * Standard image size is 640. If an image is not this size, it will automatically be resized so do not worry.
 
 ---
@@ -27,7 +27,6 @@
 ### Current standards being used
 * For each class, 1000 train images and 250 valid images will be used.
 * For each class, 16 background train images and 4 background valid images are used.
-* Link to dataset is https://app.roboflow.com/snapcycle, let me know if you want access.
 * We are using a pretrained model from yolov8, such as yolov8n or yolov8m.
 * nano takes 0.2 s, medium takes 1 s, large takes 2.5 s.
 * Currently, it takes 1.5 min to train one epoch in medium. If this increases, lets switch to nano.
