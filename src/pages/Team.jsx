@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
 
 const Team = () => {
 
@@ -7,7 +6,6 @@ const Team = () => {
 
     return (
         <div>
-            <Navbar/>
             <h2>Our Team</h2>
             <p>Aidan, <s>Harry</s>, Luai, Gabe</p>
             <h2>Our Mission</h2>
