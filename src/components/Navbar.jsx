@@ -5,7 +5,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import OutlineButton from "./OutlineButton";
 import SlideIn from "../animations/SlideIn";
 
-const Navbar = ({Pages}) => {
+const Navbar = ({pages}) => {
     const location = useLocation();
     let navigate = useNavigate();
     const goToLocation = (location) => {
@@ -21,7 +21,7 @@ const Navbar = ({Pages}) => {
                 </div>
                 <div className="NavbarPagesContainer">
                     {
-                        Pages.map((page) =>
+                        pages.map((page) =>
                             <div className={location.pathname === "/" + page ? "NavbarPagesActive" : "NavbarPages"}
                                  onClick={() => goToLocation("/" + page)}>
                                 {page}

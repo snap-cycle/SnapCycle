@@ -8,18 +8,18 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 
-function App() {
+function App({pages}) {
     return (
         <div className='App'>
             <AnimatePresence mode='wait'>
                 <Router>
-                    <Navbar Pages={["Home", "Team"]}/>
+                    <Navbar pages={pages}/>
                         <Routes>
                             <Route path='/home' element={<Home/>} />
                             <Route path='/team' element={<Team/>} />
                             <Route path='/demo' element={<Demo/>} />
                         </Routes>
-                    <Footer/>
+                    <Footer pages={pages}/>
                 </Router>
             </AnimatePresence>
         </div>

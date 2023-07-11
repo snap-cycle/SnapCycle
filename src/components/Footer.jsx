@@ -3,7 +3,7 @@ import '../styles/Footer.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import CreditsTag from "../components/CreditsTag";
 
-const Footer = () => {
+const Footer = ({pages}) => {
 
 
     return (
@@ -22,9 +22,11 @@ const Footer = () => {
             <div className="footer-right">
                 <div className="col">
                     <div className="col-title">Website</div>
-                    <FooterPageItem name="Home" destination="/"/>
-                    <FooterPageItem name="Team" destination="/team"/>
-                    <FooterPageItem name="Demo" destination="/demo"/>
+                    {
+                        pages.map((page) =>
+                            <FooterPageItem name={page} destination={"/" + page}/>
+                        )
+                    }
                 </div>
                 <div className="col">
                     <div className="col-title">SnapCycle</div>
