@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontSize: {
+      'footer-title': '2vmax',
+      'footer-item': '1vmax',
+    },
   },
   plugins: [],
 }
