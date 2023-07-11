@@ -66,7 +66,7 @@ const FooterPageItem = ({name, destination}) => {
 const FooterExternalLink = ({name, destination}) => {
     return (
         <div className="col-item">
-            <a href={destination} target="_blank">
+            <a href={destination} target="_blank" rel="noreferrer">
                 {name}
             </a>
         </div>

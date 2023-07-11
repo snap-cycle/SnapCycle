@@ -1,5 +1,5 @@
 .active {
-    color: white;
+    color: #0096FF;
 }
 
 .footer {
@@ -45,7 +45,7 @@
 }
 
 .col-item:hover {
-    color: white;
+    color: #0096FF;
     cursor: pointer;
     transition: ease-in-out 0.1s;
 }
