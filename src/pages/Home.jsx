@@ -14,12 +14,12 @@ const Home = () => {
             <div className="panel">
                 panel 1
             </div>
-            <SlideIn direction="left">
+            <SlideIn>
                 <div className="panel">
                     panel 2
                 </div>
             </SlideIn>
-            <SlideIn direction="right">
+            <SlideIn invert={true}>
                 <div className="panel">
                     panel 3
                 </div>
