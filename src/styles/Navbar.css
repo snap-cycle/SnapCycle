@@ -27,15 +27,18 @@
 
 .NavbarPages{
     color: black;
+    transition: color 0.1s ease-in-out;
 }
 
 .NavbarPages:hover{
     cursor: pointer;
-    color: black;
+    color: #0096FF;
+    transition: color 0.1s ease-in-out;
 }
 
 .NavbarPagesActive{
     color: #0096FF;
+    transition: color 0.1s ease-in-out;
 }
 
 .NavbarLogo{
