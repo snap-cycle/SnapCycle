@@ -4,7 +4,7 @@ import "../styles/InViewAnimation.css";
 
 const SlideIn = ({ children, direction }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, { once: false });
 
     let distance = 0;
     if (direction === "left") {

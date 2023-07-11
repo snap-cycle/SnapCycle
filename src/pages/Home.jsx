@@ -11,17 +11,19 @@ const Home = () => {
             <div className="panel-landing">
                 Home
             </div>
+            <div className="panel">
+                panel 1
+            </div>
             <SlideIn direction="left">
                 <div className="panel">
-                    panel 1
+                    panel 2
                 </div>
             </SlideIn>
-            <div className="panel">
-                panel 2
-            </div>
-            <div className="panel">
-                panel 3
-            </div>
+            <SlideIn direction="right">
+                <div className="panel">
+                    panel 3
+                </div>
+            </SlideIn>
         </div>
     )
 }
