@@ -8,6 +8,18 @@
     color: #d1d5db;
     padding: 7.5vmax;
     display: flex;
+    text-align: left;
+    flex-direction: row;
+    position: relative;
+}
+
+.footer-left {
+    width: 50%;
+}
+
+.footer-right {
+    width: 50%;
+    display: flex;
     justify-content: space-between;
     text-align: left;
     position: relative;
@@ -15,7 +27,7 @@
 
 .col-title {
     color: white;
-    font-size: 2vmax;
+    font-size: 1.5vmax;
 }
 
 .col {
@@ -36,4 +48,11 @@
     color: white;
     cursor: pointer;
     transition: ease-in-out 0.1s;
+}
+
+.vertical-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 3vmax;
+    color: white;
 }

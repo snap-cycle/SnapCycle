@@ -8,21 +8,37 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <div className="col">
-                <div className="col-title">SnapCycle</div>
-                <div className="text-footer-item">Saving the turtles one snap at a time</div>
-                {/*<img className="h-32" src={WhiteLogo} alt="Logo"></img>*/}
+            <div className="footer-left">
+                <div className="col">
+                    <div className="col-title">About</div>
+                    <div className="text-footer-item">
+                        Saving the turtles one snap at a time...<br/>
+                        sample text...<br/>
+                        more words...<br/>
+                        nice!
+                    </div>
+                    {/*<img className="h-32" src={WhiteLogo} alt="Logo"></img>*/}
+                </div>
             </div>
-            <div className="col">
-                <div className="col-title">Pages</div>
-                <FooterPageItem name="Home" destination="/"/>
-                <FooterPageItem name="Team" destination="/team"/>
-                <FooterPageItem name="Demo" destination="/demo"/>
-            </div>
-            <div className="col">
-                <div className="col-title">Other</div>
-                <FooterExternalLink name="Devpost" destination="https://devpost.com/software/snapcycle-hyx3qv"/>
-                <FooterExternalLink name="GitHub" destination="https://github.com/luaibash/SnapCycle"/>
+            <div className="footer-right">
+                <div className="col">
+                    <div className="col-title">Website</div>
+                    <FooterPageItem name="Home" destination="/"/>
+                    <FooterPageItem name="Team" destination="/team"/>
+                    <FooterPageItem name="Demo" destination="/demo"/>
+                </div>
+                <div className="col">
+                    <div className="col-title">SnapCycle</div>
+                    <FooterExternalLink name="Placeholder"/>
+                </div>
+                <div className="col">
+                    <div className="col-title">More</div>
+                    <FooterExternalLink name="Devpost" destination="https://devpost.com/software/snapcycle-hyx3qv"/>
+                    <FooterExternalLink name="GitHub" destination="https://github.com/luaibash/SnapCycle"/>
+                </div>
+                <div className="col">
+                    <div className="vertical-title">SnapCycle</div>
+                </div>
             </div>
             <CreditsTag names="Aidan Froggatt and Luai Bashar"/>
         </div>
