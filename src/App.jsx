@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './styles/App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
@@ -9,10 +9,6 @@ import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 function App({pages}) {
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
 
     return (
         <div className='App'>

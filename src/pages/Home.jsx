@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/Home.css';
 import SlideIn from "../animations/SlideIn";
 import AnimatedPage from "../animations/AnimatedPage";
 
 const Home = () => {
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     return (

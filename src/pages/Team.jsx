@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../styles/Team.css';
 import AnimatedPage from "../animations/AnimatedPage";
 
 const Team = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <AnimatedPage>
