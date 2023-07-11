@@ -9,17 +9,17 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="col">
-                <h3>SnapCycle</h3>
-                <img className="h-32" src={WhiteLogo} alt="Logo"></img>
+                <div className="col-title">SnapCycle</div>
+                {/*<img className="h-32" src={WhiteLogo} alt="Logo"></img>*/}
             </div>
             <div className="col">
-                <h3>Pages</h3>
+                <div className="col-title">Pages</div>
                 <FooterPageItem name="Home" destination="/"/>
                 <FooterPageItem name="Team" destination="/team"/>
                 <FooterPageItem name="Demo" destination="/demo"/>
             </div>
             <div className="col">
-                <h3>Other</h3>
+                <div className="col-title">Other</div>
                 <FooterExternalLink name="Devpost" destination="https://devpost.com/software/snapcycle-hyx3qv"/>
                 <FooterExternalLink name="GitHub" destination="https://github.com/luaibash/SnapCycle"/>
             </div>

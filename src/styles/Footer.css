@@ -13,9 +13,9 @@
     position: relative;
 }
 
-h3 {
-    font-size: 2vmax;
+.col-title {
     color: white;
+    font-size: 2vmax;
 }
 
 .col {
