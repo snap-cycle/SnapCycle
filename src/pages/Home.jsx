@@ -1,13 +1,14 @@
 import React from 'react';
 import '../styles/Home.css';
 import SlideIn from "../animations/SlideIn";
+import AnimatedPage from "../animations/AnimatedPage";
 
 const Home = () => {
 
 
 
     return (
-        <div>
+        <AnimatedPage>
             <div className="panel-landing">
                 Home
             </div>
@@ -24,7 +25,7 @@ const Home = () => {
                     panel 3
                 </div>
             </SlideIn>
-        </div>
+        </AnimatedPage>
     )
 }
 
