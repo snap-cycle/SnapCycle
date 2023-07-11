@@ -20,7 +20,7 @@ const SlideIn = ({ children, direction }) => {
                 style={{
                     transform: isInView ? "none" : "translateX(" + distance +"px)",
                     opacity: isInView ? 1 : 0,
-                    transition: "all 1.0s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s"
+                    transition: "all 1.0s cubic-bezier(0.17, 0.55, 0.55, 1)"
                 }}
             >
             {children}
