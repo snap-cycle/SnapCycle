@@ -4,8 +4,6 @@ import AnimatedPage from "../animations/AnimatedPage";
 
 const Team = () => {
 
-
-
     return (
         <AnimatedPage>
             <div className="panel-landing">
