@@ -4,7 +4,6 @@ import '../styles/Navbar.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import OutlineButton from "./OutlineButton";
 
-
 const Navbar = ({Pages}) => {
     const location = useLocation();
     let navigate = useNavigate();
