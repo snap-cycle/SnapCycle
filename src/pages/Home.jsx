@@ -7,17 +7,17 @@ const Home = () => {
 
     return (
         <div>
-            <div className="Panel">
-                <h1>Home</h1>
+            <div className="panel-home">
+                Home
             </div>
-            <div className="Panel">
-                Panel 1
+            <div className="panel">
+                panel 1
             </div>
-            <div className="Panel">
-                Panel 2
+            <div className="panel">
+                panel 2
             </div>
-            <div className="Panel">
-                Panel 3
+            <div className="panel">
+                panel 3
             </div>
         </div>
     )
