@@ -25,7 +25,7 @@
 ---
 
 ### Current standards being used
-* For each class, 1000 train images and 250 valid images will be used.
+* For each class, 1000 train images and 250 valid images will be used. Overall, 1500 boundings boxes per class.
 * For each class, 16 background train images and 4 background valid images are used.
 * We are using a pretrained model from yolov8, such as yolov8n or yolov8m.
 * nano takes 0.2 s, medium takes 1 s, large takes 2.5 s.
