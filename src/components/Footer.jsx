@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Footer.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import CreditsTag from "../components/CreditsTag";
-import WhiteLogo from "../assets/branding/WhiteLogo.png";
+
 const Footer = () => {
 
 
@@ -17,7 +17,6 @@ const Footer = () => {
                         more words...<br/>
                         nice!
                     </div>
-                    {/*<img className="h-32" src={WhiteLogo} alt="Logo"></img>*/}
                 </div>
             </div>
             <div className="footer-right">

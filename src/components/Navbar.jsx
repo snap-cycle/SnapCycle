@@ -1,7 +1,7 @@
 import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import '../styles/Navbar.css';
-import { useNavigate, useLocation } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import OutlineButton from "./OutlineButton";
 
 const Navbar = () => {

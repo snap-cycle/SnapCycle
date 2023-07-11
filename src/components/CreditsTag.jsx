@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/CreditsTag.css';
+
 const CreditsTag = ({names}) => {
     return (
         <div className="credits">
