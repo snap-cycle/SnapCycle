@@ -4,7 +4,7 @@ import '../styles/Navbar.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import OutlineButton from "./OutlineButton";
 
-const Navbar = () => {
+const Navbar = ({Pages}) => {
     let navigate = useNavigate();
 
     const goToLocation = (location) => {
@@ -21,8 +21,14 @@ const Navbar = () => {
                 SnapCycle
             </div>
             <div className="NavbarPagesContainer">
-                <div className={location.pathname === "/" ? "NavbarPagesActive" : "NavbarPages"} onClick={() => goToLocation("/")}>Home</div>
-                <div className={location.pathname === "/team" ? "NavbarPagesActive" : "NavbarPages"} onClick={() => goToLocation("/team")}>Team</div>
+                {
+                    Pages.map((page) =>
+                        <div className={location.pathname === "/" + page ? "NavbarPagesActive" : "NavbarPages"}
+                             onClick={() => goToLocation("/" + page)}>
+                            {page}
+                        </div>
+                    )
+                }
             </div>
             <div className="NavbarAdditionalContainer">
                 <OutlineButton title="Demo" destination="/demo"/>
