@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="panel-home">
+            <div className="panel-landing">
                 Home
             </div>
             <div className="panel">
