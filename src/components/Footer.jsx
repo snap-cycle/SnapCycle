@@ -10,6 +10,7 @@ const Footer = () => {
         <div className="footer">
             <div className="col">
                 <div className="col-title">SnapCycle</div>
+                <div className="">Saving the turtles one snap at a time</div>
                 {/*<img className="h-32" src={WhiteLogo} alt="Logo"></img>*/}
             </div>
             <div className="col">
