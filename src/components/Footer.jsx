@@ -38,8 +38,10 @@ const FooterPageItem = ({name, destination}) => {
     };
 
     return (
-        <div className={location.pathname === destination ? "col-item active" : "col-item"} onClick={() => handleClick(destination)}>
-            {name}
+        <div className="col-item-container">
+            <div className={location.pathname === destination ? "col-item active" : "col-item"} onClick={() => handleClick(destination)}>
+                {name}
+            </div>
         </div>
     )
 }

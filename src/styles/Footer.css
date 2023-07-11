@@ -22,9 +22,14 @@
     flex: 1;
 }
 
+.col-item-container {
+    width: 100%;
+}
+
 .col-item {
     font-size: 1vmax;
     transition: ease-in-out 0.1s;
+    width: min-content;
 }
 
 .col-item:hover {
