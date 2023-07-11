@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Footer.css';
 import {useLocation, useNavigate} from "react-router-dom";
-
+import CreditsTag from "../components/CreditsTag";
+import WhiteLogo from "../assets/branding/WhiteLogo.png";
 const Footer = () => {
 
 
@@ -9,22 +10,20 @@ const Footer = () => {
         <div className="footer">
             <div className="col">
                 <h3>SnapCycle</h3>
+                <img className="h-32" src={WhiteLogo} alt="Logo"></img>
             </div>
             <div className="col">
                 <h3>Pages</h3>
-                <FooterPageItem name="Home" destination="/home/"/>
-                <FooterPageItem name="Database" destination="/database/"/>
-                <FooterPageItem name="EIDP" destination="/eidp/"/>
-                <FooterPageItem name="Data Analysis" destination="/data_analysis/"/>
-                <FooterPageItem name="Equipment Verification" destination="/equipment_verification/"/>
-                <FooterPageItem name="Data Entry" destination="/data_entry/"/>
-                <FooterPageItem name="More Info" destination="/more_info/"/>
+                <FooterPageItem name="Home" destination="/"/>
+                <FooterPageItem name="Team" destination="/team"/>
+                <FooterPageItem name="Demo" destination="/demo"/>
             </div>
             <div className="col">
                 <h3>Other</h3>
-                <FooterExternalLink name="Company" destination="https://www.samuel.com/burloak-technologies"/>
-                <FooterExternalLink name="Samuel Start" destination="https://samuel.service-now.com/start"/>
+                <FooterExternalLink name="Devpost" destination="https://devpost.com/software/snapcycle-hyx3qv"/>
+                <FooterExternalLink name="GitHub" destination="https://github.com/luaibash/SnapCycle"/>
             </div>
+            <CreditsTag names="Aidan Froggatt and Luai Bashar"/>
         </div>
     )
 }

@@ -1,0 +1,14 @@
+
+.credits {
+    position: absolute;
+    right: 0.5vmax;
+    bottom: 0.5vmax;
+    font-size: 0.75vmax;
+    transition: ease-in-out 0.1s;
+}
+
+.credits:hover {
+    color: white;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
