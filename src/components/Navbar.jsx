@@ -6,26 +6,18 @@ import OutlineButton from "./OutlineButton";
 import SlideIn from "../animations/SlideIn";
 
 const Navbar = ({pages}) => {
-    const location = useLocation();
-    let navigate = useNavigate();
-    const goToLocation = (location) => {
-        navigate(location);
-    }
 
     return (
         <SlideIn vertical={true}>
             <div className="Navbar">
                 <div className="NavbarLogo">
-                    <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogoImage" onClick={() => goToLocation("/")}/>
+                    <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogoImage"/>
                     SnapCycle
                 </div>
                 <div className="NavbarPagesContainer">
                     {
                         pages.map((page) =>
-                            <div className={location.pathname === "/" + page ? "NavbarPagesActive" : "NavbarPages"}
-                                 onClick={() => goToLocation("/" + page)}>
-                                {page}
-                            </div>
+                            <NavbarPageItem page={page}/>
                         )
                     }
                 </div>
@@ -34,6 +26,22 @@ const Navbar = ({pages}) => {
                 </div>
             </div>
         </SlideIn>
+    );
+}
+
+const NavbarPageItem = ({page}) => {
+    const destination = "/" + page.toLowerCase();
+    const location = useLocation();
+    const navigate = useNavigate();
+    const goToLocation = (location) => {
+        navigate(location);
+    }
+
+    return (
+        <div className={location.pathname === destination ? "NavbarPagesActive" : "NavbarPages"}
+             onClick={() => goToLocation(destination)}>
+            {page}
+        </div>
     );
 }
 

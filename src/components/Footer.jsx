@@ -24,7 +24,7 @@ const Footer = ({pages}) => {
                     <div className="col-title">Website</div>
                     {
                         pages.map((page) =>
-                            <FooterPageItem name={page} destination={"/" + page}/>
+                            <FooterPageItem page={page}/>
                         )
                     }
                 </div>
@@ -46,19 +46,18 @@ const Footer = ({pages}) => {
     )
 }
 
-const FooterPageItem = ({name, destination}) => {
-
+const FooterPageItem = ({page}) => {
+    const destination = "/" + page.toLowerCase();
     const navigate = useNavigate();
     const location = useLocation();
     const handleClick = (destination) => {
         navigate(destination);
-        window.location.reload();
     };
 
     return (
         <div className="col-item-container">
             <div className={location.pathname === destination ? "col-item active" : "col-item"} onClick={() => handleClick(destination)}>
-                {name}
+                {page}
             </div>
         </div>
     )
