@@ -52,7 +52,6 @@ const FooterPageItem = ({name, destination}) => {
     const location = useLocation();
     const handleClick = (destination) => {
         navigate(destination);
-        window.location.reload();
     };
 
     return (
