@@ -34,15 +34,16 @@ const Navbar = ({pages}) => {
 }
 
 const NavbarPageItem = ({page}) => {
+    const destination = "/" + page.toLowerCase();
     const location = useLocation();
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     const goToLocation = (location) => {
         navigate(location);
     }
 
     return (
-        <div className={location.pathname === "/" + page ? "NavbarPagesActive" : "NavbarPages"}
-             onClick={() => goToLocation("/" + page)}>
+        <div className={location.pathname === destination ? "NavbarPagesActive" : "NavbarPages"}
+             onClick={() => goToLocation(destination)}>
             {page}
         </div>
     );
