@@ -49,7 +49,7 @@ def trainNewModel():
 ### Training pretrained model
 ``` Python
 def trainPreTrainedModel():
-    model = YOLO('yolov8n.pt')  # load a pretrained model, can either be yolo's or someone elses
+    model = YOLO('yolov8n.pt')  
     model.train(data='data.yaml', epochs=100,
     imgsz=640, batch=16)
 ```
