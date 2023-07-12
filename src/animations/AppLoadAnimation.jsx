@@ -76,7 +76,6 @@ const AppLoadAnimation = () => {
                     />
                 </pattern>
                 <text
-                    className="text-4xl font-bold"
                     textAnchor="middle"
                     x="50%"
                     y="50%"
