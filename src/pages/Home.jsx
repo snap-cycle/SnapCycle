@@ -17,16 +17,20 @@ const Home = () => {
             <div className="panel">
                 panel 1
             </div>
-            <SlideIn>
-                <div className="panel">
-                    panel 2
-                </div>
-            </SlideIn>
-            <SlideIn invert={true}>
-                <div className="panel">
-                    panel 3
-                </div>
-            </SlideIn>
+            <div className="panel">
+                <SlideIn>
+                    <div>
+                        panel 2
+                    </div>
+                </SlideIn>
+            </div>
+            <div className="panel">
+                <SlideIn invert={true}>
+                    <div>
+                        panel 3
+                    </div>
+                </SlideIn>
+            </div>
         </AnimatedPage>
     )
 }
