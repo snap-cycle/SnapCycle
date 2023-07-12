@@ -6,16 +6,12 @@ import OutlineButton from "./OutlineButton";
 import SlideIn from "../animations/SlideIn";
 
 const Navbar = ({pages}) => {
-    let navigate = useNavigate();
-    const goToLocation = (location) => {
-        navigate(location);
-    }
 
     return (
         <SlideIn vertical={true}>
             <div className="Navbar">
                 <div className="NavbarLogo">
-                    <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogoImage" onClick={() => goToLocation("/")}/>
+                    <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogoImage"/>
                     SnapCycle
                 </div>
                 <div className="NavbarPagesContainer">
