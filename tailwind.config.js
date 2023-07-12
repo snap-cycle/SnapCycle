@@ -9,6 +9,9 @@ module.exports = {
       'footer-title': '2vmax',
       'footer-item': '1vmax',
     },
+    height: {
+      'fullpageminusnavbar' : '92.5vh'
+    }
   },
   plugins: [],
 }
