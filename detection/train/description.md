@@ -33,6 +33,13 @@
 
 ---
 
+### Potential problems
+* Apparently there should be 10000 bounding boxes per class :/
+* A lot of the images have diagonal bounding boxes, including pixels that are not of the object. This makes the model less accurate
+* A decent amount of images have overlapping bounding boxes. Apparently this makes the model less accurate too.
+
+---
+
 ### Training new model
 ``` Python
 def trainNewModel():
