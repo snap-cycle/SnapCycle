@@ -6,7 +6,6 @@ import OutlineButton from "./OutlineButton";
 import SlideIn from "../animations/SlideIn";
 
 const Navbar = ({pages}) => {
-    const location = useLocation();
     let navigate = useNavigate();
     const goToLocation = (location) => {
         navigate(location);
@@ -22,10 +21,7 @@ const Navbar = ({pages}) => {
                 <div className="NavbarPagesContainer">
                     {
                         pages.map((page) =>
-                            <div className={location.pathname === "/" + page ? "NavbarPagesActive" : "NavbarPages"}
-                                 onClick={() => goToLocation("/" + page)}>
-                                {page}
-                            </div>
+                            <NavbarPageItem page={page}/>
                         )
                     }
                 </div>
@@ -34,6 +30,21 @@ const Navbar = ({pages}) => {
                 </div>
             </div>
         </SlideIn>
+    );
+}
+
+const NavbarPageItem = ({page}) => {
+    const location = useLocation();
+    let navigate = useNavigate();
+    const goToLocation = (location) => {
+        navigate(location);
+    }
+
+    return (
+        <div className={location.pathname === "/" + page ? "NavbarPagesActive" : "NavbarPages"}
+             onClick={() => goToLocation("/" + page)}>
+            {page}
+        </div>
     );
 }
 
