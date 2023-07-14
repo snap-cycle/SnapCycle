@@ -4,7 +4,7 @@
 * We are using a google colab file to train the model as it offers a GPU for free. This is because we need a CUDA enabled GPU to train on GPU, and intel is not CUDA compatible. However, colab has a cooldown so use it wisely.
 * Two datasets are used. **train** trains the model, **valid** tests the strength of model during training.
 * Optionally, a third dataset called test can be used to test the strength after the training.
-* Dataset we are using is available at https://universe.roboflow.com/snapcycle/snapcycle/dataset/1
+* Dataset workspace we are using is available at https://app.roboflow.com/snapcyclev2
 * The .yaml file gives instructions on the data, such as pathway and classes of objects.
 
 ---
