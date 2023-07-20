@@ -77,7 +77,7 @@ def getMainObject(results):
 def runModel():
     # Readies directories and runs model
     fileManager(10)
-    model = YOLO("./detection/models/snapModelm-V1.pt") 
+    model = YOLO("./detection/models/snapModeln.pt") 
     sourcePath = './detection/images/capture.jpg'
     results = model.predict(task = 'detect', source = sourcePath, save = True, project = "./detection/runs/detect")
 

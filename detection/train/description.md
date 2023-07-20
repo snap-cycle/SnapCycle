@@ -30,7 +30,7 @@
 * We are using a pretrained model from yolov8, such as yolov8n or yolov8m.
 * nano takes 0.2 s, medium takes 1 s, large takes 2.5 s.
 * With the new dataset, these are the training times per epoch:
-* Nano: 2:02 minutes, about 3 and a half hours
+* Nano: 1:50 minutes, about 3 hours
 * Medium: 2:41 minutes, about 4 and a half hours
 
 ---
