@@ -1,7 +1,8 @@
-.newFooter {
+.MainFooter {
     height: 65vh;
     background: #1D1D1B;
     color: #d1d5db;
+    padding: 80px 80px 20px 80px;
     font-size: 16px;
 
     border-top: solid;
@@ -9,9 +10,40 @@
     flex-direction: row;
 }
 
-.footerLeft {
-    margin-top: 15px;
-    margin-left: 30px;
+.FooterLeft {
     display: flex;
     flex-direction: column;
+    text-align: left;
+}
+
+.FooterLogoName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.FooterLogoImage {
+    height: 50px;
+}
+
+.SnapcycleTitle {
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+}
+
+.TryNowMessage {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.Divider {
+    margin-top: 10px;
+    border-color: rgb(93, 93, 240);
+}
+
+.BottomFooter {
+    height: 65px;
+    background: #292926;
 }
