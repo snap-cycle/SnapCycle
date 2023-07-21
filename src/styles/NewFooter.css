@@ -1,0 +1,17 @@
+.newFooter {
+    height: 65vh;
+    background: #1D1D1B;
+    color: #d1d5db;
+    font-size: 16px;
+
+    border-top: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.footerLeft {
+    margin-top: 15px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
