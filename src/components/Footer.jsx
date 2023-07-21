@@ -1,74 +1,81 @@
 import React from 'react';
 import '../styles/Footer.css';
-import {useLocation, useNavigate} from "react-router-dom";
-import CreditsTag from "../components/CreditsTag";
+import WhiteLogo from "../assets/branding/WhiteLogo.png";
+import GithubLogo from "../assets/socialMediaIcons/github.svg";
+import LinkedinLogo from "../assets/socialMediaIcons/linkedin.svg";
+import TwitterLogo from "../assets/socialMediaIcons/twitter.svg";
+import YoutubeLogo from "../assets/socialMediaIcons/youtube.svg";
+import FacebookLogo from "../assets/socialMediaIcons/facebook.svg";
 
 const Footer = ({pages}) => {
 
 
     return (
-        <div className="footer">
-            <div className="footer-left">
-                <div className="col">
-                    <div className="col-title">About</div>
-                    <div className="text-footer-item">
-                        Saving the turtles one snap at a time...<br/>
-                        sample text...<br/>
-                        more words...<br/>
-                        nice!
+        <div>
+            <div className='MainFooter'>
+                <div className='FooterLeft'>
+                    <div className='FooterLogoName'>
+                        <img src={WhiteLogo} alt="SnapCycle Logo" className="FooterLogoImage"/>
+                        <div className='SnapcycleTitle'>
+                            SnapCycle
+                        </div>
+                    </div>
+                    <div className='ProjectSlogan'>
+                        Saving the turtles one snap at a time.
+                    </div>
+                    <div className='SocialMedia'>
+                        <img src={GithubLogo} alt="Github Logo" className='SocialMediaLogo' />
+                        <img src={LinkedinLogo} alt="Linkedin Logo" className='SocialMediaLogo' />
+                        <img src={TwitterLogo} alt="Twitter Logo" className='SocialMediaLogo' />
+                        <img src={YoutubeLogo} alt="Youtube Logo" className='SocialMediaLogo' />
+                        <img src={FacebookLogo} alt="Facebook Logo" className='SocialMediaLogo' />
+                    </div>
+                </div>
+                <div className='FooterInfo'>
+                    <div className='ProductSection'>
+                        <div className='ProductTitle'>
+                            Product
+                        </div>
+                        <div className='TryNow'>
+                            Try Now
+                        </div>
+                        <div className='Features'>
+                            Features
+                        </div>
+                        <div className='Resources'>
+                            Resources
+                        </div>
+                        <div className='Security'>
+                            Security
+                        </div>
+                    </div>
+                    <div className='HelpSection'>
+                        <div className='HelpTitle'>
+                            Help Center
+                        </div>
+                        <div className='FAQ'>
+                            FAQ
+                        </div>
+                        <div className='Contact'>
+                            Contact Us
+                        </div>
+                    </div>
+                    <div className='CompanySection'>
+                        <div className='CompanyTitle'>
+                            Company
+                        </div>
+                        <div className='Team'>
+                            Team
+                        </div>
+                        <div className='About'>
+                            About
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="footer-right">
-                <div className="col">
-                    <div className="col-title">Website</div>
-                    {
-                        pages.map((page) =>
-                            <FooterPageItem page={page}/>
-                        )
-                    }
-                </div>
-                <div className="col">
-                    <div className="col-title">SnapCycle</div>
-                    <FooterExternalLink name="Placeholder"/>
-                </div>
-                <div className="col">
-                    <div className="col-title">More</div>
-                    <FooterExternalLink name="Devpost" destination="https://devpost.com/software/snapcycle-hyx3qv"/>
-                    <FooterExternalLink name="GitHub" destination="https://github.com/luaibash/SnapCycle"/>
-                </div>
-                <div className="col">
-                    <div className="vertical-title">SnapCycle</div>
-                </div>
+            <div className='BottomFooter'>
+                SnapCycle 2023.
             </div>
-            <CreditsTag names="Aidan Froggatt and Luai Bashar"/>
-        </div>
-    )
-}
-
-const FooterPageItem = ({page}) => {
-    const destination = "/" + page.toLowerCase();
-    const navigate = useNavigate();
-    const location = useLocation();
-    const handleClick = (destination) => {
-        navigate(destination);
-    };
-
-    return (
-        <div className="col-item-container">
-            <div className={location.pathname === destination ? "col-item active" : "col-item"} onClick={() => handleClick(destination)}>
-                {page}
-            </div>
-        </div>
-    )
-}
-
-const FooterExternalLink = ({name, destination}) => {
-    return (
-        <div className="col-item">
-            <a href={destination} target="_blank" rel="noreferrer">
-                {name}
-            </a>
         </div>
     )
 }

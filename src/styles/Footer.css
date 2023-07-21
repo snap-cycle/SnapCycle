@@ -1,58 +1,105 @@
-.active {
-    color: #0096FF;
-}
-
-.footer {
-    background: #1D1D1B;
-    height: 65vh;
+.MainFooter {
+    height: 380px;
+    background: #1B1818;
     color: #d1d5db;
-    padding: 7.5vmax;
+    padding: 17px 0px 0px 35px;
+    font-size: 16px;
     display: flex;
+}
+
+.FooterLeft {
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    width: 341px;
+}
+
+.FooterLogoName {
+    display: flex;
     flex-direction: row;
-    position: relative;
+    align-items: center;
+    margin-bottom: 39px;
 }
 
-.footer-left {
-    width: 50%;
+.FooterLogoImage {
+    width: 80px;
 }
 
-.footer-right {
-    width: 50%;
+.SnapcycleTitle {
+    font-size: 32px;
+    color: white;
+    margin-left: 20px;
+}
+
+.ProjectSlogan {
+    font-size: 20px;
+    color: #A4A4A4;
+    margin-bottom: 30px;
+}
+
+.BottomFooter {
+    height: 70px;
+    background: #252222;
+    font-size: 14px;
+    color: #A4A4A4;
     display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.SocialMedia {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    text-align: left;
-    position: relative;
+    width: 300px;
 }
 
-.col-title {
-    color: white;
-    font-size: 1.5vmax;
+.SocialMediaLogo {
+    width: 30px;
+    transition: filter 0.4s;
 }
-
-.col {
-    flex: 1;
-}
-
-.col-item-container {
-    width: 100%;
-}
-
-.col-item {
-    font-size: 1vmax;
-    transition: ease-in-out 0.1s;
-    width: min-content;
-}
-
-.col-item:hover {
-    color: #0096FF;
+.SocialMediaLogo:hover {
     cursor: pointer;
-    transition: ease-in-out 0.1s;
+    filter: brightness(0) invert(1);
+    transition: filter 0.4s;
 }
 
-.vertical-title {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-size: 3vmax;
+.FooterInfo {
+    margin-top: 30px;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
     color: white;
+    text-align: left;
+}
+
+.ProductSection {
+    width: 80px;
+}
+
+.HelpSection {
+    width: 105px;
+}
+
+.CompanySection {
+    margin-right: 100px;
+}
+
+.ProductTitle, .HelpTitle, .CompanyTitle {
+    margin-bottom: 65px;
+}
+
+.TryNow, .Features, .Resources, .Security, .FAQ, .Contact, .Team, .About {
+    color: #A4A4A4;
+    margin-bottom: 20px;
+    transition: padding-left 0.5s, color 0.5s;
+    font-size: 16px;
+}
+.TryNow:hover, .Features:hover, .Resources:hover, .Security:hover, 
+.FAQ:hover, .Contact:hover, .Team:hover, .About:hover {
+    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+    transition: padding-left 0.5s, color 0.5s;
 }
