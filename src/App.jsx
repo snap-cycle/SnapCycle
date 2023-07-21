@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import Team from './pages/Team';
 import Demo from './pages/Demo';
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import NewFooter from "./components/NewFooter";
 import { AnimatePresence } from "framer-motion";
 import AppLoadAnimation from "./animations/AppLoadAnimation";
@@ -22,7 +21,6 @@ function App({pages}) {
                             <Route path='/team' element={<Team/>} />
                             <Route path='/demo' element={<Demo/>} />
                         </Routes>
-                    <Footer pages={pages}/>
                     <NewFooter pages={pages}/>
                 </Router>
             </AnimatePresence>

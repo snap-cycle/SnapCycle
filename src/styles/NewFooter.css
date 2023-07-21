@@ -1,49 +1,61 @@
 .MainFooter {
-    height: 65vh;
-    background: #1D1D1B;
+    height: 380px;
+    background: #1B1818;
     color: #d1d5db;
-    padding: 80px 80px 20px 80px;
+    padding: 17px 0px 0px 35px;
     font-size: 16px;
-
-    border-top: solid;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .FooterLeft {
     display: flex;
     flex-direction: column;
     text-align: left;
+    width: 341px;
 }
 
 .FooterLogoName {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 39px;
 }
 
 .FooterLogoImage {
-    height: 50px;
+    width: 80px;
 }
 
 .SnapcycleTitle {
-    font-size: 30px;
+    font-size: 32px;
     color: white;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
-.TryNowMessage {
-    color: gray;
-    margin-bottom: 10px;
-}
-
-.Divider {
-    margin-top: 10px;
-    border-color: rgb(93, 93, 240);
+.ProjectSlogan {
+    font-size: 24px;
+    color: #A4A4A4;
+    margin-bottom: 30px;
 }
 
 .BottomFooter {
-    height: 65px;
-    background: #292926;
+    height: 70px;
+    background: #252222;
+    font-size: 14px;
+    color: #A4A4A4;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.SocialMedia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.SocialMediaLogo {
+    width: 30px;
 }
