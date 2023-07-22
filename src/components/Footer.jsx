@@ -24,7 +24,9 @@ const Footer = ({pages}) => {
                         Saving the turtles one snap at a time.
                     </div>
                     <div className='SocialMedia'>
+                    <a href="https://github.com/luaibash/SnapCycle" target="blank">
                         <img src={GithubLogo} alt="Github Logo" className='SocialMediaLogo' />
+                    </a>
                         <img src={LinkedinLogo} alt="Linkedin Logo" className='SocialMediaLogo' />
                         <img src={TwitterLogo} alt="Twitter Logo" className='SocialMediaLogo' />
                         <img src={YoutubeLogo} alt="Youtube Logo" className='SocialMediaLogo' />
