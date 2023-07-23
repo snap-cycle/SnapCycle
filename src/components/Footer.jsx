@@ -6,9 +6,16 @@ import LinkedinLogo from "../assets/socialMediaIcons/linkedin.svg";
 import TwitterLogo from "../assets/socialMediaIcons/twitter.svg";
 import YoutubeLogo from "../assets/socialMediaIcons/youtube.svg";
 import FacebookLogo from "../assets/socialMediaIcons/facebook.svg";
+import {useNavigate} from "react-router-dom";
 
 const Footer = ({pages}) => {
 
+    const navigate = useNavigate();
+    const goToLocation = (location) => {
+        navigate(location);
+    }
+
+    console.log(pages)
 
     return (
         <div>
@@ -66,18 +73,19 @@ const Footer = ({pages}) => {
                         <div className='CompanyTitle'>
                             Company
                         </div>
-                        <div className='Team'>
-                            Team
-                        </div>
-                        <div className='About'>
-                            About
-                        </div>
+                        {
+                            pages.map((page, index) =>
+                                <div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>
+                                    {page}
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>
-            <div className='BottomFooter'>
-                SnapCycle 2023.
-            </div>
+            {/*<div className='BottomFooter'>*/}
+            {/*    SnapCycle 2023.*/}
+            {/*</div>*/}
         </div>
     )
 }

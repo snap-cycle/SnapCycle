@@ -2,7 +2,7 @@
     height: 380px;
     background: #1B1818;
     color: #d1d5db;
-    padding: 17px 0px 0px 35px;
+    padding: 17px 0 0 35px;
     font-size: 16px;
     display: flex;
 }
@@ -96,8 +96,24 @@
     transition: padding-left 0.5s, color 0.5s;
     font-size: 16px;
 }
+
 .TryNow:hover, .Features:hover, .Resources:hover, .Security:hover, 
 .FAQ:hover, .Contact:hover, .Team:hover, .About:hover {
+    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+    transition: padding-left 0.5s, color 0.5s;
+}
+
+
+.FooterItem {
+    color: #A4A4A4;
+    margin-bottom: 20px;
+    transition: padding-left 0.5s, color 0.5s;
+    font-size: 16px;
+}
+
+.FooterItem:hover {
     cursor: pointer;
     color: white;
     padding-left: 15px;
