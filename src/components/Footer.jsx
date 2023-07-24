@@ -83,9 +83,9 @@ const Footer = ({pages}) => {
                     </div>
                 </div>
             </div>
-            {/*<div className='BottomFooter'>*/}
-            {/*    SnapCycle 2023.*/}
-            {/*</div>*/}
+            <div className='BottomFooter'>
+               Developed by Luai Bashar and Aidan Froggatt.
+            </div>
         </div>
     )
 }

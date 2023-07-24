@@ -1,3 +1,7 @@
+/* add new media query from around 800-900 pixels */
+/* We can make it so that they are drop down columns that can be expanded.  */
+/* The stuff on the left will get smaller then will eventually dissapear */
+
 .MainFooter {
     height: 380px;
     background: #1B1818;
