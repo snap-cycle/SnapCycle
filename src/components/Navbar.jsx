@@ -1,31 +1,30 @@
 import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
-import '../styles/Navbar.css';
+import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";
+import "../styles/NavBar.css";
 import {useLocation, useNavigate} from "react-router-dom";
-import OutlineButton from "./OutlineButton";
-import SlideIn from "../animations/SlideIn";
 
 const Navbar = ({pages}) => {
 
     return (
-        <SlideIn vertical={true}>
-            <div className="Navbar">
-                <div className="NavbarLogo">
-                    <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogoImage"/>
-                    SnapCycle
-                </div>
-                <div className="NavbarPagesContainer">
-                    {
-                        pages.map((page) =>
-                            <NavbarPageItem page={page}/>
-                        )
-                    }
-                </div>
-                <div className="NavbarAdditionalContainer">
-                    <OutlineButton title="Demo" destination="/demo"/>
-                </div>
+        <div className='NavBar'>
+            <div className='NavBarLogoAndName'>
+                <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo"/>
+                <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
             </div>
-        </SlideIn>
+            <div className='NavBarPages'>
+                {
+                    pages.map((page) =>
+                        <NavbarPageItem page={page}/>
+                    )
+                }
+            </div>
+            <div className="NavBarButton">
+                    <button>
+                        Try Now
+                    </button>
+            </div>
+        </div>
     );
 }
 
@@ -38,7 +37,7 @@ const NavbarPageItem = ({page}) => {
     }
 
     return (
-        <div className={location.pathname === destination ? "NavbarPagesActive" : "NavbarPages"}
+        <div className={location.pathname === destination ? "NavbarPagesActive" : "NavbarPagesInactive"}
              onClick={() => goToLocation(destination)}>
             {page}
         </div>

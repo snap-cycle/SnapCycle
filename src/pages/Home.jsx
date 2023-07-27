@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import '../styles/Home.css';
 import SlideIn from "../animations/SlideIn";
 import AnimatedPage from "../animations/AnimatedPage";
+import RecyclingBackground from "../assets/Home/RecyclingBackground.jpg";
+
 
 const Home = () => {
     useEffect(() => {
@@ -11,7 +13,7 @@ const Home = () => {
     return (
         <AnimatedPage>
             <div className="panel-landing">
-                Home
+                <img src={RecyclingBackground} alt="Recycling Background" className="RecyclingBackground"/>
             </div>
             <div className="panel">
                 panel 1

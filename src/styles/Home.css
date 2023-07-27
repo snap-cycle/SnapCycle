@@ -3,7 +3,6 @@
     flex-direction: column;
     height: 92.5vh;
     justify-content: center;
-
 }
 
 .panel {
@@ -13,4 +12,9 @@
     justify-content: center;
     background: palegoldenrod;
     border: black 1px solid;
+}
+
+.RecyclingBackground {
+    width: 100%;
+    height: 100%;
 }
