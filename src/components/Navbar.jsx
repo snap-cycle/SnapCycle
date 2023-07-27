@@ -19,11 +19,10 @@ const Navbar = ({pages}) => {
                     )
                 }
             </div>
-            <div className="NavBarButton">
-                    <button>
-                        Try Now
-                    </button>
-            </div>
+            <button class="NavBarButton">
+                Try Now
+                <span class="arrow"></span>
+            </button>
         </div>
     );
 }
