@@ -36,8 +36,6 @@ const Navbar = ({ pages }) => {
     };
   }, [handleNavigation]);
 
-  console.log(window.scrollY);
-
   //useEffect to change appearance of navbar when it is at top of page
   useEffect(() => {
 
