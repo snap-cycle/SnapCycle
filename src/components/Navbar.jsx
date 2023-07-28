@@ -20,7 +20,9 @@ const Navbar = ({pages}) => {
                     )
                 }
             </div>
-            <OutlineButton title="Try Now" destination="/demo"/>
+            <div className='ButtonContainer'>
+                <OutlineButton title="Try Now" destination="/demo" className="NavBarButton"/>
+            </div>
         </div>
     );
 }
@@ -34,7 +36,7 @@ const NavbarPageItem = ({page}) => {
     }
 
     return (
-        <div className={location.pathname === destination ? "NavbarPagesActive" : "NavbarPagesInactive"}
+        <div className={location.pathname === destination ? "NavBarPagesActive" : "NavBarPagesInactive"}
              onClick={() => goToLocation(destination)}>
             {page}
         </div>

@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 50px 0 50px;
+    margin: 30px 40px 0 50px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -33,22 +33,25 @@
     margin-right: 100px;
 }
 
-.NavbarPagesActive{
+.NavBarPagesActive{
     color: black;
     transition: color 0.2s ease-in-out;
 }
+.NavBarPagesActive:hover {
+    cursor: pointer;
+}
 
-.NavbarPagesInactive{
+.NavBarPagesInactive{
     color: #666666;
     transition: color 0.2s ease-in-out;
 }
-
-.NavbarPagesInactive:hover{
+.NavBarPagesInactive:hover{
     cursor: pointer;
     color: black;
     transition: color 0.2s ease-in-out;
 }
 
-.NavbarPagesActive:hover {
-    cursor: pointer;
+.ButtonContainer {
+    display: flex;
+    width: 145px;
 }
