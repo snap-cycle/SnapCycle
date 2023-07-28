@@ -13,13 +13,10 @@
     font-weight: 700;
     transition: all 0.3s;
 }
-
-/* #NavBarTransparent {
-
+#NavBarPartial {
+    padding: 20px 40px 20px 50px;
+    background-color: rgb(255, 255, 255, 0.5);
 }
-#NavBarMidTranslucent {
-
-} */
 #NavBarSolid {
     padding: 10px 40px 10px 50px;
     background-color: white;
@@ -77,6 +74,9 @@
 @media (max-width: 1000px) {
     .NavBar {
         padding: 30px 10px 0 10px;
+    }
+    #NavBarPartial {
+        padding: 20px 10px 20px 10px;
     }
     #NavBarSolid {
         padding: 10px 10px 10px 10px;

@@ -7,32 +7,30 @@ import "../styles/NavBar.css";
 import {useLocation, useNavigate} from "react-router-dom";
 
 const Navbar = ({ pages }) => {
-  const [showPartialBackground, setShowPartialBackground] = useState(false);
-  const [showBackground, setShowBackground] = useState(false);
-  const [scrollCount, setScrollCount] = useState(0);
-  const scrollThreshold = 200;
+  const [showPartialBackground, setPartialBackground] = useState(false);
+  const [showSolidBackground, setSolidBackground] = useState(false);
+  const scrollPartialThreshold = 50;
+  const scrollSolidThreshold = 100;
 
-  // Add an event listener to detect scroll events
   useEffect(() => {
     const handleScroll = () => {
-      setScrollCount((scrollCount) => scrollCount + 1);
+      //If scrolled down once, show partial translucent background
+      if (window.scrollY > scrollPartialThreshold) setPartialBackground(true);
+      else setPartialBackground(false);
+      
+      //If scrolled down two or more times, show full background
+      if (window.scrollY > scrollSolidThreshold) setSolidBackground(true);
+      else setSolidBackground(false);
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Update the background when the scroll count reaches the threshold
-  useEffect(() => {
-    if (scrollCount >= scrollThreshold) setShowBackground(true);
-  }, [scrollCount]);
-
   return (
-    <div className="NavBar" id={showBackground ? "NavBarSolid" : "NavBarTransparent" }>
+    <div className="NavBar" id={showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent" }>
       <div className='NavBarLogoAndName'>
         <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
         <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
