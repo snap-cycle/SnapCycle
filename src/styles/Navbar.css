@@ -24,7 +24,7 @@
 }
 
 .NavBarTitle {
-    height: 30px;
+    height: 25px;
 }
 
 .NavBarPages {
@@ -53,5 +53,32 @@
 
 .ButtonContainer {
     display: flex;
+    justify-content: space-between;
     width: 145px;
+}
+
+@media (min-width: 1000.01px) {
+    .HamburgerMenu {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .NavBar {
+        margin: 30px 10px 0 10px;
+    }
+    
+    .NavBarPages {
+        display: none;
+    }
+
+    .ButtonContainer {
+        width: 190px;
+    }
+
+    .HamburgerMenu {
+        height: 40px;
+    }
+    .HamburgerMenu:hover {
+        cursor: pointer;
+    }
 }

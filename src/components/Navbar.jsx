@@ -2,6 +2,7 @@ import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";
 import OutlineButton from "./OutlineButton";
+import HamburgerMenu from "../assets/NavBar/HamburgerMenu.jpg";
 import "../styles/NavBar.css";
 import {useLocation, useNavigate} from "react-router-dom";
 
@@ -22,6 +23,7 @@ const Navbar = ({pages}) => {
             </div>
             <div className='ButtonContainer'>
                 <OutlineButton title="Try Now" destination="/demo" className="NavBarButton"/>
+                <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu'/>
             </div>
         </div>
     );
