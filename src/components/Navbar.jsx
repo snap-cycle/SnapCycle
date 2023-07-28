@@ -1,6 +1,7 @@
 import React from 'react';
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";
+import OutlineButton from "./OutlineButton";
 import "../styles/NavBar.css";
 import {useLocation, useNavigate} from "react-router-dom";
 
@@ -19,10 +20,7 @@ const Navbar = ({pages}) => {
                     )
                 }
             </div>
-            <button class="NavBarButton">
-                Try Now
-                <span class="arrow"></span>
-            </button>
+            <OutlineButton title="Try Now" destination="/demo"/>
         </div>
     );
 }

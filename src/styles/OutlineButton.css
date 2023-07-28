@@ -1,20 +1,46 @@
-.OutlineButton{
-    cursor: pointer;
+.OutlineButton {
+    border: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    padding: 5px 20px 5px 20px;
     display: flex;
-    justify-content: center;
+    transition: all .3s ease;
+    cursor: pointer;
     align-items: center;
-    color: black;
-    background: white;
-    font-weight: 600;
-    border: 2px black solid;
-    border-radius: 2vmax;
-    padding: 0.25vmax 0.5vmax;
 }
 
-.OutlineButton:hover{
-    background-color: black;
-    color: white;
-    transition: color;
-    transition-duration: 0.2s;
+.OutlineButton > .arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 6px;
+    transition: all .3s ease;
 }
 
+.OutlineButton > .arrow::before {
+    display: block;
+    background-color: currentColor;
+    width: 3px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    content: "";
+    right: 0;
+}
+
+.OutlineButton:hover > .arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: text-hover-color;
+}
+
+.OutlineButton:hover > .arrow::before {
+    opacity: 1;
+    width: 12px;
+}
