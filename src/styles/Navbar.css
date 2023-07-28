@@ -8,9 +8,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 40px 0 50px;
-    font-size: 20px;
+    padding: 30px 40px 30px 50px;
+    font-size: 16px;
     font-weight: 700;
+    transition: all 0.3s;
+}
+
+/* #NavBarTransparent {
+
+}
+#NavBarMidTranslucent {
+
+} */
+#NavBarSolid {
+    padding: 10px 40px 10px 50px;
+    background-color: white;
 }
 
 .NavBarLogoAndName {
@@ -64,7 +76,11 @@
 }
 @media (max-width: 1000px) {
     .NavBar {
-        margin: 30px 10px 0 10px;
+        padding: 30px 10px 0 10px;
+    }
+    #NavBarSolid {
+        padding: 10px 10px 10px 10px;
+        background-color: white;
     }
     
     .NavBarPages {
