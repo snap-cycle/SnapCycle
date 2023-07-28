@@ -1,25 +1,53 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
+import {useLocation, useNavigate} from "react-router-dom";
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";
-import OutlineButton from "./OutlineButton";
 import HamburgerMenu from "../assets/NavBar/HamburgerMenu.jpg";
+import OutlineButton from "./OutlineButton";
 import "../styles/NavBar.css";
-import {useLocation, useNavigate} from "react-router-dom";
 
 const Navbar = ({ pages }) => {
   const [showPartialBackground, setPartialBackground] = useState(false);
   const [showSolidBackground, setSolidBackground] = useState(false);
-  const scrollPartialThreshold = 50;
-  const scrollSolidThreshold = 100;
+  const [showNavBar, setNavBar] = useState(true);
+  const [currentScroll, setCurrentScroll] = useState(window.scrollY);
+  const partialThreshold = 50;
+  const solidThreshold = 100;
+  const navBarThreshold = 550;
 
+  const handleNavigation = useCallback((e) => {
+      const window = e.currentTarget;
+
+      //If past home panel and scrolling down, nav bar dissapears. If scroll up, reappears
+      if (window.scrollY > navBarThreshold && currentScroll < window.scrollY)
+        setNavBar(false);
+      else setNavBar(true);
+      
+      setCurrentScroll(window.scrollY);
+  }, [currentScroll]);
+
+  //useEffect to track whether user has scrolled up or down last
   useEffect(() => {
+    setCurrentScroll(window.scrollY);
+    window.addEventListener("scroll", handleNavigation);
+
+    return () => {
+      window.removeEventListener("scroll", handleNavigation);
+    };
+  }, [handleNavigation]);
+
+  console.log(window.scrollY);
+
+  //useEffect to change appearance of navbar when it is at top of page
+  useEffect(() => {
+
     const handleScroll = () => {
       //If scrolled down once, show partial translucent background
-      if (window.scrollY > scrollPartialThreshold) setPartialBackground(true);
+      if (window.scrollY > partialThreshold) setPartialBackground(true);
       else setPartialBackground(false);
       
       //If scrolled down two or more times, show full background
-      if (window.scrollY > scrollSolidThreshold) setSolidBackground(true);
+      if (window.scrollY > solidThreshold) setSolidBackground(true);
       else setSolidBackground(false);
     };
 
@@ -30,7 +58,8 @@ const Navbar = ({ pages }) => {
   }, []);
 
   return (
-    <div className="NavBar" id={showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent" }>
+    <div className="NavBar" 
+    id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
       <div className='NavBarLogoAndName'>
         <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
         <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
