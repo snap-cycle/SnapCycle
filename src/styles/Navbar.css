@@ -14,7 +14,9 @@
     transition: all 0.3s;
 }
 #NavBarDissapear {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 40px 10px 50px;
 }
 #NavBarPartial {
     padding: 20px 40px 20px 50px;
@@ -76,14 +78,16 @@
 }
 @media (max-width: 1000px) {
     .NavBar {
-        padding: 30px 10px 0 10px;
+        padding: 30px 10px 30px 10px;
+    }
+    #NavBarDissapear {
+        padding: 10px 10px 10px 10px;
     }
     #NavBarPartial {
         padding: 20px 10px 20px 10px;
     }
     #NavBarSolid {
         padding: 10px 10px 10px 10px;
-        background-color: white;
     }
     
     .NavBarPages {
