@@ -12,8 +12,8 @@ const Home = () => {
 
     return (
         <AnimatedPage>
-            <div className="panel-landing">
-                <img src={RecyclingBackground} alt="Recycling Background" className="RecyclingBackground"/>
+            <div className="HomePanelLanding">
+                <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
             </div>
             <div className="panel">
                 panel 1

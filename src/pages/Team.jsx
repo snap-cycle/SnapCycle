@@ -9,9 +9,9 @@ const Team = () => {
 
     return (
         <AnimatedPage>
-            <div className="panel-landing">
+            <div className="TeamPanelLanding">
                 <h2>Our Team</h2>
-                <p>Aidan, Luai, Gabe?, <s>Harry</s></p>
+                <p>Aidan, Luai, Gabe, Harry</p>
             </div>
         </AnimatedPage>
     );

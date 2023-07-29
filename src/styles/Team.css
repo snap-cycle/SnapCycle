@@ -1,7 +1,6 @@
-.panel-landing {
-    height: 92.5vh;
-}
-
-.panel {
-    height: 100vh;
+.TeamPanelLanding {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
