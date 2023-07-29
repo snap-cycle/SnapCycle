@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.HomePanelLandingBackground {
+    width: 1500px;
+}
+
 .Title {
     font-size: 36px;
     font-weight: 700;
@@ -11,7 +15,7 @@
 .PanelOne {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 800px;
 }
 
 #PanelOneTitle {
@@ -22,21 +26,22 @@
 .ItemCategories {
     display: flex;
     flex-direction: column;
-    margin-left: -25px;
-    margin-right: -25px;
+    margin-left: -50px;
+    margin-right: -50px;
     align-items: center;
     vertical-align: middle;
 }
 
 .Item {
     border-radius: 20px;
-    margin: 5px;
-    height: 150px;
-    width: 150px;
-    transition: all 0.3s;
+    margin: 8px;
+    height: 170px;
+    width: 170px;
+    transition: all 0.2s ease-in-out;
 }
 .Item:hover {
     cursor: pointer;
+    transform: scale(1.05,1.05);
 }
 
 .ItemRow {
