@@ -3,6 +3,38 @@
     display: flex;
 }
 
+.Title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.PanelOne {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+#PanelOneTitle {
+    margin-left: 410px;
+    margin-right: 410px;
+}
+
+.ItemCategories {
+
+}
+
+.Item {
+    
+}
+
+
+
+
+
+
+
+
 .panel {
     display: flex;
     flex-direction: column;

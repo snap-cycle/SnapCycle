@@ -15,8 +15,13 @@ const Home = () => {
             <div className="HomePanelLanding">
                 <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
             </div>
-            <div className="panel">
-                panel 1
+            <div className="PanelOne">
+                <div className='Title' id="PanelOneTitle">
+                    Thousands of objects to detect from, that help you recycle
+                </div>
+                <div className='ItemCategories'>
+
+                </div>
             </div>
             <div className="panel">
                 <SlideIn>
