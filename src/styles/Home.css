@@ -11,21 +11,36 @@
 .PanelOne {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    margin-top: 50px;
+    height: 600px;
 }
 
 #PanelOneTitle {
-    margin-left: 410px;
-    margin-right: 410px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .ItemCategories {
-
+    display: flex;
+    flex-direction: column;
+    margin-left: -25px;
+    margin-right: -25px;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .Item {
-    
+    border-radius: 20px;
+    margin: 5px;
+    height: 150px;
+    width: 150px;
+    transition: all 0.3s;
+}
+.Item:hover {
+    cursor: pointer;
+}
+
+.ItemRow {
+    display: flex;
 }
 
 
