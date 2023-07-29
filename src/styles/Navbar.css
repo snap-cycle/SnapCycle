@@ -4,26 +4,34 @@
     position: fixed;
     left: 0;
     right: 0;
-    font-family: Inter, serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 40px 30px 50px;
+
+    font-family: Inter, serif;
     font-size: 16px;
     font-weight: 700;
+
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-left: 50px;
     transition: all 0.3s;
 }
 #NavBarDissapear {
     visibility: hidden;
     opacity: 0;
-    padding: 10px 40px 10px 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 #NavBarPartial {
-    padding: 20px 40px 20px 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: rgb(255, 255, 255, 0.5);
 }
 #NavBarSolid {
-    padding: 10px 40px 10px 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: white;
 }
 
@@ -33,7 +41,7 @@
 }
 
 .NavBarLogo {
-    height: 60px;
+    height: 50px;
     margin-right: 15px;
 }
 
@@ -78,16 +86,8 @@
 }
 @media (max-width: 1000px) {
     .NavBar {
-        padding: 30px 10px 30px 10px;
-    }
-    #NavBarDissapear {
-        padding: 10px 10px 10px 10px;
-    }
-    #NavBarPartial {
-        padding: 20px 10px 20px 10px;
-    }
-    #NavBarSolid {
-        padding: 10px 10px 10px 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
     .NavBarPages {
