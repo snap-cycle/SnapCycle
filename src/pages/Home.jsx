@@ -48,7 +48,7 @@ const Home = () => {
     }, [])
 
     return (
-        <AnimatedPage>
+        <div>
             <div className="HomePanelLanding">
                 <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
             </div>
@@ -91,7 +91,7 @@ const Home = () => {
                         Take a picture of the object in front of you,<br></br>
                         that’s all you have to do! Let SnapCycle do<br></br>
                         the rest as it detects the object for you, and<br></br>
-                        lets you in on all the sweet disposing details.<br></br>
+                        lets you in on all the sweet disposing details.
                     </div>
                     <div className='SubText'>
                         Try out SnapCycle today and experience the<br></br>
@@ -99,18 +99,41 @@ const Home = () => {
                     </div>
                     <OutlineButton title="Try Now" destination="/demo"/>
                 </div>
-                <div>
+            </div>
+            <div className='PanelThree'>
+                <div className='PanelThreeImage'>
 
                 </div>
-            </div>
-            <div className="panel">
-                <SlideIn invert={true}>
-                    <div>
-                        panel 3
+                <div className='PanelThreeText'>
+                    <div className='Title'>
+                        Can't Take a Picture?<br></br>
+                        No Worries!
                     </div>
-                </SlideIn>
+                    <div className='SubText'>
+                        Search through our ever growing database<br></br>
+                        of objects to learn how to dispose of them.<br></br>
+                        Say no more to scientific articles going into<br></br>
+                        detail on things you don't need to know! 
+                    </div>
+                    <div className='SubText'>
+                        Try out SnapCycle today and experience the<br></br>
+                        power of smooth recycling.
+                    </div>
+                    <div className='PanelThreeButton'>
+                        <OutlineButton title="Try Now" destination="/demo"/>
+                    </div>
+                </div>
             </div>
-        </AnimatedPage>
+            <AnimatedPage>
+                <div className="panel">
+                    <SlideIn invert={true}>
+                        <div>
+                            panel 3
+                        </div>
+                    </SlideIn>
+                </div>
+            </AnimatedPage>
+        </div>
     )
 }
 

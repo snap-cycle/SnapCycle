@@ -60,6 +60,28 @@
 
 .PanelTwoText {
     margin-left: 75px;
+    margin-right: 75px;
+}
+
+.PanelThree {
+    display: flex;
+    height: 500px;
+    text-align: right;
+}
+
+.PanelThreeImage {
+    width: 800px;
+}
+
+.PanelThreeText {
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.PanelThreeButton {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
 }
 
 
