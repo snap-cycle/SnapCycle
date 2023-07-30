@@ -12,18 +12,22 @@
     font-weight: 700;
 }
 
+.SubText {
+    font-size: 18px;
+    color: #434343;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .PanelOne {
     display: flex;
     flex-direction: column;
-    height: 800px;
-}
-
-#PanelOneTitle {
+    height: 700px;
     margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .ItemCategories {
+    margin-top:50px;
     display: flex;
     flex-direction: column;
     margin-left: -100px;
@@ -48,6 +52,15 @@
     display: flex;
 }
 
+.PanelTwo {
+    display: flex;
+    height: 500px;
+    text-align: left;
+}
+
+.PanelTwoText {
+    margin-left: 75px;
+}
 
 
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import '../styles/Home.css';
+import OutlineButton from "../components/OutlineButton";
 import SlideIn from "../animations/SlideIn";
 import AnimatedPage from "../animations/AnimatedPage";
 import RecyclingBackground from "../assets/Home/RecyclingBackground.jpg";
@@ -52,7 +53,7 @@ const Home = () => {
                 <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
             </div>
             <div className="PanelOne">
-                <div className='Title' id="PanelOneTitle">
+                <div className='Title'>
                     Thousands of objects<br></br> 
                     to detect from, that<br></br>
                     help you recycle
@@ -80,12 +81,27 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="panel">
-                <SlideIn>
-                    <div>
-                        panel 2
+            <div className='PanelTwo'>
+                <div className='PanelTwoText'>
+                    <div className='Title'>
+                        Take a Snap of Any<br></br> 
+                        Item, Anywhere
                     </div>
-                </SlideIn>
+                    <div className='SubText'>
+                        Take a picture of the object in front of you,<br></br>
+                        that’s all you have to do! Let SnapCycle do<br></br>
+                        the rest as it detects the object for you, and<br></br>
+                        lets you in on all the sweet disposing details.<br></br>
+                    </div>
+                    <div className='SubText'>
+                        Try out SnapCycle today and experience the<br></br>
+                        power of smooth recycling.
+                    </div>
+                    <OutlineButton title="Try Now" destination="/demo"/>
+                </div>
+                <div>
+
+                </div>
             </div>
             <div className="panel">
                 <SlideIn invert={true}>
