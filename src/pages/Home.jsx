@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import '../styles/Home.css';
 import SlideIn from "../animations/SlideIn";
 import AnimatedPage from "../animations/AnimatedPage";
@@ -23,6 +23,25 @@ import GameController from "../assets/Home/ItemCategories/GameController.png";
 
 
 const Home = () => {
+    const leftScrollRef = useRef(null);
+    const rightScrollRef = useRef(null);
+
+    // Transforms the current vertical scroll to horizontal scroll
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const horizontalScroll = scrollY / 20; // Adjust the divisor to control the movement speed
+        leftScrollRef.current.style.transform = `translateX(${-horizontalScroll}px)`;
+        rightScrollRef.current.style.transform = `translateX(${horizontalScroll}px)`;
+    };
+
+    // Scroll event listener
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -39,7 +58,7 @@ const Home = () => {
                     help you recycle
                 </div>
                 <div className='ItemCategories'>
-                    <div className='ItemRow'>
+                    <div className='ItemRow' ref={leftScrollRef}>
                         <img src={PlasticWrapper} alt="Plastic Wrapper" className='Item' />
                         <img src={PlasticBottle} alt="Plastic Bottle" className='Item' />
                         <img src={MetalCan} alt="Metal Can" className='Item' />
@@ -49,7 +68,7 @@ const Home = () => {
                         <img src={MobilePhone} alt="Mobile Phone" className='Item' />
                         <img src={CardboardBox} alt="Cardboard Box" className='Item' />
                     </div>
-                    <div className='ItemRow'>
+                    <div className='ItemRow' ref={rightScrollRef}>
                         <img src={Laptop} alt="Laptop" className='Item' />
                         <img src={PlasticContainer} alt="Plastic Container" className='Item' />
                         <img src={ElectronicCoords} alt="Electronic Coords" className='Item' />
