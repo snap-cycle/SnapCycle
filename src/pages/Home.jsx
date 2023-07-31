@@ -1,4 +1,6 @@
 import React, {useEffect, useRef} from 'react';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 import '../styles/Home.css';
 import OutlineButton from "../components/OutlineButton";
 import SlideIn from "../animations/SlideIn";
@@ -136,7 +138,7 @@ const Home = () => {
                 <div className='StatisticsContainer'>
                     <div className='Statistic'>
                         <div className='Title'>
-                            6,139,487
+                            <AnimateNumber number={6139487} yuh={""}/>
                         </div>
                         <div className='StatisticSubText'>
                             Recyclables are disposed<br></br>
@@ -145,7 +147,7 @@ const Home = () => {
                     </div>
                     <div className='Statistic'>
                         <div className='Title'>
-                            5 Masks
+                            <AnimateNumber number={5} suffix={" Masks"}/>
                         </div>
                         <div className='StatisticSubText'>
                             are littered every 30<br></br>
@@ -154,7 +156,7 @@ const Home = () => {
                     </div>
                     <div className='Statistic'>
                         <div className='Title'>
-                            95%
+                            <AnimateNumber number={95} suffix={" %"}/>
                         </div>
                         <div className='StatisticSubText'>
                             of waste in the<br></br>
@@ -164,7 +166,7 @@ const Home = () => {
                     </div>
                     <div className='Statistic'>
                         <div className='Title'>
-                            300,000
+                            <AnimateNumber number={300000}/>
                         </div>
                         <div className='StatisticSubText'>
                             of recyclables could be<br></br>
@@ -185,6 +187,18 @@ const Home = () => {
             </AnimatedPage>
         </div>
     )
+}
+
+const AnimateNumber = ({number, suffix = ""}) => {
+    return (
+        <VisibilitySensor>
+            {({isVisible}) =>
+                <div style={{ height: 50 }}>
+                    {isVisible ? <CountUp end={number} suffix={suffix}/> : 0 + suffix}
+                </div>
+            }
+        </VisibilitySensor>
+    );
 }
 
 export default Home;
