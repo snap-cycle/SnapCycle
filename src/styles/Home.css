@@ -84,6 +84,19 @@
     flex-direction: row-reverse;
 }
 
+.PanelFour {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.StatisticsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 

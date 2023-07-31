@@ -54,9 +54,9 @@ const Home = () => {
             </div>
             <div className="PanelOne">
                 <div className='Title'>
-                    Thousands of objects<br></br> 
-                    to detect from, that<br></br>
-                    help you recycle
+                    Thousands of Objects<br></br> 
+                    to Detect From, That<br></br>
+                    Help You Recycle
                 </div>
                 <div className='ItemCategories'>
                     <div className='ItemRow' ref={leftScrollRef}>
@@ -122,6 +122,19 @@ const Home = () => {
                     <div className='PanelThreeButton'>
                         <OutlineButton title="Try Now" destination="/demo"/>
                     </div>
+                </div>
+            </div>
+            <div className='PanelFour'>
+                <div className='Title'>
+                    Let the Numbers Speak<br></br>
+                    for Themselves.
+                </div>
+                <div className='SubText'>
+                    As the world migrates into the technological<br></br>
+                    age, its time to make a change.
+                </div>
+                <div className='StatisticsContainer'>
+                    
                 </div>
             </div>
             <AnimatedPage>
