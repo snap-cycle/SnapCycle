@@ -4,7 +4,7 @@ import BlackLogo from "../assets/branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";
 import HamburgerMenu from "../assets/NavBar/HamburgerMenu.jpg";
 import OutlineButton from "./OutlineButton";
-import "../styles/NavBar.css";
+import "../styles/Navbar.css";
 
 const Navbar = ({ pages }) => {
   const [showPartialBackground, setPartialBackground] = useState(false);

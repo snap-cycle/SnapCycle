@@ -79,7 +79,7 @@ const AppLoadAnimation = () => {
                     textAnchor="middle"
                     x="50%"
                     y="50%"
-                    style={{ fill: "url(#pattern)" }}
+                    style={{ fill: "url(#pattern)"}}
                 >
                     SnapCycle
                 </text>
