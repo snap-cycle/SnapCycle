@@ -90,11 +90,19 @@
     text-align: left;
     margin-left: 75px;
     margin-right: 75px;
+    height: 500px;
 }
 
 .StatisticsContainer {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+}
+
+.StatisticSubText {
+    font-size: 18px;
+    color: #434343;
+    margin-top: 5px;
 }
 
 

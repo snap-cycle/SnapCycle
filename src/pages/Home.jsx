@@ -134,7 +134,44 @@ const Home = () => {
                     age, its time to make a change.
                 </div>
                 <div className='StatisticsContainer'>
-                    
+                    <div className='Statistic'>
+                        <div className='Title'>
+                            6,139,487
+                        </div>
+                        <div className='StatisticSubText'>
+                            Recyclables are disposed<br></br>
+                            incorrectly.
+                        </div>
+                    </div>
+                    <div className='Statistic'>
+                        <div className='Title'>
+                            5 Masks
+                        </div>
+                        <div className='StatisticSubText'>
+                            are littered every 30<br></br>
+                            minutes.
+                        </div>
+                    </div>
+                    <div className='Statistic'>
+                        <div className='Title'>
+                            95%
+                        </div>
+                        <div className='StatisticSubText'>
+                            of waste in the<br></br>
+                            ocean is easily<br></br>
+                            avoidable.
+                        </div>
+                    </div>
+                    <div className='Statistic'>
+                        <div className='Title'>
+                            300,000
+                        </div>
+                        <div className='StatisticSubText'>
+                            of recyclables could be<br></br>
+                            saved with the use of<br></br>
+                            SnapCycle!
+                        </div>
+                    </div>
                 </div>
             </div>
             <AnimatedPage>
