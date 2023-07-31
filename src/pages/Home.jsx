@@ -1,6 +1,5 @@
 import React, {useEffect, useRef} from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
 import '../styles/Home.css';
 import OutlineButton from "../components/OutlineButton";
 import SlideIn from "../animations/SlideIn";
@@ -138,7 +137,7 @@ const Home = () => {
                 <div className='StatisticsContainer'>
                     <div className='Statistic'>
                         <div className='Title'>
-                            <AnimateNumber number={6139487} yuh={""}/>
+                            <CountUp end={6139487} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
                             Recyclables are disposed<br></br>
@@ -147,7 +146,7 @@ const Home = () => {
                     </div>
                     <div className='Statistic'>
                         <div className='Title'>
-                            <AnimateNumber number={5} suffix={" Masks"}/>
+                            <CountUp end={5} suffix={" Masks"} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
                             are littered every 30<br></br>
@@ -156,7 +155,7 @@ const Home = () => {
                     </div>
                     <div className='Statistic'>
                         <div className='Title'>
-                            <AnimateNumber number={95} suffix={" %"}/>
+                            <CountUp end={95} suffix={" %"} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
                             of waste in the<br></br>
@@ -166,7 +165,7 @@ const Home = () => {
                     </div>
                     <div className='Statistic'>
                         <div className='Title'>
-                            <AnimateNumber number={300000}/>
+                            <CountUp end={300000} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
                             of recyclables could be<br></br>
@@ -187,18 +186,6 @@ const Home = () => {
             </AnimatedPage>
         </div>
     )
-}
-
-const AnimateNumber = ({number, suffix = ""}) => {
-    return (
-        <VisibilitySensor>
-            {({isVisible}) =>
-                <div style={{ height: 50 }}>
-                    {isVisible ? <CountUp end={number} suffix={suffix}/> : 0 + suffix}
-                </div>
-            }
-        </VisibilitySensor>
-    );
 }
 
 export default Home;

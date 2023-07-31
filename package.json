@@ -25,7 +25,6 @@
     "react-simple-file-upload": "^1.1.0",
     "react-spring": "^9.6.1",
     "react-use-scroll-direction": "^0.1.0",
-    "react-visibility-sensor": "^5.1.1",
     "react-webcam": "^7.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
