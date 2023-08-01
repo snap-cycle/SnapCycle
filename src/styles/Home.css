@@ -57,6 +57,8 @@
     display: flex;
     height: 500px;
     text-align: left;
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 .PanelTwoText {
@@ -68,6 +70,8 @@
     display: flex;
     height: 500px;
     text-align: right;
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 .PanelThreeImage {
