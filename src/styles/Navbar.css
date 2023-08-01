@@ -1,22 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-.NavBar {
+.NavBarContainer {
     position: fixed;
     left: 0;
     right: 0;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-family: Inter, serif;
-    font-size: 16px;
-    font-weight: 700;
-
+    
     padding-top: 30px;
-    padding-right: 40px;
     padding-bottom: 30px;
-    padding-left: 50px;
     transition: all 0.3s;
 }
 #NavBarDissapear {
@@ -34,6 +25,21 @@
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: white;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 50px;
 }
 
 .NavBarLogoAndName {

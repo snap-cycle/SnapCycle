@@ -11,8 +11,8 @@ const Navbar = ({ pages }) => {
   const [showSolidBackground, setSolidBackground] = useState(false);
   const [showNavBar, setNavBar] = useState(true);
   const [currentScroll, setCurrentScroll] = useState(window.scrollY);
-  const partialThreshold = 50;
-  const solidThreshold = 100;
+  const partialThreshold = 75;
+  const solidThreshold = 150;
   const navBarThreshold = 550;
 
   const handleNavigation = useCallback((e) => {
@@ -56,20 +56,22 @@ const Navbar = ({ pages }) => {
   }, []);
 
   return (
-    <div className="NavBar" 
-    id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
-      <div className='NavBarLogoAndName'>
-        <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
-        <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
-      </div>
-      <div className='NavBarPages'>
-        {pages.map((page) => (
-          <NavbarPageItem page={page} key={page} />
-        ))}
-      </div>
-      <div className='ButtonContainer'>
-        <OutlineButton title="Try Now" destination="/demo" className="NavBarButton" />
-        <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu' />
+    <div className='NavBarContainer'
+      id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
+      <div className="NavBar">
+        <div className='NavBarLogoAndName'>
+          <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
+          <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
+        </div>
+        <div className='NavBarPages'>
+          {pages.map((page) => (
+            <NavbarPageItem page={page} key={page} />
+          ))}
+        </div>
+        <div className='ButtonContainer'>
+          <OutlineButton title="Try Now" destination="/demo" className="NavBarButton" />
+          <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu' />
+        </div>
       </div>
     </div>
   );
