@@ -2,11 +2,18 @@
 /* We can make it so that they are drop down columns that can be expanded.  */
 /* The stuff on the left will get smaller then will eventually dissapear */
 
-.MainFooter {
+.FooterContainer {
+    background: #1B1818;
+}
+
+.Footer {
     height: 380px;
+    max-width: 1350px;
+    padding: 17px 0 0 35px;
+    margin: 0 auto;
+
     background: #1B1818;
     color: #d1d5db;
-    padding: 17px 0 0 35px;
     font-size: 16px;
     display: flex;
 }

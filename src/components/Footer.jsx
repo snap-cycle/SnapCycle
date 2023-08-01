@@ -18,8 +18,8 @@ const Footer = ({pages}) => {
     console.log(pages)
 
     return (
-        <div>
-            <div className='MainFooter'>
+        <div className='FooterContainer'>
+            <div className='Footer'>
                 <div className='FooterLeft'>
                     <div className='FooterLogoName'>
                         <img src={WhiteLogo} alt="SnapCycle Logo" className="FooterLogoImage"/>
