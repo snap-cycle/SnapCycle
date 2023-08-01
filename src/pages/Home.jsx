@@ -29,8 +29,6 @@ import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
 
 
-
-
 const Home = () => {
     const leftScrollRef = useRef(null);
     const rightScrollRef = useRef(null);
