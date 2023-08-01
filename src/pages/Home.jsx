@@ -13,6 +13,9 @@ import Battery from "../assets/Home/ItemCategories/Battery.png";
 import PlasticBag from "../assets/Home/ItemCategories/PlasticBag.png";
 import MobilePhone from "../assets/Home/ItemCategories/MobilePhone.png";
 import CardboardBox from "../assets/Home/ItemCategories/CardboardBox.png";
+import PaperCup from "../assets/Home/ItemCategories/PaperCup.jpg";
+import CleaningBottle from "../assets/Home/ItemCategories/CleaningBottle.jpg";
+import Tinfoil from "../assets/Home/ItemCategories/Tinfoil.jpg";
 import Laptop from "../assets/Home/ItemCategories/Laptop.png";
 import PlasticContainer from "../assets/Home/ItemCategories/PlasticContainer.png";
 import ElectronicCoords from "../assets/Home/ItemCategories/ElectronicCoords.png";
@@ -21,6 +24,10 @@ import Cigarette from "../assets/Home/ItemCategories/Cigarette.png";
 import Mask from "../assets/Home/ItemCategories/Mask.png";
 import Lightbulb from "../assets/Home/ItemCategories/Lightbulb.png";
 import GameController from "../assets/Home/ItemCategories/GameController.png";
+import Paper from "../assets/Home/ItemCategories/Paper.png";
+import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
+import Paint from "../assets/Home/ItemCategories/Paint.png";
+
 
 
 
@@ -55,7 +62,7 @@ const Home = () => {
             </div>
             <div className="PanelOne">
                 <div className='Title'>
-                    Thousands of Objects<br></br> 
+                    Hundreds of Objects<br></br> 
                     to Detect From, That<br></br>
                     Help You Recycle
                 </div>
@@ -69,6 +76,9 @@ const Home = () => {
                         <img src={PlasticBag} alt="Plastic Bag" className='Item' />
                         <img src={MobilePhone} alt="Mobile Phone" className='Item' />
                         <img src={CardboardBox} alt="Cardboard Box" className='Item' />
+                        <img src={PaperCup} alt="Paper Cup" className='Item' />
+                        <img src={CleaningBottle} alt="Cleaning Bottle" className='Item' />
+                        <img src={Tinfoil} alt="Tinfoil" className='Item' />
                     </div>
                     <div className='ItemRow' ref={rightScrollRef}>
                         <img src={Laptop} alt="Laptop" className='Item' />
@@ -79,6 +89,9 @@ const Home = () => {
                         <img src={Mask} alt="Mask" className='Item' />
                         <img src={Lightbulb} alt="Lightbulb" className='Item' />
                         <img src={GameController} alt="Game Controller" className='Item' />
+                        <img src={Paper} alt="Paper" className='Item' />
+                        <img src={FoodContainer} alt="Food Container" className='Item' />
+                        <img src={Paint} alt="Paint" className='Item' />
                     </div>
                 </div>
             </div>
