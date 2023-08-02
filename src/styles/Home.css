@@ -66,6 +66,10 @@
     margin-right: 75px;
 }
 
+.PanelTwoButton {
+    display: flex;
+}
+
 .PanelThree {
     display: flex;
     height: 500px;

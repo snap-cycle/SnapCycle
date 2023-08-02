@@ -109,7 +109,9 @@ const Home = () => {
                         Try out SnapCycle today and experience the<br></br>
                         power of smooth recycling.
                     </div>
-                    <OutlineButton title="Try Now" destination="/demo"/>
+                    <div className='PanelTwoButton'>
+                        <OutlineButton title="Try Now" destination="/demo"/>
+                    </div>
                 </div>
             </div>
             <div className='PanelThree'>
