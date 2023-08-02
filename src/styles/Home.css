@@ -99,7 +99,7 @@
     text-align: left;
     padding-left: 75px;
     padding-right: 75px;
-    height: 500px;
+    height: 475px;
 
     margin: 0 auto;
     max-width: 1350px;
@@ -115,6 +115,15 @@
     font-size: 18px;
     color: #434343;
     margin-top: 5px;
+}
+
+.PanelFive {
+    height: 750px;
+}
+
+.PanelFiveButton {
+    display: flex;
+    justify-content: center;
 }
 
 

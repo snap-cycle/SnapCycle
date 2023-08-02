@@ -188,15 +188,22 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <AnimatedPage>
-                <div className="panel">
-                    <SlideIn invert={true}>
-                        <div>
-                            panel 3
-                        </div>
-                    </SlideIn>
+            <div className='PanelFive'>
+                <div className='Title'>
+                    Join Force for a Greener<br></br>
+                    Earth - Let's Make a<br></br>
+                    Change Together
                 </div>
-            </AnimatedPage>
+                <div className='SubText'>
+                    At SnapCycle, we want to encourage others to do everything<br></br>
+                    they can in contributing towards a stronger future. It is our<br></br>
+                    responsibility to provide the privilege we own down to our<br></br>
+                    future generations.
+                </div>
+                <div className='PanelFiveButton'>
+                    <OutlineButton title="Try Now" destination="/demo"/>
+                </div>
+            </div>
         </div>
     )
 }
