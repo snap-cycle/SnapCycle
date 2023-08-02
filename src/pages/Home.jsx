@@ -27,8 +27,7 @@ import GameController from "../assets/Home/ItemCategories/GameController.png";
 import Paper from "../assets/Home/ItemCategories/Paper.png";
 import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
-import PanelTwoPhone from "../assets/Home/PanelTwoPhone.png";
-import PanelTwoLaptop from "../assets/Home/PanelTwoLaptop.png";
+import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png"
 
 
 const Home = () => {
@@ -116,8 +115,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='PanelTwoImages'>
-                    <img src={PanelTwoLaptop} alt="Laptop" className='PanelTwoLaptop' />
-                    <img src={PanelTwoPhone} alt="Phone" className='PanelTwoPhone' />
+                    <img src={PanelTwoLaptopPhone} alt="Laptop and Phone" className='PanelTwoLaptopPhone' />
                 </div>
             </div>
             <div className='PanelThree'>

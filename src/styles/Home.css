@@ -64,7 +64,7 @@
 
 .PanelTwoText {
     margin-left: 75px;
-    max-width: 500px;
+    max-width: 470px;
 }
 
 .PanelTwoButton {
@@ -72,24 +72,9 @@
 }
 
 .PanelTwoImages {
-    position: relative;
-    margin-right: -125px;
+    margin-right: -80px;
     display: flex;
-    flex-direction: row-reverse;
-    flex: 1;
     font-size: 16px;
-}
-
-.PanelTwoPhone {
-    height: 500px;
-}
-
-.PanelTwoLaptop {
-    height: 300px;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    right: 450px;
 }
 
 .PanelThree {
