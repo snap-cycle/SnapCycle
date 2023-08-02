@@ -7,7 +7,7 @@
     font-size: 16px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
     .PanelTwo {
         max-width: 1350px;
         margin: 0 auto;

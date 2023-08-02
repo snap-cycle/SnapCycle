@@ -85,7 +85,7 @@
     width: 145px;
 }
 
-@media (min-width: 1000.01px) {
+@media (min-width: 1001px) {
     .HamburgerMenu {
         display: none;
     }
