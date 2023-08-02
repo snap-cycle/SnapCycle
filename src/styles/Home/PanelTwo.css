@@ -1,3 +1,12 @@
+.PanelTwoButton {
+    display: flex;
+}
+
+.PanelTwoImages {
+    margin-right: -105px;
+    font-size: 16px;
+}
+
 @media (min-width: 1000px) {
     .PanelTwo {
         max-width: 1350px;
@@ -18,15 +27,6 @@
         max-width: 380px;
     }
     
-    .PanelTwoButton {
-        display: flex;
-    }
-    
-    .PanelTwoImages {
-        margin-right: -105px;
-        font-size: 16px;
-    }
-    
     .PanelTwoLaptopPhone {
         max-height: 500px;
     }
@@ -35,27 +35,11 @@
 @media (max-width: 1000px) {
     .PanelTwo {
         margin-bottom: 100px;
+        margin-left: 25px;
+        margin-right: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: left;
     }
-    
-    .PanelTwoText {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-    
-    .PanelTwoButton {
-        display: flex;
-    }
-    
-    /* .PanelTwoImages {
-        margin-right: -105px;
-        font-size: 16px;
-    } */
-    
-    /* .PanelTwoLaptopPhone {
-        max-height: 500px;
-    } */
 }
