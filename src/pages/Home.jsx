@@ -27,6 +27,8 @@ import GameController from "../assets/Home/ItemCategories/GameController.png";
 import Paper from "../assets/Home/ItemCategories/Paper.png";
 import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
+import PanelTwoPhone from "../assets/Home/PanelTwoPhone.png";
+import PanelTwoLaptop from "../assets/Home/PanelTwoLaptop.png";
 
 
 const Home = () => {
@@ -100,11 +102,7 @@ const Home = () => {
                         Anywhere
                     </div>
                     <div className='SubText'>
-                        {/* Take a picture of the object in front of you, that’s all you<br></br>
-                        have to do! Let SnapCycle do the rest as it detects the<br></br>
-                        object for you, and lets you in on all the sweet disposing<br></br>
-                        details. */}
-                        Take a picture of the object in front of you, that’s all you
+                        Take a picture of the object in front of you, that &#39; s all you
                         have to do! Let SnapCycle do the rest as it detects the
                         object for you, and lets you in on all the sweet disposing
                         details.
@@ -118,7 +116,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='PanelTwoImages'>
-
+                    {/* <img src={PanelTwoLaptop} alt="Laptop" className='PanelTwoLaptop' /> */}
+                    <img src={PanelTwoPhone} alt="Phone" className='PanelTwoPhone' />
                 </div>
             </div>
             <div className='PanelThree'>
