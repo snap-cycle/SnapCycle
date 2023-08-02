@@ -49,9 +49,9 @@ const Home = () => {
         };
     }, []);
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return (
         <div>
@@ -96,22 +96,29 @@ const Home = () => {
             <div className='PanelTwo'>
                 <div className='PanelTwoText'>
                     <div className='Title'>
-                        Take a Snap of Any<br></br> 
-                        Item, Anywhere
+                        Take a Snap of Any Item,
+                        Anywhere
                     </div>
                     <div className='SubText'>
-                        Take a picture of the object in front of you,<br></br>
-                        that’s all you have to do! Let SnapCycle do<br></br>
-                        the rest as it detects the object for you, and<br></br>
-                        lets you in on all the sweet disposing details.
+                        {/* Take a picture of the object in front of you, that’s all you<br></br>
+                        have to do! Let SnapCycle do the rest as it detects the<br></br>
+                        object for you, and lets you in on all the sweet disposing<br></br>
+                        details. */}
+                        Take a picture of the object in front of you, that’s all you
+                        have to do! Let SnapCycle do the rest as it detects the
+                        object for you, and lets you in on all the sweet disposing
+                        details.
                     </div>
                     <div className='SubText'>
-                        Try out SnapCycle today and experience the<br></br>
-                        power of smooth recycling.
+                        Try out SnapCycle today and experience the power of
+                        smooth recycling.
                     </div>
                     <div className='PanelTwoButton'>
                         <OutlineButton title="Try Now" destination="/demo"/>
                     </div>
+                </div>
+                <div className='PanelTwoImages'>
+
                 </div>
             </div>
             <div className='PanelThree'>
@@ -190,7 +197,7 @@ const Home = () => {
             </div>
             <div className='PanelFive'>
                 <div className='Title'>
-                    Join Force for a Greener<br></br>
+                    Join Forces for a Greener<br></br>
                     Earth - Let's Make a<br></br>
                     Change Together
                 </div>

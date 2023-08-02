@@ -63,7 +63,7 @@
 
 .PanelTwoText {
     margin-left: 75px;
-    margin-right: 75px;
+    max-width: 500px;
 }
 
 .PanelTwoButton {
