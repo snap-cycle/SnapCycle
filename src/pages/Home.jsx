@@ -1,9 +1,12 @@
 import React, {useEffect, useRef} from 'react';
 import CountUp from 'react-countup';
-import '../styles/Home.css';
+import '../styles/Home/Home.css';
+import '../styles/Home/PanelOne.css';
+import '../styles/Home/PanelTwo.css';
+import '../styles/Home/PanelThree.css';
+import '../styles/Home/PanelFour.css';
+import '../styles/Home/PanelFive.css';
 import OutlineButton from "../components/OutlineButton";
-import SlideIn from "../animations/SlideIn";
-import AnimatedPage from "../animations/AnimatedPage";
 import RecyclingBackground from "../assets/Home/RecyclingBackground.jpg";
 import PlasticWrapper from "../assets/Home/ItemCategories/PlasticWrapper.png";
 import PlasticBottle from "../assets/Home/ItemCategories/PlasticBottle.png";

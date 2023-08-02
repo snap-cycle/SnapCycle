@@ -1,0 +1,8 @@
+.HomePanelLanding {
+    height: 600px;
+    display: flex;
+}
+
+.HomePanelLandingBackground {
+    width: 100%;
+}

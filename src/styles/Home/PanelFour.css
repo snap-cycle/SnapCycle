@@ -1,0 +1,23 @@
+.PanelFour {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 75px;
+    padding-right: 75px;
+    height: 475px;
+
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
+.StatisticsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.StatisticSubText {
+    font-size: 18px;
+    color: #434343;
+    margin-top: 5px;
+}

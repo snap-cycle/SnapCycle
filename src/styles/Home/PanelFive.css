@@ -1,0 +1,14 @@
+.PanelFive {
+    height: 750px;
+}
+
+.PanelFiveButton {
+    display: flex;
+    justify-content: center;
+}
+
+#PanelFiveText {
+    max-width: 525px;
+    margin-left: auto;
+    margin-right: auto;
+}
