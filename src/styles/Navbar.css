@@ -79,9 +79,10 @@
     transition: color 0.2s ease-in-out;
 }
 
-.ButtonContainer {
+.RightContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 145px;
 }
 
@@ -100,7 +101,7 @@
         display: none;
     }
 
-    .ButtonContainer {
+    .RightContainer {
         width: 190px;
     }
 
@@ -109,5 +110,14 @@
     }
     .HamburgerMenu:hover {
         cursor: pointer;
+    }
+}
+@media (max-width: 750px) {
+    .ButtonContainer {
+        display: none;
+    }
+
+    .RightContainer {
+        width: 50px;
     }
 }

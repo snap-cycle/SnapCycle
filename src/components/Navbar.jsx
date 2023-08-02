@@ -68,8 +68,10 @@ const Navbar = ({ pages }) => {
             <NavbarPageItem page={page} key={page} />
           ))}
         </div>
-        <div className='ButtonContainer'>
-          <OutlineButton title="Try Now" destination="/demo" className="NavBarButton" />
+        <div className='RightContainer'>
+          <div className='ButtonContainer'>
+            <OutlineButton title="Try Now" destination="/demo"/>
+          </div>
           <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu' />
         </div>
       </div>
