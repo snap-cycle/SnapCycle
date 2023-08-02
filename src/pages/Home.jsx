@@ -51,9 +51,9 @@ const Home = () => {
         };
     }, []);
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div>
@@ -102,7 +102,7 @@ const Home = () => {
                         Anywhere
                     </div>
                     <div className='SubText'>
-                        Take a picture of the object in front of you, that &#39; s all you
+                        Take a picture of the object in front of you, that&#39;s all you
                         have to do! Let SnapCycle do the rest as it detects the
                         object for you, and lets you in on all the sweet disposing
                         details.
@@ -116,7 +116,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='PanelTwoImages'>
-                    {/* <img src={PanelTwoLaptop} alt="Laptop" className='PanelTwoLaptop' /> */}
+                    <img src={PanelTwoLaptop} alt="Laptop" className='PanelTwoLaptop' />
                     <img src={PanelTwoPhone} alt="Phone" className='PanelTwoPhone' />
                 </div>
             </div>
