@@ -62,14 +62,14 @@
     align-items: center;
     text-align: left;
     position: relative;
-    padding-left: 400px;
+    padding-left: 300px;
 }
 
 .PanelTwoText {
     position: absolute;
     left: 0;
     margin-left: 75px;
-    max-width: 470px;
+    max-width: 380px;
 }
 
 .PanelTwoButton {
