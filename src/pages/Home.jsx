@@ -194,10 +194,10 @@ const Home = () => {
                     Earth - Let's Make a<br></br>
                     Change Together
                 </div>
-                <div className='SubText'>
-                    At SnapCycle, we want to encourage others to do everything<br></br>
-                    they can in contributing towards a stronger future. It is our<br></br>
-                    responsibility to provide the privilege we own down to our<br></br>
+                <div className='SubText' id='PanelFiveText'>
+                    At SnapCycle, we want to encourage others to do everything
+                    they can in contributing towards a stronger future. It is our
+                    responsibility to provide the privilege we own down to our
                     future generations.
                 </div>
                 <div className='PanelFiveButton'>
