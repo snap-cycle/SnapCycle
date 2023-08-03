@@ -110,8 +110,8 @@ const Home = () => {
                         details.
                     </div>
                     <div className='SubText'>
-                        Try out SnapCycle today and experience the power of
-                        smooth recycling.
+                        Try out SnapCycle and experience the power of smooth
+                        recycling today.
                     </div>
                     <div className='PanelTwoButton'>
                         <OutlineButton title="Try Now" destination="/demo"/>
@@ -137,8 +137,8 @@ const Home = () => {
                         detail on things you don't need to know! 
                     </div>
                     <div className='SubText'>
-                        Try out SnapCycle today and experience the<br></br>
-                        power of smooth recycling.
+                        Try out SnapCycle and unlock the secrets<br></br>
+                        of sustainable living today.
                     </div>
                     <div className='PanelThreeButton'>
                         <OutlineButton title="Try Now" destination="/demo"/>
