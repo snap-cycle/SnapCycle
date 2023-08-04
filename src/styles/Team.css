@@ -1,6 +1,14 @@
-.TeamPanelLanding {
-    height: 600px;
+.team-landing-panel {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.team-members-container{
+
+}
+
+.team-member{
+
 }
