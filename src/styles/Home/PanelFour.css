@@ -17,19 +17,3 @@
 #PanelFourSubText {
     max-width: 400px;
 }
-
-.StatisticsContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.Statistic {
-    max-width: 240px;
-}
-
-.StatisticSubText {
-    font-size: 18px;
-    color: #434343;
-    margin-top: 5px;
-}

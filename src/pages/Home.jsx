@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from 'react';
-import CountUp from 'react-countup';
 import '../styles/Home/Home.css';
 import '../styles/Home/PanelOne.css';
 import '../styles/Home/PanelTwo.css';
@@ -32,6 +31,7 @@ import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png"
 import Ticker from "../components/Ticker";
+import StatisticsRow from "../components/StatisticsRow";
 
 
 const Home = () => {
@@ -166,20 +166,7 @@ const Home = () => {
                     Take a glimpse into why responsible recycling 
                     matters now more than ever.
                 </div>
-                <div className='StatisticsContainer'>
-                    {
-                        statistics.map((statistic) => (
-                            <div className='Statistic'>
-                                <div className='Title'>
-                                    <CountUp end={statistic.value} suffix={statistic.suffix} enableScrollSpy={true}/>
-                                </div>
-                                <div className='StatisticSubText'>
-                                    {statistic.subtext}
-                                </div>
-                            </div>
-                        ))
-                    }
-                </div>
+                <StatisticsRow statistics={statistics}/>
             </div>
             <div className='PanelFive'>
                 <div className='Title' id='PanelFiveTitle'>
