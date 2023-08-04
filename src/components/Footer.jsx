@@ -38,31 +38,29 @@ const Footer = ({pages}) => {
                     </div>
                 </div>
                 <div className='FooterInfo'>
-                    <div className='ProductSection'>
-                        <div className='ProductTitle'>Product</div>
+                    <div>
+                        <div className='footer-column-title'>Product</div>
                         {
                             FooterProductInfo.map((item) => (
                                 <div className='footer-item'>{item.name}</div>
                             ))
                         }
                     </div>
-                    <div className='HelpSection'>
-                        <div className='HelpTitle'>Help Center</div>
+                    <div>
+                        <div className='footer-column-title'>Help Center</div>
                         {
                             FooterHelpInfo.map((item) => (
                                 <div className='footer-item'>{item.name}</div>
                             ))
                         }
                     </div>
-                    <div className='CompanySection'>
-                        <div className='CompanyTitle'>
+                    <div>
+                        <div className='footer-column-title'>
                             Company
                         </div>
                         {
                             pages.map((page, index) => (
-                                <div className='footer-item' key={index} onClick={() => goToLocation(page.toLowerCase())}>
-                                    {page}
-                                </div>
+                                <div className='footer-item' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>
                             ))
                         }
                     </div>

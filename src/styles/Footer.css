@@ -88,15 +88,7 @@
     text-align: left;
 }
 
-.ProductSection {
-    width: 80px;
-}
-
-.HelpSection {
-    width: 105px;
-}
-
-.ProductTitle, .HelpTitle, .CompanyTitle {
+.footer-column-title {
     margin-bottom: 65px;
 }
 
