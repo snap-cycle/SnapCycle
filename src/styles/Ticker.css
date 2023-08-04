@@ -1,0 +1,17 @@
+
+.Item {
+    border-radius: 20px;
+    margin: 8px;
+    height: 170px;
+    width: 170px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+.Item:hover {
+    cursor: pointer;
+    transform: scale(1.05,1.05);
+}
+
+.ItemRow {
+    display: flex;
+}
