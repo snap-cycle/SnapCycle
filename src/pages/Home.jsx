@@ -14,6 +14,8 @@ import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
 import StatisticsRow from "../components/StatisticsRow";
 import {StatisticsInfo} from "../Info/StatisticsInfo";
 import AnimatedPage from "../animations/AnimatedPage";
+import TurtleLeft from "../assets/Home/TurtleLeft.png";
+import TurtleRight from "../assets/Home/TurtleRight.png";
 
 
 const PanelLanding = () => {
@@ -128,6 +130,11 @@ const PanelFive = () => {
         </div>
         <div className='PanelFiveButton'>
             <OutlineButton title="Try Now" destination="/demo"/>
+        </div>
+        <div className='TurtleContainer'>
+            <img src={TurtleLeft} alt="Left Turtle" className='TurtleLeft'/>
+            <div></div>
+            <img src={TurtleRight} alt="Right Turtle" className='TurtleRight'/>
         </div>
     </div>;
 }

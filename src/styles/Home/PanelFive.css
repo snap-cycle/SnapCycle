@@ -1,7 +1,8 @@
 .PanelFive {
-    height: 750px;
-    margin-left: 75px;
-    margin-right: 75px;
+    padding-left: 75px;
+    padding-right: 75px;
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 #PanelFiveTitle {
@@ -21,9 +22,34 @@
     justify-content: center;
 }
 
+@media (min-width: 1000px) {
+.TurtleContainer {
+    display: grid;
+    grid-template-columns: 1fr 200px 1.2fr;
+    align-items: end;
+    margin-top: -75px;
+    margin-bottom: 100px;
+}
+
+.TurtleLeft, .TurtleRight {
+    max-width: 100%;
+    height: auto;
+}
+}
+
 @media (max-width: 1000px) {
     .PanelFive {
-        margin-left: 25px;
-        margin-right: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .TurtleContainer {
+        display: inline-block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .TurtleLeft {
+        display: none;
     }
 }
