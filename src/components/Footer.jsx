@@ -27,7 +27,7 @@ const Footer = ({pages}) => {
                                 ?
                                     <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
                                 :
-                                    <a href={item.link} target="_blank"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' /></a>
+                                    <a href={item.link} target="_blank"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
                             ))}
                     </div>
                 </div>
