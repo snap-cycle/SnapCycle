@@ -5,6 +5,11 @@
     margin-top: 50px;
 }
 
+#PanelOneTitle {
+    margin: 0 auto;
+    max-width: 363px;
+}
+
 .ItemCategories {
     margin-top:50px;
     display: flex;

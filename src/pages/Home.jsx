@@ -19,7 +19,6 @@ import TurtleRight from "../assets/Home/TurtleRight.png";
 
 
 const PanelLanding = () => {
-
     return (
         <div className='HomePanelLanding'>
             <div className="panel-home-title">
@@ -32,11 +31,10 @@ const PanelLanding = () => {
 }
 
 const PanelOne = () => {
-
     return <div className="PanelOne">
-        <div className='Title'>
-            Hundreds of Objects<br></br>
-            to Detect From, That<br></br>
+        <div className='Title' id='PanelOneTitle'>
+            Hundreds of Objects
+            to Detect From, That
             Help You Recycle.
         </div>
         <div className='ItemCategories'>
@@ -101,7 +99,6 @@ const PanelThree = () => {
 }
 
 const PanelFour = () => {
-
     return <div className='PanelFour'>
         <div className='Title' id='PanelFourTitle'>
             Let the Numbers Speak
