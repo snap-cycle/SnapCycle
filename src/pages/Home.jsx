@@ -31,6 +31,7 @@ import Paper from "../assets/Home/ItemCategories/Paper.png";
 import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png"
+import Ticker from "../components/Ticker";
 
 
 const Home = () => {
@@ -57,6 +58,34 @@ const Home = () => {
     //     window.scrollTo(0, 0)
     // }, [])
 
+    const tickerItems1 = [
+        {name: "Plastic Wrapper", src: PlasticWrapper},
+        {name: "Plastic Bottle", src: PlasticBottle},
+        {name: "Metal Can", src: MetalCan},
+        {name: "Glass Bottle", src: GlassBottle},
+        {name: "Battery", src: Battery},
+        {name: "Plastic Bag", src: PlasticBag},
+        {name: "Mobile Phone", src: MobilePhone},
+        {name: "Cardboard Box", src: CardboardBox},
+        {name: "Paper Cup", src: PaperCup},
+        {name: "Cleaning Bottle", src: CleaningBottle},
+        {name: "Tinfoil", src: Tinfoil},
+    ]
+
+    const tickerItems2 = [
+        {name: "Laptop", src: Laptop},
+        {name: "Plastic Container", src: PlasticContainer},
+        {name: "Electronic Coords", src: ElectronicCoords},
+        {name: "Paper Bag", src: PaperBag},
+        {name: "Cigarette", src: Cigarette},
+        {name: "Mask", src: Mask},
+        {name: "Lightbulb", src: Lightbulb},
+        {name: "Game Controller", src: GameController},
+        {name: "Paper", src: Paper},
+        {name: "Food Container", src: FoodContainer},
+        {name: "Paint", src: Paint},
+    ]
+
     return (
         <div>
             <div className="HomePanelLanding">
@@ -69,32 +98,8 @@ const Home = () => {
                     Help You Recycle
                 </div>
                 <div className='ItemCategories'>
-                    <div className='ItemRow' ref={leftScrollRef}>
-                        <img src={PlasticWrapper} alt="Plastic Wrapper" className='Item' />
-                        <img src={PlasticBottle} alt="Plastic Bottle" className='Item' />
-                        <img src={MetalCan} alt="Metal Can" className='Item' />
-                        <img src={GlassBottle} alt="Glass Bottle" className='Item' />
-                        <img src={Battery} alt="Battery" className='Item' />
-                        <img src={PlasticBag} alt="Plastic Bag" className='Item' />
-                        <img src={MobilePhone} alt="Mobile Phone" className='Item' />
-                        <img src={CardboardBox} alt="Cardboard Box" className='Item' />
-                        <img src={PaperCup} alt="Paper Cup" className='Item' />
-                        <img src={CleaningBottle} alt="Cleaning Bottle" className='Item' />
-                        <img src={Tinfoil} alt="Tinfoil" className='Item' />
-                    </div>
-                    <div className='ItemRow' ref={rightScrollRef}>
-                        <img src={Laptop} alt="Laptop" className='Item' />
-                        <img src={PlasticContainer} alt="Plastic Container" className='Item' />
-                        <img src={ElectronicCoords} alt="Electronic Coords" className='Item' />
-                        <img src={PaperBag} alt="Paper Bag" className='Item' />
-                        <img src={Cigarette} alt="Cigarette" className='Item' />
-                        <img src={Mask} alt="Mask" className='Item' />
-                        <img src={Lightbulb} alt="Lightbulb" className='Item' />
-                        <img src={GameController} alt="Game Controller" className='Item' />
-                        <img src={Paper} alt="Paper" className='Item' />
-                        <img src={FoodContainer} alt="Food Container" className='Item' />
-                        <img src={Paint} alt="Paint" className='Item' />
-                    </div>
+                    <Ticker items={tickerItems1}/>
+                    <Ticker items={tickerItems2} invert={true}/>
                 </div>
             </div>
             <div className='PanelTwo'>
