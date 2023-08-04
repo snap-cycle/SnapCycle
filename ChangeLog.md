@@ -1,5 +1,4 @@
 # SnapCycle Changelog
-### All recent changes related to SnapCyle are documented here.
 ---
 
 ### **Version 0.5.0**
