@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import BlackLogo from "../assets/branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";

@@ -6,8 +6,9 @@ import Team from './pages/Team';
 import Demo from './pages/Demo';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { AnimatePresence } from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 import AppLoadAnimation from "./animations/AppLoadAnimation";
+
 function App({pages}) {
 
     return (

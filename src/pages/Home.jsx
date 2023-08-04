@@ -7,6 +7,11 @@ import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
 import OutlineButton from "../components/OutlineButton";
 import RecyclingBackground from "../assets/Home/RecyclingBackground.jpg";
+import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png"
+import Ticker from "../components/Ticker";
+import StatisticsRow from "../components/StatisticsRow";
+import {StatisticsData} from "../data/StatisticsData";
+import {TickerData} from "../data/TickerData";
 import PlasticWrapper from "../assets/Home/ItemCategories/PlasticWrapper.png";
 import PlasticBottle from "../assets/Home/ItemCategories/PlasticBottle.png";
 import MetalCan from "../assets/Home/ItemCategories/MetalCan.png";
@@ -29,9 +34,6 @@ import GameController from "../assets/Home/ItemCategories/GameController.png";
 import Paper from "../assets/Home/ItemCategories/Paper.png";
 import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
-import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png"
-import Ticker from "../components/Ticker";
-import StatisticsRow from "../components/StatisticsRow";
 
 
 const PanelOne = () => {
@@ -62,6 +64,7 @@ const PanelOne = () => {
         {name: "Food Container", src: FoodContainer},
         {name: "Paint", src: Paint},
     ]
+
 
     return <div className="PanelOne">
         <div className='Title'>
@@ -131,12 +134,6 @@ const PanelThree = () => {
 }
 
 const PanelFour = () => {
-    const statistics = [
-        {name: "Statistic One", value: "12700000", suffix: "", subtext: "tonnes of plastic are littered into the ocean\nevery year."},
-        {name: "Statistic Two", value: "11", suffix: " Masks", subtext: "are littered every hour."},
-        {name: "Statistic Three", value: "60", suffix: " %", subtext: "of water pollution is attributed\nto litter."},
-        {name: "Statistic Four", value: "100000", suffix: "", subtext: "animals are killed by plastic bags every year.\n"},
-    ]
 
     return <div className='PanelFour'>
         <div className='Title' id='PanelFourTitle'>
@@ -147,7 +144,7 @@ const PanelFour = () => {
             Take a glimpse into why responsible recycling
             matters now more than ever.
         </div>
-        <StatisticsRow statistics={statistics}/>
+        <StatisticsRow statistics={StatisticsData}/>
     </div>;
 }
 
