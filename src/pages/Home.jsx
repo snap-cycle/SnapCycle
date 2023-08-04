@@ -13,6 +13,7 @@ import OutlineButton from "../components/OutlineButton";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
 import StatisticsRow from "../components/StatisticsRow";
 import {StatisticsInfo} from "../Info/StatisticsInfo";
+import AnimatedPage from "../animations/AnimatedPage";
 
 
 const PanelLanding = () => {
@@ -139,14 +140,14 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <AnimatedPage>
             <PanelLanding/>
             <PanelOne/>
             <PanelTwo/>
             <PanelThree/>
             <PanelFour/>
             <PanelFive/>
-        </div>
+        </AnimatedPage>
     )
 }
 

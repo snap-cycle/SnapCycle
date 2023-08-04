@@ -11,7 +11,7 @@ const OutlineButton = ({title, destination}) => {
     return (
         <div className="OutlineButton" onClick={() => goToLocation(destination)}>
             {title}
-            <span class="arrow"></span>
+            <span className="arrow"></span>
         </div>
     );
 }
