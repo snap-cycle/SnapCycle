@@ -1,12 +1,9 @@
 import React from 'react';
 import '../styles/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
-import GithubLogo from "../assets/SocialMediaIcons/GitHub.svg";
-import LinkedinLogo from "../assets/SocialMediaIcons/LinkedIn.svg";
-import TwitterLogo from "../assets/SocialMediaIcons/Twitter.svg";
-import YoutubeLogo from "../assets/SocialMediaIcons/YouTube.svg";
-import FacebookLogo from "../assets/SocialMediaIcons/Facebook.svg";
+
 import {useNavigate} from "react-router-dom";
+import {SocialMediaData} from "../data/SocialMedia";
 
 const Footer = ({pages}) => {
 
@@ -14,8 +11,6 @@ const Footer = ({pages}) => {
     const goToLocation = (location) => {
         navigate(location);
     }
-
-    console.log(pages)
 
     return (
         <div className='FooterContainer'>
@@ -31,13 +26,17 @@ const Footer = ({pages}) => {
                         Saving the turtles one snap at a time.
                     </div>
                     <div className='SocialMedia'>
-                    <a href="https://github.com/luaibash/SnapCycle" target="blank">
-                        <img src={GithubLogo} alt="Github Logo" className='SocialMediaLogo' />
-                    </a>
-                        <img src={LinkedinLogo} alt="Linkedin Logo" className='SocialMediaLogo' />
-                        <img src={TwitterLogo} alt="Twitter Logo" className='SocialMediaLogo' />
-                        <img src={YoutubeLogo} alt="Youtube Logo" className='SocialMediaLogo' />
-                        <img src={FacebookLogo} alt="Facebook Logo" className='SocialMediaLogo' />
+                        {
+                            SocialMediaData.map((item) => (
+                                item.link === ""
+                                ?
+                                    <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
+                                :
+                                    <a href={item.link} target="_blank">
+                                        <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
+                                    </a>
+                            ))
+                        }
                     </div>
                 </div>
                 <div className='FooterInfo'>
