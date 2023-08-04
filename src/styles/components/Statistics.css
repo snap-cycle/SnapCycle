@@ -8,6 +8,10 @@
     max-width: 240px;
 }
 
+#StatisticThree {
+    max-width: 170px;
+}
+
 .StatisticSubText {
     font-size: 18px;
     color: #434343;

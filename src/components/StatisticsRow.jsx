@@ -12,7 +12,7 @@ const StatisticsRow = ({ statistics }) => {
                         <div className='Title'>
                             <CountUp end={statistic.value} suffix={statistic.suffix} enableScrollSpy={true}/>
                         </div>
-                        <div className='StatisticSubText'>
+                        <div className='StatisticSubText' id={statistic.name}>
                             {statistic.subtext}
                         </div>
                     </div>
