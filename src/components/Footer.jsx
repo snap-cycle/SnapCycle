@@ -4,6 +4,8 @@ import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 
 import {useNavigate} from "react-router-dom";
 import {SocialMediaData} from "../Info/SocialMediaInfo";
+import {FooterHelpInfo} from "../Info/FooterHelpInfo";
+import {FooterProductInfo} from "../Info/FooterProductInfo";
 
 const Footer = ({pages}) => {
 
@@ -18,13 +20,9 @@ const Footer = ({pages}) => {
                 <div className='FooterLeft'>
                     <div className='FooterLogoName'>
                         <img src={WhiteLogo} alt="SnapCycle Logo" className="FooterLogoImage"/>
-                        <div className='SnapcycleTitle'>
-                            SnapCycle
-                        </div>
+                        <div className='SnapcycleTitle'>SnapCycle</div>
                     </div>
-                    <div className='ProjectSlogan'>
-                        Saving the turtles one snap at a time.
-                    </div>
+                    <div className='ProjectSlogan'>Saving the turtles one snap at a time.</div>
                     <div className='SocialMedia'>
                         {
                             SocialMediaData.map((item) => (
@@ -41,43 +39,31 @@ const Footer = ({pages}) => {
                 </div>
                 <div className='FooterInfo'>
                     <div className='ProductSection'>
-                        <div className='ProductTitle'>
-                            Product
-                        </div>
-                        <div className='TryNow'>
-                            Try Now
-                        </div>
-                        <div className='Features'>
-                            Features
-                        </div>
-                        <div className='Resources'>
-                            Resources
-                        </div>
-                        <div className='Security'>
-                            Security
-                        </div>
+                        <div className='ProductTitle'>Product</div>
+                        {
+                            FooterProductInfo.map((item) => (
+                                <div className='footer-item'>{item.name}</div>
+                            ))
+                        }
                     </div>
                     <div className='HelpSection'>
-                        <div className='HelpTitle'>
-                            Help Center
-                        </div>
-                        <div className='FAQ'>
-                            FAQ
-                        </div>
-                        <div className='Contact'>
-                            Contact Us
-                        </div>
+                        <div className='HelpTitle'>Help Center</div>
+                        {
+                            FooterHelpInfo.map((item) => (
+                                <div className='footer-item'>{item.name}</div>
+                            ))
+                        }
                     </div>
                     <div className='CompanySection'>
                         <div className='CompanyTitle'>
                             Company
                         </div>
                         {
-                            pages.map((page, index) =>
-                                <div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>
+                            pages.map((page, index) => (
+                                <div className='footer-item' key={index} onClick={() => goToLocation(page.toLowerCase())}>
                                     {page}
                                 </div>
-                            )
+                            ))
                         }
                     </div>
                 </div>

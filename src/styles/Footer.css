@@ -100,30 +100,14 @@
     margin-bottom: 65px;
 }
 
-.TryNow, .Features, .Resources, .Security, .FAQ, .Contact, .Team, .About {
+.footer-item {
     color: #A4A4A4;
     margin-bottom: 20px;
     transition: padding-left 0.5s, color 0.5s;
     font-size: 16px;
 }
 
-.TryNow:hover, .Features:hover, .Resources:hover, .Security:hover, 
-.FAQ:hover, .Contact:hover, .Team:hover, .About:hover {
-    cursor: pointer;
-    color: white;
-    padding-left: 15px;
-    transition: padding-left 0.5s, color 0.5s;
-}
-
-
-.FooterItem {
-    color: #A4A4A4;
-    margin-bottom: 20px;
-    transition: padding-left 0.5s, color 0.5s;
-    font-size: 16px;
-}
-
-.FooterItem:hover {
+.footer-item:hover {
     cursor: pointer;
     color: white;
     padding-left: 15px;
