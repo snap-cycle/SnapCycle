@@ -34,6 +34,107 @@ import Ticker from "../components/Ticker";
 import StatisticsRow from "../components/StatisticsRow";
 
 
+const PanelOne = (tickerItems1, tickerItems2) => {
+    return <div className="PanelOne">
+        <div className='Title'>
+            Hundreds of Objects<br></br>
+            to Detect From, That<br></br>
+            Help You Recycle
+        </div>
+        <div className='ItemCategories'>
+            <Ticker items={tickerItems1}/>
+            <Ticker items={tickerItems2} invert={true}/>
+        </div>
+    </div>;
+}
+
+const PanelTwo = () => {
+    return <div className='PanelTwo'>
+        <div className='PanelTwoText'>
+            <div className='Title'>
+                Take a Snap of Any
+                Item, Anywhere
+            </div>
+            <div className='SubText'>
+                Take a picture of the object in front of you,
+                that&#39;s all you have to do! Let SnapCycle do
+                the rest as it detects the object for you,
+                and lets you in on all the sweet disposing details.
+            </div>
+            <div className='SubText'>
+                Try out SnapCycle and experience the power of smooth
+                recycling today.
+            </div>
+            <div className='PanelTwoButton'>
+                <OutlineButton title="Try Now" destination="/demo"/>
+            </div>
+        </div>
+        <div className='PanelTwoImages'>
+            <img src={PanelTwoLaptopPhone} alt="Laptop and Phone" className='PanelTwoLaptopPhone'/>
+        </div>
+    </div>;
+}
+
+const PanelThree = () => {
+    return <div className='PanelThree'>
+        <div className='PanelThreeImage'>
+
+        </div>
+        <div className='PanelThreeText'>
+            <div className='Title'>
+                Can't Take a Picture?<br></br>
+                No Worries!
+            </div>
+            <div className='SubText'>
+                Search through our ever growing database<br></br>
+                of objects to learn how to dispose of them.<br></br>
+                Say no more to scientific articles going into<br></br>
+                detail on things you don't need to know!
+            </div>
+            <div className='SubText'>
+                Try out SnapCycle and unlock the secrets<br></br>
+                of sustainable living today.
+            </div>
+            <div className='PanelThreeButton'>
+                <OutlineButton title="Try Now" destination="/demo"/>
+            </div>
+        </div>
+    </div>;
+}
+
+const PanelFour = (statistics) => {
+    return <div className='PanelFour'>
+        <div className='Title' id='PanelFourTitle'>
+            Let the Numbers Speak
+            for Themselves.
+        </div>
+        <div className='SubText' id="PanelFourSubText">
+            Take a glimpse into why responsible recycling
+            matters now more than ever.
+        </div>
+        <StatisticsRow statistics={statistics}/>
+    </div>;
+}
+
+const PanelFive = () => {
+    return <div className='PanelFive'>
+        <div className='Title' id='PanelFiveTitle'>
+            Join Forces for a Greener
+            Earth - Let's Make a
+            Change Together
+        </div>
+        <div className='SubText' id='PanelFiveText'>
+            At SnapCycle, we want to encourage others to do everything
+            they can in contributing towards a stronger future. It is our
+            responsibility to provide the privilege we own down to our
+            future generations.
+        </div>
+        <div className='PanelFiveButton'>
+            <OutlineButton title="Try Now" destination="/demo"/>
+        </div>
+    </div>;
+}
+
 const Home = () => {
 
     const tickerItems1 = [
@@ -76,92 +177,11 @@ const Home = () => {
             <div className="HomePanelLanding">
                 <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
             </div>
-            <div className="PanelOne">
-                <div className='Title'>
-                    Hundreds of Objects<br></br> 
-                    to Detect From, That<br></br>
-                    Help You Recycle
-                </div>
-                <div className='ItemCategories'>
-                    <Ticker items={tickerItems1}/>
-                    <Ticker items={tickerItems2} invert={true}/>
-                </div>
-            </div>
-            <div className='PanelTwo'>
-                <div className='PanelTwoText'>
-                    <div className='Title'>
-                        Take a Snap of Any
-                        Item, Anywhere
-                    </div>
-                    <div className='SubText'>
-                        Take a picture of the object in front of you,
-                        that&#39;s all you have to do! Let SnapCycle do
-                        the rest as it detects the object for you,
-                        and lets you in on all the sweet disposing details.
-                    </div>
-                    <div className='SubText'>
-                        Try out SnapCycle and experience the power of smooth
-                        recycling today.
-                    </div>
-                    <div className='PanelTwoButton'>
-                        <OutlineButton title="Try Now" destination="/demo"/>
-                    </div>
-                </div>
-                <div className='PanelTwoImages'>
-                    <img src={PanelTwoLaptopPhone} alt="Laptop and Phone" className='PanelTwoLaptopPhone' />
-                </div>
-            </div>
-            <div className='PanelThree'>
-                <div className='PanelThreeImage'>
-
-                </div>
-                <div className='PanelThreeText'>
-                    <div className='Title'>
-                        Can't Take a Picture?<br></br>
-                        No Worries!
-                    </div>
-                    <div className='SubText'>
-                        Search through our ever growing database<br></br>
-                        of objects to learn how to dispose of them.<br></br>
-                        Say no more to scientific articles going into<br></br>
-                        detail on things you don't need to know! 
-                    </div>
-                    <div className='SubText'>
-                        Try out SnapCycle and unlock the secrets<br></br>
-                        of sustainable living today.
-                    </div>
-                    <div className='PanelThreeButton'>
-                        <OutlineButton title="Try Now" destination="/demo"/>
-                    </div>
-                </div>
-            </div>
-            <div className='PanelFour'>
-                <div className='Title' id='PanelFourTitle'>
-                    Let the Numbers Speak
-                    for Themselves.
-                </div>
-                <div className='SubText' id="PanelFourSubText">
-                    Take a glimpse into why responsible recycling 
-                    matters now more than ever.
-                </div>
-                <StatisticsRow statistics={statistics}/>
-            </div>
-            <div className='PanelFive'>
-                <div className='Title' id='PanelFiveTitle'>
-                    Join Forces for a Greener
-                    Earth - Let's Make a
-                    Change Together
-                </div>
-                <div className='SubText' id='PanelFiveText'>
-                    At SnapCycle, we want to encourage others to do everything
-                    they can in contributing towards a stronger future. It is our
-                    responsibility to provide the privilege we own down to our
-                    future generations.
-                </div>
-                <div className='PanelFiveButton'>
-                    <OutlineButton title="Try Now" destination="/demo"/>
-                </div>
-            </div>
+            {PanelOne(tickerItems1, tickerItems2)}
+            {PanelTwo()}
+            {PanelThree()}
+            {PanelFour(statistics)}
+            {PanelFive()}
         </div>
     )
 }
