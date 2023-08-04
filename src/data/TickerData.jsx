@@ -21,8 +21,7 @@ import Paper from "../assets/Home/ItemCategories/Paper.png";
 import FoodContainer from "../assets/Home/ItemCategories/FoodContainer.png";
 import Paint from "../assets/Home/ItemCategories/Paint.png";
 
-export const TickerData = [
-    {
+export const TickerData = {
         tickerItems1: [
             {name: "Plastic Wrapper", src: PlasticWrapper},
             {name: "Plastic Bottle", src: PlasticBottle},
@@ -35,9 +34,7 @@ export const TickerData = [
             {name: "Paper Cup", src: PaperCup},
             {name: "Cleaning Bottle", src: CleaningBottle},
             {name: "Tinfoil", src: Tinfoil},
-        ]
-    },
-    {
+        ],
         tickerItems2: [
             {name: "Laptop", src: Laptop},
             {name: "Plastic Container", src: PlasticContainer},
@@ -51,5 +48,4 @@ export const TickerData = [
             {name: "Food Container", src: FoodContainer},
             {name: "Paint", src: Paint},
         ]
-    }
-]
+}
