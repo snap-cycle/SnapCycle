@@ -3,9 +3,7 @@ import '../styles/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 
 import {useNavigate} from "react-router-dom";
-import {SocialMediaData} from "../Info/SocialMediaInfo";
-import {FooterHelpInfo} from "../Info/FooterHelpInfo";
-import {FooterProductInfo} from "../Info/FooterProductInfo";
+import {FooterInfo} from "../Info/FooterInfo";
 
 const Footer = ({pages}) => {
 
@@ -22,10 +20,10 @@ const Footer = ({pages}) => {
                         <img src={WhiteLogo} alt="SnapCycle Logo" className="FooterLogoImage"/>
                         <div className='SnapcycleTitle'>SnapCycle</div>
                     </div>
-                    <div className='ProjectSlogan'>Saving the turtles one snap at a time.</div>
+                    <div className='ProjectSlogan'>{FooterInfo.slogan}</div>
                     <div className='SocialMedia'>
                         {
-                            SocialMediaData.map((item) => (
+                            FooterInfo.socialMedia.map((item) => (
                                 item.link === ""
                                 ?
                                     <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
@@ -41,7 +39,7 @@ const Footer = ({pages}) => {
                     <div>
                         <div className='footer-column-title'>Product</div>
                         {
-                            FooterProductInfo.map((item) => (
+                            FooterInfo.product.map((item) => (
                                 <div className='footer-item'>{item.name}</div>
                             ))
                         }
@@ -49,7 +47,7 @@ const Footer = ({pages}) => {
                     <div>
                         <div className='footer-column-title'>Help Center</div>
                         {
-                            FooterHelpInfo.map((item) => (
+                            FooterInfo.help.map((item) => (
                                 <div className='footer-item'>{item.name}</div>
                             ))
                         }
@@ -67,7 +65,7 @@ const Footer = ({pages}) => {
                 </div>
             </div>
             <div className='BottomFooter'>
-               Developed by Luai Bashar and Aidan Froggatt.
+               Developed by Luai Bashar and Aidan Froggatt
             </div>
         </div>
     )
