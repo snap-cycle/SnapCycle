@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
-import '../styles/AppLoadAnimation.css'
+import '../styles/animations/AppLoadAnimation.css'
 
 const blackBox = {
     initial: {

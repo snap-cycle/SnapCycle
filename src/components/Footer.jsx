@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Footer.css';
+import '../styles/components/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 
 import {useNavigate} from "react-router-dom";

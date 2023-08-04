@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from "react";
-import '../styles/Ticker.css';
+import '../styles/components/Ticker.css';
 
 const Ticker = ({items, invert}) => {
     const ref = useRef(null);

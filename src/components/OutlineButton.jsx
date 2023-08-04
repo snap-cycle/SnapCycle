@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
-import '../styles/OutlineButton.css';
+import '../styles/components/OutlineButton.css';
 
 const OutlineButton = ({title, destination}) => {
     let navigate = useNavigate();

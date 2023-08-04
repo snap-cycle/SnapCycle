@@ -1,6 +1,6 @@
 import CountUp from "react-countup";
 import React from "react";
-import '../styles/Statistics.css';
+import '../styles/components/Statistics.css';
 
 const StatisticsRow = ({ statistics }) => {
 

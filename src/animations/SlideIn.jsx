@@ -1,6 +1,6 @@
 import {useRef} from "react";
 import {useInView} from "framer-motion";
-import "../styles/InViewAnimation.css";
+import "../styles/animations/InViewAnimation.css";
 
 const SlideIn = ({ children, invert, vertical }) => {
     const ref = useRef(null);
