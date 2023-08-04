@@ -197,9 +197,9 @@ const Home = () => {
                 </div>
             </div>
             <div className='PanelFive'>
-                <div className='Title'>
-                    Join Forces for a Greener<br></br>
-                    Earth - Let's Make a<br></br>
+                <div className='Title' id='PanelFiveTitle'>
+                    Join Forces for a Greener
+                    Earth - Let's Make a
                     Change Together
                 </div>
                 <div className='SubText' id='PanelFiveText'>
