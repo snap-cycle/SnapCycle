@@ -22,50 +22,34 @@ const Footer = ({pages}) => {
                     </div>
                     <div className='ProjectSlogan'>{FooterInfo.slogan}</div>
                     <div className='SocialMedia'>
-                        {
-                            FooterInfo.socialMedia.map((item) => (
+                        {FooterInfo.socialMedia.map((item) => (
                                 item.link === ""
                                 ?
                                     <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
                                 :
-                                    <a href={item.link} target="_blank">
-                                        <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
-                                    </a>
-                            ))
-                        }
+                                    <a href={item.link} target="_blank"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' /></a>
+                            ))}
                     </div>
                 </div>
                 <div className='FooterInfo'>
                     <div>
                         <div className='footer-column-title'>Product</div>
-                        {
-                            FooterInfo.product.map((item) => (
-                                <div className='footer-item'>{item.name}</div>
-                            ))
-                        }
+                        {FooterInfo.product.map((item) => (<div className='footer-item'>{item.name}</div>))}
                     </div>
                     <div>
                         <div className='footer-column-title'>Help Center</div>
-                        {
-                            FooterInfo.help.map((item) => (
-                                <div className='footer-item'>{item.name}</div>
-                            ))
-                        }
+                        {FooterInfo.help.map((item) => (<div className='footer-item'>{item.name}</div>))}
                     </div>
                     <div>
                         <div className='footer-column-title'>
                             Company
                         </div>
-                        {
-                            pages.map((page, index) => (
-                                <div className='footer-item' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>
-                            ))
-                        }
+                        {pages.map((page, index) => (<div className='footer-item' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
                     </div>
                 </div>
             </div>
             <div className='BottomFooter'>
-               Developed by Luai Bashar and Aidan Froggatt
+                {FooterInfo.credits}
             </div>
         </div>
     )
