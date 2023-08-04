@@ -1,5 +1,19 @@
 .PanelFive {
     height: 750px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+#PanelFiveTitle {
+    max-width: 445px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#PanelFiveText {
+    max-width: 525px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .PanelFiveButton {
@@ -7,8 +21,9 @@
     justify-content: center;
 }
 
-#PanelFiveText {
-    max-width: 525px;
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 1000px) {
+    .PanelFive {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }
