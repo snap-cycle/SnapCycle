@@ -3,7 +3,7 @@ import '../styles/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 
 import {useNavigate} from "react-router-dom";
-import {SocialMediaData} from "../data/SocialMedia";
+import {SocialMediaData} from "../Info/SocialMediaInfo";
 
 const Footer = ({pages}) => {
 

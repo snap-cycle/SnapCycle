@@ -8,11 +8,11 @@ import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
 import BackgroundImage from "../assets/Home/RecyclingBackground.jpg";
 import Ticker from "../components/Ticker";
-import {TickerData} from "../data/TickerData";
+import {TickerData} from "../Info/TickerInfo";
 import OutlineButton from "../components/OutlineButton";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
 import StatisticsRow from "../components/StatisticsRow";
-import {StatisticsData} from "../data/StatisticsData";
+import {StatisticsInfo} from "../Info/StatisticsInfo";
 
 
 const PanelLanding = () => {
@@ -108,7 +108,7 @@ const PanelFour = () => {
             Take a glimpse into why responsible recycling
             matters now more than ever.
         </div>
-        <StatisticsRow statistics={StatisticsData}/>
+        <StatisticsRow statistics={StatisticsInfo}/>
     </div>;
 }
 
