@@ -1,7 +1,63 @@
 .HomePanelLanding {
     height: 100vh;
     display: flex;
-    background-image: url(../../assets/Home/RecyclingBackground.jpg);
-    background-size: cover;
+    background-color: black;
+    transform: scaleX(-1);
 }
 
+.landing-background-image{
+    width: 100vw;
+    height: 100vh;
+    transform: scaleX(-1);
+}
+
+.panel-home-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+
+    filter: none;
+    transform: scaleX(-1);
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    left: 0;
+    z-index: 5;
+
+    border-right: white 4px solid;
+
+    background: rgba(255,255,255,0.75);
+
+    transform: skew(-30deg) translateX(-50%);
+    filter: blur(0px);
+    backdrop-filter: blur(5px);
+}
+
+.homepage-title {
+    position: absolute;
+    left: 5vw;
+    z-index: 7;
+    gap: 2vw;
+
+    font-family: Inter, sans-serif;
+    font-size: 5vmax;
+    font-weight: 600;
+    color: black;
+
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    filter: none;
+}
