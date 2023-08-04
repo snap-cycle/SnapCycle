@@ -1,7 +1,7 @@
-import StatisticsRow from "./StatisticsRow";
-import {StatisticsData} from "../data/StatisticsData";
+import StatisticsRow from "../StatisticsRow";
+import {StatisticsData} from "../../data/StatisticsData";
 import React from "react";
-import '../styles/Home/PanelFour.css';
+import '../../styles/Home/PanelFour.css';
 
 const PanelFour = () => {
 

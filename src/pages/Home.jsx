@@ -1,18 +1,16 @@
 import React from 'react';
 import '../styles/Home/Home.css';
-import RecyclingBackground from "../assets/Home/RecyclingBackground.jpg";
-import PanelOne from "../components/PanelOne";
-import PanelTwo from "../components/PanelTwo";
-import PanelThree from "../components/PanelThree";
-import PanelFour from "../components/PanelFour";
-import PanelFive from "../components/PanelFive";
+import PanelLanding from "../components/HomePanels/PanelLanding";
+import PanelOne from "../components/HomePanels/PanelOne";
+import PanelTwo from "../components/HomePanels/PanelTwo";
+import PanelThree from "../components/HomePanels/PanelThree";
+import PanelFour from "../components/HomePanels/PanelFour";
+import PanelFive from "../components/HomePanels/PanelFive";
 
 const Home = () => {
     return (
         <div>
-            <div className="HomePanelLanding">
-                <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
-            </div>
+            <PanelLanding/>
             <PanelOne/>
             <PanelTwo/>
             <PanelThree/>

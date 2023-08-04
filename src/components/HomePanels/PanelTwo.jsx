@@ -1,7 +1,7 @@
-import OutlineButton from "./OutlineButton";
-import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
+import OutlineButton from "../OutlineButton";
+import PanelTwoLaptopPhone from "../../assets/Home/PanelTwoLaptopPhone.png";
 import React from "react";
-import '../styles/Home/PanelTwo.css';
+import '../../styles/Home/PanelTwo.css';
 
 
 const PanelTwo = () => {

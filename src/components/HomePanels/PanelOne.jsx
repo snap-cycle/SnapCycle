@@ -1,7 +1,7 @@
-import Ticker from "./Ticker";
-import {TickerData} from "../data/TickerData";
+import Ticker from "../Ticker";
+import {TickerData} from "../../data/TickerData";
 import React from "react";
-import '../styles/Home/PanelOne.css';
+import '../../styles/Home/PanelOne.css';
 
 const PanelOne = () => {
 

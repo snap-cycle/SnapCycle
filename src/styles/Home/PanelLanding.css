@@ -1,6 +1,8 @@
 .HomePanelLanding {
-    height: 600px;
+    height: 100vh;
     display: flex;
+    background-image: url(../../assets/Home/RecyclingBackground.jpg);
+    background-size: cover;
 }
 
 .HomePanelLandingBackground {

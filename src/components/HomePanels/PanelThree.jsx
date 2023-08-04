@@ -1,6 +1,6 @@
-import OutlineButton from "./OutlineButton";
+import OutlineButton from "../OutlineButton";
 import React from "react";
-import '../styles/Home/PanelThree.css';
+import '../../styles/Home/PanelThree.css';
 
 const PanelThree = () => {
     return <div className='PanelThree'>
