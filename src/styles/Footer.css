@@ -49,8 +49,11 @@
 }
 
 .BottomFooter {
-    height: 70px;
-    background: #252222;
+    height: auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background: #1B1818;
+    border-top: #252222 4px solid;
     font-size: 14px;
     color: #A4A4A4;
     display: flex;
