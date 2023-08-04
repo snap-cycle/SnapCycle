@@ -100,14 +100,14 @@ const Home = () => {
             <div className='PanelTwo'>
                 <div className='PanelTwoText'>
                     <div className='Title'>
-                        Take a Snap of Any Item,
-                        Anywhere
+                        Take a Snap of Any
+                        Item, Anywhere
                     </div>
                     <div className='SubText'>
-                        Take a picture of the object in front of you, that&#39;s all you
-                        have to do! Let SnapCycle do the rest as it detects the
-                        object for you, and lets you in on all the sweet disposing
-                        details.
+                        Take a picture of the object in front of you,
+                        that&#39;s all you have to do! Let SnapCycle do
+                        the rest as it detects the object for you,
+                        and lets you in on all the sweet disposing details.
                     </div>
                     <div className='SubText'>
                         Try out SnapCycle and experience the power of smooth
@@ -146,13 +146,13 @@ const Home = () => {
                 </div>
             </div>
             <div className='PanelFour'>
-                <div className='Title'>
-                    Let the Numbers Speak<br></br>
+                <div className='Title' id='PanelFourTitle'>
+                    Let the Numbers Speak
                     for Themselves.
                 </div>
-                <div className='SubText'>
-                    As the world migrates into the technological<br></br>
-                    age, its time to make a change.
+                <div className='SubText' id="PanelFourSubText">
+                    Take a glimpse into why responsible recycling 
+                    matters now more than ever.
                 </div>
                 <div className='StatisticsContainer'>
                     <div className='Statistic'>
