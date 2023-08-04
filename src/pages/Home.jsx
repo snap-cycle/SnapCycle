@@ -86,6 +86,13 @@ const Home = () => {
         {name: "Paint", src: Paint},
     ]
 
+    const statistics = [
+        {name: "Statistic One", value: "12700000", suffix: "", subtext: "tonnes of plastic are littered into the ocean\nevery year."},
+        {name: "Statistic Two", value: "11", suffix: " Masks", subtext: "are littered every hour."},
+        {name: "Statistic Three", value: "60", suffix: " %", subtext: "of water pollution is attributed\nto litter."},
+        {name: "Statistic Four", value: "100000", suffix: "", subtext: "animals are killed by plastic bags every year.\n"},
+    ]
+
     return (
         <div>
             <div className="HomePanelLanding">
@@ -160,40 +167,18 @@ const Home = () => {
                     matters now more than ever.
                 </div>
                 <div className='StatisticsContainer'>
-                    <div className='StatisticOne'>
-                        <div className='Title'>
-                            <CountUp end={12700000} enableScrollSpy={true}/>
-                        </div>
-                        <div className='StatisticSubText'>
-                            tonnes of plastic are littered into the ocean
-                            every year.
-                        </div>
-                    </div>
-                    <div className='StatisticTwo'>
-                        <div className='Title'>
-                            <CountUp end={11} suffix={" Masks"} enableScrollSpy={true}/>
-                        </div>
-                        <div className='StatisticSubText'>
-                            are littered every hour.
-                        </div>
-                    </div>
-                    <div className='StatisticThree'>
-                        <div className='Title'>
-                            <CountUp end={60} suffix={" %"} enableScrollSpy={true}/>
-                        </div>
-                        <div className='StatisticSubText'>
-                            of water pollution is attributed
-                            to litter.
-                        </div>
-                    </div>
-                    <div className='StatisticFour'>
-                        <div className='Title'>
-                            <CountUp end={100000} enableScrollSpy={true}/>
-                        </div>
-                        <div className='StatisticSubText'>
-                            animals are killed by plastic bags every year.
-                        </div>
-                    </div>
+                    {
+                        statistics.map((statistic) => (
+                            <div className='Statistic'>
+                                <div className='Title'>
+                                    <CountUp end={statistic.value} suffix={statistic.suffix} enableScrollSpy={true}/>
+                                </div>
+                                <div className='StatisticSubText'>
+                                    {statistic.subtext}
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
             <div className='PanelFive'>
