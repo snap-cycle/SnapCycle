@@ -34,7 +34,35 @@ import Ticker from "../components/Ticker";
 import StatisticsRow from "../components/StatisticsRow";
 
 
-const PanelOne = (tickerItems1, tickerItems2) => {
+const PanelOne = () => {
+    const tickerItems1 = [
+        {name: "Plastic Wrapper", src: PlasticWrapper},
+        {name: "Plastic Bottle", src: PlasticBottle},
+        {name: "Metal Can", src: MetalCan},
+        {name: "Glass Bottle", src: GlassBottle},
+        {name: "Battery", src: Battery},
+        {name: "Plastic Bag", src: PlasticBag},
+        {name: "Mobile Phone", src: MobilePhone},
+        {name: "Cardboard Box", src: CardboardBox},
+        {name: "Paper Cup", src: PaperCup},
+        {name: "Cleaning Bottle", src: CleaningBottle},
+        {name: "Tinfoil", src: Tinfoil},
+    ]
+
+    const tickerItems2 = [
+        {name: "Laptop", src: Laptop},
+        {name: "Plastic Container", src: PlasticContainer},
+        {name: "Electronic Coords", src: ElectronicCoords},
+        {name: "Paper Bag", src: PaperBag},
+        {name: "Cigarette", src: Cigarette},
+        {name: "Mask", src: Mask},
+        {name: "Lightbulb", src: Lightbulb},
+        {name: "Game Controller", src: GameController},
+        {name: "Paper", src: Paper},
+        {name: "Food Container", src: FoodContainer},
+        {name: "Paint", src: Paint},
+    ]
+
     return <div className="PanelOne">
         <div className='Title'>
             Hundreds of Objects<br></br>
@@ -102,7 +130,14 @@ const PanelThree = () => {
     </div>;
 }
 
-const PanelFour = (statistics) => {
+const PanelFour = () => {
+    const statistics = [
+        {name: "Statistic One", value: "12700000", suffix: "", subtext: "tonnes of plastic are littered into the ocean\nevery year."},
+        {name: "Statistic Two", value: "11", suffix: " Masks", subtext: "are littered every hour."},
+        {name: "Statistic Three", value: "60", suffix: " %", subtext: "of water pollution is attributed\nto litter."},
+        {name: "Statistic Four", value: "100000", suffix: "", subtext: "animals are killed by plastic bags every year.\n"},
+    ]
+
     return <div className='PanelFour'>
         <div className='Title' id='PanelFourTitle'>
             Let the Numbers Speak
@@ -136,51 +171,15 @@ const PanelFive = () => {
 }
 
 const Home = () => {
-
-    const tickerItems1 = [
-        {name: "Plastic Wrapper", src: PlasticWrapper},
-        {name: "Plastic Bottle", src: PlasticBottle},
-        {name: "Metal Can", src: MetalCan},
-        {name: "Glass Bottle", src: GlassBottle},
-        {name: "Battery", src: Battery},
-        {name: "Plastic Bag", src: PlasticBag},
-        {name: "Mobile Phone", src: MobilePhone},
-        {name: "Cardboard Box", src: CardboardBox},
-        {name: "Paper Cup", src: PaperCup},
-        {name: "Cleaning Bottle", src: CleaningBottle},
-        {name: "Tinfoil", src: Tinfoil},
-    ]
-
-    const tickerItems2 = [
-        {name: "Laptop", src: Laptop},
-        {name: "Plastic Container", src: PlasticContainer},
-        {name: "Electronic Coords", src: ElectronicCoords},
-        {name: "Paper Bag", src: PaperBag},
-        {name: "Cigarette", src: Cigarette},
-        {name: "Mask", src: Mask},
-        {name: "Lightbulb", src: Lightbulb},
-        {name: "Game Controller", src: GameController},
-        {name: "Paper", src: Paper},
-        {name: "Food Container", src: FoodContainer},
-        {name: "Paint", src: Paint},
-    ]
-
-    const statistics = [
-        {name: "Statistic One", value: "12700000", suffix: "", subtext: "tonnes of plastic are littered into the ocean\nevery year."},
-        {name: "Statistic Two", value: "11", suffix: " Masks", subtext: "are littered every hour."},
-        {name: "Statistic Three", value: "60", suffix: " %", subtext: "of water pollution is attributed\nto litter."},
-        {name: "Statistic Four", value: "100000", suffix: "", subtext: "animals are killed by plastic bags every year.\n"},
-    ]
-
     return (
         <div>
             <div className="HomePanelLanding">
                 <img src={RecyclingBackground} alt="Recycling Background" className="HomePanelLandingBackground"/>
             </div>
-            {PanelOne(tickerItems1, tickerItems2)}
+            {PanelOne()}
             {PanelTwo()}
             {PanelThree()}
-            {PanelFour(statistics)}
+            {PanelFour()}
             {PanelFive()}
         </div>
     )
