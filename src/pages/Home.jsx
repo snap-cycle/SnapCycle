@@ -37,7 +37,7 @@ const PanelOne = () => {
         <div className='Title'>
             Hundreds of Objects<br></br>
             to Detect From, That<br></br>
-            Help You Recycle
+            Help You Recycle.
         </div>
         <div className='ItemCategories'>
             <Ticker items={TickerData.tickerItems1}/>
@@ -51,7 +51,7 @@ const PanelTwo = () => {
         <div className='PanelTwoText'>
             <div className='Title'>
                 Take a Snap of Any
-                Item, Anywhere
+                Item, Anywhere.
             </div>
             <div className='SubText'>
                 Take a picture of the object in front of you,
@@ -120,7 +120,7 @@ const PanelFive = () => {
         <div className='Title' id='PanelFiveTitle'>
             Join Forces for a Greener
             Earth - Let's Make a
-            Change Together
+            Change Together.
         </div>
         <div className='SubText' id='PanelFiveText'>
             At SnapCycle, we want to encourage others to do everything
