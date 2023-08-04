@@ -155,42 +155,38 @@ const Home = () => {
                     matters now more than ever.
                 </div>
                 <div className='StatisticsContainer'>
-                    <div className='Statistic'>
+                    <div className='StatisticOne'>
                         <div className='Title'>
-                            <CountUp end={6139487} enableScrollSpy={true}/>
+                            <CountUp end={12700000} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
-                            Recyclables are disposed<br></br>
-                            incorrectly.
+                            tonnes of plastic are littered into the ocean
+                            every year.
                         </div>
                     </div>
-                    <div className='Statistic'>
+                    <div className='StatisticTwo'>
                         <div className='Title'>
-                            <CountUp end={5} suffix={" Masks"} enableScrollSpy={true}/>
+                            <CountUp end={11} suffix={" Masks"} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
-                            are littered every 30<br></br>
-                            minutes.
+                            are littered every hour.
                         </div>
                     </div>
-                    <div className='Statistic'>
+                    <div className='StatisticThree'>
                         <div className='Title'>
-                            <CountUp end={95} suffix={" %"} enableScrollSpy={true}/>
+                            <CountUp end={60} suffix={" %"} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
-                            of waste in the<br></br>
-                            ocean is easily<br></br>
-                            avoidable.
+                            of water pollution is attributed
+                            to litter.
                         </div>
                     </div>
-                    <div className='Statistic'>
+                    <div className='StatisticFour'>
                         <div className='Title'>
-                            <CountUp end={300000} enableScrollSpy={true}/>
+                            <CountUp end={100000} enableScrollSpy={true}/>
                         </div>
                         <div className='StatisticSubText'>
-                            of recyclables could be<br></br>
-                            saved with the use of<br></br>
-                            SnapCycle!
+                            animals are killed by plastic bags every year.
                         </div>
                     </div>
                 </div>
