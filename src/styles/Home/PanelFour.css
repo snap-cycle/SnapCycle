@@ -24,6 +24,22 @@
     margin-top: 20px;
 }
 
+.StatisticOne {
+    max-width: 240px;
+}
+
+.StatisticTwo {
+    max-width: 170px;
+}
+
+.StatisticThree {
+    max-width: 170px;
+}
+
+.StatisticFour {
+    max-width: 240px;
+}
+
 .StatisticSubText {
     font-size: 18px;
     color: #434343;
