@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import '../styles/Home/Home.css';
 import '../styles/Home/PanelOne.css';
 import '../styles/Home/PanelTwo.css';
@@ -35,28 +35,6 @@ import StatisticsRow from "../components/StatisticsRow";
 
 
 const Home = () => {
-    const leftScrollRef = useRef(null);
-    const rightScrollRef = useRef(null);
-
-    // Transforms the current vertical scroll to horizontal scroll
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const horizontalScroll = scrollY / 20; // Adjust the divisor to control the movement speed
-        leftScrollRef.current.style.transform = `translateX(${-horizontalScroll}px)`;
-        rightScrollRef.current.style.transform = `translateX(${horizontalScroll}px)`;
-    };
-
-    // Scroll event listener
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-        window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
 
     const tickerItems1 = [
         {name: "Plastic Wrapper", src: PlasticWrapper},
