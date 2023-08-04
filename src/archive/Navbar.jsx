@@ -1,5 +1,5 @@
 import React from 'react';
-import BlackLogo from "../assets/branding/BlackLogo.png";
+import BlackLogo from "../assets/Branding/BlackLogo.png";
 import '../styles/Navbar.css';
 import {useLocation, useNavigate} from "react-router-dom";
 import OutlineButton from "./OutlineButton";

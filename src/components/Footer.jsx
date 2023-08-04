@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/Footer.css';
-import WhiteLogo from "../assets/branding/WhiteLogo.png";
-import GithubLogo from "../assets/socialMediaIcons/github.svg";
-import LinkedinLogo from "../assets/socialMediaIcons/linkedin.svg";
-import TwitterLogo from "../assets/socialMediaIcons/twitter.svg";
-import YoutubeLogo from "../assets/socialMediaIcons/youtube.svg";
-import FacebookLogo from "../assets/socialMediaIcons/facebook.svg";
+import WhiteLogo from "../assets/Branding/WhiteLogo.png";
+import GithubLogo from "../assets/SocialMediaIcons/github.svg";
+import LinkedinLogo from "../assets/SocialMediaIcons/linkedin.svg";
+import TwitterLogo from "../assets/SocialMediaIcons/twitter.svg";
+import YoutubeLogo from "../assets/SocialMediaIcons/youtube.svg";
+import FacebookLogo from "../assets/SocialMediaIcons/facebook.svg";
 import {useNavigate} from "react-router-dom";
 
 const Footer = ({pages}) => {

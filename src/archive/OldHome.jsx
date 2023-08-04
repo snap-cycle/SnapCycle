@@ -1,6 +1,6 @@
 import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 import HomeInfo from './HomeInfo';
-import BlackLogo from '../assets/branding/BlackLogo.png'
+import BlackLogo from '../assets/Branding/BlackLogo.png'
 import Navbar from '../components/Navbar';
 
 const OldHome = () => {
