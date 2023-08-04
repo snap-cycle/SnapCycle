@@ -12,7 +12,7 @@ const Team = () => {
         <AnimatedPage>
             <div className="team-landing-panel">
                 <h2>Our Team</h2>
-                <p>Aidan, Luai, Gabe, Harry</p>
+                <p>Luai Bashar, Aidan Froggatt</p>
             </div>
             <div className="team-members-container">
                 {
