@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {useNavigate} from "react-router-dom";
+import {FooterInfo} from "../Info/FooterInfo";
 import '../styles/components/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 
-import {useNavigate} from "react-router-dom";
-import {FooterInfo} from "../Info/FooterInfo";
-
 const Footer = ({pages}) => {
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const breakpoint = 1000;
+    useEffect(() => {
+        const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    if (windowWidth >= breakpoint) return (<LargeFooter pages={pages} />);
+    else return (<SmallFooter pages={pages} />);
+}
+
+const LargeFooter = ({pages}) => {
 
     const navigate = useNavigate();
     const goToLocation = (location) => {
@@ -54,5 +73,15 @@ const Footer = ({pages}) => {
         </div>
     )
 }
+
+const SmallFooter = ({}) => {
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+
 
 export default Footer;

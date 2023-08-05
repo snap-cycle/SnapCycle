@@ -1,110 +1,112 @@
-/* add new media query from around 800-900 pixels */
-/* We can make it so that they are drop down columns that can be expanded.  */
-/* The stuff on the left will get smaller then will eventually dissapear */
-
-.FooterContainer {
-    background: #1B1818;
+@media (min-width: 1000px) {
+    .FooterContainer {
+        background: #1B1818;
+    }
+    
+    .Footer {
+        height: 350px;
+        max-width: 1350px;
+        padding: 17px 60px 0 60px;
+        margin: 0 auto;
+    
+        background: #1B1818;
+        color: #d1d5db;
+        font-size: 16px;
+        display: flex;
+    }
+    
+    .FooterLeft {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 500px;
+    }
+    
+    .FooterLogoName {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 39px;
+    }
+    
+    .FooterLogoImage {
+        width: 80px;
+    }
+    
+    .SnapcycleTitle {
+        font-size: 32px;
+        color: white;
+        margin-left: 20px;
+    }
+    
+    .ProjectSlogan {
+        font-size: 20px;
+        color: #A4A4A4;
+        margin-bottom: 30px;
+    }
+    
+    .BottomFooter {
+        height: 70px;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        margin-left: 60px;
+        margin-right: 60px;
+        background: #1B1818;
+        border-top: #504c4c 1px solid;
+        font-size: 14px;
+        color: #A4A4A4;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+    
+    .SocialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+    }
+    
+    .SocialMediaLogo {
+        width: 30px;
+        transition: filter 0.4s;
+    }
+    .SocialMediaLogo:hover {
+        cursor: pointer;
+        filter: brightness(0) invert(1);
+        transition: filter 0.4s;
+    }
+    
+    .FooterInfo {
+        margin-top: 30px;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        color: white;
+        text-align: left;
+    }
+    
+    .footer-column-title {
+        margin-bottom: 65px;
+    }
+    
+    .footer-item {
+        color: #A4A4A4;
+        margin-bottom: 20px;
+        transition: padding-left 0.5s, color 0.5s;
+        font-size: 16px;
+        width: 105px;
+    }
+    
+    .footer-item:hover {
+        cursor: pointer;
+        color: white;
+        padding-left: 15px;
+        transition: padding-left 0.5s, color 0.5s;
+    }
 }
 
-.Footer {
-    height: 350px;
-    max-width: 1350px;
-    padding: 17px 60px 0 60px;
-    margin: 0 auto;
-
-    background: #1B1818;
-    color: #d1d5db;
-    font-size: 16px;
-    display: flex;
-}
-
-.FooterLeft {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 500px;
-}
-
-.FooterLogoName {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 39px;
-}
-
-.FooterLogoImage {
-    width: 80px;
-}
-
-.SnapcycleTitle {
-    font-size: 32px;
-    color: white;
-    margin-left: 20px;
-}
-
-.ProjectSlogan {
-    font-size: 20px;
-    color: #A4A4A4;
-    margin-bottom: 30px;
-}
-
-.BottomFooter {
-    height: 70px;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    margin-left: 60px;
-    margin-right: 60px;
-    background: #1B1818;
-    border-top: #504c4c 1px solid;
-    font-size: 14px;
-    color: #A4A4A4;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
-
-.SocialMedia {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 300px;
-}
-
-.SocialMediaLogo {
-    width: 30px;
-    transition: filter 0.4s;
-}
-.SocialMediaLogo:hover {
-    cursor: pointer;
-    filter: brightness(0) invert(1);
-    transition: filter 0.4s;
-}
-
-.FooterInfo {
-    margin-top: 30px;
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    color: white;
-    text-align: left;
-}
-
-.footer-column-title {
-    margin-bottom: 65px;
-}
-
-.footer-item {
-    color: #A4A4A4;
-    margin-bottom: 20px;
-    transition: padding-left 0.5s, color 0.5s;
-    font-size: 16px;
-    width: 105px;
-}
-
-.footer-item:hover {
-    cursor: pointer;
-    color: white;
-    padding-left: 15px;
-    transition: padding-left 0.5s, color 0.5s;
+@media (max-width: 1000px) {
+    
 }
