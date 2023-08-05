@@ -12,7 +12,6 @@ const Team = () => {
         <AnimatedPage>
             <div className="team-landing-panel">
                 <h2>Our Team</h2>
-                <p>Luai Bashar, Aidan Froggatt</p>
             </div>
             <div className="team-members-container">
                 {
@@ -20,9 +19,7 @@ const Team = () => {
                         <div className="team-member" key={index}>
                             <div className="team-member-name">{person.name}</div>
                             <div className="team-member-role">{person.role}</div>
-                            <div className="team-member-image">
-                                <img src={person.imageSrc} alt={person.imageAlt}/>
-                            </div>
+                            <img className="team-member-image" src={person.imageSrc} alt={person.imageAlt}/>
                             <div className="team-member-links-container">
 
                             </div>
