@@ -59,7 +59,6 @@
 .NavBarPages {
     display: flex;
     gap: 40px;
-    margin-right: 50px;
 }
 
 .NavBarPagesActive{
@@ -84,7 +83,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 145px;
+    width: 155px;
 }
 
 @media (min-width: 1001px) {
