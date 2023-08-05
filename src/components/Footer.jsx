@@ -56,19 +56,19 @@ const LargeFooter = ({pages}) => {
                 </div>
             </div>
             <div className='FooterInfo'>
-                <div>
-                    <div className='footer-column-title'>Product</div>
-                    {FooterInfo.product.map((item) => (<div className='footer-item'>{item.name}</div>))}
+                <div className='ProductContainer'>
+                    <div className='FooterColumnTitle'>Product</div>
+                    {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
                 </div>
                 <div>
-                    <div className='footer-column-title'>Help Center</div>
-                    {FooterInfo.help.map((item) => (<div className='footer-item'>{item.name}</div>))}
+                    <div className='FooterColumnTitle'>Help Center</div>
+                    {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
                 </div>
                 <div>
-                    <div className='footer-column-title'>
+                    <div className='FooterColumnTitle'>
                         Company
                     </div>
-                    {pages.map((page, index) => (<div className='footer-item' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
+                    {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
                 </div>
             </div>
         </div>
