@@ -23,8 +23,20 @@ const PanelLanding = () => {
         <div className='HomePanelLanding'>
             <div className="panel-home-title">
                 <img className="landing-background-image" alt="Landing Page Background" src={BackgroundImage}/>
-                <div className="overlay"></div>
-                <div className="homepage-title">SnapCycle</div>
+                <div className="overlay">
+                </div>
+                <div className="HomepageContent">
+                    <div class="HomepageTitle">
+                        Saving the Turtles
+                        One Snap at a Time.
+                    </div>
+                    <div className='HomepageButton'>
+                        <OutlineButton title="Try Now" destination="/demo"/>
+                    </div>
+                    <div className='LearnMore'>
+                        <span className='Words'>Learn More</span> -&#62;
+                    </div>
+                </div>
             </div>
         </div>
     )

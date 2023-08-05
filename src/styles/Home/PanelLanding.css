@@ -11,18 +11,6 @@
     transform: scaleX(-1);
 }
 
-.panel-home-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100vw;
-
-    filter: none;
-    transform: scaleX(-1);
-}
-
 .overlay {
     width: 100vw;
     height: 100vh;
@@ -32,7 +20,6 @@
     z-index: 5;
 
     border-right: white 4px solid;
-
     background: rgba(255,255,255,0.75);
 
     transform: skew(-30deg) translateX(-50%);
@@ -40,24 +27,44 @@
     backdrop-filter: blur(5px);
 }
 
-.homepage-title {
-    position: absolute;
-    left: 5vw;
-    z-index: 7;
-    gap: 2vw;
-
-    font-family: Inter, sans-serif;
-    font-size: 5vmax;
-    font-weight: 600;
-    color: black;
-
-    text-align: center;
+.panel-home-title {
     display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    flex-direction: column;
 
     filter: none;
+    transform: scaleX(-1);
+}
+
+.HomepageContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    left: 75px;
+    z-index: 5;
+    max-width: 490px;
+}
+
+.HomepageTitle {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.HomepageButton {
+    display: flex;
+}
+
+.LearnMore {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: left;
+}
+.LearnMore:hover {
+    cursor: pointer;
+}
+.Words:hover {
+    text-decoration: underline;
 }
