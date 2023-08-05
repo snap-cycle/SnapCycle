@@ -49,15 +49,17 @@
 }
 
 .BottomFooter {
-    height: auto;
+    height: 70px;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    margin-left: 60px;
+    margin-right: 60px;
     background: #1B1818;
-    border-top: #252222 4px solid;
+    border-top: #504c4c 1px solid;
     font-size: 14px;
     color: #A4A4A4;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content:center;
 }
 
