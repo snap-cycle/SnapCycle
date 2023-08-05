@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import BlackLogo from "../assets/Branding/BlackLogo.png";
-import SnapCycleTitle from "../assets/NavBar/SnapCycleTitle.png";
+import SnapCycleTitle from "../assets/Title/TitleBlack.png";
 import HamburgerMenu from "../assets/NavBar/HamburgerMenu.jpg";
 import OutlineButton from "./OutlineButton";
 import "../styles/components/Navbar.css";
