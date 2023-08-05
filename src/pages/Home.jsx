@@ -137,8 +137,10 @@ const PanelFive = () => {
             responsibility to provide the privilege we own down to our
             future generations.
         </div>
-        <div className='PanelFiveButton'>
-            <OutlineButton title="Try Now" destination="/demo"/>
+        <div className='PanelFiveButtonContainer'>
+            <div className='PanelFiveButton'>
+                <OutlineButton title="Try Now" destination="/demo"/>
+            </div>
         </div>
         <div className='TurtleContainer'>
             <img src={TurtleLeft} alt="Left Turtle" className='TurtleLeft'/>

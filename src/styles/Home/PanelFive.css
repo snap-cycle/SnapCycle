@@ -17,9 +17,15 @@
     margin-right: auto;
 }
 
-.PanelFiveButton {
+.PanelFiveButtonContainer {
     display: flex;
     justify-content: center;
+}
+
+.PanelFiveButton {
+    display: flex;
+    width: 155px;
+    margin-left: 15px;
 }
 
 @media (min-width: 1000px) {
