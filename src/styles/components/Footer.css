@@ -33,22 +33,22 @@
         flex-direction: column;
         text-align: left;
         width: 500px;
+        margin-top: 15px;
     }
     
-    .FooterLogoName {
+    .FooterLogoTitleContainer {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-bottom: 39px;
     }
     
-    .FooterLogoImage {
-        width: 80px;
+    .FooterLogo {
+        width: 60px;
     }
-    
-    .SnapcycleTitle {
-        font-size: 32px;
-        color: white;
+
+    .FooterSnapCycleTitle {
+        height: 40px;
         margin-left: 20px;
     }
     

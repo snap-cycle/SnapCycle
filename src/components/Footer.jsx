@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {FooterInfo} from "../Info/FooterInfo";
 import '../styles/components/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
+import WhiteTitle from "../assets/Title/TitleWhite.png";
 
 const Footer = ({pages}) => {
 
@@ -40,9 +41,9 @@ const LargeFooter = ({pages}) => {
     return (
         <div className='Footer'>
             <div className='FooterLeft'>
-                <div className='FooterLogoName'>
-                    <img src={WhiteLogo} alt="SnapCycle Logo" className="FooterLogoImage"/>
-                    <div className='SnapcycleTitle'>SnapCycle</div>
+                <div className='FooterLogoTitleContainer'>
+                    <img src={WhiteLogo} alt="SnapCycle Logo" className="FooterLogo"/>
+                    <img src={WhiteTitle} alt="White Title" className='FooterSnapCycleTitle' />
                 </div>
                 <div className='ProjectSlogan'>{FooterInfo.slogan}</div>
                 <div className='SocialMedia'>
