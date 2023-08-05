@@ -99,6 +99,7 @@
     margin-bottom: 20px;
     transition: padding-left 0.5s, color 0.5s;
     font-size: 16px;
+    width: 105px;
 }
 
 .footer-item:hover {
