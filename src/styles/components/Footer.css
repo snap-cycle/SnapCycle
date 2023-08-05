@@ -1,15 +1,28 @@
+.FooterContainer {
+    background: #1B1818;
+}
+
+.BottomFooter {
+    height: 70px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-top: #504c4c 1px solid;
+    font-size: 14px;
+    color: #A4A4A4;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
 @media (min-width: 1000px) {
-    .FooterContainer {
-        background: #1B1818;
-    }
-    
     .Footer {
         height: 350px;
         max-width: 1350px;
         padding: 17px 60px 0 60px;
         margin: 0 auto;
     
-        background: #1B1818;
         color: #d1d5db;
         font-size: 16px;
         display: flex;
@@ -43,21 +56,6 @@
         font-size: 20px;
         color: #A4A4A4;
         margin-bottom: 30px;
-    }
-    
-    .BottomFooter {
-        height: 70px;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
-        margin-left: 60px;
-        margin-right: 60px;
-        background: #1B1818;
-        border-top: #504c4c 1px solid;
-        font-size: 14px;
-        color: #A4A4A4;
-        display: flex;
-        align-items: center;
-        justify-content:center;
     }
     
     .SocialMedia {
@@ -108,5 +106,5 @@
 }
 
 @media (max-width: 1000px) {
-    
+
 }
