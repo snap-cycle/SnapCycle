@@ -2,12 +2,89 @@
     background: #1B1818;
 }
 
+.Footer {
+    max-width: 1350px;
+    padding: 17px 75px 35px 75px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.FooterLeft {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 500px;
+    margin-top: 15px;
+}
+
+.FooterLogoTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 39px;
+}
+
+.FooterLogo {
+    width: 60px;
+}
+
+.FooterSnapCycleTitle {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.FooterSlogan {
+    font-size: 20px;
+    color: #A4A4A4;
+    margin-bottom: 30px;
+}
+
+.SocialMedia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.SocialMediaLogo {
+    width: 30px;
+    transition: filter 0.4s;
+}
+.SocialMediaLogo:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    transition: filter 0.4s;
+}
+
+.ProductContainer {
+    width: 90px;
+}
+
+.FooterColumnTitle {
+    margin-bottom: 65px;
+    font-size: 18px;
+    color: white;
+}
+
+.FooterItem {
+    color: #A4A4A4;
+    margin-bottom: 20px;
+    transition: padding-left 0.5s, color 0.5s;
+    font-size: 16px;
+}
+.FooterItem:hover {
+    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+    transition: padding-left 0.5s, color 0.5s;
+}
+
 .BottomFooter {
     height: 70px;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 75px;
+    margin-right: 75px;
     border-top: #504c4c 1px solid;
     font-size: 14px;
     color: #A4A4A4;
@@ -17,96 +94,31 @@
 }
 
 @media (min-width: 1000px) {
-    .Footer {
-        height: 350px;
-        max-width: 1350px;
-        padding: 17px 75px 0 75px;
-        margin: 0 auto;
-    
-        color: #d1d5db;
-        font-size: 16px;
-        display: flex;
-    }
-    
-    .FooterLeft {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        width: 500px;
-        margin-top: 15px;
-    }
-    
-    .FooterLogoTitleContainer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 39px;
-    }
-    
-    .FooterLogo {
-        width: 60px;
-    }
-
-    .FooterSnapCycleTitle {
-        height: 40px;
-        margin-left: 20px;
-    }
-    
-    .ProjectSlogan {
-        font-size: 20px;
-        color: #A4A4A4;
-        margin-bottom: 30px;
-    }
-    
-    .SocialMedia {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 300px;
-    }
-    
-    .SocialMediaLogo {
-        width: 30px;
-        transition: filter 0.4s;
-    }
-    .SocialMediaLogo:hover {
-        cursor: pointer;
-        filter: brightness(0) invert(1);
-        transition: filter 0.4s;
-    }
-    
     .FooterInfo {
         margin-top: 30px;
         flex: 1;
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
-        color: white;
         text-align: left;
-    }
-
-    .ProductContainer {
-        width: 90px;
-    }
-    
-    .FooterColumnTitle {
-        margin-bottom: 65px;
-    }
-    
-    .FooterItem {
-        color: #A4A4A4;
-        margin-bottom: 20px;
-        transition: padding-left 0.5s, color 0.5s;
-        font-size: 16px;
-    }
-    .FooterItem:hover {
-        cursor: pointer;
-        color: white;
-        padding-left: 15px;
-        transition: padding-left 0.5s, color 0.5s;
     }
 }
 
 @media (max-width: 1000px) {
+    .Footer {
+        padding: 17px 25px 35px 25px;
+        flex-direction: column;
+    }
 
+    .FooterInfo {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    .BottomFooter {
+        margin-left: 25px;
+        margin-right: 25px;
+        text-align: left;
+    }
 }

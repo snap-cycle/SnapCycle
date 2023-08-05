@@ -6,7 +6,7 @@ import YouTubeLogo from "../assets/SocialMediaIcons/YouTube.svg";
 import LinkedInLogo from "../assets/SocialMediaIcons/LinkedIn.svg";
 
 export const FooterInfo = {
-    slogan: "Saving the turtles one snap at a time",
+    slogan: "Saving the turtles one snap at a time.",
     credits: "Developed by Luai Bashar and Aidan Froggatt",
     socialMedia: [
         {name: "Github", link: "https://github.com/luaibash/SnapCycle", imageSrc: GithubLogo, imageAlt: "Github Logo"},
