@@ -100,24 +100,24 @@ const MenuFooterInfo = ({pages}) => {
                 <div className='FooterColumnTitle' onClick={() => toggleProductMenu()}>
                     Product
                 </div>
-                <div className='FooterItemContainer'>
-                    {FooterInfo.product.map((item) => (<div className={ProductMenu ? 'FooterItem' : 'HideFooterItem'}>{item.name}</div>))}
+                <div className={ProductMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                    {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
                 </div>
             </div>
             <div className='HelpCenterContainer'>
                 <div className='FooterColumnTitle' onClick={() => toggleHelpMenu()}>
                     Help Center
                 </div>
-                <div className='FooterItemContainer'>
-                    {FooterInfo.help.map((item) => (<div className={HelpMenu ? 'FooterItem' : 'HideFooterItem'}>{item.name}</div>))}
+                <div className={HelpMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                    {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
                 </div>
             </div>
             <div className='CompanyContainer'>
                 <div className='FooterColumnTitle' onClick={() => toggleCompanyMenu()}>
                     Company
                 </div>
-                <div className='FooterItemContainer'>
-                    {pages.map((page, index) => (<div className={CompanyMenu ? 'FooterItem' : 'HideFooterItem'} key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
+                <div className={CompanyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                    {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
                 </div>
             </div>
         </div>

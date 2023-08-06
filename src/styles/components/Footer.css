@@ -132,18 +132,21 @@
         cursor: pointer;
     }
 
-    .HideFooterItem {
-        display: none;
-    }
-
-    .FooterItemContainer {
-        margin-bottom: 20px;
-    }
-
     .BottomFooter {
         margin-left: 25px;
         margin-right: 25px;
         text-align: left;
         border-top: none;
+    }
+
+    .ShowFooterItemContainer {
+        height: 175px;
+        transition: height 0.5s;
+        overflow: hidden;
+    }
+    .HideFooterItemContainer {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s;
     }
 }
