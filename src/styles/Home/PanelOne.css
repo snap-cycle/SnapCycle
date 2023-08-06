@@ -6,8 +6,10 @@
 }
 
 #PanelOneTitle {
+    max-width: 520px;
+    padding-left: 75px;
+    padding-right: 75px;
     margin: 0 auto;
-    max-width: 363px;
 }
 
 .ItemCategories {
@@ -18,4 +20,12 @@
     margin-right: -100px;
     align-items: center;
     vertical-align: middle;
+}
+
+@media (max-width: 1000px) {
+    #PanelOneTitle {
+        max-width: 420px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
