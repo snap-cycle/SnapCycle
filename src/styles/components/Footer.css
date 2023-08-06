@@ -132,21 +132,21 @@
         cursor: pointer;
     }
 
+    .ShowFooterItemContainer {
+        overflow: hidden;
+        max-height: 500px;
+        transition: max-height 2s;
+    }
+    .HideFooterItemContainer {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 2s;
+    }
+
     .BottomFooter {
         margin-left: 25px;
         margin-right: 25px;
         text-align: left;
         border-top: none;
-    }
-
-    .ShowFooterItemContainer {
-        height: 175px;
-        transition: height 0.5s;
-        overflow: hidden;
-    }
-    .HideFooterItemContainer {
-        overflow: hidden;
-        height: 0;
-        transition: height 0.5s;
     }
 }
