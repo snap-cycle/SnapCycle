@@ -1,19 +1,39 @@
-.StatisticsContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.Statistic {
-    max-width: 240px;
-}
-
-#StatisticThree {
-    max-width: 170px;
+.StatisticContainer {
+    margin-top: 20px
 }
 
 .StatisticSubText {
     font-size: 18px;
     color: #434343;
     margin-top: 5px;
+}
+
+@media (min-width: 1001px) {
+    .StatisticsContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .Statistic {
+        max-width: 240px;
+    }
+    
+    #StatisticThree {
+        max-width: 170px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 500px) {
+    .StatisticsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .Statistic {
+        margin-top: 30px;
+    }
 }
