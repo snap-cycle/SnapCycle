@@ -4,6 +4,7 @@ import {FooterInfo} from "../Info/FooterInfo";
 import '../styles/components/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 import WhiteTitle from "../assets/Title/TitleWhite.png";
+import Arrow from "../assets/Footer/RightArrow.svg";
 
 const Footer = ({pages}) => {
 
@@ -99,6 +100,7 @@ const MenuFooterInfo = ({pages}) => {
             <div className='ProductContainer'>
                 <div className='FooterColumnTitle' onClick={() => toggleProductMenu()}>
                     Product
+                    <img src={Arrow} alt="arrow" className={ProductMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
                 <div className={ProductMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
@@ -107,6 +109,7 @@ const MenuFooterInfo = ({pages}) => {
             <div className='HelpCenterContainer'>
                 <div className='FooterColumnTitle' onClick={() => toggleHelpMenu()}>
                     Help Center
+                    <img src={Arrow} alt="arrow" className={HelpMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
                 <div className={HelpMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
@@ -115,6 +118,7 @@ const MenuFooterInfo = ({pages}) => {
             <div className='CompanyContainer'>
                 <div className='FooterColumnTitle' onClick={() => toggleCompanyMenu()}>
                     Company
+                    <img src={Arrow} alt="arrow" className={CompanyMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
                 <div className={CompanyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
