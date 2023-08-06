@@ -115,6 +115,10 @@
 
     .FooterInfo {
         margin-top: 35px;
+<<<<<<< HEAD
+=======
+        margin-bottom: 20px;
+>>>>>>> 3ac08d1c8325dab1fe238fb1bd8c0571a235fd39
         display: flex;
         flex-direction: column;
         font-size: 18px;
