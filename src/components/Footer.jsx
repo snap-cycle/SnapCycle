@@ -62,14 +62,12 @@ const ColumnFooterInfo = ({pages}) => {
                 <div className='FooterColumnTitle'>Product</div>
                 {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
             </div>
-            <div>
+            <div className='HelpCenterContainer'>
                 <div className='FooterColumnTitle'>Help Center</div>
                 {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
             </div>
-            <div>
-                <div className='FooterColumnTitle'>
-                    Company
-                </div>
+            <div className='CompanyContainer'>
+                <div className='FooterColumnTitle'>Company</div>
                 {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
             </div>
         </div>
@@ -83,10 +81,44 @@ const MenuFooterInfo = ({pages}) => {
         navigate(location);
     }
 
+    const [ProductMenu, SetProductMenu] = useState(false);
+    const [HelpMenu, SetHelpMenu] = useState(false);
+    const [CompanyMenu, SetCompanyMenu] = useState(false);
+    const toggleProductMenu = () => {
+        SetProductMenu(!ProductMenu);
+    };
+    const toggleHelpMenu = () => {
+        SetHelpMenu(!HelpMenu);
+    };
+    const toggleCompanyMenu = () => {
+        SetCompanyMenu(!CompanyMenu);
+    };
+
     return (
         <div className='FooterInfo'>
-            <div>
-                
+            <div className='ProductContainer'>
+                <div className='FooterColumnTitle' onClick={() => toggleProductMenu()}>
+                    Product
+                </div>
+                <div className='FooterItemContainer'>
+                    {FooterInfo.product.map((item) => (<div className={ProductMenu ? 'FooterItem' : 'HideFooterItem'}>{item.name}</div>))}
+                </div>
+            </div>
+            <div className='HelpCenterContainer'>
+                <div className='FooterColumnTitle' onClick={() => toggleHelpMenu()}>
+                    Help Center
+                </div>
+                <div className='FooterItemContainer'>
+                    {FooterInfo.help.map((item) => (<div className={HelpMenu ? 'FooterItem' : 'HideFooterItem'}>{item.name}</div>))}
+                </div>
+            </div>
+            <div className='CompanyContainer'>
+                <div className='FooterColumnTitle' onClick={() => toggleCompanyMenu()}>
+                    Company
+                </div>
+                <div className='FooterItemContainer'>
+                    {pages.map((page, index) => (<div className={CompanyMenu ? 'FooterItem' : 'HideFooterItem'} key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
+                </div>
             </div>
         </div>
     )
