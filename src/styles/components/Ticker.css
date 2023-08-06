@@ -5,6 +5,7 @@
     height: 170px;
     width: 170px;
     font-size: 16px;
+    flex-shrink: 0;
     transition: all 0.2s ease-in-out;
 }
 .Item:hover {
@@ -16,10 +17,10 @@
     display: flex;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
     .Item {
-        width: 17vw;
-        height: 17vw;
-        margin: 0.8vw;
+        width: 22.668vw;
+        height: 22.668vw;
+        margin: 1.067vw;
     }
 }
