@@ -91,7 +91,7 @@
     justify-content:center;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
     .FooterInfo {
         margin-top: 30px;
         flex: 1;
