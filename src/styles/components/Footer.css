@@ -82,6 +82,7 @@
     padding-bottom: 2vh;
     margin-left: 75px;
     margin-right: 75px;
+    margin-top: 50px;
     border-top: #504c4c 1px solid;
     font-size: 14px;
     color: #A4A4A4;
@@ -145,15 +146,24 @@
         transition: transform 0.5s ease-in-out;
     }
 
-    .ShowFooterItemContainer {
+    #ShowFooterItemContainer {
         overflow: hidden;
-        max-height: 500px;
-        transition: max-height 2s;
+        transition: height 0.5s;
     }
-    .HideFooterItemContainer {
+    #HideFooterItemContainer {
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 2s;
+        height: 0;
+        transition: height 0.5s;
+    }
+
+    .ProductItemContainer {
+        height: 200px;
+    }
+    .HelpItemContainer {
+        height: 113px;
+    }
+    .CompanyItemContainer {
+        height: 100px;
     }
 
     .BottomFooter {

@@ -102,7 +102,7 @@ const MenuFooterInfo = ({pages}) => {
                     Product
                     <img src={Arrow} alt="arrow" className={ProductMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
-                <div className={ProductMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                <div className="ProductItemContainer" id={ProductMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
                 </div>
             </div>
@@ -111,7 +111,7 @@ const MenuFooterInfo = ({pages}) => {
                     Help Center
                     <img src={Arrow} alt="arrow" className={HelpMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
-                <div className={HelpMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                <div className="HelpItemContainer" id={HelpMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
                 </div>
             </div>
@@ -120,7 +120,7 @@ const MenuFooterInfo = ({pages}) => {
                     Company
                     <img src={Arrow} alt="arrow" className={CompanyMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
-                <div className={CompanyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                <div className="CompanyItemContainer" id={CompanyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
                 </div>
             </div>
