@@ -2,7 +2,7 @@ import CountUp from "react-countup";
 import React from "react";
 import '../styles/components/Statistics.css';
 
-const StatisticsRow = ({ statistics }) => {
+const Statistics = ({ statistics }) => {
 
     return (
         <div className='StatisticsContainer'>
@@ -22,4 +22,4 @@ const StatisticsRow = ({ statistics }) => {
     )
 }
 
-export default StatisticsRow;
+export default Statistics;

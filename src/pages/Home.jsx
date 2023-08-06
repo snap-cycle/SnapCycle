@@ -11,7 +11,7 @@ import Ticker from "../components/Ticker";
 import {TickerData} from "../Info/TickerInfo";
 import OutlineButton from "../components/OutlineButton";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
-import StatisticsRow from "../components/StatisticsRow";
+import Statistics from "../components/Statistics";
 import {StatisticsInfo} from "../Info/StatisticsInfo";
 import AnimatedPage from "../animations/AnimatedPage";
 import TurtleLeft from "../assets/Home/TurtleLeft.png";
@@ -120,7 +120,7 @@ const PanelFour = () => {
             Take a glimpse into why responsible recycling
             matters now more than ever.
         </div>
-        <StatisticsRow statistics={StatisticsInfo}/>
+        <Statistics statistics={StatisticsInfo}/>
     </div>;
 }
 
