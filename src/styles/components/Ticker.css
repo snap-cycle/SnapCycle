@@ -15,3 +15,11 @@
 .ItemRow {
     display: flex;
 }
+
+@media (max-width: 1000px) {
+    .Item {
+        width: 17vw;
+        height: 17vw;
+        margin: 0.8vw;
+    }
+}
