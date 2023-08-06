@@ -1,17 +1,14 @@
-.StatisticContainer {
-    margin-top: 20px
-}
-
 .StatisticSubText {
     font-size: 18px;
     color: #434343;
     margin-top: 5px;
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1151px) {
     .StatisticsContainer {
         display: flex;
         justify-content: space-between;
+        margin-top: 30px;
     }
     
     .Statistic {
@@ -23,17 +20,19 @@
     }
 }
 
-@media (max-width: 1000px) {
-
-}
-
-@media (max-width: 500px) {
+@media (max-width: 1150px) {
     .StatisticsContainer {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
-    
+
     .Statistic {
         margin-top: 30px;
+        flex-basis: 400px;
+    }
+
+    #StatisticThree {
+        max-width: 170px;
     }
 }

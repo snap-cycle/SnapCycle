@@ -19,7 +19,7 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     .PanelFour {
         padding-left: 25px;
         padding-right: 25px;
