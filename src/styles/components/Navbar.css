@@ -102,11 +102,11 @@
     }
 
     .RightContainer {
-        width: 190px;
+        width: 210px;
     }
 
     .HamburgerMenu {
-        height: 40px;
+        height: 35px;
     }
     .HamburgerMenu:hover {
         cursor: pointer;
