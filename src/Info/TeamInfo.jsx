@@ -4,8 +4,8 @@ export const TeamInfo = {
         "Aidan Froggatt":
             {
                 name: "Aidan Froggatt",
-                role: "",
-                bio: "",
+                role: "Software Engineer",
+                bio: "This is Aidan Froggatt's bio...",
                 links: {
                 linkedin: "https://www.linkedin.com/in/aidanfroggatt/",
                     github: "https://github.com/aidanfroggatt",
@@ -23,8 +23,8 @@ export const TeamInfo = {
         "Luai Bashar":
             {
                 name: "Luai Bashar",
-                role: "",
-                bio: "",
+                role: "Mechatronics Engineer",
+                bio: "This is Luai Bashar's bio...",
                 links: {
                 linkedin: "https://www.linkedin.com/in/luaibashar/",
                     github: "https://github.com/luaibash",

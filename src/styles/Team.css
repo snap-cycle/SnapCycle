@@ -6,8 +6,16 @@
 }
 
 .team-members-container{
-    height: 100vh;
+    min-height: 100vh;
     background: lightblue;
+}
+
+.team-member{
+
+}
+
+.team-member-image{
+    font-size: 1vmax;
 }
 
 .team-member-name{
@@ -18,11 +26,30 @@
 
 }
 
-.team-member-link{
+.team-member-bio{
 
 }
 
-.team-member-image{
-    font-size: 1vmax;
+.team-member-contact-container{
+
 }
 
+.team-member-contact-container{
+
+}
+
+.team-member-link-container{
+
+}
+
+.team-member-link-item{
+
+}
+
+.team-member-info-container{
+
+}
+
+.team-member-info-item{
+
+}

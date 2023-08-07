@@ -21,16 +21,25 @@ const Team = () => {
                 <h2>Our Team</h2>
             </div>
             <div className="team-members-container">
-                <div className="team-member">
-                    <img className="team-member-image" src={""} alt={"alt"}/>
-                    <div className="team-member-name"></div>
-                    <div className="team-member-role"></div>
-                    <div className="team-member-bio"></div>
-                    <div className="team-member-contact-container">
-                        <div className="team-member-links-container"></div>
-                        <div className="team-member-personal-info-container"></div>
-                    </div>
-                </div>
+                {
+                    Object.keys(TeamInfo.teamMembers).map((key) => {
+                        return (
+                        <div className="team-member">
+                            <img className="team-member-image" src={TeamInfo.teamMembers[key].imageSrc} alt={TeamInfo.teamMembers[key].imageAlt}/>
+                            <div className="team-member-name">{TeamInfo.teamMembers[key].name}</div>
+                            <div className="team-member-role">{TeamInfo.teamMembers[key].role}</div>
+                            <div className="team-member-bio">{TeamInfo.teamMembers[key].bio}</div>
+                            <div className="team-member-contact-container">
+                                <div className="team-member-link-container">
+
+                                </div>
+                                <div className="team-member-info-container">
+
+                                </div>
+                            </div>
+                        </div>
+                        )
+                })}
             </div>
         </AnimatedPage>
     );
