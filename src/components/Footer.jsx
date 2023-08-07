@@ -42,7 +42,7 @@ const Footer = () => {
                             ))}
                     </div>
                 </div>
-                {(windowWidth > breakpoint) ? <ColumnFooterInfo/> : <MenuFooterInfo/>}
+                {(windowWidth > breakpoint) ? <NavigationColumnCollection/> : <ArrowMenuCollection/>}
             </div>
             <div className='BottomFooter'>
                 {FooterInfo.credits}
@@ -51,9 +51,7 @@ const Footer = () => {
     )
 }
 
-const ColumnFooterInfo = () => {
-    console.log(FooterInfo.columns)
-
+const NavigationColumnCollection = () => {
     return (
         <div className='FooterInfo'>
             <NavigationColumn info={FooterInfo.product} columnName={"Product"}/>
@@ -63,7 +61,7 @@ const ColumnFooterInfo = () => {
     )
 }
 
-const MenuFooterInfo = () => {
+const ArrowMenuCollection = () => {
     const [productMenu, setProductMenu] = useState(false);
     const [helpMenu, setHelpMenu] = useState(false);
     const [companyMenu, setCompanyMenu] = useState(false);
