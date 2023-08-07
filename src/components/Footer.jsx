@@ -68,12 +68,11 @@ const MenuFooterInfo = () => {
     const [helpMenu, setHelpMenu] = useState(false);
     const [companyMenu, setCompanyMenu] = useState(false);
 
-
     return (
         <div className='FooterInfo'>
-            <ArrowNavigationMenu menu={productMenu} setMenu={setProductMenu} info={FooterInfo.product} columnName={"Product"}/>
-            <ArrowNavigationMenu menu={helpMenu} setMenu={setHelpMenu} info={FooterInfo.help} columnName={"Help Center"}/>
-            <ArrowNavigationMenu menu={companyMenu} setMenu={setCompanyMenu} info={PagesInfo.PagesInfo} columnName={"Company"}/>
+            <ArrowNavigationMenu menuState={productMenu} setMenuState={setProductMenu} info={FooterInfo.product} columnName={"Product"}/>
+            <ArrowNavigationMenu menuState={helpMenu} setMenuState={setHelpMenu} info={FooterInfo.help} columnName={"Help Center"}/>
+            <ArrowNavigationMenu menuState={companyMenu} setMenuState={setCompanyMenu} info={PagesInfo.PagesInfo} columnName={"Company"}/>
         </div>
     )
 }

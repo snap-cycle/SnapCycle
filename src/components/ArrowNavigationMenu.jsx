@@ -3,7 +3,7 @@ import Arrow from "../assets/Footer/RightArrow.svg";
 import React from "react";
 import '../styles/components/Footer.css';
 
-const ArrowNavigationMenu = ({info, columnName, menu, setMenu}) => {
+const ArrowNavigationMenu = ({info, columnName, menuState, setMenuState}) => {
     const navigate = useNavigate();
     const goToLocation = (location) => {
         if (location === "") {return;}
@@ -15,11 +15,11 @@ const ArrowNavigationMenu = ({info, columnName, menu, setMenu}) => {
 
     return (
         <div className='ProductContainer'>
-            <div className='FooterColumnTitle' onClick={() => toggleMenu([menu, setMenu])}>
+            <div className='FooterColumnTitle' onClick={() => toggleMenu([menuState, setMenuState])}>
                 {columnName}
-                <img src={Arrow} alt="arrow" className={menu ? "FooterArrowActive" : "FooterArrowInactive"}/>
+                <img src={Arrow} alt="arrow" className={menuState ? "FooterArrowActive" : "FooterArrowInactive"}/>
             </div>
-            <div className="ProductItemContainer" id={menu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+            <div className="ProductItemContainer" id={menuState ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                 {info.map((item, index) => (
                     <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>{item.name}</div>
                 ))}
