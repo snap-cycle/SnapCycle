@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import React from "react";
-import '../styles/components/Footer.css';
+import '../styles/components/NavigationColumn.css';
 
 const NavigationColumn = ({info, columnName}) => {
     const navigate = useNavigate();
