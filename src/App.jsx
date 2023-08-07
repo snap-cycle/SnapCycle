@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import {AnimatePresence} from "framer-motion";
 import AppLoadAnimation from "./animations/AppLoadAnimation";
-import * as PagesInfo from "./Info/PagesInfo";
 
 function App() {
 
@@ -17,13 +16,13 @@ function App() {
             <AppLoadAnimation/>
             <AnimatePresence mode='wait'>
                 <Router>
-                    <Navbar pages={PagesInfo.pages}/>
+                    <Navbar/>
                         <Routes>
                             <Route path='/home' element={<Home/>} />
                             <Route path='/team' element={<Team/>} />
                             <Route path='/demo' element={<Demo/>} />
                         </Routes>
-                    <Footer pages={PagesInfo.pages}/>
+                    <Footer/>
                 </Router>
             </AnimatePresence>
         </div>

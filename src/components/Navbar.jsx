@@ -65,7 +65,7 @@ const Navbar = () => {
           <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
         </div>
         <div className='NavBarPages'>
-          {PagesInfo.pages.map((page) => (
+          {PagesInfo.PagesInfo.map((page) => (
             <NavbarPageItem page={page} key={page} />
           ))}
         </div>

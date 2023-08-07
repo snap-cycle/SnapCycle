@@ -42,7 +42,7 @@ const Footer = () => {
                             ))}
                     </div>
                 </div>
-                {(windowWidth > breakpoint) ? <ColumnFooterInfo pages={PagesInfo.pages}/> : <MenuFooterInfo pages={PagesInfo.pages}/>}
+                {(windowWidth > breakpoint) ? <ColumnFooterInfo pages={PagesInfo.PagesInfo}/> : <MenuFooterInfo pages={PagesInfo.PagesInfo}/>}
             </div>
             <div className='BottomFooter'>
                 {FooterInfo.credits}
@@ -68,10 +68,25 @@ const ColumnFooterInfo = () => {
                 <div className='FooterColumnTitle'>Help Center</div>
                 {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
             </div>
-            <div className='FooterInfoColumnContainer'>
-                <div className='FooterColumnTitle'>Company</div>
-                {PagesInfo.pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
-            </div>
+            <ColumnFooterInfoitem info={PagesInfo.PagesInfo} name={"Company"}/>
+        </div>
+    )
+}
+
+const ColumnFooterInfoitem = ({info, name}) => {
+    const navigate = useNavigate();
+    const goToLocation = (location) => {
+        navigate(location);
+    }
+
+    return (
+        <div className='FooterInfoColumnContainer'>
+            <div className='FooterColumnTitle'>{name}</div>
+            {info.map((item, index) => (
+                <div className='FooterItem' key={index} onClick={() => goToLocation(item.toLowerCase())}>
+                    {item}
+                </div>
+            ))}
         </div>
     )
 }
@@ -117,7 +132,7 @@ const MenuFooterInfo = () => {
                     <img src={Arrow} alt="arrow" className={companyMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
                 <div className="CompanyItemContainer" id={companyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
-                    {PagesInfo.pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
+                    {PagesInfo.PagesInfo.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
                 </div>
             </div>
         </div>
