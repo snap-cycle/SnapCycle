@@ -156,14 +156,8 @@
         transition: height 0.5s;
     }
 
-    .ProductItemContainer {
-        height: 200px;
-    }
-    .HelpItemContainer {
-        height: 113px;
-    }
-    .CompanyItemContainer {
-        height: 100px;
+    .MenuItemContainer {
+        padding-bottom: 2vh;
     }
 
     .BottomFooter {
