@@ -24,24 +24,5 @@ export const FooterInfo = {
         {name: "FAQ", destination: ""},
         {name: "Contact Us", destination: ""},
     ],
-
-    columns: [
-        {
-            Product: [
-                {name: "Try Now", destination: ""},
-                {name: "Features", destination: ""},
-                {name: "Resources", destination: ""},
-                {name: "Security", destination: ""}
-            ],
-            Company: [
-                {name: "Home", destination: "/home"},
-                {name: "Team", destination: "/team"},
-            ],
-            Help: [
-                {name: "FAQ", destination: ""},
-                {name: "Contact Us", destination: ""},
-            ]
-        }
-    ]
 }
 
