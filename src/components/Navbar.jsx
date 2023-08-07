@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
         <div className='NavBarPages'>
           {PagesInfo.PagesInfo.map((page) => (
-            <NavbarPageItem page={page} key={page} />
+            <NavbarPageItem pageName={page.name} key={page} />
           ))}
         </div>
         <div className='RightContainer'>
@@ -80,8 +80,8 @@ const Navbar = () => {
   );
 };
 
-const NavbarPageItem = ({ page }) => {
-  const destination = "/" + page.toLowerCase();
+const NavbarPageItem = ({ pageName }) => {
+  const destination = "/" + pageName.toLowerCase();
   const location = useLocation();
   const navigate = useNavigate();
   const goToLocation = (location) => {
@@ -93,7 +93,7 @@ const NavbarPageItem = ({ page }) => {
       className={location.pathname === destination ? "NavBarPagesActive" : "NavBarPagesInactive"}
       onClick={() => goToLocation(destination)}
     >
-      {page}
+      {pageName}
     </div>
   );
 };
