@@ -112,7 +112,7 @@ const MenuFooterInfo = () => {
                 </div>
             </div>
             <div className='CompanyContainer'>
-                <div className='FooterColumnTitle' onClick={() => toggleMenu(companyMenu, setCompanyMenu)}>
+                <div className='FooterColumnTitle' onClick={() => toggleMenu([companyMenu, setCompanyMenu])}>
                     Company
                     <img src={Arrow} alt="arrow" className={companyMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
