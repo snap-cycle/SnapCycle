@@ -99,39 +99,6 @@
         text-align: left;
     }
 
-    .FooterColumnTitle {
-        margin-bottom: 0;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-bottom: #504c4c 1px solid;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .FooterColumnTitle:hover {
-        cursor: pointer;
-    }
-
-    .FooterArrowInactive {
-        height: 20px;
-        transition: transform 0.5s ease-in-out;
-    }
-    .FooterArrowActive {
-        height: 20px;
-        transform: rotate(90deg);
-        transition: transform 0.5s ease-in-out;
-    }
-
-    #ShowFooterItemContainer {
-        overflow: hidden;
-        transition: height 0.5s;
-    }
-    #HideFooterItemContainer {
-        overflow: hidden;
-        height: 0;
-        transition: height 0.5s;
-    }
-
     .BottomFooter {
         margin-left: 25px;
         margin-right: 25px;
