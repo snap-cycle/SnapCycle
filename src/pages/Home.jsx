@@ -25,7 +25,7 @@ const PanelLanding = () => {
                 <img className="landing-background-image" alt="Landing Page Background" src={BackgroundImage}/>
                 <div className="overlay"></div>
                 <div className="HomepageContent">
-                    <div class="HomepageTitle">
+                    <div className="HomepageTitle">
                         Saving the Turtles
                         One Snap at a Time.
                     </div>

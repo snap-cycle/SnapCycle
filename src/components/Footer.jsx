@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {FooterInfo} from "../Info/FooterInfo";
 import '../styles/components/Footer.css';
@@ -33,12 +33,12 @@ const Footer = () => {
                     </div>
                     <div className='FooterSlogan'>{FooterInfo.slogan}</div>
                     <div className='SocialMedia'>
-                        {FooterInfo.socialMedia.map((item) => (
+                        {FooterInfo.socialMedia.map((item, index) => (
                                 item.destination === ""
                                 ?
-                                    <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
+                                    <img src={item.imageSrc} key={index} alt={item.imageAlt} className='SocialMediaLogo' />
                                 :
-                                    <a href={item.destination} target="_blank" rel="noreferrer"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
+                                    <a href={item.destination} target="_blank" rel="noreferrer" key={index}><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
                             ))}
                     </div>
                 </div>
@@ -52,6 +52,8 @@ const Footer = () => {
 }
 
 const ColumnFooterInfo = () => {
+    console.log(FooterInfo.columns)
+
     return (
         <div className='FooterInfo'>
             <ColumnFooterInfoItem info={FooterInfo.product} name={"Product"}/>
@@ -70,14 +72,10 @@ const ColumnFooterInfoItem = ({info, name}) => {
 
     return (
         <div className='FooterInfoColumnContainer'>
-            <div className='FooterColumnTitle'>
-                {name}
-            </div>
-            {
-                info.map((item) => (
-                    <div className='FooterItem' onClick={() => goToLocation(item.destination)}>{item.name}</div>
-                ))
-            }
+            <div className='FooterColumnTitle'>{name}</div>
+            {info.map((item, index) => (
+                <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>{item.name}</div>
+            ))}
         </div>
     )
 }

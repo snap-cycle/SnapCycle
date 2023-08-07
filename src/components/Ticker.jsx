@@ -20,8 +20,8 @@ const Ticker = ({items, invert}) => {
     return (
         <div className='ItemRow' ref={ref}>
             {
-                items.map((item) => (
-                    <img src={item.src} alt={item.name} className="Item"/>
+                items.map((item, index) => (
+                    <img src={item.src} key={index} alt={item.name} className="Item"/>
                 ))
             }
         </div>
