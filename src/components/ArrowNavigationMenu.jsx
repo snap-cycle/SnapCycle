@@ -3,7 +3,7 @@ import Arrow from "../assets/Footer/RightArrow.svg";
 import React from "react";
 import '../styles/components/Footer.css';
 
-const ArrowNavigationMenu = ({info, name, menu, setMenu}) => {
+const ArrowNavigationMenu = ({info, columnName, menu, setMenu}) => {
     const navigate = useNavigate();
     const goToLocation = (location) => {
         if (location === "") {return;}
@@ -16,7 +16,7 @@ const ArrowNavigationMenu = ({info, name, menu, setMenu}) => {
     return (
         <div className='ProductContainer'>
             <div className='FooterColumnTitle' onClick={() => toggleMenu([menu, setMenu])}>
-                {name}
+                {columnName}
                 <img src={Arrow} alt="arrow" className={menu ? "FooterArrowActive" : "FooterArrowInactive"}/>
             </div>
             <div className="ProductItemContainer" id={menu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>

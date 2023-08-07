@@ -56,9 +56,9 @@ const ColumnFooterInfo = () => {
 
     return (
         <div className='FooterInfo'>
-            <NavigationColumn info={FooterInfo.product} name={"Product"}/>
-            <NavigationColumn info={FooterInfo.help} name={"Help Center"}/>
-            <NavigationColumn info={PagesInfo.PagesInfo} name={"Company"}/>
+            <NavigationColumn info={FooterInfo.product} columnName={"Product"}/>
+            <NavigationColumn info={FooterInfo.help} columnName={"Help Center"}/>
+            <NavigationColumn info={PagesInfo.PagesInfo} columnName={"Company"}/>
         </div>
     )
 }
@@ -71,9 +71,9 @@ const MenuFooterInfo = () => {
 
     return (
         <div className='FooterInfo'>
-            <ArrowNavigationMenu menu={productMenu} setMenu={setProductMenu} info={FooterInfo.product} name={"Product"}/>
-            <ArrowNavigationMenu menu={helpMenu} setMenu={setHelpMenu} info={FooterInfo.help} name={"Help Center"}/>
-            <ArrowNavigationMenu menu={companyMenu} setMenu={setCompanyMenu} info={PagesInfo.PagesInfo} name={"Company"}/>
+            <ArrowNavigationMenu menu={productMenu} setMenu={setProductMenu} info={FooterInfo.product} columnName={"Product"}/>
+            <ArrowNavigationMenu menu={helpMenu} setMenu={setHelpMenu} info={FooterInfo.help} columnName={"Help Center"}/>
+            <ArrowNavigationMenu menu={companyMenu} setMenu={setCompanyMenu} info={PagesInfo.PagesInfo} columnName={"Company"}/>
         </div>
     )
 }
