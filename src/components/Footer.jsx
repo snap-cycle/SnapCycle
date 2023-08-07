@@ -60,15 +60,15 @@ const ColumnFooterInfo = () => {
 
     return (
         <div className='FooterInfo'>
-            <div className='ProductContainer'>
+            <div className='FooterInfoColumnContainer'>
                 <div className='FooterColumnTitle'>Product</div>
                 {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
             </div>
-            <div className='HelpCenterContainer'>
+            <div className='FooterInfoColumnContainer'>
                 <div className='FooterColumnTitle'>Help Center</div>
                 {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
             </div>
-            <div className='CompanyContainer'>
+            <div className='FooterInfoColumnContainer'>
                 <div className='FooterColumnTitle'>Company</div>
                 {PagesInfo.pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
             </div>
