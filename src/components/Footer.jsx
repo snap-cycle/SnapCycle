@@ -64,6 +64,7 @@ const ColumnFooterInfo = () => {
 const ColumnFooterInfoItem = ({info, name}) => {
     const navigate = useNavigate();
     const goToLocation = (location) => {
+        if (location === "") {return;}
         navigate(location);
     }
 
@@ -74,9 +75,7 @@ const ColumnFooterInfoItem = ({info, name}) => {
             </div>
             {
                 info.map((item) => (
-                    <div className='FooterItem' onClick={() => goToLocation(item.destination)}>
-                        {item.name}
-                    </div>
+                    <div className='FooterItem' onClick={() => goToLocation(item.destination)}>{item.name}</div>
                 ))
             }
         </div>
@@ -101,6 +100,7 @@ const MenuFooterInfo = () => {
 const MenuFooterInfoItem = ({info, name, menu, setMenu}) => {
     const navigate = useNavigate();
     const goToLocation = (location) => {
+        if (location === "") {return;}
         navigate(location);
     }
     const toggleMenu = ([menu, setMenu]) => {
@@ -115,9 +115,7 @@ const MenuFooterInfoItem = ({info, name, menu, setMenu}) => {
             </div>
             <div className="ProductItemContainer" id={menu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                 {info.map((item, index) => (
-                    <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>
-                        {item.name}
-                    </div>
+                    <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>{item.name}</div>
                 ))}
             </div>
         </div>
