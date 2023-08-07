@@ -68,9 +68,9 @@ const ArrowMenuCollection = () => {
 
     return (
         <div className='FooterInfo'>
-            <ArrowNavigationMenu menuState={productMenu} setMenuState={setProductMenu} info={FooterInfo.product} columnName={"Product"}/>
-            <ArrowNavigationMenu menuState={helpMenu} setMenuState={setHelpMenu} info={FooterInfo.help} columnName={"Help Center"}/>
-            <ArrowNavigationMenu menuState={companyMenu} setMenuState={setCompanyMenu} info={PagesInfo.PagesInfo} columnName={"Company"}/>
+            <ArrowNavigationMenu info={FooterInfo.product} columnName={"Product"} menuState={productMenu} setMenuState={setProductMenu}/>
+            <ArrowNavigationMenu info={FooterInfo.help} columnName={"Help Center"} menuState={helpMenu} setMenuState={setHelpMenu}/>
+            <ArrowNavigationMenu info={PagesInfo.PagesInfo} columnName={"Company"} menuState={companyMenu} setMenuState={setCompanyMenu}/>
         </div>
     )
 }

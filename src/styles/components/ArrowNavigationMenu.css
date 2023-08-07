@@ -52,4 +52,14 @@
         height: 0;
         transition: height 0.5s;
     }
+
+    .Product {
+        height: 200px;
+    }
+    .Help {
+        height: 113px;
+    }
+    .Company {
+        height: 100px;
+    }
 }

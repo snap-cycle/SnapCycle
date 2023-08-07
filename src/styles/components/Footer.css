@@ -156,10 +156,6 @@
         transition: height 0.5s;
     }
 
-    .MenuItemContainer {
-        padding-bottom: 2vh;
-    }
-
     .BottomFooter {
         margin-left: 25px;
         margin-right: 25px;
