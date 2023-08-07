@@ -6,7 +6,8 @@
 }
 
 .team-members-container{
-
+    height: 100vh;
+    background: lightblue;
 }
 
 .team-member-name{
