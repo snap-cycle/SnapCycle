@@ -118,6 +118,6 @@
     }
 
     .RightContainer {
-        width: 50px;
+        width:fit-content;
     }
 }
