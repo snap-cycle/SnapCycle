@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate} from "react-router-dom";
 import {FooterInfo} from "../Info/FooterInfo";
 import '../styles/components/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 import WhiteTitle from "../assets/Title/TitleWhite.png";
-import Arrow from "../assets/Footer/RightArrow.svg";
 import * as PagesInfo from "../Info/PagesInfo";
 import NavigationColumn from "./NavigationColumn";
+import ArrowNavigationMenu from "./ArrowNavigationMenu";
 
 const Footer = () => {
 
@@ -72,38 +71,12 @@ const MenuFooterInfo = () => {
 
     return (
         <div className='FooterInfo'>
-            <MenuFooterInfoItem menu={productMenu} setMenu={setProductMenu} info={FooterInfo.product} name={"Product"}/>
-            <MenuFooterInfoItem menu={helpMenu} setMenu={setHelpMenu} info={FooterInfo.help} name={"Help Center"}/>
-            <MenuFooterInfoItem menu={companyMenu} setMenu={setCompanyMenu} info={PagesInfo.PagesInfo} name={"Company"}/>
+            <ArrowNavigationMenu menu={productMenu} setMenu={setProductMenu} info={FooterInfo.product} name={"Product"}/>
+            <ArrowNavigationMenu menu={helpMenu} setMenu={setHelpMenu} info={FooterInfo.help} name={"Help Center"}/>
+            <ArrowNavigationMenu menu={companyMenu} setMenu={setCompanyMenu} info={PagesInfo.PagesInfo} name={"Company"}/>
         </div>
     )
 }
-
-const MenuFooterInfoItem = ({info, name, menu, setMenu}) => {
-    const navigate = useNavigate();
-    const goToLocation = (location) => {
-        if (location === "") {return;}
-        navigate(location);
-    }
-    const toggleMenu = ([menu, setMenu]) => {
-        setMenu(!menu);
-    }
-
-    return (
-        <div className='ProductContainer'>
-            <div className='FooterColumnTitle' onClick={() => toggleMenu([menu, setMenu])}>
-                {name}
-                <img src={Arrow} alt="arrow" className={menu ? "FooterArrowActive" : "FooterArrowInactive"}/>
-            </div>
-            <div className="ProductItemContainer" id={menu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
-                {info.map((item, index) => (
-                    <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>{item.name}</div>
-                ))}
-            </div>
-        </div>
-    )
-}
-
 
 
 export default Footer;
