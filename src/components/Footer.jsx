@@ -90,7 +90,7 @@ const MenuFooterInfo = () => {
         navigate(location);
     }
 
-    const [prodcutMenu, setProductMenu] = useState(false);
+    const [productMenu, setProductMenu] = useState(false);
     const [helpMenu, setHelpMenu] = useState(false);
     const [companyMenu, setCompanyMenu] = useState(false);
 
@@ -101,11 +101,11 @@ const MenuFooterInfo = () => {
     return (
         <div className='FooterInfo'>
             <div className='ProductContainer'>
-                <div className='FooterColumnTitle' onClick={() => toggleMenu([prodcutMenu, setProductMenu])}>
+                <div className='FooterColumnTitle' onClick={() => toggleMenu([productMenu, setProductMenu])}>
                     Product
-                    <img src={Arrow} alt="arrow" className={prodcutMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
+                    <img src={Arrow} alt="arrow" className={productMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
-                <div className="ProductItemContainer" id={prodcutMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                <div className="ProductItemContainer" id={productMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
                     {FooterInfo.product.map((item) => (
                         <div className='FooterItem'>
                             {item.name}
@@ -142,6 +142,32 @@ const MenuFooterInfo = () => {
         </div>
     )
 }
+
+// const MenuFooterInfoItem = ({info, name, menu}) => {
+//     const navigate = useNavigate();
+//     const goToLocation = (location) => {
+//         navigate(location);
+//     }
+//     const toggleMenu = ([menu, setMenu]) => {
+//         setMenu(!menu);
+//     }
+//
+//     return (
+//         <div className='ProductContainer'>
+//             <div className='FooterColumnTitle' onClick={() => toggleMenu([productMenu, setProductMenu])}>
+//                 Product
+//                 <img src={Arrow} alt="arrow" className={productMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
+//             </div>
+//             <div className="ProductItemContainer" id={productMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+//                 {FooterInfo.product.map((item) => (
+//                     <div className='FooterItem'>
+//                         {item.name}
+//                     </div>
+//                 ))}
+//             </div>
+//         </div>
+//     )
+// }
 
 
 
