@@ -1,0 +1,55 @@
+.FooterColumnTitle {
+    margin-bottom: 45px;
+    font-size: 18px;
+    color: white;
+    user-select: none;
+}
+
+.FooterItem {
+    color: #A4A4A4;
+    margin-top: 20px;
+    transition: padding-left 0.5s, color 0.5s;
+    font-size: 16px;
+}
+.FooterItem:hover {
+    cursor: pointer;
+    color: white;
+    padding-left: 15px;
+    transition: padding-left 0.5s, color 0.5s;
+}
+
+@media (max-width: 1000px) {
+
+    .FooterColumnTitle {
+        margin-bottom: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: #504c4c 1px solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .FooterColumnTitle:hover {
+        cursor: pointer;
+    }
+
+    .FooterArrowInactive {
+        height: 20px;
+        transition: transform 0.5s ease-in-out;
+    }
+    .FooterArrowActive {
+        height: 20px;
+        transform: rotate(90deg);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    #ShowFooterItemContainer {
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+    #HideFooterItemContainer {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s;
+    }
+}

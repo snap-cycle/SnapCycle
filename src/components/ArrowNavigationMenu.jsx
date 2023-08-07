@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import Arrow from "../assets/Footer/RightArrow.svg";
 import React from "react";
-import '../styles/components/Footer.css';
+import '../styles/components/ArrowNavigationMenu.css';
 
 const ArrowNavigationMenu = ({info, columnName, menuState, setMenuState}) => {
     const navigate = useNavigate();
