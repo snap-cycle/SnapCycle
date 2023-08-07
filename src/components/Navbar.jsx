@@ -5,8 +5,9 @@ import SnapCycleTitle from "../assets/Title/TitleBlack.png";
 import HamburgerMenu from "../assets/NavBar/HamburgerMenu.jpg";
 import OutlineButton from "./OutlineButton";
 import "../styles/components/Navbar.css";
+import * as PagesInfo from "../Info/PagesInfo";
 
-const Navbar = ({ pages }) => {
+const Navbar = () => {
   const [showPartialBackground, setPartialBackground] = useState(false);
   const [showSolidBackground, setSolidBackground] = useState(false);
   const [showNavBar, setNavBar] = useState(true);
@@ -64,7 +65,7 @@ const Navbar = ({ pages }) => {
           <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
         </div>
         <div className='NavBarPages'>
-          {pages.map((page) => (
+          {PagesInfo.pages.map((page) => (
             <NavbarPageItem page={page} key={page} />
           ))}
         </div>

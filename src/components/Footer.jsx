@@ -5,20 +5,21 @@ import '../styles/components/Footer.css';
 import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 import WhiteTitle from "../assets/Title/TitleWhite.png";
 import Arrow from "../assets/Footer/RightArrow.svg";
+import * as PagesInfo from "../Info/PagesInfo";
 
-const Footer = ({pages}) => {
+const Footer = () => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const breakpoint = 1000;
     useEffect(() => {
         const handleResize = () => {
-        setWindowWidth(window.innerWidth);
+            setWindowWidth(window.innerWidth);
         };
 
         window.addEventListener('resize', handleResize);
 
         return () => {
-        window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -37,11 +38,11 @@ const Footer = ({pages}) => {
                                 ?
                                     <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
                                 :
-                                    <a href={item.link} target="_blank"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
+                                    <a href={item.link} target="_blank" rel="noreferrer"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
                             ))}
                     </div>
                 </div>
-                {(windowWidth > breakpoint) ? <ColumnFooterInfo pages={pages}/> : <MenuFooterInfo pages={pages}/>}
+                {(windowWidth > breakpoint) ? <ColumnFooterInfo pages={PagesInfo.pages}/> : <MenuFooterInfo pages={PagesInfo.pages}/>}
             </div>
             <div className='BottomFooter'>
                 {FooterInfo.credits}
@@ -50,7 +51,7 @@ const Footer = ({pages}) => {
     )
 }
 
-const ColumnFooterInfo = ({pages}) => {
+const ColumnFooterInfo = () => {
 
     const navigate = useNavigate();
     const goToLocation = (location) => {
@@ -69,13 +70,13 @@ const ColumnFooterInfo = ({pages}) => {
             </div>
             <div className='CompanyContainer'>
                 <div className='FooterColumnTitle'>Company</div>
-                {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
+                {PagesInfo.pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
             </div>
         </div>
     )
 }
 
-const MenuFooterInfo = ({pages}) => {
+const MenuFooterInfo = () => {
 
     const navigate = useNavigate();
     const goToLocation = (location) => {
@@ -121,7 +122,7 @@ const MenuFooterInfo = ({pages}) => {
                     <img src={Arrow} alt="arrow" className={CompanyMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
                 </div>
                 <div className="CompanyItemContainer" id={CompanyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
-                    {pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
+                    {PagesInfo.pages.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
                 </div>
             </div>
         </div>
