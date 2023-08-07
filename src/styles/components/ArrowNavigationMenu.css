@@ -19,7 +19,6 @@
 }
 
 @media (max-width: 1000px) {
-
     .FooterColumnTitle {
         margin-bottom: 0;
         padding-top: 15px;
@@ -31,25 +30,5 @@
     }
     .FooterColumnTitle:hover {
         cursor: pointer;
-    }
-
-    .FooterArrowInactive {
-        height: 20px;
-        transition: transform 0.5s ease-in-out;
-    }
-    .FooterArrowActive {
-        height: 20px;
-        transform: rotate(90deg);
-        transition: transform 0.5s ease-in-out;
-    }
-
-    #ShowFooterItemContainer {
-        overflow: hidden;
-        transition: height 0.5s;
-    }
-    #HideFooterItemContainer {
-        overflow: hidden;
-        height: 0;
-        transition: height 0.5s;
     }
 }

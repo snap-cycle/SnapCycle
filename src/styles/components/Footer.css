@@ -56,26 +56,6 @@
     transition: filter 0.4s;
 }
 
-.FooterColumnTitle {
-    margin-bottom: 45px;
-    font-size: 18px;
-    color: white;
-    user-select: none;
-}
-
-.FooterItem {
-    color: #A4A4A4;
-    margin-top: 20px;
-    transition: padding-left 0.5s, color 0.5s;
-    font-size: 16px;
-}
-.FooterItem:hover {
-    cursor: pointer;
-    color: white;
-    padding-left: 15px;
-    transition: padding-left 0.5s, color 0.5s;
-}
-
 .BottomFooter {
     height: 70px;
     padding-top: 2vh;
@@ -98,10 +78,6 @@
         display: flex;
         justify-content: space-between;
         text-align: left;
-    }
-
-    .FooterInfoColumnContainer {
-        width: 120px;
     }
 }
 
