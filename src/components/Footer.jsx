@@ -6,6 +6,7 @@ import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 import WhiteTitle from "../assets/Title/TitleWhite.png";
 import Arrow from "../assets/Footer/RightArrow.svg";
 import * as PagesInfo from "../Info/PagesInfo";
+import NavigationColumn from "./NavigationColumn";
 
 const Footer = () => {
 
@@ -56,26 +57,9 @@ const ColumnFooterInfo = () => {
 
     return (
         <div className='FooterInfo'>
-            <ColumnFooterInfoItem info={FooterInfo.product} name={"Product"}/>
-            <ColumnFooterInfoItem info={FooterInfo.help} name={"Help Center"}/>
-            <ColumnFooterInfoItem info={PagesInfo.PagesInfo} name={"Company"}/>
-        </div>
-    )
-}
-
-const ColumnFooterInfoItem = ({info, name}) => {
-    const navigate = useNavigate();
-    const goToLocation = (location) => {
-        if (location === "") {return;}
-        navigate(location);
-    }
-
-    return (
-        <div className='FooterInfoColumnContainer'>
-            <div className='FooterColumnTitle'>{name}</div>
-            {info.map((item, index) => (
-                <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>{item.name}</div>
-            ))}
+            <NavigationColumn info={FooterInfo.product} name={"Product"}/>
+            <NavigationColumn info={FooterInfo.help} name={"Help Center"}/>
+            <NavigationColumn info={PagesInfo.PagesInfo} name={"Company"}/>
         </div>
     )
 }
