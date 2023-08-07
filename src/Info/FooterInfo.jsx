@@ -1,4 +1,3 @@
-import React from "react";
 import GithubLogo from "../assets/SocialMediaIcons/GitHub.svg";
 import FacebookLogo from "../assets/SocialMediaIcons/Facebook.svg";
 import TwitterLogo from "../assets/SocialMediaIcons/Twitter.svg";
@@ -9,21 +8,21 @@ export const FooterInfo = {
     slogan: "Saving the turtles one snap at a time.",
     credits: "Developed by Luai Bashar and Aidan Froggatt",
     socialMedia: [
-        {name: "Github", link: "https://github.com/luaibash/SnapCycle", imageSrc: GithubLogo, imageAlt: "Github Logo"},
-        {name: "Facebook", link: "", imageSrc: FacebookLogo, imageAlt: "Facebook Logo"},
-        {name: "Twitter", link: "", imageSrc: TwitterLogo, imageAlt: "Twitter Logo"},
-        {name: "YouTube", link: "", imageSrc: YouTubeLogo, imageAlt: "YouTube Logo"},
-        {name: "LinkedIn", link: "", imageSrc: LinkedInLogo, imageAlt: "LinkedIn Logo"},
+        {name: "Github", destination: "https://github.com/luaibash/SnapCycle", imageSrc: GithubLogo, imageAlt: "Github Logo"},
+        {name: "Facebook", destination: "", imageSrc: FacebookLogo, imageAlt: "Facebook Logo"},
+        {name: "Twitter", destination: "", imageSrc: TwitterLogo, imageAlt: "Twitter Logo"},
+        {name: "YouTube", destination: "", imageSrc: YouTubeLogo, imageAlt: "YouTube Logo"},
+        {name: "LinkedIn", destination: "", imageSrc: LinkedInLogo, imageAlt: "LinkedIn Logo"},
     ],
     product: [
-        {name: "Try Now", link: ""},
-        {name: "Features", link: ""},
-        {name: "Resources", link: ""},
-        {name: "Security", link: ""}
+        {name: "Try Now", destination: ""},
+        {name: "Features", destination: ""},
+        {name: "Resources", destination: ""},
+        {name: "Security", destination: ""}
     ],
     help: [
-        {name: "FAQ", link: ""},
-        {name: "Contact Us", link: ""},
+        {name: "FAQ", destination: ""},
+        {name: "Contact Us", destination: ""},
     ]
 }
 

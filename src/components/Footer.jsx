@@ -34,15 +34,15 @@ const Footer = () => {
                     <div className='FooterSlogan'>{FooterInfo.slogan}</div>
                     <div className='SocialMedia'>
                         {FooterInfo.socialMedia.map((item) => (
-                                item.link === ""
+                                item.destination === ""
                                 ?
                                     <img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo' />
                                 :
-                                    <a href={item.link} target="_blank" rel="noreferrer"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
+                                    <a href={item.destination} target="_blank" rel="noreferrer"><img src={item.imageSrc} alt={item.imageAlt} className='SocialMediaLogo'/></a>
                             ))}
                     </div>
                 </div>
-                {(windowWidth > breakpoint) ? <ColumnFooterInfo pages={PagesInfo.PagesInfo}/> : <MenuFooterInfo pages={PagesInfo.PagesInfo}/>}
+                {(windowWidth > breakpoint) ? <ColumnFooterInfo/> : <MenuFooterInfo/>}
             </div>
             <div className='BottomFooter'>
                 {FooterInfo.credits}
@@ -52,88 +52,71 @@ const Footer = () => {
 }
 
 const ColumnFooterInfo = () => {
-
-    const navigate = useNavigate();
-    const goToLocation = (location) => {
-        navigate(location);
-    }
-
     return (
         <div className='FooterInfo'>
-            <div className='FooterInfoColumnContainer'>
-                <div className='FooterColumnTitle'>Product</div>
-                {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
-            </div>
-            <div className='FooterInfoColumnContainer'>
-                <div className='FooterColumnTitle'>Help Center</div>
-                {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
-            </div>
-            <ColumnFooterInfoitem info={PagesInfo.PagesInfo} name={"Company"}/>
+            <ColumnFooterInfoItem info={FooterInfo.product} name={"Product"}/>
+            <ColumnFooterInfoItem info={FooterInfo.help} name={"Help Center"}/>
+            <ColumnFooterInfoItem info={PagesInfo.PagesInfo} name={"Company"}/>
         </div>
     )
 }
 
-const ColumnFooterInfoitem = ({info, name}) => {
+const ColumnFooterInfoItem = ({info, name}) => {
     const navigate = useNavigate();
     const goToLocation = (location) => {
+        if (location === "") {return;}
         navigate(location);
     }
 
     return (
         <div className='FooterInfoColumnContainer'>
-            <div className='FooterColumnTitle'>{name}</div>
-            {info.map((item, index) => (
-                <div className='FooterItem' key={index} onClick={() => goToLocation(item.toLowerCase())}>
-                    {item}
-                </div>
-            ))}
+            <div className='FooterColumnTitle'>
+                {name}
+            </div>
+            {
+                info.map((item) => (
+                    <div className='FooterItem' onClick={() => goToLocation(item.destination)}>{item.name}</div>
+                ))
+            }
         </div>
     )
 }
 
 const MenuFooterInfo = () => {
-
-    const navigate = useNavigate();
-    const goToLocation = (location) => {
-        navigate(location);
-    }
-
-    const [prodcutMenu, setProductMenu] = useState(false);
+    const [productMenu, setProductMenu] = useState(false);
     const [helpMenu, setHelpMenu] = useState(false);
     const [companyMenu, setCompanyMenu] = useState(false);
 
+
+    return (
+        <div className='FooterInfo'>
+            <MenuFooterInfoItem menu={productMenu} setMenu={setProductMenu} info={FooterInfo.product} name={"Product"}/>
+            <MenuFooterInfoItem menu={helpMenu} setMenu={setHelpMenu} info={FooterInfo.help} name={"Help Center"}/>
+            <MenuFooterInfoItem menu={companyMenu} setMenu={setCompanyMenu} info={PagesInfo.PagesInfo} name={"Company"}/>
+        </div>
+    )
+}
+
+const MenuFooterInfoItem = ({info, name, menu, setMenu}) => {
+    const navigate = useNavigate();
+    const goToLocation = (location) => {
+        if (location === "") {return;}
+        navigate(location);
+    }
     const toggleMenu = ([menu, setMenu]) => {
         setMenu(!menu);
     }
 
     return (
-        <div className='FooterInfo'>
-            <div className='ProductContainer'>
-                <div className='FooterColumnTitle' onClick={() => toggleMenu([prodcutMenu, setProductMenu])}>
-                    Product
-                    <img src={Arrow} alt="arrow" className={prodcutMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
-                </div>
-                <div className="ProductItemContainer" id={prodcutMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
-                    {FooterInfo.product.map((item) => (<div className='FooterItem'>{item.name}</div>))}
-                </div>
+        <div className='ProductContainer'>
+            <div className='FooterColumnTitle' onClick={() => toggleMenu([menu, setMenu])}>
+                {name}
+                <img src={Arrow} alt="arrow" className={menu ? "FooterArrowActive" : "FooterArrowInactive"}/>
             </div>
-            <div className='HelpCenterContainer'>
-                <div className='FooterColumnTitle' onClick={() => toggleMenu([helpMenu, setHelpMenu])}>
-                    Help Center
-                    <img src={Arrow} alt="arrow" className={helpMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
-                </div>
-                <div className="HelpItemContainer" id={helpMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
-                    {FooterInfo.help.map((item) => (<div className='FooterItem'>{item.name}</div>))}
-                </div>
-            </div>
-            <div className='CompanyContainer'>
-                <div className='FooterColumnTitle' onClick={() => toggleMenu([companyMenu, setCompanyMenu])}>
-                    Company
-                    <img src={Arrow} alt="arrow" className={companyMenu ? "FooterArrowActive" : "FooterArrowInactive"}/>
-                </div>
-                <div className="CompanyItemContainer" id={companyMenu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
-                    {PagesInfo.PagesInfo.map((page, index) => (<div className='FooterItem' key={index} onClick={() => goToLocation(page.toLowerCase())}>{page}</div>))}
-                </div>
+            <div className="ProductItemContainer" id={menu ? "ShowFooterItemContainer" : "HideFooterItemContainer"}>
+                {info.map((item, index) => (
+                    <div className='FooterItem' key={index} onClick={() => goToLocation(item.destination)}>{item.name}</div>
+                ))}
             </div>
         </div>
     )

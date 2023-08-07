@@ -1,5 +1,5 @@
 export const PagesInfo=
     [
-        "Home",
-        "Team"
+        {name: "Home", destination: "/home"},
+        {name: "Team", destination: "/team"},
     ]
