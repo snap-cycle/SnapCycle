@@ -7,15 +7,15 @@ export const TeamInfo = {
                 role: "Software Engineer",
                 bio: "This is Aidan Froggatt's bio...",
                 links: {
-                linkedin: "https://www.linkedin.com/in/aidanfroggatt/",
+                    linkedin: "https://www.linkedin.com/in/aidanfroggatt/",
                     github: "https://github.com/aidanfroggatt",
                     portfolio: "https://aidanfroggatt.github.io/portfolio/"
                 },
                 personaInfo: {
-                    email: "",
-                        location: "",
-                        phone: "",
-                        education: "",
+                    email: "aidanfr@live.ca",
+                    location: "Burlington, ON",
+                    phone: "",
+                    education: "Bachelor of Software Engineering, McMaster University"
                 },
                 imageSrc: "",
                     imageAlt: "Aidan's Profile Picture"
@@ -26,15 +26,15 @@ export const TeamInfo = {
                 role: "Mechatronics Engineer",
                 bio: "This is Luai Bashar's bio...",
                 links: {
-                linkedin: "https://www.linkedin.com/in/luaibashar/",
+                    linkedin: "https://www.linkedin.com/in/luaibashar/",
                     github: "https://github.com/luaibash",
                     portfolio: ""
                 },
                 personaInfo: {
                     email: "",
-                        location: "",
-                        phone: "",
-                        education: "",
+                    location: "",
+                    phone: "",
+                    education: ""
                 },
                 imageSrc: "",
                     imageAlt: "Luai's Profile Picture"

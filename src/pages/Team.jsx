@@ -8,12 +8,20 @@ const Team = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    Object.keys(TeamInfo.teamMembers).forEach((key) => {
-        console.log(TeamInfo.teamMembers[key]);
-        Object.keys(TeamInfo.teamMembers[key]).forEach((key2) => {
-            console.log(TeamInfo.teamMembers[key][key2]);
-        });
-    });
+    // Object.keys(TeamInfo.teamMembers).forEach((key) => {
+    //     console.log(TeamInfo.teamMembers[key]);
+    //     console.log(TeamInfo.teamMembers[key].links)
+    //
+    //     //links
+    //     Object.keys(TeamInfo.teamMembers[key].links).forEach((link) => {
+    //         console.log(TeamInfo.teamMembers[key].links[link]);
+    //     });
+    //
+    //     //personaInfo
+    //     Object.keys(TeamInfo.teamMembers[key].personaInfo).forEach((info) => {
+    //         console.log(TeamInfo.teamMembers[key].personaInfo[info]);
+    //     });
+    // });
 
     return (
         <AnimatedPage>
@@ -31,10 +39,22 @@ const Team = () => {
                             <div className="team-member-bio">{TeamInfo.teamMembers[key].bio}</div>
                             <div className="team-member-contact-container">
                                 <div className="team-member-link-container">
-
+                                    {
+                                        Object.keys(TeamInfo.teamMembers[key].links).map((link) => {
+                                            return (
+                                                <div>{TeamInfo.teamMembers[key].links[link]}</div>
+                                            )
+                                        })
+                                    }
                                 </div>
                                 <div className="team-member-info-container">
-
+                                    {
+                                        Object.keys(TeamInfo.teamMembers[key].personaInfo).map((info) => {
+                                            return (
+                                                <div>{TeamInfo.teamMembers[key].personaInfo[info]}</div>
+                                            )
+                                        })
+                                    }
                                 </div>
                             </div>
                         </div>
