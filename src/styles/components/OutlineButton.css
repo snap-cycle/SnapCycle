@@ -2,7 +2,7 @@
     border: solid;
     border-width: 1px;
     border-radius: 50px;
-    padding: 5px 20px 5px 30px;
+    padding: 5px 25px 5px 30px;
     display: flex;
     transition: all .3s ease;
     cursor: pointer;
@@ -25,7 +25,7 @@
     border-bottom: 2px solid black;
     position: relative;
     transform: rotate(-45deg);
-    margin: 0 6px;
+    margin: 0 3px;
     transition: all .3s ease;
 }
 
