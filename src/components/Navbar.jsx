@@ -73,7 +73,7 @@ const Navbar = () => {
           <div className='ButtonContainer'>
             <OutlineButton title="Try Now" destination="/demo"/>
           </div>
-          <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu' />
+          <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu' id={showPartialBackground ? 'HamburgerMenuGray' : 'HamburgerMenuWhite'}/>
         </div>
       </div>
     </div>

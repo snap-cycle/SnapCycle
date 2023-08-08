@@ -113,12 +113,16 @@
         border-radius: 50px;
         height: 65px;
         padding: 15px;
-
-        background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: 0% 0%;
         transition: background-size .2s;
+    }
+    #HamburgerMenuGray {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+    }
+    #HamburgerMenuWhite {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     }
     .HamburgerMenu:hover {
         cursor: pointer;
