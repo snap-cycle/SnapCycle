@@ -21,8 +21,8 @@ export const FooterInfo = {
         {name: "Security", destination: ""}
     ],
     help: [
-        {name: "FAQ", destination: ""},
-        {name: "Contact Us", destination: ""},
+        {name: "FAQ", destination: "/help-center"},
+        {name: "Contact Us", destination: "/help-center"},
     ],
 }
 
