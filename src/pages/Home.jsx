@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import '../styles/Home/Home.css';
 import '../styles/Home/PanelLanding.css';
 import '../styles/Home/PanelOne.css';
@@ -151,11 +151,6 @@ const PanelFive = () => {
 
 
 const Home = () => {
-    // Scroll to top of page on load
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-
     return (
         <AnimatedPage>
             <PanelLanding/>

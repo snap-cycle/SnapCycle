@@ -1,28 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import '../styles/Team.css';
 import AnimatedPage from "../animations/AnimatedPage";
 import {TeamInfo} from "../Info/TeamInfo";
 
 const Team = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-
-    // Object.keys(TeamInfo.teamMembers).forEach((key) => {
-    //     console.log(TeamInfo.teamMembers[key]);
-    //     console.log(TeamInfo.teamMembers[key].links)
-    //
-    //     //links
-    //     Object.keys(TeamInfo.teamMembers[key].links).forEach((link) => {
-    //         console.log(TeamInfo.teamMembers[key].links[link]);
-    //     });
-    //
-    //     //personaInfo
-    //     Object.keys(TeamInfo.teamMembers[key].personaInfo).forEach((info) => {
-    //         console.log(TeamInfo.teamMembers[key].personaInfo[info]);
-    //     });
-    // });
-
     return (
         <AnimatedPage>
             <div className="team-landing-panel">
