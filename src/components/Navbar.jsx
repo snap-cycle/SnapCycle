@@ -4,7 +4,8 @@ import BlackLogo from "../assets/Branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/Title/TitleBlack.png";
 import HamburgerIcon from "../assets/NavBar/HamburgerMenu.svg";
 import OutlineButton from "./OutlineButton";
-import "../styles/components/Navbar.css";
+import "../styles/Navbar/Navbar.css";
+import "../styles/Navbar/HamburgerMenu.css";
 import * as PagesInfo from "../Info/PagesInfo";
 
 const Navbar = () => {
@@ -58,24 +59,21 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='NavBarContainer'
-      id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
-      <div className="NavBar">
-        <div className='NavBarLogoAndName'>
-          <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
-          <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
+    <div className="NavBar" id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
+      <div className='NavBarLogoAndName'>
+        <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
+        <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
+      </div>
+      <div className='NavBarPages'>
+        {PagesInfo.PagesInfo.map((page, index) => (
+          <NavbarPageItem pageName={page.name} key={index} />
+        ))}
+      </div>
+      <div className='RightContainer'>
+        <div className='ButtonContainer'>
+          <OutlineButton title="Try Now" destination="/demo"/>
         </div>
-        <div className='NavBarPages'>
-          {PagesInfo.PagesInfo.map((page, index) => (
-            <NavbarPageItem pageName={page.name} key={index} />
-          ))}
-        </div>
-        <div className='RightContainer'>
-          <div className='ButtonContainer'>
-            <OutlineButton title="Try Now" destination="/demo"/>
-          </div>
-          <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!HamburgerMenu)}/>
-        </div>
+        <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!HamburgerMenu)}/>
       </div>
     </div>
   );
@@ -98,5 +96,14 @@ const NavbarPageItem = ({ pageName }) => {
     </div>
   );
 };
+
+const HamburgerMenu = () => {
+
+  return (
+      <div className='HamburgerMenu'>
+
+      </div>
+  )
+}
 
 export default Navbar;
