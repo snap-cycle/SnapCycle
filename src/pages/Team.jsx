@@ -8,21 +8,6 @@ const Team = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    // Object.keys(TeamInfo.teamMembers).forEach((key) => {
-    //     console.log(TeamInfo.teamMembers[key]);
-    //     console.log(TeamInfo.teamMembers[key].links)
-    //
-    //     //links
-    //     Object.keys(TeamInfo.teamMembers[key].links).forEach((link) => {
-    //         console.log(TeamInfo.teamMembers[key].links[link]);
-    //     });
-    //
-    //     //personaInfo
-    //     Object.keys(TeamInfo.teamMembers[key].personaInfo).forEach((info) => {
-    //         console.log(TeamInfo.teamMembers[key].personaInfo[info]);
-    //     });
-    // });
-
     return (
         <AnimatedPage>
             <div className="team-landing-panel">
