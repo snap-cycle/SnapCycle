@@ -25,4 +25,3 @@ export const FooterInfo = {
         {name: "Contact Us", destination: "/help-center"},
     ],
 }
-

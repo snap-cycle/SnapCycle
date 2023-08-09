@@ -21,3 +21,4 @@ const NavigationColumn = ({info, columnName}) => {
 
 export default NavigationColumn;
 
+

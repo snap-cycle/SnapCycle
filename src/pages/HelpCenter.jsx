@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/HelpCenter.css';
 import AnimatedPage from "../animations/AnimatedPage";
+
 const HelpCenter = () => {
     return (
         <AnimatedPage>
