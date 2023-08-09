@@ -14,16 +14,12 @@ const Navbar = () => {
   const [showNavBar, setNavBar] = useState(true);
   const [currentScroll, setCurrentScroll] = useState(window.scrollY);
   const [HamburgerMenu, setHamburgerMenu] = useState(false);
-  const partialThreshold = 75;
-  const solidThreshold = 150;
-  const navBarThreshold = 550;
+  const partialThreshold = 75, solidThreshold = 150, navBarThreshold = 550;
 
   const handleNavigation = useCallback((e) => {
       const window = e.currentTarget;
-
-      //If past home panel and scrolling down, nav bar dissapears. If scroll up, reappears
-      if (window.scrollY > navBarThreshold && currentScroll < window.scrollY)
-        setNavBar(false);
+      //If past home panel and scrolling down, nav bar disappears. If scroll up, reappears
+      if (window.scrollY > navBarThreshold && currentScroll < window.scrollY) setNavBar(false);
       else setNavBar(true);
       
       setCurrentScroll(window.scrollY);
@@ -41,12 +37,10 @@ const Navbar = () => {
 
   //useEffect to change appearance of navbar when it is at top of page
   useEffect(() => {
-
     const handleScroll = () => {
       //If scrolled down once, show partial translucent background
       if (window.scrollY > partialThreshold) setPartialBackground(true);
       else setPartialBackground(false);
-      
       //If scrolled down two or more times, show full background
       if (window.scrollY > solidThreshold) setSolidBackground(true);
       else setSolidBackground(false);
