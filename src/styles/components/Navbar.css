@@ -88,7 +88,7 @@
 }
 
 @media (min-width: 1001px) {
-    .HamburgerMenu {
+    .HamburgerIcon {
         display: none;
     }
 }
