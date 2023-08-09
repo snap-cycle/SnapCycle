@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/HelpCenter.css';
 import AnimatedPage from "../animations/AnimatedPage";
 const HelpCenter = () => {
-
     return (
         <AnimatedPage>
             <div className="min-h-screen flex flex-col justify-center align-middle items-center">

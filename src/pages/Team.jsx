@@ -1,13 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import '../styles/Team.css';
 import AnimatedPage from "../animations/AnimatedPage";
 import {TeamInfo} from "../Info/TeamInfo";
 
 const Team = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-
     return (
         <AnimatedPage>
             <div className="team-landing-panel">

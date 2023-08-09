@@ -11,7 +11,6 @@ import AppLoadAnimation from "./animations/AppLoadAnimation";
 import HelpCenter from "./pages/HelpCenter";
 
 function App() {
-
     return (
         <div className='App'>
             <AppLoadAnimation/>
