@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-.NavBarContainer {
+.ActiveNavBarContainer {
     position: fixed;
     left: 0;
     right: 0;
@@ -26,7 +26,7 @@
     background-color: white;
 }
 
-.NavBar {
+.ActiveNavBar {
     display: flex;
     justify-content: space-between;
     align-items: center;

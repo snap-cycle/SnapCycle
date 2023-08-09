@@ -13,7 +13,7 @@ const Navbar = () => {
   const [showSolidBackground, setSolidBackground] = useState(false);
   const [showNavBar, setNavBar] = useState(true);
   const [currentScroll, setCurrentScroll] = useState(window.scrollY);
-  const [HamburgerMenu, setHamburgerMenu] = useState(false);
+  const [showHamburgerMenu, setHamburgerMenu] = useState(false);
   const partialThreshold = 75, solidThreshold = 150, navBarThreshold = 550;
 
   const handleNavigation = useCallback((e) => {
@@ -53,24 +53,27 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className='NavBarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
-      <div className="NavBar">
-        <div className='NavBarLogoAndName'>
-          <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
-          <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
-        </div>
-        <div className='NavBarPages'>
-          {PagesInfo.PagesInfo.map((page, index) => (
-            <NavbarPageItem pageName={page.name} key={index} />
-          ))}
-        </div>
-        <div className='RightContainer'>
-          <div className='ButtonContainer'>
-            <OutlineButton title="Try Now" destination="/demo"/>
+    <div className='NavbarContainer'>
+      <div className='ActiveNavBarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
+        <div className="ActiveNavBar">
+          <div className='NavBarLogoAndName'>
+            <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
+            <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
           </div>
-          <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!HamburgerMenu)}/>
+          <div className='NavBarPages'>
+            {PagesInfo.PagesInfo.map((page, index) => (
+              <NavbarPageItem pageName={page.name} key={index} />
+            ))}
+          </div>
+          <div className='RightContainer'>
+            <div className='ButtonContainer'>
+              <OutlineButton title="Try Now" destination="/demo"/>
+            </div>
+            <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!showHamburgerMenu)}/>
+          </div>
         </div>
       </div>
+      {showHamburgerMenu && <HamburgerMenu/>}
     </div>
   );
 };
@@ -97,7 +100,7 @@ const HamburgerMenu = () => {
 
   return (
       <div className='HamburgerMenu'>
-
+        yuh
       </div>
   )
 }
