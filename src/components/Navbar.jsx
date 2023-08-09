@@ -54,13 +54,13 @@ const Navbar = () => {
 
   return (
     <div className='NavbarContainer'>
-      <div className='ActiveNavBarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavBarSolid" : "NavBarPartial") : "NavBarTransparent") : "NavBarDissapear"}>
-        <div className="ActiveNavBar">
-          <div className='NavBarLogoAndName'>
-            <img src={BlackLogo} alt="SnapCycle Logo" className="NavBarLogo" />
-            <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavBarTitle' />
+      <div className='ActiveNavbarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavbarSolid" : "NavbarPartial") : "NavbarTransparent") : "NavbarDissapear"}>
+        <div className="ActiveNavbar">
+          <div className='NavbarLogoAndName'>
+            <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogo" />
+            <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
           </div>
-          <div className='NavBarPages'>
+          <div className='NavbarPages'>
             {PagesInfo.PagesInfo.map((page, index) => (
               <NavbarPageItem pageName={page.name} key={index} />
             ))}
@@ -88,7 +88,7 @@ const NavbarPageItem = ({ pageName }) => {
 
   return (
     <div
-      className={location.pathname === destination ? "NavBarPagesActive" : "NavBarPagesInactive"}
+      className={location.pathname === destination ? "NavbarPagesActive" : "NavbarPagesInactive"}
       onClick={() => goToLocation(destination)}
     >
       {pageName}

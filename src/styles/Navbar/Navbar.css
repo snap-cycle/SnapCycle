@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-.ActiveNavBarContainer {
+.ActiveNavbarContainer {
     position: fixed;
     left: 0;
     right: 0;
@@ -9,24 +9,24 @@
 
     transition: padding-top 0.3s, padding-bottom 0.3s, background-color 0.3s, opacity 0.3s, visibility 0.3s;
 }
-#NavBarDissapear {
+#NavbarDissapear {
     visibility: hidden;
     opacity: 0;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#NavBarPartial {
+#NavbarPartial {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: rgb(255, 255, 255, 0.5);
 }
-#NavBarSolid {
+#NavbarSolid {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: white;
 }
 
-.ActiveNavBar {
+.ActiveNavbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,38 +39,38 @@
     font-weight: 700;
 }
 
-.NavBarLogoAndName {
+.NavbarLogoAndName {
     display: flex;
     align-items: center;
 }
 
-.NavBarLogo {
+.NavbarLogo {
     height: 50px;
     margin-right: 15px;
 }
 
-.NavBarTitle {
+.NavbarTitle {
     height: 25px;
 }
 
-.NavBarPages {
+.NavbarPages {
     display: flex;
     gap: 40px;
 }
 
-.NavBarPagesActive{
+.NavbarPagesActive{
     color: black;
     transition: color 0.2s ease-in-out;
 }
-.NavBarPagesActive:hover {
+.NavbarPagesActive:hover {
     cursor: pointer;
 }
 
-.NavBarPagesInactive{
+.NavbarPagesInactive{
     color: #666666;
     transition: color 0.2s ease-in-out;
 }
-.NavBarPagesInactive:hover{
+.NavbarPagesInactive:hover{
     cursor: pointer;
     color: black;
     transition: color 0.2s ease-in-out;
@@ -90,12 +90,12 @@
     }
 }
 @media (max-width: 1000px) {
-    .NavBar {
+    .ActiveNavbar {
         padding-left: 25px;
         padding-right: 25px;
     }
     
-    .NavBarPages {
+    .NavbarPages {
         display: none;
     }
 
