@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import BlackLogo from "../assets/Branding/BlackLogo.png";
 import SnapCycleTitle from "../assets/Title/TitleBlack.png";
-import HamburgerMenu from "../assets/NavBar/HamburgerMenu.svg";
+import HamburgerIcon from "../assets/NavBar/HamburgerMenu.svg";
 import OutlineButton from "./OutlineButton";
 import "../styles/components/Navbar.css";
 import * as PagesInfo from "../Info/PagesInfo";
@@ -12,6 +12,7 @@ const Navbar = () => {
   const [showSolidBackground, setSolidBackground] = useState(false);
   const [showNavBar, setNavBar] = useState(true);
   const [currentScroll, setCurrentScroll] = useState(window.scrollY);
+  const [HamburgerMenu, setHamburgerMenu] = useState(false);
   const partialThreshold = 75;
   const solidThreshold = 150;
   const navBarThreshold = 550;
@@ -73,7 +74,7 @@ const Navbar = () => {
           <div className='ButtonContainer'>
             <OutlineButton title="Try Now" destination="/demo"/>
           </div>
-          <img src={HamburgerMenu} alt="Hamburger Menu" className='HamburgerMenu' id={showPartialBackground ? 'HamburgerMenuGray' : 'HamburgerMenuWhite'}/>
+          <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!HamburgerMenu)}/>
         </div>
       </div>
     </div>
