@@ -70,10 +70,10 @@ const Navbar = () => {
               <OutlineButton title="Try Now" destination="/demo"/>
             </div>
             <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!showHamburgerMenu)}/>
+            {showHamburgerMenu && <HamburgerMenu/>}
           </div>
         </div>
       </div>
-      {showHamburgerMenu && <HamburgerMenu/>}
     </div>
   );
 };

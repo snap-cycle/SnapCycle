@@ -1,0 +1,7 @@
+.HamburgerMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    background-color: gray;
+}
