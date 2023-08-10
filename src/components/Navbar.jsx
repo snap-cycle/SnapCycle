@@ -52,6 +52,23 @@ const Navbar = () => {
     };
   }, []);
 
+  //useEffect to close hamburger menu whenever window is large enough to not need it
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1000) setHamburgerMenu(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const updateHamburgerMenu = () => {
+    setHamburgerMenu(!showHamburgerMenu);
+  };
+
   return (
     <div className='NavbarContainer'>
       <div className='ActiveNavbarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavbarSolid" : "NavbarPartial") : "NavbarTransparent") : "NavbarDissapear"}>
@@ -69,8 +86,8 @@ const Navbar = () => {
             <div className='ButtonContainer'>
               <OutlineButton title="Try Now" destination="/demo"/>
             </div>
-            <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!showHamburgerMenu)}/>
-            {showHamburgerMenu && <HamburgerMenu showHamburgerMenu={showHamburgerMenu} setHamburgerMenu={setHamburgerMenu}/>}
+            <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => updateHamburgerMenu()}/>
+            {showHamburgerMenu && <HamburgerMenu updateHamburgerMenu={updateHamburgerMenu}/>}
           </div>
         </div>
       </div>
@@ -96,10 +113,10 @@ const NavbarPageItem = ({ pageName }) => {
   );
 };
 
-const HamburgerMenu = ({showHamburgerMenu, setHamburgerMenu}) => {
+const HamburgerMenu = ({updateHamburgerMenu}) => {
 
   return (
-      <div className='HamburgerMenu' onClick={() => setHamburgerMenu(!showHamburgerMenu)}>
+      <div className='HamburgerMenu' onClick={() => updateHamburgerMenu()}>
       </div>
       
   )
