@@ -14,11 +14,11 @@ export const ThemeProvider = ({ children }) => {
             setDarkMode(event.matches);
         };
 
-        mediaQuery.addListener(handleChange);
+        mediaQuery.addEventListener(handleChange);
 
         // Clean up listener on component unmount
         return () => {
-            mediaQuery.removeListener(handleChange);
+            mediaQuery.removeEventListener(handleChange);
         };
     }, []);
     const toggleTheme = () => {
