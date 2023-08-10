@@ -70,7 +70,7 @@ const Navbar = () => {
               <OutlineButton title="Try Now" destination="/demo"/>
             </div>
             <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => setHamburgerMenu(!showHamburgerMenu)}/>
-            {showHamburgerMenu && <HamburgerMenu/>}
+            {showHamburgerMenu && <HamburgerMenu showHamburgerMenu={showHamburgerMenu} setHamburgerMenu={setHamburgerMenu}/>}
           </div>
         </div>
       </div>
@@ -96,12 +96,12 @@ const NavbarPageItem = ({ pageName }) => {
   );
 };
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({showHamburgerMenu, setHamburgerMenu}) => {
 
   return (
-      <div className='HamburgerMenu'>
-        yuh
+      <div className='HamburgerMenu' onClick={() => setHamburgerMenu(!showHamburgerMenu)}>
       </div>
+      
   )
 }
 
