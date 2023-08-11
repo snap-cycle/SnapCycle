@@ -1,4 +1,4 @@
-.HamburgerMenu {
+.HamburgerMenuContainer {
     position: fixed;
     top: 0px;
     right: 0px;
@@ -21,4 +21,24 @@
     border-radius: 0 0 0 100%;
 
     transition: width 0.15s linear, height 0.15s linear, border-radius 0.05s linear;
+}
+
+.HamburgerMenu {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.BurgerTopContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BurgerLogoAndName {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+
 }

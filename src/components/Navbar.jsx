@@ -1,7 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import BlackLogo from "../assets/Branding/BlackLogo.png";
-import SnapCycleTitle from "../assets/Title/TitleBlack.png";
+import WhiteLogo from "../assets/Branding/WhiteLogo.png";
+import BlackSnapCycleTitle from "../assets/Title/TitleBlack.png";
+import WhiteSnapCycleTitle from "../assets/Title/TitleWhite.png";
 import HamburgerIcon from "../assets/NavBar/HamburgerMenu.svg";
 import OutlineButton from "./OutlineButton";
 import "../styles/Navbar/Navbar.css";
@@ -95,7 +97,7 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
         <div className="ActiveNavbar">
           <div className='NavbarLogoAndName'>
             <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogo" />
-            <img src={SnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
+            <img src={BlackSnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
           </div>
           <div className='NavbarPages'>
             {PagesInfo.PagesInfo.map((page, index) => (
@@ -135,10 +137,13 @@ const NavbarPageItem = ({ pageName }) => {
 const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
 
   return (
-      <div className='HamburgerMenu' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'} onClick={() => updateHamburgerMenu()}>
-        <div className='BurgerTopContainer'>
-          <div className='BurgerLogoAndName'>
-
+      <div className='HamburgerMenuContainer' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'} onClick={() => updateHamburgerMenu()}>
+        <div className='HamburgerMenu'>
+          <div className='BurgerTopContainer'>
+            <div className='BurgerLogoAndName'>
+              <img src={WhiteLogo} alt="SnapCycle Logo" className="NavbarLogo" />
+              <img src={WhiteSnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
+            </div>
           </div>
         </div>
       </div>
