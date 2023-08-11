@@ -6,6 +6,7 @@
 
     background-color: #1B1818;
     border-radius: 0 0 0 100%;
+    overflow: hidden;
 }
 #HamburgerMenuActive {
     width: 100%;

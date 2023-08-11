@@ -104,9 +104,9 @@
     }
 
     .HamburgerIcon {
-        z-index: 10;
         position: absolute;
         right: 0;
+        z-index: 10;
 
         border-radius: 50px;
         height: 65px;
