@@ -9,11 +9,39 @@ import "../styles/Navbar/HamburgerMenu.css";
 import * as PagesInfo from "../Info/PagesInfo";
 
 const Navbar = () => {
+  const [showHamburgerMenu, setHamburgerMenu] = useState(false);
+
+  //useEffect to close hamburger menu whenever window is large enough to not need it
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1000) setHamburgerMenu(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const updateHamburgerMenu = () => {
+    setHamburgerMenu(!showHamburgerMenu);
+  };
+  
+  return (
+    <div>
+      <ActiveNavbar updateHamburgerMenu={updateHamburgerMenu}/>
+      <HamburgerMenu showHamburgerMenu={showHamburgerMenu} updateHamburgerMenu={updateHamburgerMenu}/>
+    </div>
+  );
+}
+
+
+const ActiveNavbar = ({updateHamburgerMenu}) => {
   const [showPartialBackground, setPartialBackground] = useState(false);
   const [showSolidBackground, setSolidBackground] = useState(false);
   const [showNavBar, setNavBar] = useState(true);
   const [currentScroll, setCurrentScroll] = useState(window.scrollY);
-  const [showHamburgerMenu, setHamburgerMenu] = useState(false);
   const partialThreshold = 75, solidThreshold = 150, navBarThreshold = 550;
 
   const handleNavigation = useCallback((e) => {
@@ -52,23 +80,6 @@ const Navbar = () => {
     };
   }, []);
 
-  //useEffect to close hamburger menu whenever window is large enough to not need it
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1000) setHamburgerMenu(false);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const updateHamburgerMenu = () => {
-    setHamburgerMenu(!showHamburgerMenu);
-  };
-
   return (
     <div className='NavbarContainer'>
       <div className='ActiveNavbarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavbarSolid" : "NavbarPartial") : "NavbarTransparent") : "NavbarDissapear"}>
@@ -87,7 +98,6 @@ const Navbar = () => {
               <OutlineButton title="Try Now" destination="/demo"/>
             </div>
             <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => updateHamburgerMenu()}/>
-            <HamburgerMenu showHamburgerMenu={showHamburgerMenu} updateHamburgerMenu={updateHamburgerMenu}/>
           </div>
         </div>
       </div>
