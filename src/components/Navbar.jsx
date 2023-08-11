@@ -5,6 +5,7 @@ import WhiteLogo from "../assets/Branding/WhiteLogo.png";
 import BlackSnapCycleTitle from "../assets/Title/TitleBlack.png";
 import WhiteSnapCycleTitle from "../assets/Title/TitleWhite.png";
 import HamburgerIcon from "../assets/NavBar/HamburgerMenu.svg";
+import WhiteX from "../assets/NavBar/WhiteX.svg";
 import OutlineButton from "./OutlineButton";
 import "../styles/Navbar/Navbar.css";
 import "../styles/Navbar/HamburgerMenu.css";
@@ -137,13 +138,14 @@ const NavbarPageItem = ({ pageName }) => {
 const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
 
   return (
-      <div className='HamburgerMenuContainer' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'} onClick={() => updateHamburgerMenu()}>
+      <div className='HamburgerMenuContainer' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'}>
         <div className='HamburgerMenu'>
           <div className='BurgerTopContainer'>
             <div className='BurgerLogoAndName'>
               <img src={WhiteLogo} alt="SnapCycle Logo" className="NavbarLogo" />
               <img src={WhiteSnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
             </div>
+            <img src={WhiteX} alt="Close Button" className='WhiteX' onClick={() => updateHamburgerMenu()}/>
           </div>
         </div>
       </div>
