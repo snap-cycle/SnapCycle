@@ -11,10 +11,23 @@ import * as PagesInfo from "../Info/PagesInfo";
 const Navbar = () => {
   const [showHamburgerMenu, setHamburgerMenu] = useState(false);
 
+  const updateHamburgerMenu = () => {
+    setHamburgerMenu(showHamburgerMenu => !showHamburgerMenu);
+
+    if (showHamburgerMenu) document.body.style.overflow = 'auto'; //sets scrollbar based on if menu is open or not
+    else document.body.style.overflow = 'hidden';                 //glitch with this? should be the opposite results
+
+    console.log(document.body.style.overflow);
+    console.log(showHamburgerMenu);
+  };
+
   //useEffect to close hamburger menu whenever window is large enough to not need it
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1000) setHamburgerMenu(false);
+      if (window.innerWidth > 1000) {
+        setHamburgerMenu(false);
+        document.body.style.overflow = 'auto';
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -23,10 +36,6 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const updateHamburgerMenu = () => {
-    setHamburgerMenu(!showHamburgerMenu);
-  };
   
   return (
     <div>
