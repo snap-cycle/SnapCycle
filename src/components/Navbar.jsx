@@ -55,7 +55,7 @@ const Navbar = () => {
   //useEffect to close hamburger menu whenever window is large enough to not need it
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1000) setHamburgerMenu(false);
+      if (window.innerWidth > 1000) setHamburgerMenu(false);
     };
 
     window.addEventListener('resize', handleResize);
@@ -87,7 +87,7 @@ const Navbar = () => {
               <OutlineButton title="Try Now" destination="/demo"/>
             </div>
             <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => updateHamburgerMenu()}/>
-            {showHamburgerMenu && <HamburgerMenu updateHamburgerMenu={updateHamburgerMenu}/>}
+            <HamburgerMenu showHamburgerMenu={showHamburgerMenu} updateHamburgerMenu={updateHamburgerMenu}/>
           </div>
         </div>
       </div>
@@ -113,10 +113,10 @@ const NavbarPageItem = ({ pageName }) => {
   );
 };
 
-const HamburgerMenu = ({updateHamburgerMenu}) => {
+const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
 
   return (
-      <div className='HamburgerMenu' onClick={() => updateHamburgerMenu()}>
+      <div className='HamburgerMenu' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'} onClick={() => updateHamburgerMenu()}>
       </div>
       
   )
