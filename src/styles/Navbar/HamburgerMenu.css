@@ -4,23 +4,23 @@
     left: 0;
     right: 0;
     z-index: 15;
-
     background-color: #1B1818;
-    overflow: hidden;
 
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 #HamburgerMenuActive {
     height: 100%;
+    overflow-y: auto;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 #HamburgerMenuInactive {
     height: 0%;
+    overflow-y: hidden;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
 .HamburgerMenu {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 30px;
+    margin: 30px 40px 65px 50px;
 }
 
 .BurgerTopContainer {

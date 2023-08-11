@@ -39,6 +39,11 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // const SwitchScrollBar = () => {
+  //   document.body.style.overflow = 'hidden';
+  //   document.querySelector('#HamburgerMenuInactive').style.overflow = 'auto';
+  // };
   
   return (
     <div>
