@@ -17,11 +17,7 @@ const Navbar = () => {
   const updateHamburgerMenu = () => {
     setHamburgerMenu(showHamburgerMenu => !showHamburgerMenu);
 
-    if (showHamburgerMenu) {
-      document.body.style.overflow = 'auto'; //sets scrollbar based on if menu is open or not
-      document.querySelector('#HamburgerMenuActive').style.overflow = 'hidden';
-    }
-    else setTimeout(SwitchScrollBar,500);
+    SwitchScrollBar();
   };
 
   //useEffect to close hamburger menu whenever window is large enough to not need it
@@ -40,9 +36,18 @@ const Navbar = () => {
     };
   }, []);
 
+  // Switches scrollbars whenever hamburger menu is opened or closed
   const SwitchScrollBar = () => {
-    document.body.style.overflow = 'hidden';
-    document.querySelector('#HamburgerMenuActive').style.overflow = 'auto';
+    if (showHamburgerMenu) {
+      document.body.style.overflow = 'auto';
+      document.querySelector('#HamburgerMenuActive').style.overflow = 'hidden';
+    }
+    else {
+      setTimeout(() => {
+        document.body.style.overflow = 'hidden';
+        document.querySelector('#HamburgerMenuActive').style.overflow = 'auto';
+      }, 500 );
+    }
   };
   
   return (
