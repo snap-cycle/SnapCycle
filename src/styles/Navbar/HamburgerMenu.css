@@ -50,3 +50,24 @@
     cursor: pointer;
     background-size: 100% 100%;
 }
+
+.HamburgerPages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.HamburgerPage {
+    font-size: 36px;
+    font-weight: 600;
+    color: #A4A4A4;
+    text-align: left;
+    margin: 10px 0;
+
+    transition: padding-left 0.5s, color 0.5s;
+}
+.HamburgerPage:hover {
+    color: white;
+    padding-left: 20px;
+    cursor: pointer;
+}

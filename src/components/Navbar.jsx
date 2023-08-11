@@ -147,6 +147,26 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
             </div>
             <img src={WhiteX} alt="Close Button" className='WhiteX' onClick={() => updateHamburgerMenu()}/>
           </div>
+          <div className='HamburgerPages'>
+            <div className='HamburgerPage'>
+              Home
+            </div>
+            <div className='HamburgerPage'>
+              Try Now
+            </div>
+            <div className='HamburgerPage'>
+              Team
+            </div>
+            <div className='HamburgerPage'>
+              FAQ
+            </div>
+            <div className='HamburgerPage'>
+              Help
+            </div>
+            <div className='HamburgerPage'>
+              Contact Us
+            </div>
+          </div>
         </div>
       </div>
   )
