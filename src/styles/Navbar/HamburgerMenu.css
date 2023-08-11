@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 0% 0%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03));
 
     transition: background-size .15s;
 }
@@ -63,6 +63,7 @@
     color: #A4A4A4;
     text-align: left;
     margin: 10px 0;
+    width: fit-content;
 
     transition: padding-left 0.5s, color 0.5s;
 }
