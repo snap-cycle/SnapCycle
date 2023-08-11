@@ -35,10 +35,18 @@
 }
 
 .WhiteX {
-    width: 50px;
+    width: 55px;
+    padding: 15px;
+
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 0% 0%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
+
+    transition: background-size .15s;
 }
 .WhiteX:hover {
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-size: 100% 100%;
 }
