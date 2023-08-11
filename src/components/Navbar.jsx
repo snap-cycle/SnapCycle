@@ -102,8 +102,8 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
               <NavbarPageItem pageName={page.name} key={index} />
             ))}
           </div>
-          <div className='RightContainer'>
-            <div className='ButtonContainer'>
+          <div className='NavbarRightContainer'>
+            <div className='NavbarButtonContainer'>
               <OutlineButton title="Try Now" destination="/demo"/>
             </div>
             <img src={HamburgerIcon} alt="Hamburger Icon" className='HamburgerIcon' id={showPartialBackground ? 'HamburgerIconGray' : 'HamburgerIconWhite'} onClick={() => updateHamburgerMenu()}/>
@@ -136,8 +136,12 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
 
   return (
       <div className='HamburgerMenu' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'} onClick={() => updateHamburgerMenu()}>
+        <div className='BurgerTopContainer'>
+          <div className='BurgerLogoAndName'>
+
+          </div>
+        </div>
       </div>
-      
   )
 }
 

@@ -76,7 +76,7 @@
     transition: color 0.2s ease-in-out;
 }
 
-.RightContainer {
+.NavbarRightContainer {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -99,7 +99,7 @@
         display: none;
     }
 
-    .RightContainer {
+    .NavbarRightContainer {
         width: 215px;
     }
 
@@ -128,11 +128,11 @@
     }
 }
 @media (max-width: 750px) {
-    .ButtonContainer {
+    .NavbarButtonContainer {
         display: none;
     }
 
-    .RightContainer {
+    .NavbarRightContainer {
         width: 65px;
     }
 }
