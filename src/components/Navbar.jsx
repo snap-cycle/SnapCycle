@@ -17,11 +17,11 @@ const Navbar = () => {
   const updateHamburgerMenu = () => {
     setHamburgerMenu(showHamburgerMenu => !showHamburgerMenu);
 
-    if (showHamburgerMenu) document.body.style.overflow = 'auto'; //sets scrollbar based on if menu is open or not
-    else document.body.style.overflow = 'hidden';                 //glitch with this? should be the opposite results
-
-    console.log(document.body.style.overflow);
-    console.log(showHamburgerMenu);
+    if (showHamburgerMenu) {
+      document.body.style.overflow = 'auto'; //sets scrollbar based on if menu is open or not
+      document.querySelector('#HamburgerMenuActive').style.overflow = 'hidden';
+    }
+    else setTimeout(SwitchScrollBar,500);
   };
 
   //useEffect to close hamburger menu whenever window is large enough to not need it
@@ -40,10 +40,10 @@ const Navbar = () => {
     };
   }, []);
 
-  // const SwitchScrollBar = () => {
-  //   document.body.style.overflow = 'hidden';
-  //   document.querySelector('#HamburgerMenuInactive').style.overflow = 'auto';
-  // };
+  const SwitchScrollBar = () => {
+    document.body.style.overflow = 'hidden';
+    document.querySelector('#HamburgerMenuActive').style.overflow = 'auto';
+  };
   
   return (
     <div>
