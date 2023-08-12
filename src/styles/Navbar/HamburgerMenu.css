@@ -8,12 +8,12 @@
 }
 #HamburgerMenuActive {
     height: 100%;
-    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: width 0.5s cubic-bezier(.95,.01,.05,.99), height 0.5s cubic-bezier(.95,.01,.05,.99);
 }
 #HamburgerMenuInactive {
     height: 0%;
     overflow-y: hidden;
-    transition: width 0.5s ease-in-out 0.3s, height 0.5s ease-in-out 0.3s;
+    transition: width 0.5s cubic-bezier(.89,0,.12,.99) 0.3s, height 0.5s cubic-bezier(.89,0,.12,.99) 0.3s;
 }
 
 .HamburgerMenu {
