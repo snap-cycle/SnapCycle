@@ -37,13 +37,13 @@
     flex: 25;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(#1B1818, #1B1818);
 
     background-repeat: no-repeat;
     background-size: 200% 200%;
 }
-#LogoAnimation {
-    animation: slideIn 0.3s 0.7s ease-in-out forwards, slideOut 0.4s 1.1s ease-in-out forwards;
+#LogoActive {
+    background-image: linear-gradient(#1B1818, #1B1818);
+    animation: slideIn 0.35s cubic-bezier(0.17, 0.67, 0.21, 1) 0.7s forwards, slideOut 0.35s cubic-bezier(0.17, 0.67, 0.21, 1) 1.1s forwards;
 }
 @keyframes slideIn {
     0% {
