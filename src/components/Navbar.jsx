@@ -171,8 +171,8 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
 };
 
 const HamburgerPage = ({show, text, page}) => {
-  const maxTime = 1;
-  const delay = (show) ? (0.5 + page*0.2) : (maxTime - page*0.2);
+  const maxPage = 5; const interval = 0.2; const maxTime = maxPage*interval;
+  const delay = (show) ? (0.5 + page*interval) : (maxTime - page*interval);
   const pageStyle = {
     transition: `padding-left 0.5s, color 0.5s, opacity 0.2s ease-out ${delay}s, margin-top 0.2s ease-out ${delay}s`,
   };
