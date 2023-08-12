@@ -6,6 +6,7 @@ import BlackSnapCycleTitle from "../assets/Title/TitleBlack.png";
 import WhiteSnapCycleTitle from "../assets/Title/TitleWhite.png";
 import HamburgerIcon from "../assets/NavBar/HamburgerMenu.svg";
 import WhiteX from "../assets/NavBar/WhiteX.svg";
+import RightArrow from "../assets/Footer/RightArrow.svg";
 import OutlineButton from "./OutlineButton";
 import "../styles/Navbar/Navbar.css";
 import "../styles/Navbar/HamburgerMenu.css";
@@ -180,6 +181,7 @@ const HamburgerPage = ({show, text, page}) => {
   return (
     <div className='HamburgerPage' id={show ? 'HamburgerPageActive' : 'HamburgerPageInactive'} style={pageStyle}>
       {text}
+      <img src={RightArrow} alt="Arrow" className='HamburgerArrow'/>
     </div>
   );
 };

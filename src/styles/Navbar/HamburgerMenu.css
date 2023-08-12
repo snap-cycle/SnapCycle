@@ -60,8 +60,10 @@
     font-weight: 600;
     color: #A4A4A4;
     text-align: left;
-    margin: 10px 0;
-    width: fit-content;
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
 }
 .HamburgerPage:hover {
     color: white;
@@ -71,4 +73,13 @@
 #HamburgerPageInactive {
     opacity: 0;
     margin-top: -10px;
+}
+
+.HamburgerArrow {
+    height: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.HamburgerPage:hover .HamburgerArrow {
+    opacity: 1;
 }
