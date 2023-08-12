@@ -153,8 +153,9 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
         <div className='HamburgerMenu'>
           <div className='BurgerTopContainer'>
             <div className='BurgerLogoAndName'>
-              <img src={WhiteLogo} alt="SnapCycle Logo" className="NavbarLogo" />
-              <img src={WhiteSnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
+              <img src={WhiteLogo} alt="SnapCycle Logo" className="HamburgerLogo"/>
+              <img src={WhiteSnapCycleTitle} alt="SnapCycle Title" className='HamburgerTitle'/>
+              <div className='cover' id={showHamburgerMenu && 'LogoAnimation'}></div>
             </div>
             <img src={WhiteX} alt="Close Button" className='WhiteX' onClick={() => updateHamburgerMenu()}/>
           </div>

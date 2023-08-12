@@ -29,6 +29,49 @@
 .BurgerLogoAndName {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.cover {
+    position: absolute;
+    flex: 25;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#1B1818, #1B1818);
+
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+}
+#LogoAnimation {
+    animation: slideIn 0.3s 0.7s ease-in-out forwards, slideOut 0.4s 1.1s ease-in-out forwards;
+}
+@keyframes slideIn {
+    0% {
+        background-image: linear-gradient(to right, white 50%, #1B1818 0);
+        background-position: right;
+    }
+    100% {
+        background-image: linear-gradient(to right, white 50%, #1B1818 0);
+        background-position: left;
+    }
+}
+@keyframes slideOut {
+    0% {
+        background-image: linear-gradient(to right, transparent 50%, white 0);
+        background-position: right;
+    }
+    100% {
+        background-image: linear-gradient(to right, transparent 50%, white 0);
+        background-position: left;
+    }
+}
+
+.HamburgerLogo {
+    height: 50px;
+    margin-right: 15px;
+}
+.HamburgerTitle {
+    height: 25px;
 }
 
 .WhiteX {
