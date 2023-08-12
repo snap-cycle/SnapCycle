@@ -158,28 +158,30 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
             <img src={WhiteX} alt="Close Button" className='WhiteX' onClick={() => updateHamburgerMenu()}/>
           </div>
           <div className='HamburgerPages'>
-            <div className='HamburgerPage'>
-              Home
-            </div>
-            <div className='HamburgerPage'>
-              Try Now
-            </div>
-            <div className='HamburgerPage'>
-              Team
-            </div>
-            <div className='HamburgerPage'>
-              FAQ
-            </div>
-            <div className='HamburgerPage'>
-              Help
-            </div>
-            <div className='HamburgerPage'>
-              Contact Us
-            </div>
+            <HamburgerPage show={showHamburgerMenu} text={'Home'} page={0}/>
+            <HamburgerPage show={showHamburgerMenu} text={'Try Now'} page={1}/>
+            <HamburgerPage show={showHamburgerMenu} text={'Team'} page={2}/>
+            <HamburgerPage show={showHamburgerMenu} text={'FAQ'} page={3}/>
+            <HamburgerPage show={showHamburgerMenu} text={'Help'} page={4}/>
+            <HamburgerPage show={showHamburgerMenu} text={'Contact Us'} page={5}/>
           </div>
         </div>
       </div>
-  )
-}
+  );
+};
+
+const HamburgerPage = ({show, text, page}) => {
+  const maxPage = 5; const maxTime = 1.5;
+  const delay = (show) ? (0.5 + page*0.2) : (maxTime - (page-maxPage)*0.1);
+  const pageStyle = {
+    transition: `padding-left 0.5s, color 0.5s, opacity 0.2s ease-out ${delay}s, margin-top 0.2s ease-out ${delay}s`,
+  };
+
+  return (
+    <div className='HamburgerPage' id={show ? 'HamburgerPageActive' : 'HamburgerPageInactive'} style={pageStyle}>
+      {text}
+    </div>
+  );
+};
 
 export default Navbar;

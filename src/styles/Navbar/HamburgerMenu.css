@@ -5,8 +5,6 @@
     right: 0;
     z-index: 15;
     background-color: #1B1818;
-
-    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 #HamburgerMenuActive {
     height: 100%;
@@ -15,11 +13,11 @@
 #HamburgerMenuInactive {
     height: 0%;
     overflow-y: hidden;
-    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out 1.5s, height 0.5s ease-in-out 1.5s;
 }
 
 .HamburgerMenu {
-    margin: 25px 30px 70px 25px;
+    margin: 25px 30px 65px 25px;
 }
 
 .BurgerTopContainer {
@@ -63,11 +61,13 @@
     text-align: left;
     margin: 10px 0;
     width: fit-content;
-
-    transition: padding-left 0.5s, color 0.5s;
 }
 .HamburgerPage:hover {
     color: white;
     padding-left: 20px;
     cursor: pointer;
+}
+#HamburgerPageInactive {
+    opacity: 0;
+    margin-top: -10px;
 }
