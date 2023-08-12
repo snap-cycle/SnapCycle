@@ -29,7 +29,11 @@
 .BurgerLogoAndName {
     display: flex;
     align-items: center;
+}
+
+.BurgerTitleContainer {
     position: relative;
+    display: flex;
 }
 
 .cover {
