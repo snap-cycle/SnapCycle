@@ -13,7 +13,7 @@
 #HamburgerMenuInactive {
     height: 0%;
     overflow-y: hidden;
-    transition: width 0.5s ease-in-out 1.5s, height 0.5s ease-in-out 1.5s;
+    transition: width 0.5s ease-in-out 1s, height 0.5s ease-in-out 1s;
 }
 
 .HamburgerMenu {
@@ -52,6 +52,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    height: 440px;
 }
 
 .HamburgerPage {
