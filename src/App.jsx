@@ -17,7 +17,7 @@ function App() {
         <div className='App'>
             <AppLoadAnimation/>
             <AnimatePresence mode='wait'>
-                <Router>
+                <Router basename="/">
                     <Navbar/>
                         <Routes>
                             <Route exact_path="/" element={<Root/>}/>
