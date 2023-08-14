@@ -16,7 +16,7 @@
     display: inline-block;
     margin-left: 12px;
 
-    color: rgb(34, 99, 34);
+    color: rgb(32, 117, 32);
 
     height: 44px;
     line-height: 1.1;
@@ -33,28 +33,16 @@
     0% {
         transform: translateY(0);
     }
-    12.5% {
+    12.5%, 25% {
         transform: translateY(-40px);
     }
-    25% {
-        transform: translateY(-40px);
-    }
-    37.5% {
+    37.5%, 50% {
         transform: translateY(-79.5px);
     }
-    50% {
-        transform: translateY(-79.5px);
-    }
-    62.5% {
+    62.5%, 75% {
         transform: translateY(-119px);
     }
-    75% {
-        transform: translateY(-119px);
-    }
-    87.5% {
-        transform: translateY(-158px);
-    }
-    100% {
+    87.5%, 100% {
         transform: translateY(-158px);
     }
 }
