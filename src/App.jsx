@@ -8,7 +8,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import {AnimatePresence} from "framer-motion";
 import AppLoadAnimation from "./animations/AppLoadAnimation";
-import HelpCenter from "./pages/HelpCenter";
+import Help from "./pages/Help";
+import Contact from "./pages/Contact";
 
 function App() {
     return (
@@ -21,7 +22,8 @@ function App() {
                             <Route path='/home' element={<Home/>} />
                             <Route path='/team' element={<Team/>} />
                             <Route path='/demo' element={<Demo/>} />
-                            <Route path='/help-center' element={<HelpCenter/>}/>
+                            <Route path='/help' element={<Help/>}/>
+                            <Route path='/contact' element={<Contact/>}/>
                         </Routes>
                     <Footer/>
                 </Router>

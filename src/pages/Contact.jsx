@@ -1,16 +1,15 @@
 import React from 'react';
-import '../styles/HelpCenter.css';
 import AnimatedPage from "../animations/AnimatedPage";
 
-const HelpCenter = () => {
+const Contact = () => {
     return (
         <AnimatedPage>
             <div className="min-h-screen flex flex-col justify-center align-middle items-center">
-                <h1>Help Center</h1>
+                <h1>Contact</h1>
                 <p>Currently in development</p>
             </div>
         </AnimatedPage>
     );
 }
 
-export default HelpCenter;
+export default Contact;
