@@ -27,10 +27,10 @@
 }
 #BurgerTopContainerInactive {
     transform: translateY(-80px);
-    transition: all 0.3s ease-in 0.3s;
+    transition: all 0.25s ease-in 0.3s;
 }
 #BurgerTopContainerActive {
-    transition: all 0.3s ease-in;
+    transition: all 0.25s ease-in;
 }
 
 .BurgerLogoAndName {
