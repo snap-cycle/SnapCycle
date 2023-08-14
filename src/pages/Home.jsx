@@ -46,7 +46,14 @@ const PanelOne = () => {
         <div className='Title' id='PanelOneTitle'>
             Hundreds of Objects
             to Detect From, That
-            Help You Recycle.
+            Help You
+            <span className='RevolvingWordsContainer'>
+                <span className='RevolvingWord'>Recycle.</span>
+                <span className='RevolvingWord'>Dispose.</span>
+                <span className='RevolvingWord'>Recover.</span>
+                <span className='RevolvingWord'>Discard.</span>
+                <span className='RevolvingWord'>Recycle.</span>
+            </span>
         </div>
         <div className='ItemCategories'>
             <Ticker items={TickerData.tickerItems1}/>

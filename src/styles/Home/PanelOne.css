@@ -12,6 +12,53 @@
     margin: 0 auto;
 }
 
+.RevolvingWordsContainer {
+    display: inline-block;
+    margin-left: 12px;
+
+    color: rgb(34, 99, 34);
+
+    height: 44px;
+    line-height: 1.1;
+    vertical-align: bottom;
+    overflow-y: hidden;
+}
+.RevolvingWord {
+    display: block;
+    white-space: pre;
+    text-align: left;
+    animation: animateWords 15s infinite ease;
+}
+@keyframes animateWords {
+    0% {
+        transform: translateY(0);
+    }
+    12.5% {
+        transform: translateY(-40px);
+    }
+    25% {
+        transform: translateY(-40px);
+    }
+    37.5% {
+        transform: translateY(-79.5px);
+    }
+    50% {
+        transform: translateY(-79.5px);
+    }
+    62.5% {
+        transform: translateY(-119px);
+    }
+    75% {
+        transform: translateY(-119px);
+    }
+    87.5% {
+        transform: translateY(-158px);
+    }
+    100% {
+        transform: translateY(-158px);
+    }
+}
+
 .ItemCategories {
     margin-top:50px;
     display: flex;
