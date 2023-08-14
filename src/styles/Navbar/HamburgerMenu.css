@@ -25,6 +25,13 @@
     justify-content: space-between;
     align-items: center;
 }
+#BurgerTopContainerInactive {
+    transform: translateY(-80px);
+    transition: all 0.3s ease-in 0.3s;
+}
+#BurgerTopContainerActive {
+    transition: all 0.3s ease-in;
+}
 
 .BurgerLogoAndName {
     display: flex;

@@ -151,7 +151,7 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
   return (
       <div className='HamburgerMenuContainer' id={showHamburgerMenu ? 'HamburgerMenuActive' : 'HamburgerMenuInactive'}>
         <div className='HamburgerMenu'>
-          <div className='BurgerTopContainer'>
+          <div className='BurgerTopContainer' id={ showHamburgerMenu ? 'BurgerTopContainerActive' : 'BurgerTopContainerInactive'}>
             <div className='BurgerLogoAndName'>
               <img src={WhiteLogo} alt="SnapCycle Logo" className="HamburgerLogo"/>
               <div className='BurgerTitleContainer'>
