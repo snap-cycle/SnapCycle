@@ -10,6 +10,7 @@ import {AnimatePresence} from "framer-motion";
 import AppLoadAnimation from "./animations/AppLoadAnimation";
 import Help from "./pages/Help";
 import Contact from "./pages/Contact";
+import Root from "./pages/Root";
 
 function App() {
     return (
