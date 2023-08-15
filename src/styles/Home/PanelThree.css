@@ -1,31 +1,54 @@
-.PanelThree {
-    max-width: 1350px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-
-    display: flex;
-    justify-content: space-between;
-    text-align: right;
-    align-items: start;
-}
-
-.PanelThreeImageContainer {
-    max-width: 600px;
-    margin-left: 75px;
-    margin-right: 50px;
-}
-
-.PanelThreePlaceholder {
-    width: 100%;
-}
-
 .PanelThreeText {
-    max-width: 370px;
-    margin-right: 75px;
+    text-align: right;
 }
 
 .PanelThreeButton {
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
+}
+
+@media (min-width: 1001px) {
+    .PanelThree {
+        max-width: 1350px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .PanelThreeImageContainer {
+        max-width: 600px;
+        margin-left: 75px;
+        margin-right: 50px;
+    }
+    
+    .PanelThreePlaceholder {
+        width: 100%;
+    }
+    
+    .PanelThreeText {
+        max-width: 370px;
+        margin-right: 75px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .PanelThree {
+        margin: 0 25px 100px 25px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .PanelThreeImageContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 75px;
+    }
+
+    .PanelThreePlaceholder {
+        width: 800px;
+    }
 }
