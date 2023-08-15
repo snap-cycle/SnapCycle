@@ -12,12 +12,14 @@
         max-width: 1350px;
         margin: 0 auto;
         margin-bottom: 100px;
+        padding-left: 300px;
+
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         text-align: left;
+
         position: relative;
-        padding-left: 300px;
     }
     
     .PanelTwoText {

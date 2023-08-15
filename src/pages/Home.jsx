@@ -97,17 +97,17 @@ const PanelThree = () => {
         </div>
         <div className='PanelThreeText'>
             <div className='Title'>
-                Can't Take a Picture?<br></br>
+                Can't Take a Picture?
                 No Worries!
             </div>
             <div className='SubText'>
-                Search through our ever growing database<br></br>
-                of objects to learn how to dispose of them.<br></br>
-                Say no more to scientific articles going into<br></br>
+                Search through our ever growing database
+                of objects to learn how to dispose of them.
+                Say no more to scientific articles going into
                 detail on things you don't need to know!
             </div>
             <div className='SubText'>
-                Try out SnapCycle and unlock the secrets<br></br>
+                Try out SnapCycle and unlock the secrets
                 of sustainable living today.
             </div>
             <div className='PanelThreeButton'>

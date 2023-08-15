@@ -10,11 +10,12 @@
 }
 
 .PanelThreePlaceholder {
-    width: 600px;
+    max-height: 500px;
     margin-left: 75px;
 }
 
 .PanelThreeText {
+    max-width: 370px;
     margin-right: 75px;
 }
 
