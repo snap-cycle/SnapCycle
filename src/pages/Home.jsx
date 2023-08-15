@@ -92,7 +92,7 @@ const PanelTwo = () => {
 
 const PanelThree = () => {
     return <div className='PanelThree'>
-        <div className='PanelThreeImage'>
+        <div className='PanelThreeImageContainer'>
             <img src={PanelThreePlaceholder} alt="Placeholder" className='PanelThreePlaceholder'/>
         </div>
         <div className='PanelThreeText'>
@@ -156,7 +156,6 @@ const PanelFive = () => {
         </div>
     </div>;
 }
-
 
 const Home = () => {
     return (

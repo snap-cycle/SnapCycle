@@ -6,12 +6,17 @@
     display: flex;
     justify-content: space-between;
     text-align: right;
-    align-items: center;
+    align-items: start;
+}
+
+.PanelThreeImageContainer {
+    max-width: 600px;
+    margin-left: 75px;
+    margin-right: 50px;
 }
 
 .PanelThreePlaceholder {
-    max-height: 500px;
-    margin-left: 75px;
+    width: 100%;
 }
 
 .PanelThreeText {
