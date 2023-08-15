@@ -1,10 +1,17 @@
 .PanelThree {
-    height: 500px;
     max-width: 1350px;
     margin: 0 auto;
+    margin-bottom: 100px;
+
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
     text-align: right;
+    align-items: center;
+}
+
+.PanelThreePlaceholder {
+    width: 600px;
+    margin-left: 75px;
 }
 
 .PanelThreeText {

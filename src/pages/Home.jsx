@@ -11,6 +11,7 @@ import Ticker from "../components/Ticker";
 import {TickerData} from "../Info/TickerInfo";
 import OutlineButton from "../components/OutlineButton";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
+import PanelThreePlaceholder from "../assets/Home/PanelThreePlaceholder.png";
 import Statistics from "../components/Statistics";
 import {StatisticsInfo} from "../Info/StatisticsInfo";
 import AnimatedPage from "../animations/AnimatedPage";
@@ -92,7 +93,7 @@ const PanelTwo = () => {
 const PanelThree = () => {
     return <div className='PanelThree'>
         <div className='PanelThreeImage'>
-
+            <img src={PanelThreePlaceholder} alt="Placeholder" className='PanelThreePlaceholder'/>
         </div>
         <div className='PanelThreeText'>
             <div className='Title'>
