@@ -14,7 +14,7 @@
 
 .RevolvingWordsContainer {
     display: inline-block;
-    margin-left: 12px;
+    padding-left: 12px;
 
     color: rgb(32, 117, 32);
 
@@ -22,6 +22,9 @@
     line-height: 1.1;
     vertical-align: bottom;
     overflow-y: hidden;
+
+    user-select: none;
+    cursor:text;
 }
 .RevolvingWord {
     display: block;
