@@ -1,4 +1,4 @@
-.HomePanelLanding {
+/* .HomePanelLanding {
     height: 100vh;
     display: flex;
     background-color: black;
@@ -67,4 +67,19 @@
 }
 .Words:hover {
     text-decoration: underline;
+} */
+
+.PanelLanding {
+    width: 100vw;
+    height: 100vh;
+    
+    position: relative;
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
+.PanelLandingBackground {
+    position: absolute;
+    height: 100%;
+    overflow-x: hidden;
 }

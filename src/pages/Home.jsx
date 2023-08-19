@@ -6,6 +6,7 @@ import '../styles/Home/PanelTwo.css';
 import '../styles/Home/PanelThree.css';
 import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
+import PanelLandingBackground from "../assets/Home/PanelLandingBackground.png";
 import BackgroundImage from "../assets/Home/RecyclingBackground.jpg";
 import Ticker from "../components/Ticker";
 import {TickerData} from "../Info/TickerInfo";
@@ -19,7 +20,7 @@ import TurtleLeft from "../assets/Home/TurtleLeft.png";
 import TurtleRight from "../assets/Home/TurtleRight.png";
 
 
-const PanelLanding = () => {
+const OldPanelLanding = () => {
     return (
         <div className='HomePanelLanding'>
             <div className="panel-home-title">
@@ -38,6 +39,14 @@ const PanelLanding = () => {
                     </div>
                 </div>
             </div>
+        </div>
+    )
+}
+
+const PanelLanding = () => {
+    return (
+        <div className='PanelLanding'>
+            <img src={PanelLandingBackground} className='PanelLandingBackground'/>
         </div>
     )
 }
