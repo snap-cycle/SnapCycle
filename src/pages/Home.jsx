@@ -19,14 +19,11 @@ import AnimatedPage from "../animations/AnimatedPage";
 import TurtleLeft from "../assets/Home/TurtleLeft.png";
 import TurtleRight from "../assets/Home/TurtleRight.png";
 
-
-const OldPanelLanding = () => {
+const PanelLanding = () => {
     return (
-        <div className='HomePanelLanding'>
-            <div className="panel-home-title">
-                <img className="landing-background-image" alt="Landing Page Background" src={BackgroundImage}/>
-                <div className="overlay"></div>
-                <div className="HomepageContent">
+        <div className='PanelLanding'>
+            <img src={PanelLandingBackground} className='PanelLandingBackground'/>
+            <div className="HomepageContent">
                     <div className="HomepageTitle">
                         Saving the Turtles
                         One Snap at a Time.
@@ -37,16 +34,7 @@ const OldPanelLanding = () => {
                     <div className='LearnMore'>
                         <span className='Words'>Learn More</span> -&#62;
                     </div>
-                </div>
             </div>
-        </div>
-    )
-}
-
-const PanelLanding = () => {
-    return (
-        <div className='PanelLanding'>
-            <img src={PanelLandingBackground} className='PanelLandingBackground'/>
         </div>
     )
 }

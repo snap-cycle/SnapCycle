@@ -1,48 +1,21 @@
-/* .HomePanelLanding {
+.PanelLanding {
+    position: relative;
     height: 100vh;
-    display: flex;
-    background-color: black;
-    transform: scaleX(-1);
+    width: 4000px;
 }
 
-.landing-background-image{
-    width: 100vw;
-    height: 100vh;
-    transform: scaleX(-1);
-}
-
-.overlay {
-    width: 100vw;
-    height: 100vh;
-
+.PanelLandingBackground {
     position: absolute;
-    left: 0;
-    z-index: 5;
-
-    border-right: white 4px solid;
-    background: rgba(255,255,255,0.75);
-
-    transform: skew(-30deg) translateX(-50%);
-    filter: blur(0px);
-    backdrop-filter: blur(5px);
-}
-
-.panel-home-title {
-    display: flex;
-    flex-direction: column;
-
-    filter: none;
-    transform: scaleX(-1);
+    height: 100%;
+    overflow-x: hidden;
+    z-index: -1;
 }
 
 .HomepageContent {
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 200px;
-    left: 75px;
-    z-index: 5;
-    max-width: 490px;
+    padding-top: 200px;
+    margin-left: 75px;
 }
 
 .HomepageTitle {
@@ -50,6 +23,7 @@
     font-weight: 700;
     text-align: left;
     margin-bottom: 50px;
+    max-width: 500px;
 }
 
 .HomepageButton {
@@ -67,19 +41,4 @@
 }
 .Words:hover {
     text-decoration: underline;
-} */
-
-.PanelLanding {
-    width: 100vw;
-    height: 100vh;
-    
-    position: relative;
-    margin: 0 auto;
-    max-width: 1350px;
-}
-
-.PanelLandingBackground {
-    position: absolute;
-    height: 100%;
-    overflow-x: hidden;
 }
