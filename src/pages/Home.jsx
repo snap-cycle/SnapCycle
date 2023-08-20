@@ -7,7 +7,6 @@ import '../styles/Home/PanelThree.css';
 import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
 import PanelLandingBackground from "../assets/Home/PanelLandingBackground.png";
-import BackgroundImage from "../assets/Home/RecyclingBackground.jpg";
 import Ticker from "../components/Ticker";
 import {TickerData} from "../Info/TickerInfo";
 import OutlineButton from "../components/OutlineButton";
@@ -22,7 +21,7 @@ import TurtleRight from "../assets/Home/TurtleRight.png";
 const PanelLanding = () => {
     return (
         <div className='PanelLanding'>
-            <img src={PanelLandingBackground} className='PanelLandingBackground'/>
+            <img src={PanelLandingBackground} alt="Home Background"className='PanelLandingBackground'/>
             <div className="HomepageContent">
                     <div className="HomepageTitle">
                         Saving the Turtles
