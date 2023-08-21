@@ -13,9 +13,9 @@ const Team = () => {
                 </div>
                 <div className="team-members-container">
                     {
-                        Object.keys(TeamInfo.teamMembers).map((key) => {
+                        Object.keys(TeamInfo.teamMembers).map((key, index) => {
                             return (
-                            <div className="team-member">
+                            <div className="team-member" key={index}>
                                 {/*<img className="team-member-image" src={TeamInfo.teamMembers[key].imageSrc} alt={TeamInfo.teamMembers[key].imageAlt}/>*/}
                                 <div className="team-member-name">{TeamInfo.teamMembers[key].name}</div>
                                 <div className="team-member-role">{TeamInfo.teamMembers[key].role}</div>
@@ -23,9 +23,9 @@ const Team = () => {
                                 <div className="team-member-contact-container">
                                     <div className="team-member-info-container">
                                         {
-                                            Object.keys(TeamInfo.teamMembers[key].personaInfo).map((info) => {
+                                            Object.keys(TeamInfo.teamMembers[key].personaInfo).map((info, index) => {
                                                 return (
-                                                    <div className="team-member-info">
+                                                    <div className="team-member-info" key={index}>
                                                         <div className="team-member-info-label">{info}</div>
                                                         <div className="team-member-info-value">{TeamInfo.teamMembers[key].personaInfo[info]}</div>
                                                     </div>
@@ -35,9 +35,14 @@ const Team = () => {
                                     </div>
                                     <div className="team-member-link-container">
                                         {
-                                            Object.keys(TeamInfo.teamMembers[key].links).map((link) => {
+                                            Object.keys(TeamInfo.teamMembers[key].links).map((link, index) => {
                                                 return (
-                                                    <a className={"team-member-link-item"} href={TeamInfo.teamMembers[key].links[link].link} target="_blank" rel="noreferrer">
+                                                    <a className={"team-member-link-item"}
+                                                       href={TeamInfo.teamMembers[key].links[link].link}
+                                                       target="_blank"
+                                                       rel="noreferrer"
+                                                       key={index}
+                                                    >
                                                         {TeamInfo.teamMembers[key].links[link].icon}
                                                     </a>
                                                 )
