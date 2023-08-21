@@ -61,6 +61,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding: var(--padding-2);
 }
 
 .team-member-link-item{
@@ -77,7 +78,11 @@
 }
 
 .team-member-info-container{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: var(--padding-2);
 }
 
 .team-member-info-item{

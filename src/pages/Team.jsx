@@ -19,16 +19,13 @@ const Team = () => {
                                 {/*<img className="team-member-image" src={TeamInfo.teamMembers[key].imageSrc} alt={TeamInfo.teamMembers[key].imageAlt}/>*/}
                                 <div className="team-member-name">{TeamInfo.teamMembers[key].name}</div>
                                 <div className="team-member-role">{TeamInfo.teamMembers[key].role}</div>
-                                <div className="team-member-bio">{TeamInfo.teamMembers[key].bio}</div>
+                                {/*<div className="team-member-bio">{TeamInfo.teamMembers[key].bio}</div>*/}
                                 <div className="team-member-contact-container">
                                     <div className="team-member-info-container">
                                         {
                                             Object.keys(TeamInfo.teamMembers[key].personaInfo).map((info, index) => {
                                                 return (
-                                                    <div className="team-member-info" key={index}>
-                                                        <div className="team-member-info-label">{info}</div>
-                                                        <div className="team-member-info-value">{TeamInfo.teamMembers[key].personaInfo[info]}</div>
-                                                    </div>
+                                                    <div key={index} className="team-member-info-item">{info}: {TeamInfo.teamMembers[key].personaInfo[info]}</div>
                                                 )
                                             })
                                         }
