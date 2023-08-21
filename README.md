@@ -20,3 +20,4 @@ SnapCycle is a web app where the user can scan an item to receive info on its re
 ---
 - [Luai Bashar](https://github.com/luaibash)
 - [Aidan Froggatt](https://github.com/aidanfroggatt)
+
