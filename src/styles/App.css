@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
 
+:root {
+    --font-size-1: 0.5vmax;
+    --font-size-2: 1vmax;
+    --font-size-3: 1.5vmax;
+    --font-size-4: 3vmax;
+    --font-size-5: 5vmax;
+
+    --color-2: #000000;
+    --color-1: #FFFFFF;
+
+    --padding-1: 0.5vmax;
+    --padding-2: 1vmax;
+}
+
 .App {
   font-family: Inter, serif;
   font-size: 15vmin;
