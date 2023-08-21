@@ -45,10 +45,6 @@ export const TeamInfo = {
                         link: "https://github.com/luaibash",
                         icon: <FaGithub/>
                     },
-                    portfolio: {
-                        link: "",
-                        icon: <FaGlobe/>
-                    },
                 },
                 personaInfo: {
                     email: "",
