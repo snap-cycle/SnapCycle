@@ -8,9 +8,6 @@ const Team = () => {
     return (
         <AnimatedPage>
             <div className="team">
-                <div className="team-landing-panel">
-                    <h2>Our Team</h2>
-                </div>
                 <div className="team-members-container">
                     {
                         Object.keys(TeamInfo.teamMembers).map((key, index) => {
