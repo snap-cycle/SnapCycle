@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Team.css';
+import '../styles/pages/Team.css';
 import AnimatedPage from "../animations/AnimatedPage";
 import {TeamInfo} from "../Info/TeamInfo";
 

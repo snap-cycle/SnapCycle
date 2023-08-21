@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/Demo.css"
+import "../styles/pages/Demo.css"
 import AnimatedPage from "../animations/AnimatedPage";
 
 const Demo = () => {
