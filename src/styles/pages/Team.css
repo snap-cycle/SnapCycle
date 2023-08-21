@@ -17,7 +17,7 @@
     justify-content: space-evenly;
     align-items: start;
 
-    padding-bottom: 8vmax;
+    padding-bottom: var(--padding-bottom-big);
 }
 
 .team-member{
