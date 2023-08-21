@@ -6,7 +6,7 @@ export const TeamInfo = {
         "Aidan Froggatt":
             {
                 name: "Aidan Froggatt",
-                role: "Software Engineer",
+                role: "Software Engineering Student",
                 bio: "This is Aidan Froggatt's bio...",
                 links: {
                     linkedin: {
@@ -36,7 +36,7 @@ export const TeamInfo = {
         "Luai Bashar":
             {
                 name: "Luai Bashar",
-                role: "Mechatronics Engineer",
+                role: "Mechatronics Engineering Student",
                 bio: "This is Luai Bashar's bio...",
                 links: {
                     linkedin: {
