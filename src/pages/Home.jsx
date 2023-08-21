@@ -21,7 +21,9 @@ import TurtleRight from "../assets/Home/TurtleRight.png";
 const PanelLanding = () => {
     return (
         <div className='PanelLanding'>
-            <img src={PanelLandingBackground} alt="Home Background"className='PanelLandingBackground'/>
+            <div className='PanelLandingBackgroundContainer'> 
+                <img src={PanelLandingBackground} alt="Home Background"className='PanelLandingBackground'/>
+            </div>
             <div className="HomepageContent">
                     <div className="HomepageTitle">
                         Saving the Turtles

@@ -1,22 +1,28 @@
 .PanelLanding {
     position: relative;
+}
+
+.PanelLandingBackgroundContainer {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+
     height: 100vh;
-    width: 4000px;
+    width: max-content;
 }
 
 .PanelLandingBackground {
-    position: absolute;
     height: 100%;
-    overflow-x: hidden;
-    z-index: -1;
 }
 
 .HomepageContent {
     display: flex;
     flex-direction: column;
+
+    width: fit-content;
     padding-top: 200px;
     margin-left: 75px;
-    width: fit-content;
+    margin-bottom: 200px;
 }
 
 .HomepageTitle {
