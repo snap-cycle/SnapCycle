@@ -37,7 +37,7 @@ const Team = () => {
                                         {
                                             Object.keys(TeamInfo.teamMembers[key].links).map((link) => {
                                                 return (
-                                                    <a href={TeamInfo.teamMembers[key].links[link].link} target="_blank" rel="noreferrer">
+                                                    <a className={"team-member-link-item"} href={TeamInfo.teamMembers[key].links[link].link} target="_blank" rel="noreferrer">
                                                         {TeamInfo.teamMembers[key].links[link].icon}
                                                     </a>
                                                 )

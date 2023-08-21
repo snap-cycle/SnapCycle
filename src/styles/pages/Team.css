@@ -64,7 +64,16 @@
 }
 
 .team-member-link-item{
+    font-size: var(--font-size-3);
+    color: var(--color-2);
+    scale: 1;
+    transition: ease-out 0.25s;
+}
 
+.team-member-link-item:hover{
+    scale: 1.1;
+    color: var(--color-accent);
+    transition: ease 0.25s;
 }
 
 .team-member-info-container{
