@@ -16,6 +16,7 @@
     flex-direction: column;
     padding-top: 200px;
     margin-left: 75px;
+    width: fit-content;
 }
 
 .HomepageTitle {
@@ -41,4 +42,10 @@
 }
 .Words:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    .HomepageContent {
+        margin-left: 25px;
+    }
 }
