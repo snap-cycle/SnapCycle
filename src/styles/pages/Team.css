@@ -66,11 +66,13 @@
     justify-content: space-evenly;
     align-items: center;
     padding: var(--padding-2);
+    color: white;
+    background: black;
+    border-radius: 1vmax;
 }
 
 .team-member-link-item{
     font-size: var(--font-size-3);
-    color: var(--color-2);
     scale: 1;
     transition: ease-out 0.25s;
 }
