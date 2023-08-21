@@ -8,7 +8,7 @@ export const FooterInfo = {
     slogan: "Saving the turtles one snap at a time.",
     credits: "Developed by Luai Bashar and Aidan Froggatt",
     socialMedia: [
-        {name: "Github", destination: "https://github.com/luaibash/SnapCycle", imageSrc: GithubLogo, imageAlt: "Github Logo"},
+        {name: "Github", destination: "https://github.com/snap-cycle/SnapCycle", imageSrc: GithubLogo, imageAlt: "Github Logo"},
         {name: "Facebook", destination: "", imageSrc: FacebookLogo, imageAlt: "Facebook Logo"},
         {name: "Twitter", destination: "", imageSrc: TwitterLogo, imageAlt: "Twitter Logo"},
         {name: "YouTube", destination: "", imageSrc: YouTubeLogo, imageAlt: "YouTube Logo"},
