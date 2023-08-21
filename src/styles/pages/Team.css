@@ -42,10 +42,14 @@
 
 .team-member-name{
     font-size: var(--font-size-4);
+    width: 100%;
+    border-bottom: black solid 0.1vmax;
+    padding: 1vmax;
 }
 
 .team-member-role{
     font-size: var(--font-size-3);
+    padding: 1vmax
 }
 
 .team-member-bio{
