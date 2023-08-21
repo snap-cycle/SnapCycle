@@ -48,9 +48,9 @@ export const TeamInfo = {
                 },
                 personaInfo: {
                     email: "",
-                    location: "",
+                    location: "Burlington, ON",
                     phone: "",
-                    education: ""
+                    education: "Bachelor of Mechatronics Engineering, McMaster University"
                 },
                 imageSrc: "",
                     imageAlt: "Luai's Profile Picture"
