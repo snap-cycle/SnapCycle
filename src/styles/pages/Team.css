@@ -78,13 +78,14 @@
 .team-member-link-item{
     font-size: var(--font-size-3);
     scale: 1;
-    transition: ease-out 0.25s;
+    transition: ease-out 0.4s;
+    color: var(--color-3);
 }
 
 .team-member-link-item:hover{
     scale: 1.1;
-    color: var(--color-accent);
-    transition: ease 0.25s;
+    filter: brightness(0) invert(1);
+    transition: filter 0.4s;
 }
 
 .team-member-info-container{
