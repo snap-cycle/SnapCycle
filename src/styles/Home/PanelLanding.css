@@ -32,25 +32,20 @@
     font-size: 50px;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     max-width: 500px;
+}
+
+.HomepageDescription {
+    font-size: 20px;
+    color: #434343;
+    text-align: left;
+    max-width: 500px;
+    margin-bottom: 40px;
 }
 
 .HomepageButton {
     display: flex;
-}
-
-.LearnMore {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-left: 5px;
-    text-align: left;
-}
-.LearnMore:hover {
-    cursor: pointer;
-}
-.Words:hover {
-    text-decoration: underline;
 }
 
 @media (max-width: 1115px) {

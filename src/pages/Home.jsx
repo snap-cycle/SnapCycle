@@ -29,11 +29,11 @@ const PanelLanding = () => {
                         Saving the Turtles
                         One Snap at a Time.
                     </div>
+                    <div className='HomepageDescription'>
+                        Learn how to recycle by scanning disposables all around you.
+                    </div>
                     <div className='HomepageButton'>
                         <OutlineButton title="Try Now" destination="/demo"/>
-                    </div>
-                    <div className='LearnMore'>
-                        <span className='Words'>Learn More</span> -&#62;
                     </div>
             </div>
         </div>
