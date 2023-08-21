@@ -1,4 +1,4 @@
-import {FaGithub, FaGlobe, FaLinkedin} from "react-icons/fa";
+import {FaEnvelopeOpen, FaGithub, FaGlobe, FaLinkedin} from "react-icons/fa";
 
 export const TeamInfo = {
     teamMembers:
@@ -20,12 +20,14 @@ export const TeamInfo = {
                     portfolio: {
                         link: "https://aidanfroggatt.github.io/portfolio/",
                         icon: <FaGlobe/>
+                    },
+                    email: {
+                        link: "mailto:aidanfr@live.ca",
+                        icon: <FaEnvelopeOpen/>
                     }
                 },
                 personaInfo: {
-                    email: "aidanfr@live.ca",
                     location: "Burlington, ON",
-                    phone: "",
                     education: "Bachelor of Software Engineering, McMaster University"
                 },
                 imageSrc: "",
@@ -45,11 +47,13 @@ export const TeamInfo = {
                         link: "https://github.com/luaibash",
                         icon: <FaGithub/>
                     },
+                    email: {
+                        link: "mailto:",
+                        icon: <FaEnvelopeOpen/>
+                    }
                 },
                 personaInfo: {
-                    email: "",
                     location: "Burlington, ON",
-                    phone: "",
                     education: "Bachelor of Mechatronics Engineering, McMaster University"
                 },
                 imageSrc: "",
