@@ -1,12 +1,11 @@
 .team-landing-panel {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .team-members-container{
-    min-height: 100vh;
     background: lightblue;
 }
 

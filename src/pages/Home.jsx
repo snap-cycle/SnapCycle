@@ -22,7 +22,7 @@ const PanelLanding = () => {
     return (
         <div className='PanelLanding'>
             <div className='PanelLandingBackgroundContainer'> 
-                <img src={PanelLandingBackground} alt="Home Background"className='PanelLandingBackground'/>
+                <img src={PanelLandingBackground} alt="Home Background" className='PanelLandingBackground'/>
             </div>
             <div className="HomepageContent">
                     <div className="HomepageTitle">
