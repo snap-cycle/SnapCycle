@@ -11,12 +11,11 @@
 @media (min-width: 1001px) {
     .PanelThree {
         max-width: 1350px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-    
+        margin: 0 auto 100px;
+
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: flex-start;
     }
 
     .PanelThreeImageContainer {
