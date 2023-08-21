@@ -4,6 +4,7 @@ import AnimatedPage from "../animations/AnimatedPage";
 import {TeamInfo} from "../Info/TeamInfo";
 
 const Team = () => {
+
     return (
         <AnimatedPage>
             <div className="team">
@@ -20,20 +21,25 @@ const Team = () => {
                                 <div className="team-member-role">{TeamInfo.teamMembers[key].role}</div>
                                 <div className="team-member-bio">{TeamInfo.teamMembers[key].bio}</div>
                                 <div className="team-member-contact-container">
-                                    <div className="team-member-link-container">
-                                        {
-                                            Object.keys(TeamInfo.teamMembers[key].links).map((link) => {
-                                                return (
-                                                    <div>{TeamInfo.teamMembers[key].links[link]}</div>
-                                                )
-                                            })
-                                        }
-                                    </div>
                                     <div className="team-member-info-container">
                                         {
                                             Object.keys(TeamInfo.teamMembers[key].personaInfo).map((info) => {
                                                 return (
-                                                    <div>{TeamInfo.teamMembers[key].personaInfo[info]}</div>
+                                                    <div className="team-member-info">
+                                                        <div className="team-member-info-label">{info}</div>
+                                                        <div className="team-member-info-value">{TeamInfo.teamMembers[key].personaInfo[info]}</div>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                    <div className="team-member-link-container">
+                                        {
+                                            Object.keys(TeamInfo.teamMembers[key].links).map((link) => {
+                                                return (
+                                                    <a href={TeamInfo.teamMembers[key].links[link].link} target="_blank" rel="noreferrer">
+                                                        {TeamInfo.teamMembers[key].links[link].icon}
+                                                    </a>
                                                 )
                                             })
                                         }
