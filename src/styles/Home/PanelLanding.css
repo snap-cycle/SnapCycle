@@ -12,25 +12,25 @@
     height: 180px;
 }
 .BeachLayerContainer {
-    bottom: 198px;
-    right: -155px;
+    top: 141px;
+    left: 631px;
     height: 395px;
 }
 .RocksLayerContainer {
-    bottom: 114px;
-    right: -155.6px;
+    top: 430px;
+    left: 707px;
     height: 191px;
 }
 .SkyLayer, .BeachLayer, .RocksLayer {
     height: 100%;
 }
+
 .PanelLandingBackgroundContainer {
     position: absolute;
     z-index: -1;
     width: max-content;
     height: 619px;
 }
-
 .PanelLandingBackground {
     height: 100%;
 }
