@@ -60,10 +60,29 @@
 @media (max-width: 1000px) {
     .HomepageContent {
         margin-left: 25px;
+        margin-right: 25px;
     }
 }
 @media (max-width: 850px) {
     .PanelLandingBackgroundContainer {
         left: -265px;
+    }
+
+    .HomepageTitle {
+        font-size: 5.9vw;
+    }
+
+    .HomepageDescription {
+        font-size: 2.35vw;
+    }
+}
+@media (max-width: 700px) {
+    .HomepageDescription {
+        font-size: 16px; 
+    }
+}
+@media (max-width: 500px) {
+    .HomepageTitle {
+        font-size: 30px;
     }
 }
