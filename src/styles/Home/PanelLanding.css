@@ -116,10 +116,21 @@
 @media (max-width: 700px) {
     .HomepageContent {
         padding-top: 150px;
-        padding-bottom: 250px;
+        padding-bottom: 375px;
     }
 
     .SkyLayerContainer {
         height: 130px;
+    }
+
+    .BeachLayerContainer {
+        top: 311px;
+        left: 66px;
+        height: 395px;
+    }
+    .RocksLayerContainer {
+        top: 610px;
+        left: 142px;
+        height: 191px;
     }
 }
