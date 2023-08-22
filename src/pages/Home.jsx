@@ -30,7 +30,9 @@ const PanelLanding = () => {
                         One Snap at a Time.
                     </div>
                     <div className='HomepageDescription'>
-                        Master responsible recycling with SnapCycle's award-winning trash detection – your guide to recycling tips and tricks!
+                        Master responsible recycling with SnapCycle's
+                        award-winning trash detection &#45; your guide to
+                        recycling tips and tricks!
                     </div>
                     <div className='HomepageButton'>
                         <OutlineButton title="Try Now" destination="/demo"/>
