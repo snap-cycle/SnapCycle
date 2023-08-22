@@ -57,11 +57,6 @@
     max-width: 450px;
     margin-bottom: 40px;
 }
-@media (max-width: 920px) {
-    .HomepageDescription {
-        max-width: 350px;
-    }
-}
 
 .HomepageButton {
     display: flex;
@@ -86,17 +81,18 @@
         margin-right: 25px;
     }
 }
-@media (max-width: 850px) {
+@media(max-width: 950px) {
     .SkyLayerContainer {
-        left: -265px;
+        left: -165px;
     }
     .BeachLayerContainer {
-        left: 366px;
+        left: 466px;
     }
     .RocksLayerContainer {
-        left: 442px;
+        left: 542px;
     }
-
+}
+@media (max-width: 850px) {
     .HomepageTitle {
         font-size: 5.9vw;
     }
