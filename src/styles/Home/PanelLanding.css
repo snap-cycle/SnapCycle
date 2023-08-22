@@ -4,13 +4,30 @@
     margin: 0 auto;
 }
 
+.SkyLayerContainer, .BeachLayerContainer, .RocksLayerContainer {
+    position: absolute;
+    width: max-content;
+}
+.SkyLayerContainer {
+    height: 180px;
+}
+.BeachLayerContainer {
+    bottom: 198px;
+    right: -155px;
+    height: 395px;
+}
+.RocksLayerContainer {
+    bottom: 114px;
+    right: -155.6px;
+    height: 191px;
+}
+.SkyLayer, .BeachLayer, .RocksLayer {
+    height: 100%;
+}
 .PanelLandingBackgroundContainer {
     position: absolute;
     z-index: -1;
     width: max-content;
-}
-
-.PanelLandingBackgroundContainer {  
     height: 619px;
 }
 
@@ -24,7 +41,7 @@
 
     padding-top: 200px;
     margin-left: 75px;
-    margin-bottom: 200px;
+    padding-bottom: 200px;
 }
 
 .HomepageTitle {

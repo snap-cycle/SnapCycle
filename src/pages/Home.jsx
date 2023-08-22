@@ -6,7 +6,10 @@ import '../styles/Home/PanelTwo.css';
 import '../styles/Home/PanelThree.css';
 import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
-import PanelLandingBackground from "../assets/Home/PanelLandingBackground.png";
+import PanelLandingBackground from "../assets/Home/PanelLanding/PanelLandingBackground.png";
+import SkyLayer from "../assets/Home/PanelLanding/SkyLayer.png";
+import BeachLayer from "../assets/Home/PanelLanding/BeachLayer.png";
+import RocksLayer from "../assets/Home/PanelLanding/RocksLayer.png";
 import Ticker from "../components/Ticker";
 import {TickerData} from "../Info/TickerInfo";
 import OutlineButton from "../components/OutlineButton";
@@ -21,8 +24,17 @@ import TurtleRight from "../assets/Home/TurtleRight.png";
 const PanelLanding = () => {
     return (
         <div className='PanelLanding'>
-            <div className='PanelLandingBackgroundContainer'> 
+            {/* <div className='PanelLandingBackgroundContainer'> 
                 <img src={PanelLandingBackground} alt="Home Background" className='PanelLandingBackground'/>
+            </div> */}
+            <div className='SkyLayerContainer'>
+                <img src={SkyLayer} alt="Sky Layer" className='SkyLayer'/>
+            </div>
+            <div className='BeachLayerContainer'>
+                <img src={BeachLayer} alt="Beach Layer" className='BeachLayer' />
+            </div>
+            <div className='RocksLayerContainer'>
+                <img src={RocksLayerNew} alt="Sky Layer" className='RocksLayer' />
             </div>
             <div className="HomepageContent">
                     <div className="HomepageTitle">
