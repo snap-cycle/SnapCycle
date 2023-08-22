@@ -7,7 +7,6 @@ import Demo from './pages/Demo';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import {AnimatePresence} from "framer-motion";
-import AppLoadAnimation from "./animations/AppLoadAnimation";
 import Help from "./pages/Help";
 import Contact from "./pages/Contact";
 import Root from "./pages/Root";
@@ -15,7 +14,6 @@ import Root from "./pages/Root";
 function App() {
     return (
         <div className='App'>
-            <AppLoadAnimation/>
             <AnimatePresence mode='wait'>
                 <Router basename="/">
                     <Navbar/>
