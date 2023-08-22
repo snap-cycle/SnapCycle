@@ -6,7 +6,6 @@ import '../styles/Home/PanelTwo.css';
 import '../styles/Home/PanelThree.css';
 import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
-import PanelLandingBackground from "../assets/Home/PanelLanding/PanelLandingBackground.png";
 import SkyLayer from "../assets/Home/PanelLanding/SkyLayer.png";
 import BeachLayer from "../assets/Home/PanelLanding/BeachLayer.png";
 import RocksLayer from "../assets/Home/PanelLanding/RocksLayer.png";

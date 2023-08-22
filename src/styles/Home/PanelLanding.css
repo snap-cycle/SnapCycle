@@ -11,6 +11,7 @@
 }
 .SkyLayerContainer {
     height: 183px;
+    transition: transform 0.3s ease-out;
 }
 .BeachLayerContainer {
     top: 141px;
@@ -22,6 +23,14 @@
 }
 .SkyLayer, .BeachLayer, .RocksLayer {
     height: 100%;
+}
+#HomepageActive {
+    opacity: 1;
+    transform: translateY(0);
+}
+#HomepageInactive {
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .HomepageContent {
