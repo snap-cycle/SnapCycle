@@ -34,7 +34,7 @@ const PanelLanding = () => {
                 <img src={BeachLayer} alt="Beach Layer" className='BeachLayer' />
             </div>
             <div className='RocksLayerContainer'>
-                <img src={RocksLayerNew} alt="Sky Layer" className='RocksLayer' />
+                <img src={RocksLayer} alt="Sky Layer" className='RocksLayer' />
             </div>
             <div className="HomepageContent">
                     <div className="HomepageTitle">
