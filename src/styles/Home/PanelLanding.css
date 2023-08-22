@@ -6,6 +6,7 @@
 
 .SkyLayerContainer, .BeachLayerContainer, .RocksLayerContainer {
     position: absolute;
+    z-index: -1;
     width: max-content;
 }
 .SkyLayerContainer {
@@ -13,25 +14,13 @@
 }
 .BeachLayerContainer {
     top: 141px;
-    left: 631px;
     height: 395px;
 }
 .RocksLayerContainer {
     top: 430px;
-    left: 707px;
     height: 191px;
 }
 .SkyLayer, .BeachLayer, .RocksLayer {
-    height: 100%;
-}
-
-.PanelLandingBackgroundContainer {
-    position: absolute;
-    z-index: -1;
-    width: max-content;
-    height: 619px;
-}
-.PanelLandingBackground {
     height: 100%;
 }
 
@@ -69,10 +58,18 @@
     display: flex;
 }
 
+@media (min-width: 1116px) {
+    .BeachLayerContainer {
+        left: 631px;
+    }
+    .RocksLayerContainer {
+        left: 707px;
+    }
+}
 @media (max-width: 1115px) {
-    .PanelLandingBackgroundContainer {
+    .SkyLayerContainer, .BeachLayerContainer, .RocksLayerContainer {
         right: -400px;
-    } 
+    }
 }
 @media (max-width: 1000px) {
     .HomepageContent {
@@ -81,8 +78,14 @@
     }
 }
 @media (max-width: 850px) {
-    .PanelLandingBackgroundContainer {
+    .SkyLayerContainer {
         left: -265px;
+    }
+    .BeachLayerContainer {
+        left: 366px;
+    }
+    .RocksLayerContainer {
+        left: 442px;
     }
 
     .HomepageTitle {

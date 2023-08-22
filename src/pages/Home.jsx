@@ -24,9 +24,6 @@ import TurtleRight from "../assets/Home/TurtleRight.png";
 const PanelLanding = () => {
     return (
         <div className='PanelLanding'>
-            {/* <div className='PanelLandingBackgroundContainer'> 
-                <img src={PanelLandingBackground} alt="Home Background" className='PanelLandingBackground'/>
-            </div> */}
             <div className='SkyLayerContainer'>
                 <img src={SkyLayer} alt="Sky Layer" className='SkyLayer'/>
             </div>
