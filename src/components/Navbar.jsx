@@ -8,6 +8,7 @@ import HamburgerIcon from "../assets/NavBar/HamburgerMenu.svg";
 import WhiteX from "../assets/NavBar/WhiteX.svg";
 import RightArrow from "../assets/Footer/RightArrow.svg";
 import OutlineButton from "./OutlineButton";
+import AnimatedPage from "../animations/AnimatedPage";
 import "../styles/Navbar/Navbar.css";
 import "../styles/Navbar/HamburgerMenu.css";
 import * as PagesInfo from "../Info/PagesInfo";
@@ -52,10 +53,10 @@ const Navbar = () => {
   };
   
   return (
-    <div>
+    <AnimatedPage y={0} duration={0} delay={0.1}>
       <ActiveNavbar updateHamburgerMenu={updateHamburgerMenu}/>
       <HamburgerMenu showHamburgerMenu={showHamburgerMenu} updateHamburgerMenu={updateHamburgerMenu}/>
-    </div>
+    </AnimatedPage>
   );
 }
 

@@ -167,7 +167,7 @@ const PanelFive = () => {
 
 const Home = () => {
     return (
-        <AnimatedPage>
+        <AnimatedPage y={0} duration={0} delay={0.1}>
             <PanelLanding/>
             <PanelOne/>
             <PanelTwo/>
