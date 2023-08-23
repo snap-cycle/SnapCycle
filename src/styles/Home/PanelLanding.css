@@ -8,31 +8,34 @@
     position: absolute;
     z-index: -1;
     width: max-content;
+    opacity: 0;
 }
 .SkyLayerContainer {
     height: 183px;
-    transition: transform 0.5s ease-out 0.1s, opacity 1s ease-out 0.1s;
+    animation: Appear 0.5s ease-out 0.1s forwards;
 }
 .BeachLayerContainer {
     top: 141px;
     height: 395px;
-    transition: transform 0.5s ease-out 0.2s, opacity 1s ease-out 0.2s;
+    animation: Appear 0.5s ease-out 0.2s forwards;
 }
 .RocksLayerContainer {
     top: 430px;
     height: 191px;
-    transition: transform 0.5s ease-out 0.3s, opacity 1s ease-out 0.3s;
+    animation: Appear 0.5s ease-out 0.3s forwards;
 }
 .SkyLayer, .BeachLayer, .RocksLayer {
     height: 100%;
 }
-#HomepageActive {
-    opacity: 1;
-    transform: translateY(0);
-}
-#HomepageInactive {
-    transform: translateY(100px);
-    opacity: 0;
+
+@keyframes Appear {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .HomepageContent {

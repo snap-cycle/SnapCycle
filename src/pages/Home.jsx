@@ -29,13 +29,13 @@ const PanelLanding = () => {
 
     return (
         <div className='PanelLanding'>
-            <div className='SkyLayerContainer' id={startAnimation ? 'HomepageActive' : 'HomepageInactive'}>
+            <div className='SkyLayerContainer'>
                 <img src={SkyLayer} alt="Sky Layer" className='SkyLayer'/>
             </div>
-            <div className='BeachLayerContainer' id={startAnimation ? 'HomepageActive' : 'HomepageInactive'}>
+            <div className='BeachLayerContainer'>
                 <img src={BeachLayer} alt="Beach Layer" className='BeachLayer' />
             </div>
-            <div className='RocksLayerContainer' id={startAnimation ? 'HomepageActive' : 'HomepageInactive'}>
+            <div className='RocksLayerContainer'>
                 <img src={RocksLayer} alt="Sky Layer" className='RocksLayer' />
             </div>
             <div className="HomepageContent">
