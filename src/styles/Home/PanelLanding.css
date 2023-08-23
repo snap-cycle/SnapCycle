@@ -11,9 +11,10 @@
     opacity: 0;
 }
 .SkyLayerContainer {
+    top: -10px;
     height: 183px;
-    /* animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1s ease-out 0.1s forwards; */
-    animation: AnimateOpacity 1s ease 0.1s forwards;
+    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1s ease-out 0.1s forwards;
+    transform: translateY(10px);
 }
 .BeachLayerContainer {
     top: 141px;
@@ -130,7 +131,7 @@
     }
 
     .SkyLayerContainer {
-        height: 130px;
+        height: 150px;
     }
 
     .BeachLayerContainer {
