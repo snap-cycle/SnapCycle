@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from 'react';
+import React from 'react';
 import '../styles/Home/Home.css';
 import '../styles/Home/PanelLanding.css';
 import '../styles/Home/PanelOne.css';
@@ -21,12 +21,6 @@ import TurtleLeft from "../assets/Home/TurtleLeft.png";
 import TurtleRight from "../assets/Home/TurtleRight.png";
 
 const PanelLanding = () => {
-    const [startAnimation, setStartAnimation] = useState(false);
-
-    useEffect(() => {
-        setStartAnimation(true);
-    }, []);
-
     return (
         <div className='PanelLanding'>
             <div className='SkyLayerContainer'>
