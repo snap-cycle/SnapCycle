@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import '../styles/Home/Home.css';
 import '../styles/Home/PanelLanding.css';
 import '../styles/Home/PanelOne.css';
@@ -21,15 +21,21 @@ import TurtleLeft from "../assets/Home/TurtleLeft.png";
 import TurtleRight from "../assets/Home/TurtleRight.png";
 
 const PanelLanding = () => {
+    const [startAnimation, setStartAnimation] = useState(false);
+
+    useEffect(() => {
+        setStartAnimation(true);
+    }, []);
+
     return (
         <div className='PanelLanding'>
-            <div className='SkyLayerContainer'>
+            <div className='SkyLayerContainer' id={startAnimation ? 'HomepageActive' : 'HomepageInactive'}>
                 <img src={SkyLayer} alt="Sky Layer" className='SkyLayer'/>
             </div>
-            <div className='BeachLayerContainer'>
+            <div className='BeachLayerContainer' id={startAnimation ? 'HomepageActive' : 'HomepageInactive'}>
                 <img src={BeachLayer} alt="Beach Layer" className='BeachLayer' />
             </div>
-            <div className='RocksLayerContainer'>
+            <div className='RocksLayerContainer' id={startAnimation ? 'HomepageActive' : 'HomepageInactive'}>
                 <img src={RocksLayer} alt="Sky Layer" className='RocksLayer' />
             </div>
             <div className="HomepageContent">
