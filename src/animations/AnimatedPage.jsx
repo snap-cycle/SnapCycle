@@ -1,5 +1,4 @@
 import {motion} from "framer-motion";
-import {useEffect} from "react";
 
 const animations = {
     initial: { y: -20, opacity: 0 },
@@ -14,11 +13,6 @@ const animations = {
 };
 
 const AnimatedPage = ({ children }) => {
-    // Scrolls to top of page on page load
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    });
-
     return (
         <motion.div
             variants={animations}
