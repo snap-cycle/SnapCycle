@@ -13,17 +13,16 @@
 .SkyLayerContainer {
     height: 183px;
     /* animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1s ease-out 0.1s forwards; */
-    opacity: 1;
-    transform: translateY(-20px);
+    animation: AnimateOpacity 1s ease 0.1s forwards;
 }
 .BeachLayerContainer {
     top: 141px;
     height: 395px;
     animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1.25s ease-out 0.1s forwards;
-    transform: translateY(100px);
+    transform: translateY(75px);
 }
 .RocksLayerContainer {
-    top: 430px;
+    top: 427px;
     height: 191px;
     animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1s cubic-bezier(.22,.52,.64,1) 0.1s forwards;
     transform: translateY(75px);
@@ -140,7 +139,7 @@
         height: 395px;
     }
     .RocksLayerContainer {
-        top: 610px;
+        top: 595px;
         left: 142px;
         height: 191px;
     }
