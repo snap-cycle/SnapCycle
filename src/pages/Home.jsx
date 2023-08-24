@@ -95,18 +95,18 @@ const PanelTwo = () => {
                 </div>
             </AnimateDiv>
         </div>
-        <div className='PanelTwoImages'>
+        <AnimateDiv className='PanelTwoImages' down={true}>
             <img src={PanelTwoLaptopPhone} alt="Laptop and Phone" className='PanelTwoLaptopPhone'/>
-        </div>
+        </AnimateDiv>
     </div>;
 }
 
 const PanelThree = () => {
     return <div className='PanelThree'>
-        <div className='PanelThreeImageContainer'>
+        <AnimateDiv className='PanelThreeImageContainer'>
             <img src={PanelThreePlaceholder} alt="Placeholder" className='PanelThreePlaceholder'/>
-        </div>
-        <AnimateDiv className='PanelThreeText'>
+        </AnimateDiv>
+        <AnimateDiv className='PanelThreeText' down={true} childrenDelay={true}>
             <div className='Title'>
                 Can't Take a Picture?
                 No Worries!
@@ -130,41 +130,45 @@ const PanelThree = () => {
 
 const PanelFour = () => {
     return <div className='PanelFour'>
-        <div className='Title' id='PanelFourTitle'>
-            Let the Numbers Speak
-            for Themselves.
-        </div>
-        <div className='SubText' id="PanelFourSubText">
-            Take a glimpse into why responsible recycling
-            matters now more than ever.
-        </div>
+        <AnimateDiv className='PanelFourText' childrenDelay={true}>
+            <div className='Title' id='PanelFourTitle'>
+                Let the Numbers Speak
+                for Themselves.
+            </div>
+            <div className='SubText' id="PanelFourSubText">
+                Take a glimpse into why responsible recycling
+                matters now more than ever.
+            </div>
+        </AnimateDiv>
         <Statistics statistics={StatisticsInfo}/>
     </div>;
 }
 
 const PanelFive = () => {
     return <div className='PanelFive'>
-        <div className='Title' id='PanelFiveTitle'>
-            Join Forces for a Greener
-            Earth - Let's Make a
-            Change Together.
-        </div>
-        <div className='SubText' id='PanelFiveText'>
-            At SnapCycle, we want to encourage others to do everything
-            they can in contributing towards a stronger future. It is our
-            responsibility to provide the privilege we own down to our
-            future generations.
-        </div>
-        <div className='PanelFiveButtonContainer'>
-            <div className='PanelFiveButton'>
-                <OutlineButton title="Try Now" destination="/demo"/>
+        <AnimateDiv className='PanelFiveText' childrenDelay={true}>
+            <div className='Title' id='PanelFiveTitle'>
+                Join Forces for a Greener
+                Earth - Let's Make a
+                Change Together.
             </div>
-        </div>
-        <div className='TurtleContainer'>
+            <div className='SubText' id='PanelFiveText'>
+                At SnapCycle, we want to encourage others to do everything
+                they can in contributing towards a stronger future. It is our
+                responsibility to provide the privilege we own down to our
+                future generations.
+            </div>
+            <div className='PanelFiveButtonContainer'>
+                <div className='PanelFiveButton'>
+                    <OutlineButton title="Try Now" destination="/demo"/>
+                </div>
+            </div>
+        </AnimateDiv>
+        <AnimateDiv className='TurtleContainer'>
             <img src={TurtleLeft} alt="Left Turtle" className='TurtleLeft'/>
             <div></div>
             <img src={TurtleRight} alt="Right Turtle" className='TurtleRight'/>
-        </div>
+        </AnimateDiv>
     </div>;
 }
 
