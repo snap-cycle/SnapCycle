@@ -13,31 +13,38 @@
 .SkyLayerContainer {
     top: -10px;
     height: 183px;
-    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1s ease-out 0.1s forwards;
-    transform: translateY(10px);
+    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateSky 1s ease-out 0.1s forwards;
 }
 .BeachLayerContainer {
     top: 141px;
     height: 395px;
-    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1.25s ease-out 0.1s forwards;
-    transform: translateY(75px);
+    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateBeach 1.25s ease-out 0.1s forwards;
 }
 .RocksLayerContainer {
     top: 427px;
     height: 191px;
-    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateLayer 1s cubic-bezier(.22,.52,.64,1) 0.1s forwards;
-    transform: translateY(75px);
+    animation: AnimateOpacity 1s ease 0.1s forwards, AnimateBeach 1s cubic-bezier(.22,.52,.64,1) 0.1s forwards;
 }
 .SkyLayer, .BeachLayer, .RocksLayer {
     height: 100%;
 }
 
-@keyframes AnimateLayer {
+@keyframes AnimateBeach {
+    0% {
+        transform: translateY(75px);
+    }
     100% {
         transform: translateY(0);
     }
 }
-
+@keyframes AnimateSky {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 @keyframes AnimateOpacity {
     100%  {
         opacity: 1;
