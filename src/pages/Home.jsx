@@ -6,17 +6,18 @@ import '../styles/Home/PanelTwo.css';
 import '../styles/Home/PanelThree.css';
 import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
+import AnimatedPage from "../animations/AnimatedPage";
+import AnimateDiv from "../animations/AnimateDiv";
+import Ticker from "../components/Ticker";
+import OutlineButton from "../components/OutlineButton";
+import Statistics from "../components/Statistics";
+import {TickerData} from "../Info/TickerInfo";
+import {StatisticsInfo} from "../Info/StatisticsInfo";
 import SkyLayer from "../assets/Home/PanelLanding/SkyLayer.png";
 import BeachLayer from "../assets/Home/PanelLanding/BeachLayer.png";
 import RocksLayer from "../assets/Home/PanelLanding/RocksLayer.png";
-import Ticker from "../components/Ticker";
-import {TickerData} from "../Info/TickerInfo";
-import OutlineButton from "../components/OutlineButton";
 import PanelTwoLaptopPhone from "../assets/Home/PanelTwoLaptopPhone.png";
 import PanelThreePlaceholder from "../assets/Home/PanelThreePlaceholder.png";
-import Statistics from "../components/Statistics";
-import {StatisticsInfo} from "../Info/StatisticsInfo";
-import AnimatedPage from "../animations/AnimatedPage";
 import TurtleLeft from "../assets/Home/TurtleLeft.png";
 import TurtleRight from "../assets/Home/TurtleRight.png";
 
@@ -52,18 +53,20 @@ const PanelLanding = () => {
 
 const PanelOne = () => {
     return <div className="PanelOne">
-        <div className='Title' id='PanelOneTitle'>
-            Hundreds of Objects
-            to Detect From, That
-            Help You
-            <span className='RevolvingWordsContainer'>
-                <span className='RevolvingWord'>Recycle.</span>
-                <span className='RevolvingWord'>Dispose.</span>
-                <span className='RevolvingWord'>Recover.</span>
-                <span className='RevolvingWord'>Discard.</span>
-                <span className='RevolvingWord'>Recycle.</span>
-            </span>
-        </div>
+        <AnimateDiv>
+            <div className='Title' id='PanelOneTitle'>
+                Hundreds of Objects
+                to Detect From, That
+                Help You
+                <span className='RevolvingWordsContainer'>
+                    <span className='RevolvingWord'>Recycle.</span>
+                    <span className='RevolvingWord'>Dispose.</span>
+                    <span className='RevolvingWord'>Recover.</span>
+                    <span className='RevolvingWord'>Discard.</span>
+                    <span className='RevolvingWord'>Recycle.</span>
+                </span>
+            </div>
+        </AnimateDiv>
         <div className='ItemCategories'>
             <Ticker items={TickerData.tickerItems1}/>
             <Ticker items={TickerData.tickerItems2} invert={true}/>
