@@ -102,29 +102,31 @@ const PanelTwo = () => {
 }
 
 const PanelThree = () => {
-    return <div className='PanelThree'>
-        <AnimateDiv className='PanelThreeImageContainer'>
-            <img src={PanelThreePlaceholder} alt="Placeholder" className='PanelThreePlaceholder'/>
-        </AnimateDiv>
-        <AnimateDiv className='PanelThreeText' down={true} childrenDelay={true}>
-            <div className='Title'>
-                Can't Take a Picture?
-                No Worries!
-            </div>
-            <div className='SubText'>
-                Search through our ever growing database
-                of objects to learn how to dispose of them.
-                Say no more to scientific articles going into
-                detail on things you don't need to know!
-            </div>
-            <div className='SubText'>
-                Try out SnapCycle and unlock the secrets
-                of sustainable living today.
-            </div>
-            <div className='PanelThreeButton'>
-                <OutlineButton title="Try Now" destination="/demo"/>
-            </div>
-        </AnimateDiv>
+    return <div className='PanelThreeContainer'>
+        <div className='PanelThree'>
+            <AnimateDiv className='PanelThreeImageContainer'>
+                <img src={PanelThreePlaceholder} alt="Placeholder" className='PanelThreePlaceholder'/>
+            </AnimateDiv>
+            <AnimateDiv className='PanelThreeText' down={true} childrenDelay={true}>
+                <div className='Title'>
+                    Can't Take a Picture?
+                    No Worries!
+                </div>
+                <div className='SubText'>
+                    Search through our ever growing database
+                    of objects to learn how to dispose of them.
+                    Say no more to scientific articles going into
+                    detail on things you don't need to know!
+                </div>
+                <div className='SubText'>
+                    Try out SnapCycle and unlock the secrets
+                    of sustainable living today.
+                </div>
+                <div className='PanelThreeButton'>
+                    <OutlineButton title="Try Now" destination="/demo"/>
+                </div>
+            </AnimateDiv>
+        </div>
     </div>;
 }
 
@@ -145,30 +147,32 @@ const PanelFour = () => {
 }
 
 const PanelFive = () => {
-    return <div className='PanelFive'>
-        <AnimateDiv className='PanelFiveText' childrenDelay={true}>
-            <div className='Title' id='PanelFiveTitle'>
-                Join Forces for a Greener
-                Earth - Let's Make a
-                Change Together.
-            </div>
-            <div className='SubText' id='PanelFiveText'>
-                At SnapCycle, we want to encourage others to do everything
-                they can in contributing towards a stronger future. It is our
-                responsibility to provide the privilege we own down to our
-                future generations.
-            </div>
-            <div className='PanelFiveButtonContainer'>
-                <div className='PanelFiveButton'>
-                    <OutlineButton title="Try Now" destination="/demo"/>
+    return <div className='PanelFiveContainer'>
+        <div className='PanelFive'>
+            <AnimateDiv className='PanelFiveText' childrenDelay={true}>
+                <div className='Title' id='PanelFiveTitle'>
+                    Join Forces for a Greener
+                    Earth - Let's Make a
+                    Change Together.
                 </div>
-            </div>
-        </AnimateDiv>
-        <AnimateDiv className='TurtleContainer'>
-            <img src={TurtleLeft} alt="Left Turtle" className='TurtleLeft'/>
-            <div></div>
-            <img src={TurtleRight} alt="Right Turtle" className='TurtleRight'/>
-        </AnimateDiv>
+                <div className='SubText' id='PanelFiveText'>
+                    At SnapCycle, we want to encourage others to do everything
+                    they can in contributing towards a stronger future. It is our
+                    responsibility to provide the privilege we own down to our
+                    future generations.
+                </div>
+                <div className='PanelFiveButtonContainer'>
+                    <div className='PanelFiveButton'>
+                        <OutlineButton title="Try Now" destination="/demo"/>
+                    </div>
+                </div>
+            </AnimateDiv>
+            <AnimateDiv className='TurtleContainer'>
+                <img src={TurtleLeft} alt="Left Turtle" className='TurtleLeft'/>
+                <div></div>
+                <img src={TurtleRight} alt="Right Turtle" className='TurtleRight'/>
+            </AnimateDiv>
+        </div>
     </div>;
 }
 
