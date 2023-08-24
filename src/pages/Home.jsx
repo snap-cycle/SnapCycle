@@ -53,19 +53,17 @@ const PanelLanding = () => {
 
 const PanelOne = () => {
     return <div className="PanelOne">
-        <AnimateDiv>
-            <div className='Title' id='PanelOneTitle'>
-                Hundreds of Objects
-                to Detect From, That
-                Help You
-                <span className='RevolvingWordsContainer'>
-                    <span className='RevolvingWord'>Recycle.</span>
-                    <span className='RevolvingWord'>Dispose.</span>
-                    <span className='RevolvingWord'>Recover.</span>
-                    <span className='RevolvingWord'>Discard.</span>
-                    <span className='RevolvingWord'>Recycle.</span>
-                </span>
-            </div>
+        <AnimateDiv className='Title' id='PanelOneTitle'>
+            Hundreds of Objects
+            to Detect From, That
+            Help You
+            <span className='RevolvingWordsContainer'>
+                <span className='RevolvingWord'>Recycle.</span>
+                <span className='RevolvingWord'>Dispose.</span>
+                <span className='RevolvingWord'>Recover.</span>
+                <span className='RevolvingWord'>Discard.</span>
+                <span className='RevolvingWord'>Recycle.</span>
+            </span>
         </AnimateDiv>
         <div className='ItemCategories'>
             <Ticker items={TickerData.tickerItems1}/>

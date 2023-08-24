@@ -7,7 +7,7 @@ import '../styles/Home/PanelThree.css';
 import '../styles/Home/PanelFour.css';
 import '../styles/Home/PanelFive.css';
 
-const AnimateDiv = ({ children, delay = 0, down = false}) => {
+const AnimateDiv = ({ children, className, id, delay = 0, down = false}) => {
 
     return (
         <motion.div 
@@ -16,7 +16,9 @@ const AnimateDiv = ({ children, delay = 0, down = false}) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 + delay, ease: "easeOut" }}
         >
-            {children}
+            <div className={`${className}`} id={`${id}`}>
+                {children}
+            </div>
         </motion.div>
     );
 };
