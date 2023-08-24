@@ -1,3 +1,8 @@
+.PanelTwo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .PanelTwoButton {
     display: flex;
 }
@@ -10,7 +15,6 @@
     .PanelTwo {
         max-width: 1350px;
         margin: 0 auto;
-        margin-bottom: 100px;
         padding-left: 300px;
 
         display: flex;
@@ -35,7 +39,6 @@
 
 @media (max-width: 1000px) {
     .PanelTwo {
-        margin-bottom: 100px;
         margin-left: 25px;
         margin-right: 25px;
         display: flex;

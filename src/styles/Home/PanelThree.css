@@ -1,5 +1,7 @@
 .PanelThree {
     background-color: rgb(246, 246, 246);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .PanelThreeText {
@@ -15,7 +17,7 @@
 @media (min-width: 1001px) {
     .PanelThree {
         max-width: 1350px;
-        margin: 0 auto 100px;
+        margin: 0 auto;
 
         display: flex;
         justify-content: space-between;
@@ -40,7 +42,8 @@
 
 @media (max-width: 1000px) {
     .PanelThree {
-        margin: 0 25px 100px 25px;
+        padding-left: 25px;
+        padding-right: 25px;
         display: flex;
         flex-direction: column-reverse;
     }
