@@ -1,4 +1,4 @@
-import {motion, useInView} from "framer-motion";
+import motion from "framer-motion";
 import '../styles/Home/Home.css';
 import '../styles/Home/PanelLanding.css';
 import '../styles/Home/PanelOne.css';
