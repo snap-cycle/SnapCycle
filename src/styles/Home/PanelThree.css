@@ -1,7 +1,5 @@
 .PanelThree {
     background-color: rgb(246, 246, 246);
-    padding-top: 75px;
-    padding-bottom: 75px;
 }
 
 .PanelThreeText {
@@ -18,6 +16,7 @@
     .PanelThree {
         max-width: 1350px;
         margin: 0 auto;
+        padding: 75px 75px;
 
         display: flex;
         justify-content: space-between;
@@ -26,7 +25,6 @@
 
     .PanelThreeImageContainer {
         max-width: 600px;
-        margin-left: 75px;
         margin-right: 50px;
     }
     
@@ -36,14 +34,12 @@
     
     .PanelThreeText {
         max-width: 370px;
-        margin-right: 75px;
     }
 }
 
 @media (max-width: 1000px) {
     .PanelThree {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 75px 25px;
         display: flex;
         flex-direction: column-reverse;
     }
