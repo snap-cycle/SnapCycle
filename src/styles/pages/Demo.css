@@ -1,0 +1,71 @@
+.DemoPanel, .HowPanel, .TroublePanel {
+    height: 1000px;
+}
+
+.DemoPanel, .HowPanel, .TroublePanel {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    padding: 50px 75px 50px 75px;
+    padding-left: 75px;
+    padding-right: 75px;
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
+.DemoPanel {
+    padding-top: 125px;
+    padding-bottom: 0px;
+}
+
+#DemoPanelTitle {
+    /* max-width: 300px; */
+    font-size: 40px;
+    max-width: 400px;
+}
+
+#DemoPanelSubText {
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.TitleDivider {
+    height: 8px;
+    width: 250px;
+    margin-top: 15px;
+
+    background-color: rgb(254, 145, 16);
+}
+
+.CameraContainer {
+    padding-top: 50px;
+    padding-bottom: 75px;
+ 
+    position: relative;
+}
+
+.CameraBackground {
+    position: absolute;
+    top: 50px;
+    left: -75px;
+
+    height: 500px;
+    flex: -10;
+}
+
+.CameraButtonContainer {
+    flex: 1;
+}
+
+.HowPanel {
+    background-color: rgb(246, 246, 246);
+}
+
+@media (max-width: 1000px) {
+    .DemoPanel, .HowPanel, .TroublePanel {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}

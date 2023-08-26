@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 75px 75px;
 
+    padding: 75px 75px;
     margin: 0 auto;
     max-width: 1350px;
 }
