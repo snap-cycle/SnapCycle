@@ -61,7 +61,23 @@ const TroublePanel = () => {
 
     return (
         <div className="TroublePanel">
-
+            <div className="Title" id="TroublePanelTitle">
+                Having trouble with
+                detection?
+            </div>
+            <div className="SubText" id="TroublePanelSubText">
+                Here are the best practices to follow in order to get the best experience with
+                SnapCycle:
+            </div> 
+            <div className="TroublePanelBulletContainer">
+                <div className="TroublePanelBullet"> &#x2022; Fill over 50% of the camera with the object </div>
+                <div className="TroublePanelBullet"> &#x2022; Line the objects to the middle of the camera </div>
+                <div className="TroublePanelBullet"> &#x2022; Hold the object still for more than 10 seconds </div>
+                <div className="TroublePanelBullet"> &#x2022; Remove any objects in the background or on you that could confuse the scanner </div>
+            </div>
+            <div className="SubText">
+                Still not working? Contact us and let us in on the details.
+            </div>
         </div>
     );
 }

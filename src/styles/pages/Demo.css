@@ -51,9 +51,33 @@
     background-color: rgb(246, 246, 246);
 }
 
+#TroublePanelTitle {
+    max-width: 350px;
+}
+
+#TroublePanelSubText {
+    max-width: 675px;
+}
+
+.TroublePanelBulletContainer {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #434343;
+}
+
+.TroublePanelBullet {
+    max-width: 600px;
+}
+
 @media (max-width: 1000px) {
-    .DemoPanel, .HowPanel, .TroublePanel {
+    .DemoPanel, .HowPanelContainer, .TroublePanel {
         padding-left: 25px;
         padding-right: 25px;
+    }
+
+    .TroublePanelBullet {
+        margin-top: 5px;
     }
 }
