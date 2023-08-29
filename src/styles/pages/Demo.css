@@ -1,7 +1,3 @@
-.TroublePanel {
-    height: 1000px;
-}
-
 .DemoPanel, .HowPanelContainer, .TroublePanel {
     display: flex;
     flex-direction: column;
@@ -9,8 +5,6 @@
     text-align: left;
 
     padding: 50px 75px 50px 75px;
-    padding-left: 75px;
-    padding-right: 75px;
     margin: 0 auto;
     max-width: 1350px;
 }
@@ -37,16 +31,16 @@
     background-color: rgb(254, 145, 16);
 }
 
-.CameraContainer {
-    padding-top: 50px;
-    padding-bottom: 75px;
- 
+.CameraPanel {
+    margin-top: 50px;
+    height: 500px;
+
     position: relative;
 }
 
 .CameraBackground {
     position: absolute;
-    flex: -10;
+    flex: -1;
 }
 
 .CameraButtonContainer {

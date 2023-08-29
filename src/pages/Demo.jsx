@@ -24,7 +24,7 @@ const DemoPanel = () => {
 const CameraPanel = () => {
 
     return (
-        <div className="CameraContainer">
+        <div className="CameraPanel">
             {/* <div className="CameraButtonContainer">
                 <button className="CameraButton">
                     Enable Camera
