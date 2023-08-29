@@ -1,8 +1,8 @@
-.DemoPanel, .HowPanel, .TroublePanel {
+.TroublePanel {
     height: 1000px;
 }
 
-.DemoPanel, .HowPanel, .TroublePanel {
+.DemoPanel, .HowPanelContainer, .TroublePanel {
     display: flex;
     flex-direction: column;
 
@@ -17,11 +17,9 @@
 
 .DemoPanel {
     padding-top: 125px;
-    padding-bottom: 0px;
 }
 
 #DemoPanelTitle {
-    /* max-width: 300px; */
     font-size: 40px;
     max-width: 400px;
 }
@@ -48,10 +46,6 @@
 
 .CameraBackground {
     position: absolute;
-    top: 50px;
-    left: -75px;
-
-    height: 500px;
     flex: -10;
 }
 

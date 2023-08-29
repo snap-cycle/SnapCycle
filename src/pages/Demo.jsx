@@ -2,8 +2,7 @@ import React from "react";
 import "../styles/pages/Demo.css";
 import "../styles/Home/Home.css";
 import AnimatedPage from "../animations/AnimatedPage";
-// import CameraBackground from "../assets/Demo/CameraBackground.svg";
-import CameraBackground from "../assets/Demo/Shapes.jpg";
+import CameraBackground from "../assets/Demo/CameraBackground.svg";
 
 const DemoPanel = () => {
 
@@ -18,14 +17,20 @@ const DemoPanel = () => {
                 Scan any item in front of you, and let SnapCycle fill you in on
                 how to dispose of it.
             </div>
-            <div className="CameraContainer">
-                <div className="CameraButtonContainer">
-                    <button className="CameraButton">
-                        Enable Camera
-                    </button>
-                </div>
-                <img src={CameraBackground} alt="Camera Background" className="CameraBackground" />
-            </div>
+        </div>
+    );
+}
+
+const CameraPanel = () => {
+
+    return (
+        <div className="CameraContainer">
+            {/* <div className="CameraButtonContainer">
+                <button className="CameraButton">
+                    Enable Camera
+                </button>
+            </div> */}
+            {/* <img src={CameraBackground} alt="Camera Background" className="CameraBackground" /> */}
         </div>
     );
 }
@@ -34,22 +39,19 @@ const HowPanel = () => {
     
     return (
         <div className="HowPanel">
-            <div className="Title">
-                How to Use
-            </div>
-            <div className="SubText">
-                Here are the best practices to follow in order to get the best experience with
-                SnapCycle:
-            </div>
-            <div className="SubText">
-                - Fill over 50% of the camera with the object
-                - Line the object to the middle of the camera
-                - Hold the object still for more than 10 seconds
-                - Remove any objects in the background or on you that would confuse
-                the scanner
-            </div>
-            <div className="SubText">
-                Still not working? Contact us and let us in on the details
+            <div className="HowPanelContainer">
+                <div className="Title">
+                    How to Use
+                </div>
+                <div className="SubText">
+                    1. Click the "Enable Button" camera to allow SnapCycle to see you!
+                </div>
+                <div className="SubText">
+                    2. Line the object up in the middle of the screen and hold it still.
+                </div>
+                <div className="SubText">
+                    3. Wait a few seconds and SnapCycle will detect it!
+                </div>
             </div>
         </div>
     );
@@ -68,6 +70,7 @@ const Demo = () => {
     return (
         <AnimatedPage>
             <DemoPanel/>
+            <CameraPanel/>
             <HowPanel/>
             <TroublePanel/>
         </AnimatedPage>
