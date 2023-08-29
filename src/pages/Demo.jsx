@@ -31,7 +31,9 @@ const CameraPanel = () => {
                     Enable Camera
                 </button>
             </div> */}
-            {/* <img src={CameraBackground} alt="Camera Background" className="CameraBackground" /> */}
+            <div className="CameraBackgroundContainer">
+                <img src={CameraBackground} alt="Camera Background" className="CameraBackground" />
+            </div>
         </div>
     );
 }

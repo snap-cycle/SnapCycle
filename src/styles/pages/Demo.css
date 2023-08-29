@@ -32,15 +32,21 @@
 }
 
 .CameraPanel {
-    margin-top: 50px;
-    height: 500px;
-
+    height: 600px;
     position: relative;
 }
 
-.CameraBackground {
+.CameraBackgroundContainer {
+    display: flex;
+    justify-content: center;
     position: absolute;
     flex: -1;
+    width: 100vw;
+}
+
+.CameraBackground {
+    height: 600px;
+    width: 1440px;
 }
 
 .CameraButtonContainer {
