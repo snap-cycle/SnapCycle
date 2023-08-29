@@ -4,6 +4,7 @@ import "../styles/Home/Home.css";
 import AnimatedPage from "../animations/AnimatedPage";
 import CameraBackground from "../assets/Demo/CameraBackground.svg";
 import OutlineButton from "../components/OutlineButton";
+import CameraButton from "../components/CameraButton";
 
 const DemoPanel = () => {
 
@@ -26,7 +27,7 @@ const CameraPanel = () => {
 
     return (
         <div className="CameraPanel">
-            <OutlineButton title="Enable"/>
+            <CameraButton/>
             <div className="CameraBackgroundContainer">
                 <img src={CameraBackground} alt="Camera Background" className="CameraBackground" />
             </div>
