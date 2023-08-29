@@ -26,11 +26,7 @@ const CameraPanel = () => {
 
     return (
         <div className="CameraPanel">
-            {/* <div className="CameraButtonContainer">
-                <button className="CameraButton">
-                    Enable Camera
-                </button>
-            </div> */}
+            <OutlineButton title="Enable"/>
             <div className="CameraBackgroundContainer">
                 <img src={CameraBackground} alt="Camera Background" className="CameraBackground" />
             </div>

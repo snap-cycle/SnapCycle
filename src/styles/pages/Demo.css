@@ -34,23 +34,25 @@
 .CameraPanel {
     height: 600px;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .CameraBackgroundContainer {
     display: flex;
     justify-content: center;
+
     position: absolute;
-    flex: -1;
+    z-index: -1;
+    top: 0;
     width: 100vw;
 }
 
 .CameraBackground {
     height: 600px;
     width: 1440px;
-}
-
-.CameraButtonContainer {
-    flex: 1;
 }
 
 .HowPanel {
