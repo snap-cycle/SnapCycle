@@ -3,6 +3,7 @@ import "../styles/pages/Demo.css";
 import "../styles/Home/Home.css";
 import AnimatedPage from "../animations/AnimatedPage";
 import CameraBackground from "../assets/Demo/CameraBackground.svg";
+import OutlineButton from "../components/OutlineButton";
 
 const DemoPanel = () => {
 
@@ -77,6 +78,9 @@ const TroublePanel = () => {
             </div>
             <div className="SubText">
                 Still not working? Contact us and let us in on the details.
+            </div>
+            <div className="TroublePanelButton">
+                <OutlineButton title="Contact" destination="/Contact"/>
             </div>
         </div>
     );

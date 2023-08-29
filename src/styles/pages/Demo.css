@@ -71,6 +71,10 @@
     max-width: 600px;
 }
 
+.TroublePanelButton {
+    display: flex;
+}
+
 @media (max-width: 1000px) {
     .DemoPanel, .HowPanelContainer, .TroublePanel {
         padding-left: 25px;
