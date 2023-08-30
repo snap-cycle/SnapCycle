@@ -8,6 +8,7 @@ const ArrowNavigationMenu = ({info, columnName, menuState, setMenuState}) => {
     const goToLocation = (location) => {
         if (location === "") {return;}
         navigate(location);
+        window.scrollTo(0,0);
     }
     const toggleMenu = ([menu, setMenu]) => {
         setMenu(!menu);
