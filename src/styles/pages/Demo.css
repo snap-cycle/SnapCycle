@@ -47,7 +47,7 @@
     position: absolute;
     z-index: -1;
     top: 0;
-    width: 100vw;
+    width: 1440px;
 }
 
 .CameraBackground {
