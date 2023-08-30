@@ -7,6 +7,7 @@ const NavigationColumn = ({info, columnName}) => {
     const goToLocation = (location) => {
         if (location === "") {return;}
         navigate(location);
+        window.scrollTo(0,0);
     }
 
     return (
