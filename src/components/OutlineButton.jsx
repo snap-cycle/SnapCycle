@@ -6,6 +6,7 @@ const OutlineButton = ({title, destination}) => {
     let navigate = useNavigate();
     const goToLocation = (location) => {
         navigate(location);
+        window.scrollTo(0,0);
     }
 
     return (
