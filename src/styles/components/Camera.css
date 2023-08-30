@@ -58,3 +58,7 @@
     opacity: 1;
     width: 12px;
 }
+
+.WebcamContainer {
+    height: 90vh;
+}
