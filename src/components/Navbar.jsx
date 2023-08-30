@@ -187,6 +187,7 @@ const HamburgerPage = ({show, text, page, destination, hamburgerMenu, setHamburg
 
     const goToLocation = (location) => {
         navigate(location);
+        window.scrollTo(0,0);
         setHamburgerMenu(showHamburgerMenu => !showHamburgerMenu);
     }
 
