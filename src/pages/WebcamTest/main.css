@@ -4,8 +4,7 @@ html, body {
 }
 
 /* Loading Transition */
-
-/* body.loading video {
+body.loading video {
     filter: grayscale(1) brightness(0.25);
 }
 body.loading:before {
@@ -22,13 +21,21 @@ body.loading:before {
 }
 body video {
     transition: filter 250ms linear;
-} */
-
-canvas {
-    width: 100%;
-    height: 100%;
 }
 
+/* Video that actually displays the camera */
+.videoContainer {
+    display: flex;
+    justify-content: center;
+}
 video {
     height: 90vh;
+    position: relative;
+}
+
+/* canvas overlay that the model looks at and detects */
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
