@@ -1,5 +1,3 @@
-/*jshint esversion:6*/
-
 $(function () {
     const video = $("video")[0];
     const startButton = document.querySelector('.enabler');

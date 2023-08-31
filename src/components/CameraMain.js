@@ -1,20 +1,14 @@
-/*jshint esversion:6*/
-
 $(function () {
     const video = $("video")[0];
-    const startButton = $("button")[0]; // Get the button element
+    const startButton = document.querySelector('.CameraButton');
 
     var model;
     var cameraMode = "environment"; // or "user"
     var ratio = 16 / 9; // The width to height ratio of the camera
 
-    var isCameraStarted = false; // Track if the camera has been started
-
     startButton.addEventListener("click", function () {
-        if (!isCameraStarted) {
-            startCamera();
-            isCameraStarted = true;
-        }
+        startButton.style.display = 'none';
+        startCamera();
     });
 
     function startCamera() {
