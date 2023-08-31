@@ -5,12 +5,14 @@ $(function () {
 
     var model;
     var cameraMode = "environment"; // or "user"
+    var ratio = 16/9; // The width to height ratio of the camera
 
     const startVideoStreamPromise = navigator.mediaDevices
         .getUserMedia({
             audio: false,
             video: {
-                facingMode: cameraMode
+                facingMode: cameraMode,
+                aspectRatio: ratio
             }
         })
         .then(function (stream) {
