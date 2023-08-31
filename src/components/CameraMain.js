@@ -2,7 +2,7 @@
 
 $(function () {
     const video = $("video")[0];
-    const startButton = document.querySelector('.enabler');
+    const startButton = $("button")[0]; // Get the button element
 
     var model;
     var cameraMode = "environment"; // or "user"
