@@ -2,52 +2,64 @@
 
 $(function () {
     const video = $("video")[0];
+    const startButton = $("button")[0]; // Get the button element
 
     var model;
     var cameraMode = "environment"; // or "user"
-    var ratio = 16/9; // The width to height ratio of the camera
+    var ratio = 16 / 9; // The width to height ratio of the camera
 
-    const startVideoStreamPromise = navigator.mediaDevices
-        .getUserMedia({
-            audio: false,
-            video: {
-                facingMode: cameraMode,
-                aspectRatio: ratio
-            }
-        })
-        .then(function (stream) {
-            return new Promise(function (resolve) {
-                video.srcObject = stream;
-                video.onloadeddata = function () {
-                    video.play();
-                    resolve();
-                };
+    var isCameraStarted = false; // Track if the camera has been started
+
+    startButton.addEventListener("click", function () {
+        if (!isCameraStarted) {
+            startCamera();
+            isCameraStarted = true;
+        }
+    });
+
+    function startCamera() {
+        const startVideoStreamPromise = navigator.mediaDevices
+            .getUserMedia({
+                audio: false,
+                video: {
+                    facingMode: cameraMode,
+                    aspectRatio: ratio,
+                },
+            })
+            .then(function (stream) {
+                return new Promise(function (resolve) {
+                    video.srcObject = stream;
+                    video.onloadeddata = function () {
+                        video.play();
+                        resolve();
+                    };
+                });
             });
+
+        var publishable_key = "rf_Pie3L75SxoaXKnDxrk8D";
+        var toLoad = {
+            model: "snapcycle-4vdlw",
+            version: 1,
+        };
+
+        const loadModelPromise = new Promise(function (resolve, reject) {
+            roboflow
+                .auth({
+                    publishable_key: publishable_key,
+                })
+                .load(toLoad)
+                .then(function (m) {
+                    model = m;
+                    resolve();
+                });
         });
 
-    var publishable_key = "rf_Pie3L75SxoaXKnDxrk8D";
-    var toLoad = {
-        model: "snapcycle-4vdlw",
-        version: 1
-    };
-
-    const loadModelPromise = new Promise(function (resolve, reject) {
-        roboflow
-            .auth({
-                publishable_key: publishable_key
-            })
-            .load(toLoad)
-            .then(function (m) {
-                model = m;
-                resolve();
-            });
-    });
-
-    Promise.all([startVideoStreamPromise, loadModelPromise]).then(function () {
-        $("body").removeClass("loading");
-        resizeCanvas();
-        detectFrame();
-    });
+        Promise.all([startVideoStreamPromise, loadModelPromise]).then(function () {
+            $("body").removeClass("loading");
+            resizeCanvas();
+            detectFrame();
+        });
+    }
 
     var canvas, ctx;
     const font = "16px sans-serif";
