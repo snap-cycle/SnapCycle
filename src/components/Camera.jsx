@@ -7,12 +7,13 @@ const Camera = () => {
 
     useEffect(() => {
         if (cameraOn) {
+            // Removes button
             document.querySelector('.CameraButton').style.display = 'none';
 
+            // Sets up and displays camera for user
             const video = document.querySelector("video");
-            const cameraMode = "environment"; // or "user"
+            const cameraMode = "environment"; // environment for outwards, user for selfie. selfie if outwards not available
             const ratio = 16/9; // The width to height ratio of the camera
-
             navigator.mediaDevices.getUserMedia({
                 audio: false,
                 video: {
@@ -44,11 +45,7 @@ const Camera = () => {
                     <span className="arrow"></span>
                 </div>
             </div>
-            {cameraOn &&
-                <div className='WebcamContainer'>
-                    <video id="video" autoplay muted playsinline></video>
-                </div>
-            }
+            {cameraOn && <video id="video" autoplay muted playsinline></video>}
         </div>
     );
 }
