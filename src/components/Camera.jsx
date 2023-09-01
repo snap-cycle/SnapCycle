@@ -136,12 +136,11 @@ const Camera = () => {
             canvas.css({
                 width: dimensions.width,
                 height: dimensions.height,
-                left: ($(window).width() - dimensions.width) / 2,
-                // top: ($(window).height() - dimensions.height) / 2
-                top: 0
+                position: 'absolute',
             });
-    
-            $("body").append(canvas);
+
+            const camera = document.querySelector('.VideoContainer');
+            $(camera).append(canvas);
         };
     
         const renderPredictions = function (predictions) {
@@ -236,7 +235,9 @@ const Camera = () => {
                     <span className="arrow"></span>
                 </div>
             </div>
-            <video id="video" autoplay muted playsinline></video>
+            <div className='VideoContainer'>
+                <video id="video" autoplay muted playsinline></video>
+            </div>
         </div>
     );
 }

@@ -59,6 +59,6 @@
     width: 12px;
 }
 
-.video {
-    height: 90vh;
+.VideoContainer {
+    position: relative;
 }
