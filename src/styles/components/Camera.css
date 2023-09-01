@@ -59,6 +59,11 @@
     width: 12px;
 }
 
+#video {
+    display: none;
+    height: 50vh;
+}
+
 .VideoContainer {
     position: relative;
 }

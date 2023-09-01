@@ -27,13 +27,15 @@ const Camera = () => {
     $(function () {
         const video = $("video")[0];
         const startButton = document.querySelector('.CameraButton');
+        const camera = document.querySelector('#video');
     
         var model;
-        var cameraMode = "environment"; // or "user"
+        var cameraMode = "environment"; // environment is outwards, user is selfie. If no environment, uses selfie
         var ratio = 16 / 9; // The width to height ratio of the camera
     
         startButton.addEventListener("click", function () {
-            startButton.style.display = 'none';
+            startButton.style.display = 'none';             // Makes button dissapear, and have camera appear
+            camera.style.display = 'block';
             startCamera();
         });
     
@@ -137,10 +139,11 @@ const Camera = () => {
                 width: dimensions.width,
                 height: dimensions.height,
                 position: 'absolute',
+                top: 0
             });
 
-            const camera = document.querySelector('.VideoContainer');
-            $(camera).append(canvas);
+            const cameraContainer = document.querySelector('.VideoContainer');
+            $(cameraContainer).append(canvas);
         };
     
         const renderPredictions = function (predictions) {
