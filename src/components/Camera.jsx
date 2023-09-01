@@ -77,7 +77,7 @@ const Camera = () => {
             });
     
             Promise.all([startVideoStreamPromise, loadModelPromise]).then(function () {
-                $("body").removeClass("loading");
+                camera.style.filter = 'none';   // Removes loading dark screen
                 resizeCanvas();
                 detectFrame();
             });
@@ -239,7 +239,7 @@ const Camera = () => {
                 </div>
             </div>
             <div className='VideoContainer'>
-                <video id="video" autoplay muted playsinline></video>
+                <video id="video" autoPlay muted playsInline></video>
             </div>
         </div>
     );
