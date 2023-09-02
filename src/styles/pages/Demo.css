@@ -38,6 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .CameraBackgroundContainer {
@@ -46,12 +47,11 @@
 
     position: absolute;
     z-index: -1;
-    top: 0;
     width: 1440px;
 }
 
 .CameraBackground {
-    height: 600px;
+    height: 900px;
     width: 1440px;
 }
 
@@ -83,6 +83,20 @@
     display: flex;
 }
 
+@media (min-width: 1100px) {
+    .CameraPanel {
+        height: 900px;
+    }
+
+    .CameraBackgroundContainer {
+        top: 0;
+    }
+}
+@media (max-width: 1000px) {
+    .CameraBackgroundContainer {
+        top: -150px;
+    }
+}
 @media (max-width: 1000px) {
     .DemoPanel, .HowPanelContainer, .TroublePanel {
         padding-left: 25px;
