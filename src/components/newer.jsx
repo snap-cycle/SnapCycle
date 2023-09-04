@@ -47,8 +47,6 @@ const Camera = () => {
 
             setCameraStarted(true);
             loadModel();
-            resizeCanvas();
-            detectFrame();
         } 
         catch (error) {
             console.error('Error accessing camera:', error);
@@ -78,6 +76,8 @@ const Camera = () => {
 
         Promise.all([loadModelPromise]).then(function () {
             camera.style.filter = 'none';   // Removes loading dark screen
+            resizeCanvas();
+            detectFrame();
         });
     };
 
