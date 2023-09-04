@@ -135,30 +135,30 @@ const Camera = () => {
     };
 
     const CameraButton = () => {
-    return (
-        <div className="CameraButtonContainer" style={{ display: cameraStarted ? 'none' : '' }}>
-            <div className="CameraButton" onClick={startCamera}>
-                Enable Camera
-                <span className="arrow"></span>
+        return (
+            <div className="CameraButtonContainer" style={{ display: cameraStarted ? 'none' : '' }}>
+                <div className="CameraButton" onClick={startCamera}>
+                    Enable Camera
+                    <span className="arrow"></span>
+                </div>
             </div>
-        </div>
-    );
+        );
     };
 
     const VideoContainer = () => {
-    return (
-        <div className="VideoContainer">
-            <video
-                id="video"
-                ref={videoRef}
-                autoPlay
-                muted
-                playsInline
-                style={{ display: cameraStarted ? 'block' : 'none' }}
-            ></video>
-            <canvas ref={canvasRef} style={{ position: 'absolute', top: 0 }}></canvas>
-        </div>
-    );
+        return (
+            <div className="VideoContainer">
+                <video
+                    id="video"
+                    ref={videoRef}
+                    autoPlay
+                    muted
+                    playsInline
+                    style={{ display: cameraStarted ? 'block' : 'none' }}
+                ></video>
+                <canvas ref={canvasRef} className='ModelCanvas'></canvas>
+            </div>
+        );
     };
 
     return (

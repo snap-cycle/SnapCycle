@@ -70,3 +70,8 @@
 .VideoContainer {
     position: relative;
 }
+
+.ModelCanvas {
+    position: absolute;
+    top: 0;
+}
