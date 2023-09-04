@@ -20,9 +20,13 @@ const Camera = () => {
         // Append the script to the document body
         document.body.appendChild(script);
 
-        // Clean up by removing the script when the component unmounts
+        // Add listener for whenever the video changes size
+        window.addEventListener('resize', resizeCanvas);
+
+        // Clean up when component unmounts
         return () => {
             document.body.removeChild(script);
+            window.removeEventListener('resize', resizeCanvas);
         };
     }, []);
 
@@ -77,38 +81,51 @@ const Camera = () => {
         });
     };
 
-    function videoDimensions(video) {
-        // Ratio of the video's intrisic dimensions
-        var videoRatio = video.videoWidth / video.videoHeight;
+    // Function to retrieve current dimensions of camera for the canvas
+    const videoDimensions = () => {
+        const video = videoRef.current;
+
+        if (!video) return null;
+
+        // Ratio of the video's intrinsic dimensions
+        const videoRatio = video.videoWidth / video.videoHeight;
 
         // The width and height of the video element
-        var width = video.offsetWidth,
-            height = video.offsetHeight;
+        const width = video.offsetWidth;
+        const height = video.offsetHeight;
 
         // The ratio of the element's width to its height
-        var elementRatio = width / height;
+        const elementRatio = width / height;
+
+        let newWidth = width;
+        let newHeight = height;
 
         // If the video element is short and wide
         if (elementRatio > videoRatio) {
-            width = height * videoRatio;
+            newWidth = height * videoRatio;
         } else {
             // It must be tall and thin, or exactly equal to the original ratio
-            height = width / videoRatio;
+            newHeight = width / videoRatio;
         }
 
         return {
-            width: width,
-            height: height
+            width: newWidth,
+            height: newHeight,
         };
-    }
+    };
 
+    // Function to resize canvas whenever the camera is resized
     const resizeCanvas = () => {
-        if (videoRef.current) {
-            const { videoWidth, videoHeight } = videoRef.current;
-            const canvas = canvasRef.current;
-            canvas.width = videoWidth;
-            canvas.height = videoHeight;
-        }
+        const canvas = canvasRef.current;
+        const dimensions = videoDimensions();
+
+        if (!canvas || !dimensions) return;
+
+        canvas.width = videoRef.current.videoWidth;
+        canvas.height = videoRef.current.videoHeight;
+
+        canvas.style.width = dimensions.width + 'px';
+        canvas.style.height = dimensions.height + 'px';
     };
 
     const detectFrame = () => {
@@ -120,10 +137,10 @@ const Camera = () => {
     const CameraButton = () => {
     return (
         <div className="CameraButtonContainer" style={{ display: cameraStarted ? 'none' : '' }}>
-        <div className="CameraButton" onClick={startCamera}>
-            Enable Camera
-            <span className="arrow"></span>
-        </div>
+            <div className="CameraButton" onClick={startCamera}>
+                Enable Camera
+                <span className="arrow"></span>
+            </div>
         </div>
     );
     };
@@ -131,15 +148,15 @@ const Camera = () => {
     const VideoContainer = () => {
     return (
         <div className="VideoContainer">
-        <video
-            id="video"
-            ref={videoRef}
-            autoPlay
-            muted
-            playsInline
-            style={{ display: cameraStarted ? 'block' : 'none' }}
-        ></video>
-        <canvas ref={canvasRef} style={{ position: 'absolute', top: 0 }}></canvas>
+            <video
+                id="video"
+                ref={videoRef}
+                autoPlay
+                muted
+                playsInline
+                style={{ display: cameraStarted ? 'block' : 'none' }}
+            ></video>
+            <canvas ref={canvasRef} style={{ position: 'absolute', top: 0 }}></canvas>
         </div>
     );
     };
