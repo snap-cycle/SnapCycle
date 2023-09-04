@@ -6,7 +6,7 @@ const Camera = () => {
     const [cameraStarted, setCameraStarted] = useState(false);
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
-    const ctx = useRef(null);
+    var ctx;
     var model;
     const font = "16px sans-serif";
 
@@ -118,6 +118,7 @@ const Camera = () => {
 
     // Function to resize canvas whenever the camera is resized
     const resizeCanvas = () => {
+        ctx = canvas[0].getContext("2d");
         const canvas = canvasRef.current;
         const dimensions = videoDimensions();
 
@@ -164,7 +165,6 @@ const Camera = () => {
     // Function to render every frame and detect any objects in frame
     const renderPredictions = function (predictions) {
         var dimensions = videoDimensions(video);
-
         var scale = 1;
 
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
