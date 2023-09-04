@@ -6,6 +6,9 @@ const Camera = () => {
     const [cameraStarted, setCameraStarted] = useState(false);
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
+    const ctx = useRef(null);
+    var model;
+    const font = "16px sans-serif";
 
     useEffect(() => {
         // Load Roboflow script when the component mounts
@@ -56,7 +59,6 @@ const Camera = () => {
 
     // Function to load model from roboflow to be used
     const loadModel = () => {
-        var model;
         var publishable_key = "rf_Pie3L75SxoaXKnDxrk8D";
         var toLoad = {
             model: "snapcycle-4vdlw",
@@ -128,10 +130,91 @@ const Camera = () => {
         canvas.style.height = dimensions.height + 'px';
     };
 
+    var prevTime;
+    var pastFrameTimes = [];
+    // Function to pass each video frame into the model
     const detectFrame = () => {
-    // Implement the model detection logic here
-    // You can use Roboflow or any other library for this
-    // Update the canvas or state with the detection results
+        const video = videoRef.current;
+
+        if (!model) return requestAnimationFrame(detectFrame);
+
+        model
+            .detect(video)
+            .then((predictions) => {
+                requestAnimationFrame(detectFrame);
+                renderPredictions(predictions);
+
+                if (prevTime) {
+                    pastFrameTimes.push(Date.now() - prevTime);
+                    if (pastFrameTimes.length > 30) pastFrameTimes.shift();
+
+                    var total = 0;
+                    _.each(pastFrameTimes, function (t) {
+                        total += t / 1000;
+                    });
+                }
+                prevTime = Date.now();
+            })
+            .catch((e) => {
+                console.log("CAUGHT", e);
+                requestAnimationFrame(detectFrame);
+            });
+    };
+
+    // Function to render every frame and detect any objects in frame
+    const renderPredictions = function (predictions) {
+        var dimensions = videoDimensions(video);
+
+        var scale = 1;
+
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+        predictions.forEach(function (prediction) {
+            const x = prediction.bbox.x;
+            const y = prediction.bbox.y;
+
+            const width = prediction.bbox.width;
+            const height = prediction.bbox.height;
+
+            // Draw the bounding box.
+            ctx.strokeStyle = prediction.color;
+            ctx.lineWidth = 4;
+            ctx.strokeRect(
+                (x - width / 2) / scale,
+                (y - height / 2) / scale,
+                width / scale,
+                height / scale
+            );
+
+            // Draw the label background.
+            ctx.fillStyle = prediction.color;
+            const textWidth = ctx.measureText(prediction.class).width;
+            const textHeight = parseInt(font, 10); // base 10
+            ctx.fillRect(
+                (x - width / 2) / scale,
+                (y - height / 2) / scale,
+                textWidth + 8,
+                textHeight + 4
+            );
+        });
+
+        predictions.forEach(function (prediction) {
+            const x = prediction.bbox.x;
+            const y = prediction.bbox.y;
+
+            const width = prediction.bbox.width;
+            const height = prediction.bbox.height;
+
+            // Draw the text last to ensure it's on top.
+            ctx.font = font;
+            ctx.textBaseline = "top";
+            ctx.fillStyle = "#000000";
+            ctx.fillText(
+                prediction.class,
+                (x - width / 2) / scale + 4,
+                (y - height / 2) / scale + 1
+            );
+        });
     };
 
     const CameraButton = () => {
