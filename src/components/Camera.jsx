@@ -1,11 +1,17 @@
-import {React, useEffect} from 'react';
-import $ from 'jquery';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/components/OutlineButton.css';
 import '../styles/components/Camera.css';
 
 const Camera = () => {
+    const [cameraStarted, setCameraStarted] = useState(false);
+    const videoRef = useRef(null);
+    const canvasRef = useRef(null);
+    var ctx;
+    var model;
+    const font = "16px sans-serif";
+
     useEffect(() => {
-        // Import roboflow script to allow model to work
+        // Load Roboflow script when the component mounts
         const script = document.createElement('script');
         script.src = 'https://cdn.roboflow.com/0.2.26/roboflow.js';
 
@@ -13,238 +19,241 @@ const Camera = () => {
         script.onload = () => {
             console.log('Script has been loaded');
         };
-    
+
         // Append the script to the document body
         document.body.appendChild(script);
-    
-        // Clean up by removing the script when the component unmounts
+
+        // Add listener for whenever the video changes size
+        window.addEventListener('resize', resizeCanvas);
+
+        // Clean up when component unmounts
         return () => {
-          document.body.removeChild(script);
+            document.body.removeChild(script);
+            window.removeEventListener('resize', resizeCanvas);
         };
     }, []);
 
-    // Function to activate camera and scan it with model
-    $(function () {
-        const video = $("video")[0];
-        const startButton = document.querySelector('.CameraButton');
+    // Function to activate camera when button clicked
+    const startCamera = async () => {
+        try {
+            // Set up camera settings
+            const stream = await navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: {
+                facingMode: 'environment', // or 'user' for selfie
+                aspectRatio: 16 / 9,
+            },
+            });
+            videoRef.current.srcObject = stream;
+            await videoRef.current.play();
+
+            setCameraStarted(true);
+            loadModel();
+        } 
+        catch (error) {
+            console.error('Error accessing camera:', error);
+        }
+    };
+
+    // Function to load model from roboflow to be used
+    const loadModel = () => {
+        var publishable_key = "rf_Pie3L75SxoaXKnDxrk8D";
+        var toLoad = {
+            model: "snapcycle-4vdlw",
+            version: 1,
+        };
         const camera = document.querySelector('#video');
-    
-        var model;
-        var cameraMode = "environment"; // environment is outwards, user is selfie. If no environment, uses selfie
-        var ratio = 16 / 9; // The width to height ratio of the camera
-    
-        startButton.addEventListener("click", function () {
-            startButton.style.display = 'none';             // Makes button dissapear, and have camera appear
-            camera.style.display = 'block';
-            startCamera();
-        });
-    
-        function startCamera() {
-            const startVideoStreamPromise = navigator.mediaDevices
-                .getUserMedia({
-                    audio: false,
-                    video: {
-                        facingMode: cameraMode,
-                        aspectRatio: ratio,
-                    },
+
+        const loadModelPromise = new Promise(function (resolve, reject) {
+            roboflow
+                .auth({
+                    publishable_key: publishable_key,
                 })
-                .then(function (stream) {
-                    return new Promise(function (resolve) {
-                        video.srcObject = stream;
-                        video.onloadeddata = function () {
-                            video.play();
-                            resolve();
-                        };
-                    });
+                .load(toLoad)
+                .then(function (m) {
+                    model = m;
+                    resolve();
                 });
-    
-            var publishable_key = "rf_Pie3L75SxoaXKnDxrk8D";
-            var toLoad = {
-                model: "snapcycle-4vdlw",
-                version: 1,
-            };
-    
-            const loadModelPromise = new Promise(function (resolve, reject) {
-                roboflow
-                    .auth({
-                        publishable_key: publishable_key,
-                    })
-                    .load(toLoad)
-                    .then(function (m) {
-                        model = m;
-                        resolve();
-                    });
-            });
-    
-            Promise.all([startVideoStreamPromise, loadModelPromise]).then(function () {
-                camera.style.filter = 'none';   // Removes loading dark screen
-                resizeCanvas();
-                detectFrame();
-            });
-        }
-    
-        var canvas, ctx;
-        const font = "16px sans-serif";
-    
-        function videoDimensions(video) {
-            // Ratio of the video's intrisic dimensions
-            var videoRatio = video.videoWidth / video.videoHeight;
-    
-            // The width and height of the video element
-            var width = video.offsetWidth,
-                height = video.offsetHeight;
-    
-            // The ratio of the element's width to its height
-            var elementRatio = width / height;
-    
-            // If the video element is short and wide
-            if (elementRatio > videoRatio) {
-                width = height * videoRatio;
-            } else {
-                // It must be tall and thin, or exactly equal to the original ratio
-                height = width / videoRatio;
-            }
-    
-            return {
-                width: width,
-                height: height
-            };
-        }
-    
-        $(window).resize(function () {
-            resizeCanvas();
         });
-    
-        const resizeCanvas = function () {
-            $("canvas").remove();
-    
-            canvas = $("<canvas/>");
-    
-            ctx = canvas[0].getContext("2d");
-    
-            var dimensions = videoDimensions(video);
-    
-            console.log(
-                video.videoWidth,
-                video.videoHeight,
-                video.offsetWidth,
-                video.offsetHeight,
-                dimensions
+
+        Promise.all([loadModelPromise]).then(function () {
+            camera.style.filter = 'none';   // Removes loading dark screen
+            resizeCanvas();                 // Must be called in loadModel otherwise no scanning occurs until canvas resized
+            detectFrame();                
+        });
+    };
+
+    // Function to retrieve current dimensions of camera for the canvas
+    const videoDimensions = () => {
+        const video = videoRef.current;
+
+        if (!video) return null;
+
+        // Ratio of the video's intrinsic dimensions
+        const videoRatio = video.videoWidth / video.videoHeight;
+
+        // The width and height of the video element
+        const width = video.offsetWidth;
+        const height = video.offsetHeight;
+
+        // The ratio of the element's width to its height
+        const elementRatio = width / height;
+
+        let newWidth = width;
+        let newHeight = height;
+
+        // If the video element is short and wide
+        if (elementRatio > videoRatio) {
+            newWidth = height * videoRatio;
+        } else {
+            // It must be tall and thin, or exactly equal to the original ratio
+            newHeight = width / videoRatio;
+        }
+
+        return {
+            width: newWidth,
+            height: newHeight,
+        };
+    };
+
+    // Function to resize canvas whenever the camera is resized
+    const resizeCanvas = () => {
+        var canvasClass = document.querySelector('.ModelCanvas');
+        ctx = canvasClass.getContext("2d");
+
+        const canvas = canvasRef.current;
+        const dimensions = videoDimensions();
+
+        if (!canvas || !dimensions) return;
+
+        canvas.width = videoRef.current.videoWidth;
+        canvas.height = videoRef.current.videoHeight;
+
+        canvas.style.width = dimensions.width + 'px';
+        canvas.style.height = dimensions.height + 'px';
+    };
+
+    var prevTime;
+    var pastFrameTimes = [];
+    // Function to pass each video frame into the model
+    const detectFrame = () => {
+        const video = videoRef.current;
+
+        if (!model) return requestAnimationFrame(detectFrame);
+
+        model
+            .detect(video)
+            .then((predictions) => {
+                requestAnimationFrame(detectFrame);
+                renderPredictions(predictions);
+
+                if (prevTime) {
+                    pastFrameTimes.push(Date.now() - prevTime);
+                    if (pastFrameTimes.length > 30) pastFrameTimes.shift();
+
+                    var total = 0;
+                    _.each(pastFrameTimes, function (t) {
+                        total += t / 1000;
+                    });
+                }
+                prevTime = Date.now();
+            })
+            .catch((e) => {
+                console.log("CAUGHT", e);
+                requestAnimationFrame(detectFrame);
+            });
+    };
+
+    // Function to render every frame and detect any objects in frame
+    const renderPredictions = (predictions) => {
+        var dimensions = videoDimensions(video);
+        var scale = 1;
+
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+        predictions.forEach(function (prediction) {
+            const x = prediction.bbox.x;
+            const y = prediction.bbox.y;
+
+            const width = prediction.bbox.width;
+            const height = prediction.bbox.height;
+
+            // Draw the bounding box.
+            ctx.strokeStyle = prediction.color;
+            ctx.lineWidth = 4;
+            ctx.strokeRect(
+                (x - width / 2) / scale,
+                (y - height / 2) / scale,
+                width / scale,
+                height / scale
             );
-    
-            canvas[0].width = video.videoWidth;
-            canvas[0].height = video.videoHeight;
-    
-            canvas.css({
-                width: dimensions.width,
-                height: dimensions.height,
-                position: 'absolute',
-                top: 0
-            });
 
-            const cameraContainer = document.querySelector('.VideoContainer');
-            $(cameraContainer).append(canvas);
-        };
-    
-        const renderPredictions = function (predictions) {
-            var dimensions = videoDimensions(video);
-    
-            var scale = 1;
-    
-            ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    
-            predictions.forEach(function (prediction) {
-                const x = prediction.bbox.x;
-                const y = prediction.bbox.y;
-    
-                const width = prediction.bbox.width;
-                const height = prediction.bbox.height;
-    
-                // Draw the bounding box.
-                ctx.strokeStyle = prediction.color;
-                ctx.lineWidth = 4;
-                ctx.strokeRect(
-                    (x - width / 2) / scale,
-                    (y - height / 2) / scale,
-                    width / scale,
-                    height / scale
-                );
-    
-                // Draw the label background.
-                ctx.fillStyle = prediction.color;
-                const textWidth = ctx.measureText(prediction.class).width;
-                const textHeight = parseInt(font, 10); // base 10
-                ctx.fillRect(
-                    (x - width / 2) / scale,
-                    (y - height / 2) / scale,
-                    textWidth + 8,
-                    textHeight + 4
-                );
-            });
-    
-            predictions.forEach(function (prediction) {
-                const x = prediction.bbox.x;
-                const y = prediction.bbox.y;
-    
-                const width = prediction.bbox.width;
-                const height = prediction.bbox.height;
-    
-                // Draw the text last to ensure it's on top.
-                ctx.font = font;
-                ctx.textBaseline = "top";
-                ctx.fillStyle = "#000000";
-                ctx.fillText(
-                    prediction.class,
-                    (x - width / 2) / scale + 4,
-                    (y - height / 2) / scale + 1
-                );
+            // Draw the label background.
+            ctx.fillStyle = prediction.color;
+            const textWidth = ctx.measureText(prediction.class).width;
+            const textHeight = parseInt(font, 10); // base 10
+            ctx.fillRect(
+                (x - width / 2) / scale,
+                (y - height / 2) / scale,
+                textWidth + 8,
+                textHeight + 4
+            );
+        });
 
-                console.log(prediction.class + " has been detected.");
-            });
-        };
-    
-        var prevTime;
-        var pastFrameTimes = [];
-        const detectFrame = function () {
-            if (!model) return requestAnimationFrame(detectFrame);
-    
-            model
-                .detect(video)
-                .then(function (predictions) {
-                    requestAnimationFrame(detectFrame);
-                    renderPredictions(predictions);
-    
-                    if (prevTime) {
-                        pastFrameTimes.push(Date.now() - prevTime);
-                        if (pastFrameTimes.length > 30) pastFrameTimes.shift();
-    
-                        var total = 0;
-                        _.each(pastFrameTimes, function (t) {
-                            total += t / 1000;
-                        });
-                    }
-                    prevTime = Date.now();
-                })
-                .catch(function (e) {
-                    console.log("CAUGHT", e);
-                    requestAnimationFrame(detectFrame);
-                });
-        };
-    });
+        predictions.forEach(function (prediction) {
+            const x = prediction.bbox.x;
+            const y = prediction.bbox.y;
 
-    return (
-        <div>
-            <div className='CameraButtonContainer'>
-                <div className="CameraButton">
+            const width = prediction.bbox.width;
+            const height = prediction.bbox.height;
+
+            // Draw the text last to ensure it's on top.
+            ctx.font = font;
+            ctx.textBaseline = "top";
+            ctx.fillStyle = "#000000";
+            ctx.fillText(
+                prediction.class,
+                (x - width / 2) / scale + 4,
+                (y - height / 2) / scale + 1
+            );
+
+            console.log(prediction.class + " has been detected.");
+        });
+    };
+
+    const CameraButton = () => {
+        return (
+            <div className="CameraButtonContainer" style={{ display: cameraStarted ? 'none' : '' }}>
+                <div className="CameraButton" onClick={startCamera}>
                     Enable Camera
                     <span className="arrow"></span>
                 </div>
             </div>
-            <div className='VideoContainer'>
-                <video id="video" autoPlay muted playsInline></video>
+        );
+    };
+
+    const VideoContainer = () => {
+        return (
+            <div className="VideoContainer">
+                <video
+                    id="video"
+                    ref={videoRef}
+                    autoPlay
+                    muted
+                    playsInline
+                    style={{ display: cameraStarted ? 'block' : 'none' }}
+                ></video>
+                <canvas ref={canvasRef} className='ModelCanvas'></canvas>
             </div>
-        </div>
+        );
+    };
+
+    return (
+    <div>
+        {CameraButton()}
+        {VideoContainer()}
+    </div>
     );
-}
+};
 
 export default Camera;
