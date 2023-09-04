@@ -118,7 +118,9 @@ const Camera = () => {
 
     // Function to resize canvas whenever the camera is resized
     const resizeCanvas = () => {
-        ctx = canvas[0].getContext("2d");
+        var canvasClass = document.querySelector('.ModelCanvas');
+        ctx = canvasClass.getContext("2d");
+
         const canvas = canvasRef.current;
         const dimensions = videoDimensions();
 
@@ -163,7 +165,7 @@ const Camera = () => {
     };
 
     // Function to render every frame and detect any objects in frame
-    const renderPredictions = function (predictions) {
+    const renderPredictions = (predictions) => {
         var dimensions = videoDimensions(video);
         var scale = 1;
 
@@ -214,6 +216,8 @@ const Camera = () => {
                 (x - width / 2) / scale + 4,
                 (y - height / 2) / scale + 1
             );
+
+            console.log(prediction.class + " has been detected.");
         });
     };
 
