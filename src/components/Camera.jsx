@@ -8,7 +8,6 @@ const Camera = () => {
     const canvasRef = useRef(null);
     var ctx;
     var model;
-    const font = "16px sans-serif";
 
     useEffect(() => {
         // Load Roboflow script when the component mounts
@@ -168,6 +167,7 @@ const Camera = () => {
     const renderPredictions = (predictions) => {
         var dimensions = videoDimensions(video);
         var scale = 1;
+        const font = "16px sans-serif";
 
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
