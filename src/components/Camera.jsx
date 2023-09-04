@@ -198,6 +198,8 @@ const Camera = () => {
                     (x - width / 2) / scale + 4,
                     (y - height / 2) / scale + 1
                 );
+
+                console.log(prediction.class + " has been detected.");
             });
         };
     
