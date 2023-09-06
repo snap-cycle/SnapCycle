@@ -5,7 +5,7 @@ import '../styles/components/Camera.css';
 const Camera = () => {
     const [cameraStarted, setCameraStarted] = useState(false);
     const canvasRef = useRef(null);
-    var cameraOn = true, video, ctx, model;
+    var cameraOn = true, video = null, ctx, model;
 
     useEffect(() => {
         // Load Roboflow script when the component mounts
@@ -59,7 +59,7 @@ const Camera = () => {
 
     // Function to stop camera when component is unmounted
     const stopCamera = () => {
-        if (video.srcObject) {
+        if (video && video.srcObject) {
             video.srcObject.getTracks().forEach(track => track.stop());
         }
     };
