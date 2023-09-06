@@ -4,10 +4,8 @@ import '../styles/components/Camera.css';
 
 const Camera = () => {
     const [cameraStarted, setCameraStarted] = useState(false);
-    const videoRef = useRef(null);
     const canvasRef = useRef(null);
-    var ctx;
-    var model;
+    var cameraOn = true, video, ctx, model;
 
     useEffect(() => {
         // Load Roboflow script when the component mounts
@@ -27,6 +25,8 @@ const Camera = () => {
 
         // Clean up when component unmounts
         return () => {
+            cameraOn = false;
+            stopCamera();
             document.body.removeChild(script);
             window.removeEventListener('resize', resizeCanvas);
         };
@@ -36,6 +36,7 @@ const Camera = () => {
     const startCamera = async () => {
         try {
             // Set up camera settings
+            video = document.querySelector("video");
             const stream = await navigator.mediaDevices.getUserMedia({
             audio: false,
             video: {
@@ -43,14 +44,23 @@ const Camera = () => {
                 aspectRatio: 16 / 9,
             },
             });
-            videoRef.current.srcObject = stream;
-            await videoRef.current.play();
+            video.srcObject = stream;
+            video.onloadeddata = function () {
+                video.play();
+            };
 
             setCameraStarted(true);
             loadModel();
         } 
         catch (error) {
             console.error('Error accessing camera:', error);
+        }
+    };
+
+    // Function to stop camera when component is unmounted
+    const stopCamera = () => {
+        if (video.srcObject) {
+            video.srcObject.getTracks().forEach(track => track.stop());
         }
     };
 
@@ -84,8 +94,6 @@ const Camera = () => {
 
     // Function to retrieve current dimensions of camera for the canvas
     const videoDimensions = () => {
-        const video = videoRef.current;
-
         if (!video) return null;
 
         // Ratio of the video's intrinsic dimensions
@@ -125,8 +133,8 @@ const Camera = () => {
 
         if (!canvas || !dimensions) return;
 
-        canvas.width = videoRef.current.videoWidth;
-        canvas.height = videoRef.current.videoHeight;
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
 
         canvas.style.width = dimensions.width + 'px';
         canvas.style.height = dimensions.height + 'px';
@@ -136,9 +144,11 @@ const Camera = () => {
     var pastFrameTimes = [];
     // Function to pass each video frame into the model
     const detectFrame = () => {
-        const video = videoRef.current;
-
         if (!model) return requestAnimationFrame(detectFrame);
+        else if (!cameraOn) {                                   // If camera unmounted, deactivate model
+            console.log("Model deactivated.")
+            return;
+        }
 
         model
             .detect(video)
@@ -237,7 +247,6 @@ const Camera = () => {
             <div className="VideoContainer">
                 <video
                     id="video"
-                    ref={videoRef}
                     autoPlay
                     muted
                     playsInline
