@@ -4,7 +4,7 @@ import '../styles/components/Camera.css';
 
 const Camera = () => {
     const [cameraStarted, setCameraStarted] = useState(false);
-    const videoRef = useRef(null);
+    var video;
 
     useEffect(() => {
         return () => {
@@ -17,6 +17,7 @@ const Camera = () => {
     const startCamera = async () => {
         try {
             // Set up camera settings
+            video = document.querySelector("video");
             const stream = await navigator.mediaDevices.getUserMedia({
             audio: false,
             video: {
@@ -24,8 +25,10 @@ const Camera = () => {
                 aspectRatio: 16 / 9,
             },
             });
-            videoRef.current.srcObject = stream;
-            await videoRef.current.play();
+            video.srcObject = stream;
+            video.onloadeddata = function () {
+                video.play();
+            };
 
             setCameraStarted(true);
             console.log("loaded");
@@ -37,10 +40,8 @@ const Camera = () => {
 
     // Function to stop camera when component is unmounted
     const stopCamera = () => {
-        const stream = videoRef.current.srcObject;
-        if (stream) {
-            const tracks = stream.getTracks();
-            tracks.forEach((track) => track.stop());
+        if (video.srcObject) {
+            video.srcObject.getTracks().forEach(track => track.stop());
         }
 
         console.log("unmounted");
@@ -62,7 +63,6 @@ const Camera = () => {
             <div className="VideoContainer">
                 <video
                     id="video"
-                    ref={videoRef}
                     autoPlay
                     muted
                     playsInline
