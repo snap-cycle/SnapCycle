@@ -1,0 +1,35 @@
+
+
+.result-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.result-page-background {
+    height: 590px;
+    width: 1280px;
+}
+
+.result-disposal-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.disposal-process {
+    display: flex;
+    flex-direction: row;
+}
+
+.disposal-process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #F3F3F3;
+    border-radius: 40px;
+    width: 278px;
+    height: 402px;
+}

@@ -2,8 +2,9 @@ import PlasticBottleBackground from "../assets/Result/MainBackground1.svg";
 import PlasticBottle from "../assets/Result/PlasticBottle.svg";
 import RecyclingBin from "../assets/Result/RecyclingBin.svg";
 import BottleAndArrow from "../assets/Result/BottleAndArrow.svg";
-import WaterBottleCrushed from "../assets/Result/WaterBottleCrushed.svg";
-export const itemInfo = {
+import WaterBottleCrushed from "../assets/Result/PlasticBottleCrushed.svg";
+
+export const ItemInfo = {
     "Plastic Bottle": {
         "name": "Plastic Bottle",
         "background": PlasticBottleBackground,
