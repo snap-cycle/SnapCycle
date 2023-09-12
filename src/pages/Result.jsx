@@ -8,7 +8,7 @@ const Result = () => {
         case "Plastic Bottle":
             return (
                 <div className="result-page">
-                    <img className="result-page-background" src={ItemInfo["Plastic Bottle"].background} alt="result-background-image"/>
+                    <img className="result-page-background" src={ItemInfo["Plastic Bottle"].background} alt="result-background"/>
                     <div className="result-disposal-methods">
                         <h1 className="result-h1">Disposal Methods</h1>
                         <div className="disposal-process">
@@ -17,9 +17,9 @@ const Result = () => {
                                     return (
                                         <div className="disposal-process-step" key={key}>
                                             <h1>{key}</h1>
-                                            <img className="disposal-method-image"
+                                            <img className="disposal-method"
                                                  src={ItemInfo["Plastic Bottle"].dispsal[key].image}
-                                                 alt="disposal-method-image"/>
+                                                 alt="disposal-method"/>
                                             <p className="disposal-method-text">{ItemInfo["Plastic Bottle"].dispsal[key].text}</p>
                                         </div>
                                     )

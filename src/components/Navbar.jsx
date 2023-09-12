@@ -193,7 +193,6 @@ const HamburgerPage = ({show, text, page, destination, hamburgerMenu, setHamburg
         transition: `padding-left 0.5s, color 0.5s, opacity 0.2s ease-out ${delay}s, margin-top 0.2s ease-out ${delay}s`,
     };
 
-    const location = useLocation();
     const navigate = useNavigate();
 
     const goToLocation = (location) => {

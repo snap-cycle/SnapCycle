@@ -48,7 +48,7 @@ export const ItemInfo = {
             },
             '4': {
                 type: 'text',
-                text: 'Recycling plastic is of paramount importance due to its incredibly slow decomposition rate and the severe adverse effects it imposes on the global environment. Plastic materials can take hundreds of years to break down, accumulating in landfills, oceans, and ecosystems, where they persist as persistent pollutants. These non-biodegradable plastics pose a significant threat to wildlife, marine life, and terrestrial ecosystems, often causing entanglement, ingestion, and habitat destruction. '
+                text: 'Recycling plastic is of paramount importance due to its incredibly slow decomposition rate and the severe adverse effects it imposes on the global environment. Plastic materials can take hundreds of years to break down, accumulating in landfills, oceans, and ecosystems, where they persist as persistent pollutants. These non-biodegradable plastics pose a significant threat to wildlife, marine life, and terrestrial ecosystems, often causing entanglement, ingestion, and habitat destruction.'
             }
         }
     }
