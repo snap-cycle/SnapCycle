@@ -104,9 +104,19 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
         };
     }, []);
 
+    // Chooses navbar style based on conditions
+    var NavbarId; const location = useLocation();
+    if (location.pathname !== '/home') NavbarId = "NavbarSolid";
+    else if (showNavBar) {
+        if (showSolidBackground) NavbarId = "NavbarSolid";
+        else if (showPartialBackground) NavbarId = "NavbarPartial";
+        else NavbarId = "NavbarTransparent";
+    }
+    else NavbarId = "NavbarDissapear";
+
     return (
         <div className='NavbarContainer'>
-            <div className='ActiveNavbarContainer' id={showNavBar ? (showPartialBackground ? (showSolidBackground ? "NavbarSolid" : "NavbarPartial") : "NavbarTransparent") : "NavbarDissapear"}>
+            <div className='ActiveNavbarContainer' id={NavbarId}>
                 <div className="ActiveNavbar">
                     <div className='NavbarLogoAndName'>
                         <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogo" />
