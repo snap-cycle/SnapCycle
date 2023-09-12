@@ -10,7 +10,7 @@ const Result = () => {
                 <div className="result-page">
                     <img className="result-page-background" src={ItemInfo["Plastic Bottle"].background} alt="result-background-image"/>
                     <div className="result-disposal-methods">
-                        <h1>Disposal Methods</h1>
+                        <h1 className="result-h1">Disposal Methods</h1>
                         <div className="disposal-process">
                             {
                                 Object.keys(ItemInfo["Plastic Bottle"].dispsal).map((key) => {
@@ -25,6 +25,10 @@ const Result = () => {
                                     )
                                 })
                             }
+                        </div>
+                        <div className="material-info">
+                            <h1 className="result-h1">Material Info</h1>
+
                         </div>
                     </div>
                 </div>

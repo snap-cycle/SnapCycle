@@ -7,6 +7,16 @@
 
 }
 
+.result-h1 {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .result-page-background {
     height: 590px;
     width: 1280px;
@@ -15,12 +25,17 @@
 .result-disposal-methods {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    width: 100%;
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 73px;
 }
 
 .disposal-process {
     display: flex;
     flex-direction: row;
+    gap: 2px;
 }
 
 .disposal-process-step {
@@ -32,4 +47,10 @@
     border-radius: 40px;
     width: 278px;
     height: 402px;
+}
+
+.material-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
