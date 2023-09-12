@@ -28,7 +28,26 @@ const Result = () => {
                         </div>
                         <div className="material-info">
                             <h1 className="result-h1">Material Info</h1>
-
+                            <div className="material-info-content">
+                                {
+                                    Object.keys(ItemInfo["Plastic Bottle"].additionalInfo).map((key) => {
+                                        if (ItemInfo["Plastic Bottle"].additionalInfo[key].type === 'text') {
+                                            return (
+                                                <div className="material-info-text" key={key}>
+                                                    <p className="material-info-p">{ItemInfo["Plastic Bottle"].additionalInfo[key].text}</p>
+                                                </div>
+                                            )
+                                        } else if (ItemInfo["Plastic Bottle"].additionalInfo[key].type === 'image') {
+                                            return (
+                                                <div className="material-info-image" key={key}>
+                                                    <img src={ItemInfo["Plastic Bottle"].additionalInfo[key].src}
+                                                         alt={ItemInfo["Plastic Bottle"].additionalInfo[key].alt}/>
+                                                </div>
+                                            )
+                                        }
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

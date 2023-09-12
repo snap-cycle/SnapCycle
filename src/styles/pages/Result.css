@@ -52,5 +52,34 @@
 .material-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    gap: 40px;
+}
+
+.material-info-content {
+    display: flex;
+    max-width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    text-align: start;
+    justify-content: space-between;
+}
+
+.material-info-p {
+    width: 592px;
+    height: 294px;
+    flex-shrink: 0;
+    color: #434343;
+    text-align: right;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.material-info-image {
+    max-width: 506px;
+    flex-shrink: 0;
 }
