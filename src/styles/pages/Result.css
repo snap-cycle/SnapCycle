@@ -7,6 +7,10 @@
     margin-bottom: 100px;
 }
 
+.result-title {
+
+}
+
 .result-h1 {
     color: #000;
     text-align: center;
@@ -30,6 +34,7 @@
     gap: 40px;
     margin-top: 40px;
     margin-left: 73px;
+    margin-right: 73px;
 }
 
 .disposal-process {
