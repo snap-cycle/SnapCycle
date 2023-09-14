@@ -1,0 +1,153 @@
+.ContactPanel {
+    max-width: 1400px;
+
+    padding: 130px 75px 120px 75px;
+    margin: 0 auto;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#ContactSubtext {
+    max-width: 600px;
+}
+
+.ContactBoxContainer {
+    max-width: 1500px;
+    width: 100%;
+
+    margin-top: 25px;
+
+    background-color: #F8F8F8;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.ContactBox {
+    padding: 30px 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactBoxTitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.ContactBoxRow {
+    display: flex;
+    column-gap: 100px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ContactTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.Required {
+    color: rgb(240, 58, 58);
+    font-size: 14px;
+    display: none;
+}
+
+.InputContainer, .MessageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.Input {
+    height: 50px;
+    border-radius: 10px;
+    border: solid 2px #B9B5B5;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-weight: 400;
+}
+
+.MessageContainer {
+    margin-top: 30px;
+}
+#Message {
+    height: 140px;
+    padding-top: 10px;
+    resize: none;
+}
+
+.ContactButtonContainer {
+    height: 40px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.ContactButton {
+    border-radius: 20px;
+    padding: 8px 50px;
+    background-color: #C8BFFF;
+    font-weight: 700;
+    overflow-y: hidden;
+
+    transition: all 0.2s;
+}
+
+.TransitionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: hidden;
+    align-items: center;
+}
+.ContactButton:hover {
+    cursor: pointer;
+    background-color: #b0a6f7;
+}
+
+.Checkmark {
+    height: 25px;
+    width: 30px;
+}
+@keyframes CheckmarkTransition {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-33px);
+    }
+}
+
+.Circuit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    height: 460px;
+    width: 1400px;
+}
+
+@media (max-width: 1000px) {
+    .ContactPanel {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media (max-width: 500px) {
+    .ContactBox {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
