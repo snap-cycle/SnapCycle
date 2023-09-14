@@ -107,7 +107,7 @@
 .ContactButton {
     border-radius: 20px;
     padding: 8px 50px;
-    background-color: #C8BFFF;
+    background-color: #f7a6b7;
     font-weight: 700;
     overflow-y: hidden;
 
@@ -123,7 +123,7 @@
 }
 .ContactButton:hover {
     cursor: pointer;
-    background-color: #b0a6f7;
+    background-color: #f7849d;
 }
 
 .Checkmark {
