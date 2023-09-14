@@ -14,7 +14,7 @@ const DemoPanel = () => {
                 SnapCycle Object
                 Detector
             </div>
-            <div className="TitleDivider"/>
+            <div className="DemoTitleDivider"/>
             <div className="SubText" id="DemoPanelSubText">
                 Scan any item in front of you, and let SnapCycle fill you in on
                 how to dispose of it.

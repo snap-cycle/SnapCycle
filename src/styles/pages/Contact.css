@@ -13,8 +13,18 @@
     text-align: left;
 }
 
+.ContactTitleDivider {
+    height: 8px;
+    width: 250px;
+    margin-top: 15px;
+
+    background-color: #2D6C1D;
+}
+
 #ContactSubtext {
-    max-width: 600px;
+    max-width: 700px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .ContactBoxContainer {

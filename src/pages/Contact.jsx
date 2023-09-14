@@ -14,10 +14,9 @@ const Contact = () => {
                 <div className='Title'>
                     Contact Us.
                 </div>
+                <div className="ContactTitleDivider"/>
                 <div className='SubText' id='ContactSubtext'>
-                    Whether it&#39;s a new article topic, or you would like to give us advice,
-                    we would love to hear from you. Enter your contact info below and
-                    your message, and we&#39;ll get back to you shortly. 
+                    Connect with Us - Get in touch with SnapCycle for questions, advice, or just to chat!
                 </div>
                 <div className='ContactBoxContainer'>
                     <div className='ContactBox'>
