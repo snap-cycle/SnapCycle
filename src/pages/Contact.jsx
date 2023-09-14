@@ -62,8 +62,8 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
+                    <img src={Circuit} alt="" className='Circuit'/>
                 </div>
-                {/* <img src={Circuit} alt="" className='Circuit'/> */}
             </div>
         </AnimatedPage>
     );
