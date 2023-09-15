@@ -4,7 +4,7 @@ import '../styles/components/SliderTemplate.css';
 
 const SliderTemplate = ({content, title, item, method}) => (
     <div className="slider-container">
-        <Slider arrowsBlock={false} pauseOnHover={false} autoplay autoplayScroll={1} autoplaySpeed={3000}>
+        <Slider swipe={false} arrowsBlock={false} pauseOnHover={false} autoplay autoplayScroll={1} autoplaySpeed={3000}>
             {
                 Object.keys(content).map((key) => {
                     return (
