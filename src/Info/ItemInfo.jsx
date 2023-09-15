@@ -119,14 +119,14 @@ export const ItemInfo = {
             '2': {
                 type: 'image',
                 text: '',
-                src: PlasticTypes,
-                alt: "plastic types"
+                src: "",
+                alt: "garbage conveyor belt"
             },
             '3': {
                 type: 'image',
                 text: '',
-                src: Years,
-                alt: "years to decompose"
+                src: "",
+                alt: "collection of empty metal cans"
             },
             '4': {
                 type: 'text',
@@ -153,19 +153,19 @@ export const ItemInfo = {
         "dispsal": {
             1: {
                 "text": "Empty and rinse",
-                "image": PlasticBottle
+                "image": ""
             },
             2: {
                 "text": "Recycling bin",
-                "image": RecyclingBin
+                "image": ""
             },
             3: {
                 "text": "Keep caps on",
-                "image": BottleAndArrow
+                "image": ""
             },
             4: {
                 "text": "Do not crush",
-                "image": WaterBottleCrushed
+                "image": ""
             }
         },
         "info": "this is glass lol",
@@ -177,14 +177,14 @@ export const ItemInfo = {
             '2': {
                 type: 'image',
                 text: '',
-                src: PlasticTypes,
-                alt: "plastic types"
+                src: "",
+                alt: "Glass in hand"
             },
             '3': {
                 type: 'image',
                 text: '',
-                src: Years,
-                alt: "years to decompose"
+                src: "",
+                alt: "Glass bottle in bin"
             },
             '4': {
                 type: 'text',
