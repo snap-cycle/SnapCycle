@@ -95,19 +95,19 @@ export const ItemInfo = {
         "dispsal": {
             1: {
                 "text": "Empty and rinse",
-                "image": PlasticBottle
+                "image": ""
             },
             2: {
                 "text": "Recycling bin",
-                "image": RecyclingBin
+                "image": ""
             },
             3: {
                 "text": "Keep caps on",
-                "image": BottleAndArrow
+                "image": ""
             },
             4: {
                 "text": "Do not crush",
-                "image": WaterBottleCrushed
+                "image": ""
             },
         },
         "info": "this is metal lol",
