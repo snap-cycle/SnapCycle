@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from 'infinite-react-carousel';
 import '../styles/components/SliderTemplate.css';
 
-const SliderTemplate = ({content}, title) => (
-    <>
+const SliderTemplate = ({content, title, item}) => (
+    <div className="slider-container">
         <Slider arrowsBlock={false} pauseOnHover={false} autoplay autoplayScroll={1} autoplaySpeed={3000}>
             {
                 Object.keys(content).map((key) => {
@@ -13,14 +13,16 @@ const SliderTemplate = ({content}, title) => (
                 })
             }
         </Slider>
-        {title ?
-            <div className="banner">
-                <div className="overlay"></div>
-                <div className="overlay-header">Overlay</div>
-            </div>
-            :
-            null}
-    </>
+        {
+            title ?
+                <div className="slider-title">
+                    <h1>You have detected</h1>
+                    <h1>{item}</h1>
+                </div>
+                :
+                null
+        }
+    </div>
 );
 
 export default SliderTemplate;

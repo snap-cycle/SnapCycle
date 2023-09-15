@@ -1,39 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
-body {
-    padding: 1em 0;
-    font-family: 'Roboto Slab', serif;
-    color: #fff;
-}
-.banner {
-    background: url(https://placehold.it/600x372/008CBA/FFFFFF/&text=1) no-repeat 50% 50%;
-    background-size: cover;
-    width: 600px;
-    height: 372px;
+
+.slider-container{
     position: relative;
-    overflow: hidden;
-    margin: 0 10px;
+    height: 100%;
+    width: 100%;
 }
-.overlay {
+
+.slider-title {
     position: absolute;
-    top: 0;
-    z-index: 10;
-    width: 740px;
-    height: 372px;
-    background: rgba(0,0,0,0.6);
-    transform: skew(200.25deg);
-    left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 50%;
+    top: 40%;
+    left: 15px;
+    z-index: 7;
+
+    font-size: 50px;
 }
-.overlay-header {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    z-index: 11;
-    font-weight: 300;
-    font-size: 48px;
-}
-/*
-.banner:hover .overlay {
-    left: 0;
-    transform: inherit;
-}
-*/
