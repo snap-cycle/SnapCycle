@@ -15,13 +15,10 @@ export const FooterInfo = {
         {name: "LinkedIn", destination: "", imageSrc: LinkedInLogo, imageAlt: "LinkedIn Logo"},
     ],
     product: [
-        {name: "Try Now", destination: ""},
-        {name: "Features", destination: ""},
-        {name: "Resources", destination: ""},
-        {name: "Security", destination: ""}
+        {name: "Try Now", destination: "/demo"}
     ],
     help: [
-        {name: "FAQ", destination: "/help-center"},
-        {name: "Contact Us", destination: "/help-center"},
+        {name: "FAQ", destination: "/demo"},
+        {name: "Difficulties", destination: "/demo"},
     ],
 }

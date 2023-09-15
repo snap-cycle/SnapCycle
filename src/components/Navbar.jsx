@@ -178,7 +178,6 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
                     <HamburgerPage show={showHamburgerMenu} text={'Try Now'} page={1} destination="/demo" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                     <HamburgerPage show={showHamburgerMenu} text={'Team'} page={2} destination="/team" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                     <HamburgerPage show={showHamburgerMenu} text={'FAQ'} page={3} destination="/faq" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
-                    <HamburgerPage show={showHamburgerMenu} text={'Help'} page={4} destination="/help" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                     <HamburgerPage show={showHamburgerMenu} text={'Contact Us'} page={5} destination="/contact" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                 </div>
             </div>

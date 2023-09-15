@@ -7,7 +7,6 @@ import Demo from './pages/Demo';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import {AnimatePresence} from "framer-motion";
-import Help from "./pages/Help";
 import Contact from "./pages/Contact";
 import Result from "./pages/Result";
 
@@ -22,7 +21,6 @@ function App() {
                             <Route path='/team' element={<Team/>} />
                             <Route path='/demo' element={<Demo/>} />
                             <Route path='/result' element={<Result/>}/>
-                            <Route path='/help' element={<Help/>}/>
                             <Route path='/contact' element={<Contact/>}/>
                         </Routes>
                     <Footer/>
