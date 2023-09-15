@@ -12,11 +12,14 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    background: pink;
-    top: 35%;
-    left: 35px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
     z-index: 7;
-
+    clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
+    width: 65%;
+    height: 100%;
+    padding: 50px;
 }
 
 .slider-title {
