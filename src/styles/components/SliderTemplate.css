@@ -5,17 +5,26 @@
     width: 100%;
 }
 
-.slider-title {
+.slider-overlay {
     position: absolute;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
 
     width: 50%;
     top: 40%;
-    left: 15px;
+    left: 35px;
     z-index: 7;
 
+}
+
+.slider-title {
     font-size: 50px;
+    font-weight: 600;
+}
+
+.slider-subtitle {
+    font-size: 20px;
+    font-weight: 400;
 }

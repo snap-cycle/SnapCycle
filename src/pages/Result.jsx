@@ -5,11 +5,12 @@ import SliderTemplate from "../components/SliderTemplate";
 
 const Result = ({selectedItem}) => {
     let item = "Plastic Bottle"
+    let disposalMethod = "Recycle"
     switch (item) {
         case "Plastic Bottle":
             return (
                 <div className="result-page">
-                    <SliderTemplate content={ItemInfo[item].backgrounds} title={true} item={item}/>
+                    <SliderTemplate content={ItemInfo[item].backgrounds} title={true} item={item} method={disposalMethod}/>
                     <div className="result-disposal-methods">
                         <h1 className="result-h1">Disposal Methods</h1>
                         <div className="disposal-process">

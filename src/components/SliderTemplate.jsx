@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'infinite-react-carousel';
 import '../styles/components/SliderTemplate.css';
 
-const SliderTemplate = ({content, title, item}) => (
+const SliderTemplate = ({content, title, item, method}) => (
     <div className="slider-container">
         <Slider arrowsBlock={false} pauseOnHover={false} autoplay autoplayScroll={1} autoplaySpeed={3000}>
             {
@@ -15,9 +15,11 @@ const SliderTemplate = ({content, title, item}) => (
         </Slider>
         {
             title ?
-                <div className="slider-title">
-                    <h1>You have detected</h1>
-                    <h1>{item}</h1>
+                <div className="slider-overlay">
+                    <p className="slider-subtitle">You have detected</p>
+                    <p className="slider-title">{item}</p>
+                    <p className="slider-subtitle">Disposal Method</p>
+                    <p className="slider-title">{method}</p>
                 </div>
                 :
                 null
