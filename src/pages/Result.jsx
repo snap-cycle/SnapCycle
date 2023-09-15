@@ -16,7 +16,7 @@ const Result = () => {
                                 Object.keys(ItemInfo["Plastic Bottle"].dispsal).map((key) => {
                                     return (
                                         <div className="disposal-process-step" key={key}>
-                                            <h1>{key}</h1>
+                                            <h1 className="result-h1">{key}</h1>
                                             <img className="disposal-method"
                                                  src={ItemInfo["Plastic Bottle"].dispsal[key].image}
                                                  alt="disposal-method"/>
