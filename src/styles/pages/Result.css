@@ -72,6 +72,8 @@
     align-items: flex-start;
     text-align: start;
     justify-content: space-between;
+    gap: 40px;
+
 }
 
 .material-info-p {
@@ -95,4 +97,14 @@
 .disposal-method-text {
     font-size: 25px;
     font-weight: 600;
+}
+
+.material-info-content-column {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 400;
+    gap: 40px;
+
 }

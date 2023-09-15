@@ -4,6 +4,7 @@ import { ItemInfo } from '../Info/ItemInfo.jsx';
 
 const Result = () => {
     let item = "Plastic Bottle"
+    console.log(item)
     switch (item) {
         case "Plastic Bottle":
             return (
@@ -29,24 +30,14 @@ const Result = () => {
                         <div className="material-info">
                             <h1 className="result-h1">Material Info</h1>
                             <div className="material-info-content">
-                                {
-                                    Object.keys(ItemInfo["Plastic Bottle"].additionalInfo).map((key) => {
-                                        if (ItemInfo["Plastic Bottle"].additionalInfo[key].type === 'text') {
-                                            return (
-                                                <div className="material-info-text" key={key}>
-                                                    <p className="material-info-p">{ItemInfo["Plastic Bottle"].additionalInfo[key].text}</p>
-                                                </div>
-                                            )
-                                        } else if (ItemInfo["Plastic Bottle"].additionalInfo[key].type === 'image') {
-                                            return (
-                                                <div className="material-info-image" key={key}>
-                                                    <img src={ItemInfo["Plastic Bottle"].additionalInfo[key].src}
-                                                         alt={ItemInfo["Plastic Bottle"].additionalInfo[key].alt}/>
-                                                </div>
-                                            )
-                                        }
-                                    })
-                                }
+                                <div className="material-info-content-column">
+                                    <div>{ItemInfo[item].additionalInfo["1"].text}</div>
+                                    <img src={ItemInfo[item].additionalInfo["2"].src} alt={ItemInfo[item].additionalInfo["2"].alt}/>
+                                </div>
+                                <div className="material-info-content-column">
+                                    <img src={ItemInfo[item].additionalInfo["3"].src} alt={ItemInfo[item].additionalInfo["3"].alt}/>
+                                    <div>{ItemInfo[item].additionalInfo["4"].text}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
