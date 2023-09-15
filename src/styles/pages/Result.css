@@ -24,6 +24,7 @@
 .result-page-background {
     height: 590px;
     width: 1280px;
+    margin-top: 70px;
 }
 
 .result-disposal-methods {
@@ -52,6 +53,7 @@
     border-radius: 40px;
     width: 278px;
     height: 402px;
+    padding-bottom: 20px;
 }
 
 .material-info {
@@ -87,4 +89,8 @@
 .material-info-image {
     max-width: 506px;
     flex-shrink: 0;
+}
+
+.disposal-method-text {
+    font-size: 25px;
 }
