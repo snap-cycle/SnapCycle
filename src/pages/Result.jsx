@@ -9,7 +9,7 @@ const Result = ({selectedItem}) => {
         case "Plastic Bottle":
             return (
                 <div className="result-page">
-                    <SliderTemplate content={ItemInfo[item].backgrounds}/>
+                    <SliderTemplate content={ItemInfo[item].backgrounds} title={true}/>
                     <div className="result-disposal-methods">
                         <h1 className="result-h1">Disposal Methods</h1>
                         <div className="disposal-process">

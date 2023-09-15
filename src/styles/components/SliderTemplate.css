@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+body {
+    padding: 1em 0;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+}
+.banner {
+    background: url(https://placehold.it/600x372/008CBA/FFFFFF/&text=1) no-repeat 50% 50%;
+    background-size: cover;
+    width: 600px;
+    height: 372px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 10px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 740px;
+    height: 372px;
+    background: rgba(0,0,0,0.6);
+    transform: skew(200.25deg);
+    left: 300px;
+}
+.overlay-header {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 11;
+    font-weight: 300;
+    font-size: 48px;
+}
+/*
+.banner:hover .overlay {
+    left: 0;
+    transform: inherit;
+}
+*/
