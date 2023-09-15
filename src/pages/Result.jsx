@@ -1,27 +1,27 @@
 import React from 'react';
 import '../styles/pages/Result.css';
 import { ItemInfo } from '../Info/ItemInfo.jsx';
+import SliderTemplate from "../components/SliderTemplate";
 
-const Result = () => {
+const Result = ({selectedItem}) => {
     let item = "Plastic Bottle"
-    console.log(item)
     switch (item) {
         case "Plastic Bottle":
             return (
                 <div className="result-page">
-                    <img className="result-page-background" src={ItemInfo["Plastic Bottle"].background} alt="result-background"/>
+                    <SliderTemplate content={ItemInfo[item].backgrounds}/>
                     <div className="result-disposal-methods">
                         <h1 className="result-h1">Disposal Methods</h1>
                         <div className="disposal-process">
                             {
-                                Object.keys(ItemInfo["Plastic Bottle"].dispsal).map((key) => {
+                                Object.keys(ItemInfo[item].dispsal).map((key) => {
                                     return (
                                         <div className="disposal-process-step" key={key}>
                                             <h1 className="result-h1">{key}</h1>
                                             <img className="disposal-method"
-                                                 src={ItemInfo["Plastic Bottle"].dispsal[key].image}
+                                                 src={ItemInfo[item].dispsal[key].image}
                                                  alt="disposal-method"/>
-                                            <p className="disposal-method-text">{ItemInfo["Plastic Bottle"].dispsal[key].text}</p>
+                                            <p className="disposal-method-text">{ItemInfo[item].dispsal[key].text}</p>
                                         </div>
                                     )
                                 })

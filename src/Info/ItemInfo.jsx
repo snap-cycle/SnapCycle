@@ -1,4 +1,7 @@
-import PlasticBottleBackground from "../assets/Result/MainBackground1.svg";
+import PlasticBottleBackground1 from "../assets/Result/MainBackground1.svg";
+import PlasticBottleBackground2 from "../assets/Result/MainBackground2.svg";
+import PlasticBottleBackground3 from "../assets/Result/MainBackground3.svg";
+import PlasticBottleBackground4 from "../assets/Result/MainBackground4.svg";
 import PlasticBottle from "../assets/Result/PlasticBottle.svg";
 import RecyclingBin from "../assets/Result/RecyclingBin.svg";
 import BottleAndArrow from "../assets/Result/BottleAndArrow.svg";
@@ -9,7 +12,20 @@ import Years from "../assets/Result/Years.svg";
 export const ItemInfo = {
     "Plastic Bottle": {
         "name": "Plastic Bottle",
-        "background": PlasticBottleBackground,
+        "backgrounds": {
+            1: {
+                "image": PlasticBottleBackground1,
+            },
+            2: {
+                "image": PlasticBottleBackground2,
+            },
+            3: {
+                "image": PlasticBottleBackground3,
+            },
+            4: {
+                "image": PlasticBottleBackground4,
+            },
+        },
         "dispsal": {
             1: {
                 "text": "Empty and rinse",
