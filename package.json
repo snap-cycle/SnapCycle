@@ -1,6 +1,6 @@
 {
   "name": "snapcycle",
-  "homepage": "https://snap-cycle.github.io/SnapCycle",
+  "homepage": "https://snap-cycle.github.io/SnapCycle/#/home",
   "version": "0.5.0",
   "private": true,
   "dependencies": {
