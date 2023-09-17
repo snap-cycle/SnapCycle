@@ -1,7 +1,6 @@
 # [SnapCycle](https://snap-cycle.github.io/SnapCycle/#/)
 SnapCycle is a web app where the user can scan an item to receive info on its recyclability and how to dispose of it! Say no more to scientific articles going into detail on things you don't need to know, SnapCycle tells you exactly what you need to do on the spot!
-
----
+ 
 ### How to Use
 ---
 - Go on the webapp, and navigate to the demo page from the navigation bar
@@ -20,4 +19,4 @@ SnapCycle is a web app where the user can scan an item to receive info on its re
 ---
 - [Luai Bashar](https://github.com/luaibash)
 - [Aidan Froggatt](https://github.com/aidanfroggatt)
-
+---
