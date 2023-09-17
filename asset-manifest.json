@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SnapCycle/static/css/main.5e63a45e.css",
-    "main.js": "/SnapCycle/static/js/main.611381cc.js",
+    "main.js": "/SnapCycle/static/js/main.8e33ad66.js",
     "static/media/Years.svg": "/SnapCycle/static/media/Years.4a1b5177e34f5076fb4337037f4762e0.svg",
     "static/media/PlasticBottle.png": "/SnapCycle/static/media/PlasticBottle.db6688d15fa9e4a44a79.png",
     "static/media/PlasticBag.png": "/SnapCycle/static/media/PlasticBag.cb494f60e1f78c05f31c.png",
@@ -64,10 +64,10 @@
     "static/media/Facebook.svg": "/SnapCycle/static/media/Facebook.b91e34eaebe0060af55602702a3b4538.svg",
     "static/media/LinkedIn.svg": "/SnapCycle/static/media/LinkedIn.7fa1568cc4fcd510c8fd8203e4c66b6b.svg",
     "main.5e63a45e.css.map": "/SnapCycle/static/css/main.5e63a45e.css.map",
-    "main.611381cc.js.map": "/SnapCycle/static/js/main.611381cc.js.map"
+    "main.8e33ad66.js.map": "/SnapCycle/static/js/main.8e33ad66.js.map"
   },
   "entrypoints": [
     "static/css/main.5e63a45e.css",
-    "static/js/main.611381cc.js"
+    "static/js/main.8e33ad66.js"
   ]
 }
