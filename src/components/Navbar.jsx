@@ -124,7 +124,7 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
                     </div>
                     <div className='NavbarPages'>
                         {PagesInfo.PagesInfo.map((page, index) => (
-                            <NavbarPageItem pageName={page.name} key={index} />
+                            <NavbarPageItem pageName={page.name} destination={page.destination} key={index} />
                         ))}
                     </div>
                     <div className='NavbarRightContainer'>
@@ -139,8 +139,7 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
     );
 };
 
-const NavbarPageItem = ({ pageName }) => {
-    const destination = "/" + pageName.toLowerCase();
+const NavbarPageItem = ({ pageName, destination }) => {
     const location = useLocation();
     const navigate = useNavigate();
     const goToLocation = (location) => {
