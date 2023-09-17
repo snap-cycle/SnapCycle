@@ -106,7 +106,7 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
 
     // Chooses navbar style based on conditions
     var NavbarId; const location = useLocation();
-    if (location.pathname !== '/home') NavbarId = "NavbarSolid";
+    if (location.pathname !== '/') NavbarId = "NavbarSolid";
     else if (showNavBar) {
         if (showSolidBackground) NavbarId = "NavbarSolid";
         else if (showPartialBackground) NavbarId = "NavbarPartial";
@@ -174,7 +174,7 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
                     <img src={WhiteX} alt="Close Button" className='WhiteX' onClick={() => updateHamburgerMenu()}/>
                 </div>
                 <div className='HamburgerPages'>
-                    <HamburgerPage show={showHamburgerMenu} text={'Home'} page={0} destination="/home" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
+                    <HamburgerPage show={showHamburgerMenu} text={'Home'} page={0} destination="/" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                     <HamburgerPage show={showHamburgerMenu} text={'Try Now'} page={1} destination="/demo" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                     <HamburgerPage show={showHamburgerMenu} text={'Team'} page={2} destination="/team" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                     <HamburgerPage show={showHamburgerMenu} text={'FAQ'} page={3} destination="/faq" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
