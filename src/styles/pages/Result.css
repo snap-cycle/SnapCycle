@@ -4,7 +4,6 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
 }
 
 .result-title {
@@ -14,17 +13,11 @@
 .result-h1 {
     color: #000;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
-
-.result-page-background {
-    height: 590px;
-    width: 1280px;
-    margin-top: 70px;
 }
 
 .result-disposal-methods {
