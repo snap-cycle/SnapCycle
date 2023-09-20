@@ -17,7 +17,7 @@ const Result = ({selectedItem, selectedDisposalMethod}) => {
                             return (
                                 <div className="disposal-process-step" key={key}>
                                     <h1 className="result-h1">{key}</h1>
-                                    <img className="disposal-method"
+                                    <img className="disposal-method-image"
                                          src={ItemInfo[item].dispsal[key].image}
                                          alt="disposal-method"/>
                                     <p className="disposal-method-text">{ItemInfo[item].dispsal[key].text}</p>
