@@ -1,10 +1,14 @@
 
-.slider-container{
+.slider-container {
     position: relative;
     margin-top: 70px;
     width: 100%;
     min-height: 100vh;
     pointer-events: none;
+}
+
+.slider-image {
+
 }
 
 .slider-overlay {
@@ -31,4 +35,20 @@
 .slider-subtitle {
     font-size: 20px;
     font-weight: 400;
+}
+
+
+/*media query for mobile devices*/
+
+@media screen and (max-width: 768px) {
+    .slider-overlay {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .slider-title {
+        font-size: 30px;
+    }
+    .slider-subtitle {
+        font-size: 15px;
+    }
 }
