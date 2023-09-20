@@ -8,7 +8,7 @@ const SliderTemplate = ({content, title, item, method}) => (
             {
                 Object.keys(content).map((key) => {
                     return (
-                        <img src={content[key].image} alt="result-background"/>
+                        <img className="slider-image" src={content[key].image} alt="result-background"/>
                     )
                 })
             }
