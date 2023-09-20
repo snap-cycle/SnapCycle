@@ -9,7 +9,7 @@
 .slider-overlay {
     position: absolute;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.5);
