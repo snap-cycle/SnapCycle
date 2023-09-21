@@ -56,18 +56,30 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
-
 .Headshot {
     position: absolute;
     bottom: 0;
     height: 390px;
+    z-index: 2;
+}
+
+.HeadshotBackground {
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+.MemberContainer:hover .HeadshotBackground {
+    opacity: 1;
+}
+
+.MemberInfoContainer {
+    display: flex;
+    padding: 15px 0 15px 15px;
 }
 
 .TextContainer {
     display: flex;
     flex-direction: column;
-
-    padding: 15px;
     gap: 15px;
 }
 
@@ -80,6 +92,20 @@
 .MemberRole {
     font-weight: 400;
     color: gray;
+}
+
+.MemberLinks {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.Link {
+    height: 35px;
+}
+.Link:hover {
+    cursor: pointer;
 }
 
 .LogoContainer {
