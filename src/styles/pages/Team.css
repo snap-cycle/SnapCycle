@@ -29,12 +29,13 @@
 
 .MembersContainer {
     display: flex;
-    margin-top: 100px;
+    justify-content: space-between;
+    margin-top: 50px;
 
 }
 
 .MemberContainer {
-    width: 300px;
+    width: 550px;
     height: 450px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -50,7 +51,7 @@
     position: relative;
 
     height: 350px;
-    width: 300px;
+    width: 550px;
 
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;

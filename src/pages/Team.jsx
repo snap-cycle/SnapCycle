@@ -17,6 +17,7 @@ const Team = () => {
                 </div>
                 <div className='MembersContainer'>
                     <Member name="Luai Bashar" role="Software Developer" headshot={Luai} colour="#FF6161"/>
+                    <Member name="Aidan Froggatt" role="Software Developer" colour="#7299FF"/>
                 </div>
             </div>
         </AnimatedPage>
