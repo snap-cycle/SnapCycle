@@ -1,3 +1,100 @@
 @import '../App.css';
 
+.TeamPanel {
+    max-width: 1400px;
 
+    padding: 130px 75px 120px 75px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.TeamTitleDivider {
+    height: 8px;
+    width: 250px;
+    margin-top: 15px;
+
+    background-color: #1036FE;
+}
+
+#TeamSubtext {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.MembersContainer {
+    display: flex;
+    margin-top: 100px;
+
+}
+
+.MemberContainer {
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background-color: #F8F8F8;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.HeadshotContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    height: 350px;
+    width: 300px;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.Headshot {
+    position: absolute;
+    bottom: 0;
+    height: 390px;
+}
+
+.TextContainer {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+    gap: 15px;
+}
+
+.MemberName {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.MemberRole {
+    font-weight: 400;
+    color: gray;
+}
+
+.LogoContainer {
+    display: flex;
+}
+.LinkedIn {
+    height: 25px;
+    margin-left: 10px;
+}
+.LinkedIn:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .TeamPanel {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
