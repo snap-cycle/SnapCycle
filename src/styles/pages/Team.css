@@ -30,12 +30,14 @@
 .MembersContainer {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     margin-top: 50px;
 
 }
 
 .MemberContainer {
-    width: 550px;
+    max-width: 550px;
+    width: 100%;
     height: 450px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -51,7 +53,6 @@
     position: relative;
 
     height: 350px;
-    width: 550px;
 
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -59,7 +60,7 @@
 .Headshot {
     position: absolute;
     bottom: 0;
-    height: 390px;
+    max-height: 390px;
     z-index: 2;
 }
 
@@ -67,6 +68,7 @@
     opacity: 0;
     z-index: 1;
     transition: opacity 0.3s;
+    min-height: 350px;
 }
 .MemberContainer:hover .HeadshotBackground {
     opacity: 1;
@@ -108,26 +110,45 @@
     cursor: pointer;
 }
 
-.LogoContainer {
-    display: flex;
+@media (min-width:871px) and (max-width: 1150px) {
+    .MemberLinks {
+        gap: 20px;
+    }
+    
+    .Link {
+        height: 25px;
+    }
 }
-.LinkedIn {
-    height: 25px;
-    margin-left: 10px;
-}
-.LinkedIn:hover {
-    cursor: pointer;
-}
-
 @media (max-width: 1000px) {
     .TeamPanel {
         padding-left: 25px;
         padding-right: 25px;
     }
-
+}
+@media (max-width: 870px) {
     .MembersContainer {
         flex-direction: column;
         gap: 100px;
         align-items: center;
+    }
+}
+@media (max-width: 525px) {
+    .MemberLinks {
+        gap: 25px;
+    }
+    
+    .Link {
+        height: 30px;
+    }
+}
+@media (max-width: 450px) {
+    .MemberContainer {
+        height: 510px;
+    }
+
+    .MemberInfoContainer {
+        flex-direction: column;
+        gap: 20px;
+        padding-right: 15px;
     }
 }
