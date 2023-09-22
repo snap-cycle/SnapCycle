@@ -22,15 +22,15 @@ const Team = () => {
                     Meet the people who make SnapCycle possible!
                 </div>
                 <div className='MembersContainer'>
-                    <Member name="Luai Bashar" role="Software Developer" headshot={Luai} background={LuaiBackground} colour="#FF6161"/>
-                    <Member name="Aidan Froggatt" role="Software Developer" background={AidanBackground} colour="#7299FF"/>
+                    <Member name="Luai Bashar" role="Software Developer" headshot={Luai} background={LuaiBackground} colour="#FF6161" linkedin='https://www.linkedin.com/in/luaibashar' github='https://github.com/luaibash' mail='mailto:luai.hawa@gmail.com'/>
+                    <Member name="Aidan Froggatt" role="Software Developer" background={AidanBackground} colour="#7299FF" linkedin='https://www.linkedin.com/in/aidanfroggatt' github='https://github.com/aidanfroggatt' globe='https://aidanfroggatt.github.io/portfolio/' mail='mailto:aidanfr@live.ca'/>
                 </div>
             </div>
         </AnimatedPage>
     );
 };
 
-const Member = ({name, role, headshot, background, colour}) => {
+const Member = ({name, role, headshot, background, colour, linkedin, github, globe, mail}) => {
     const headshotRef = useRef(null);
 
     useEffect(() => {
@@ -53,10 +53,18 @@ const Member = ({name, role, headshot, background, colour}) => {
                     </div>
                 </div>
                 <div className='MemberLinks'>
-                    <img src={LinkedIn} alt="" className='Link'/>
-                    <img src={Github} alt="" className='Link'/>
-                    <img src={Globe} alt="" className='Link' />
-                    <img src={Mail} alt="" className='Link'/>
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                        <img src={LinkedIn} alt="" className='Link'/>
+                    </a>
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                        <img src={Github} alt="" className='Link'/>
+                    </a>
+                    <a href={globe} target="_blank" rel="noopener noreferrer">
+                        <img src={Globe} alt="" className='Link' />
+                    </a>
+                    <a href={mail} target="_blank" rel="noopener noreferrer">
+                        <img src={Mail} alt="" className='Link'/>
+                    </a>
                 </div>
             </div>
         </div>
