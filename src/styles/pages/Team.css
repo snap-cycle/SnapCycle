@@ -124,4 +124,10 @@
         padding-left: 25px;
         padding-right: 25px;
     }
+
+    .MembersContainer {
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+    }
 }
