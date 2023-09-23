@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/App.css';
 import {HashRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
@@ -11,6 +11,17 @@ import Contact from "./pages/Contact";
 import Result from "./pages/Result";
 
 function App() {
+    useEffect(() => {
+        // Load Roboflow script when the component mounts
+        const script = document.createElement('script');
+        script.src = 'https://cdn.roboflow.com/0.2.26/roboflow.js';
+        document.body.appendChild(script);
+
+        script.onload = () => {
+            console.log('Script has been loaded');
+        };
+    }, []); 
+
     return (
         <div className='App'>
             <AnimatePresence mode='wait'>

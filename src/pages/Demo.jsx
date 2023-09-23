@@ -4,7 +4,7 @@ import "../styles/Home/Home.css";
 import AnimatedPage from "../animations/AnimatedPage";
 import CameraBackground from "../assets/Demo/CameraBackground.svg";
 import OutlineButton from "../components/OutlineButton";
-// import Camera from "../components/Camera";
+import Camera from "../components/Camera";
 
 const DemoPanel = () => {
 
@@ -27,7 +27,7 @@ const CameraPanel = () => {
 
     return (
         <div className="CameraPanel">
-            {/*<Camera/>*/}
+            <Camera/>
             <div className="CameraBackgroundContainer">
                 <img src={CameraBackground} alt="Camera Background" className="CameraBackground" />
             </div>
