@@ -20,6 +20,10 @@ function App() {
         script.onload = () => {
             console.log('Script has been loaded');
         };
+
+        return () => {
+            document.body.removeChild(script);
+        }
     }, []); 
 
     return (
