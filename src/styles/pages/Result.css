@@ -155,7 +155,7 @@
     margin-bottom: 100px;
 }
 
-.disposalStep {
+.DisposalStep {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -171,9 +171,35 @@
     border-radius: 20px;
 }
 
+.DisposalStepTitle {
+    line-height: normal;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.DisposalStepImage {
+    max-width: 10vw;
+    object-fit: cover;
+}
+
+.DisposalStepText {
+    font-size: 25px;
+    font-weight: 600;
+}
+
 @media (max-width: 1000px) {
     .ResultInfoContainer {
         padding-left: 25px;
         padding-right: 25px;
+    }
+
+    .DisposalStep {
+        padding: 10px;
+    }
+    .DisposalStepTitle {
+        font-size: 30px;
+    }
+    .DisposalStepText {
+        font-size: 20px;
     }
 }

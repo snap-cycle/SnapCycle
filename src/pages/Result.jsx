@@ -17,12 +17,10 @@ const Result = ({selectedItem, selectedDisposalMethod}) => {
                     {
                         Object.keys(ItemInfo[item].dispsal).map((key) => {
                             return (
-                                <div className="disposalStep" key={key}>
-                                    <h1 className="result-h1">{key}</h1>
-                                    <img className="disposal-method-image"
-                                         src={ItemInfo[item].dispsal[key].image}
-                                         alt="disposal-method"/>
-                                    <p className="disposal-method-text">{ItemInfo[item].dispsal[key].text}</p>
+                                <div className="DisposalStep" key={key}>
+                                    <h1 className="DisposalStepTitle">{key}</h1>
+                                    <img className="DisposalStepImage" src={ItemInfo[item].dispsal[key].image} alt=""/>
+                                    <p className="DisposalStepText">{ItemInfo[item].dispsal[key].text}</p>
                                 </div>
                             )
                         })
