@@ -178,7 +178,8 @@
 }
 
 .DisposalStepImage {
-    max-width: 10vw;
+    width: 13vw;
+    max-width: 182px;
     object-fit: cover;
 }
 
@@ -217,6 +218,10 @@
         height: 45vw;
         max-width: none;
         max-height: none;
+    }
+
+    .DisposalStepImage {
+        width: 20vw;
     }
 
     .DisposalStepText {
