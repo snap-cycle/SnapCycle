@@ -148,11 +148,11 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 50px;
+    row-gap: 25px;
 
     width: 100%;
-    margin-top: 25px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 75px;
 }
 
 .DisposalStep {
@@ -183,7 +183,7 @@
 }
 
 .DisposalStepText {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -199,7 +199,32 @@
     .DisposalStepTitle {
         font-size: 30px;
     }
+}
+@media (max-width: 900px) {
+    .DisposalProcessContainer {
+        flex-wrap: wrap;
+        column-gap: 25px;
+        justify-content: center;
+    }
+
+    .DisposalStep {
+        width: 35vw;
+        height: 45vw;
+        max-width: none;
+        max-height: none;
+    }
+
+    .DisposalStepText {
+        font-size: 24px;
+    }
+}
+@media(max-width: 600px) {
     .DisposalStepText {
         font-size: 20px;
+    }
+}
+@media (max-width: 510px) {
+    .DisposalStepText {
+        font-size: 14px;
     }
 }
