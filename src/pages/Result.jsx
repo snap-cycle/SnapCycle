@@ -28,6 +28,9 @@ const Result = ({selectedItem, selectedDisposalMethod}) => {
                         })
                     }
                 </div>
+                <div className='Title'>
+                    Material Info
+                </div>
             </div>
             <div className="result-disposal-methods">
                 <div className="material-info">

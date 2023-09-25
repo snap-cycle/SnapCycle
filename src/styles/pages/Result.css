@@ -152,6 +152,7 @@
 
     width: 100%;
     margin-top: 25px;
+    margin-bottom: 100px;
 }
 
 .disposalStep {
@@ -160,8 +161,10 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 275px;
-    height: 375px;
+    max-width: 275px;
+    max-height: 375px;
+    width: 20vw;
+    height: 28vw;
     padding: 20px;
 
     background: #F3F3F3;
