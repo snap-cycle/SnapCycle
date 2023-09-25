@@ -183,10 +183,15 @@
 }
 
 .DisposalStepText {
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: 600;
 }
 
+@media (min-width: 1401px) {
+    .DisposalStepText {
+        font-size: 28px;
+    }
+}
 @media (max-width: 1000px) {
     .ResultInfoContainer {
         padding-left: 25px;
@@ -215,16 +220,6 @@
     }
 
     .DisposalStepText {
-        font-size: 24px;
-    }
-}
-@media(max-width: 600px) {
-    .DisposalStepText {
-        font-size: 20px;
-    }
-}
-@media (max-width: 510px) {
-    .DisposalStepText {
-        font-size: 14px;
+        font-size: 3vw;
     }
 }
