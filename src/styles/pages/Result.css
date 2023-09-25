@@ -131,3 +131,46 @@
         max-width: 80vw;
     }
 }
+
+/* The following code is for the edited page */
+.ResultInfoContainer {
+    max-width: 1400px;
+    padding: 75px 75px 120px 75px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.DisposalProcessContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    width: 100%;
+    margin-top: 25px;
+}
+
+.disposalStep {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 275px;
+    height: 375px;
+    padding: 20px;
+
+    background: #F3F3F3;
+    border-radius: 20px;
+}
+
+@media (max-width: 1000px) {
+    .ResultInfoContainer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
