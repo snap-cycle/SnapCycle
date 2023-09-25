@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 const Result = ({selectedItem, selectedDisposalMethod}) => {
     const { item } = useParams();
-    const {disposalMethod} = useParams();
+    let disposalMethod = ItemInfo[item].disposalMethod;
     return (
         <div className="ResultPanel">
             <SliderTemplate content={ItemInfo[item].backgrounds} title={true} item={item} method={disposalMethod}/>

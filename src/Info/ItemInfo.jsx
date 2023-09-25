@@ -19,6 +19,7 @@ import Years from "../assets/Result/Years.svg";
 
 export const ItemInfo = {
     "PlasticBottle": {
+        "disposalMethod": "Recycle",
         "name": "Plastic Bottle",
         "backgrounds": {
             1: {
@@ -78,6 +79,7 @@ export const ItemInfo = {
     },
     "MetalCan": {
         "name": "Metal Can",
+        "disposalMethod": "Recycle",
         "backgrounds": {
             1: {
                 "image": MetalCanBackground1,
@@ -136,6 +138,7 @@ export const ItemInfo = {
     },
     "GlassBottle": {
         "name": "Glass Bottle",
+        "disposalMethod": "Recycle",
         "backgrounds": {
             1: {
                 "image": GlassBottleBackground1,
