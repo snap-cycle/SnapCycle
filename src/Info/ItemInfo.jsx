@@ -18,7 +18,7 @@ import PlasticTypes from "../assets/Result/PlasticTypes.svg";
 import Years from "../assets/Result/Years.svg";
 
 export const ItemInfo = {
-    "Plastic Bottle": {
+    "PlasticBottle": {
         "name": "Plastic Bottle",
         "backgrounds": {
             1: {
@@ -76,7 +76,7 @@ export const ItemInfo = {
             }
         },
     },
-    "Metal Can": {
+    "MetalCan": {
         "name": "Metal Can",
         "backgrounds": {
             1: {
@@ -134,7 +134,7 @@ export const ItemInfo = {
             },
         },
     },
-    "Glass Bottle": {
+    "GlassBottle": {
         "name": "Glass Bottle",
         "backgrounds": {
             1: {
