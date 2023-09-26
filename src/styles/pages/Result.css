@@ -195,21 +195,30 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-
-    text-align: start;
 }
 
 .MaterialInfoColumn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 4vmax;
 
     max-width: 44vw;
     
     font-size: 1.75vmax;
     font-weight: 400;
+}
+#ColumnLeft {
+    align-items: flex-start;
+}
+#ColumnRight {
+    align-items: flex-end;
+}
+
+.TextLeft {
+    text-align: left;
+}
+.TextRight {
+    text-align: right;
 }
 
 @media (min-width: 1401px) {

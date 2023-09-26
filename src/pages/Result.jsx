@@ -31,13 +31,13 @@ const Result = ({selectedItem, selectedDisposalMethod}) => {
                     Material Info
                 </div>
                 <div className="MaterialInfoContainer">
-                    <div className="MaterialInfoColumn">
-                        <div>{ItemInfo[item].additionalInfo["1"].text}</div>
+                    <div className="MaterialInfoColumn" id="ColumnLeft">
+                        <div className='TextLeft'>{ItemInfo[item].additionalInfo["1"].text}</div>
                         <img src={ItemInfo[item].additionalInfo["2"].src} alt={ItemInfo[item].additionalInfo["2"].alt}/>
                     </div>
-                    <div className="MaterialInfoColumn">
+                    <div className="MaterialInfoColumn" id="ColumnRight">
                         <img src={ItemInfo[item].additionalInfo["3"].src} alt={ItemInfo[item].additionalInfo["3"].alt}/>
-                        <div>{ItemInfo[item].additionalInfo["4"].text}</div>
+                        <div className='TextRight'>{ItemInfo[item].additionalInfo["4"].text}</div>
                     </div>
                 </div>
             </div>
