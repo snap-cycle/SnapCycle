@@ -29,19 +29,14 @@ const Result = ({selectedItem, selectedDisposalMethod}) => {
                 <div className='Title'>
                     Material Info
                 </div>
-            </div>
-            <div className="result-disposal-methods">
-                <div className="material-info">
-                    <h1 className="result-h1">Material Info</h1>
-                    <div className="material-info-content">
-                        <div className="material-info-content-column">
-                            <div>{ItemInfo[item].additionalInfo["1"].text}</div>
-                            <img src={ItemInfo[item].additionalInfo["2"].src} alt={ItemInfo[item].additionalInfo["2"].alt}/>
-                        </div>
-                        <div className="material-info-content-column">
-                            <img src={ItemInfo[item].additionalInfo["3"].src} alt={ItemInfo[item].additionalInfo["3"].alt}/>
-                            <div>{ItemInfo[item].additionalInfo["4"].text}</div>
-                        </div>
+                <div className="MaterialInfoContainer">
+                    <div className="MaterialInfoColumn">
+                        <div>{ItemInfo[item].additionalInfo["1"].text}</div>
+                        <img src={ItemInfo[item].additionalInfo["2"].src} alt={ItemInfo[item].additionalInfo["2"].alt}/>
+                    </div>
+                    <div className="MaterialInfoColumn">
+                        <img src={ItemInfo[item].additionalInfo["3"].src} alt={ItemInfo[item].additionalInfo["3"].alt}/>
+                        <div>{ItemInfo[item].additionalInfo["4"].text}</div>
                     </div>
                 </div>
             </div>
