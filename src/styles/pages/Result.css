@@ -1,138 +1,3 @@
-.result-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.result-h1 {
-    color: #000;
-    text-align: center;
-    font-family: Inter, serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.result-disposal-methods {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 4vmax;
-    margin: 4vmax;
-}
-
-.disposal-process {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 92vw;
-}
-
-.disposal-process-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: #F3F3F3;
-    border-radius: 2.5vmax;
-    width: 20vw;
-    height: 60vh;
-    padding: 2.5vmax;
-}
-
-.disposal-method-image {
-    max-width: 10vw;
-    object-fit: cover;
-}
-
-.material-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 92vw;
-}
-
-.material-info-content {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: start;
-    justify-content: space-between;
-}
-
-.material-info-image {
-    max-width: 33vw;
-}
-
-.disposal-method-text {
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.material-info-content-column {
-    max-width: 44vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.75vmax;
-    font-weight: 400;
-    gap: 4vmax;
-}
-
-
-@media screen and (max-width: 768px) {
-    .result-h1 {
-        font-size: 30px;
-    }
-
-    .disposal-process {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 4vmax;
-    }
-
-    .disposal-method-image {
-        max-width: 30vw;
-    }
-
-    .disposal-process-step {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2vmax;
-        width: 70vw;
-        height: 40vh;
-    }
-
-    .material-info-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 4vmax;
-    }
-
-    .material-info-image {
-        max-width: 80vw;
-    }
-
-    .material-info-content-column {
-        max-width: 80vw;
-    }
-}
-
-/* The following code is for the edited page */
 .ResultInfoContainer {
     max-width: 1400px;
     padding: 75px 75px 120px 75px;
@@ -201,12 +66,7 @@
 .MaterialInfoColumn {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-
-    max-width: 44vw;
-    
-    font-size: 1.75vmax;
-    font-weight: 400;
+    gap:50px;
 }
 #ColumnLeft {
     align-items: flex-start;
@@ -216,7 +76,7 @@
 }
 
 .TextLeft, .TextRight {
-    font-size: 1.5vw;
+    font-size: 20px;
 }
 .TextLeft {
     text-align: left;
@@ -267,5 +127,22 @@
 
     .DisposalStepText {
         font-size: 3vw;
+    }
+}
+@media (max-width: 800px) {
+    .MaterialInfoContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #ColumnLeft, #ColumnRight {
+        align-items: center;
+    }
+    #ColumnRight {
+        flex-direction: column-reverse;
+    }
+
+    .TextLeft, .TextRight {
+        text-align: center;
     }
 }
