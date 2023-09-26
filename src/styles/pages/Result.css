@@ -195,12 +195,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 50px;
 }
 
 .MaterialInfoColumn {
     display: flex;
     flex-direction: column;
-    gap: 4vmax;
+    gap: 50px;
 
     max-width: 44vw;
     
@@ -214,6 +215,9 @@
     align-items: flex-end;
 }
 
+.TextLeft, .TextRight {
+    font-size: 1.5vw;
+}
 .TextLeft {
     text-align: left;
 }
@@ -224,6 +228,10 @@
 @media (min-width: 1401px) {
     .DisposalStepText {
         font-size: 28px;
+    }
+
+    .TextLeft, .TextRight {
+        font-size: 21px;
     }
 }
 @media (max-width: 1000px) {
