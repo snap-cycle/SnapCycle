@@ -59,9 +59,14 @@ const Member = ({name, role, headshot, background, colour, linkedin, github, glo
                     <a href={github} target="_blank" rel="noopener noreferrer">
                         <img src={Github} alt="" className='Link'/>
                     </a>
-                    <a href={globe} target="_blank" rel="noopener noreferrer">
-                        <img src={Globe} alt="" className='Link' />
-                    </a>
+                    {
+                        globe ?
+                            <a href={globe} target="_blank" rel="noopener noreferrer">
+                                <img src={Globe} alt="" className='Link' />
+                            </a>
+                            :
+                            <></>
+                    }
                     <a href={mail} target="_blank" rel="noopener noreferrer">
                         <img src={Mail} alt="" className='Link'/>
                     </a>
