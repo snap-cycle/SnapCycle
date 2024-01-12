@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/SnapCycle/static/css/main.5e63a45e.css",
-    "main.js": "/SnapCycle/static/js/main.8e33ad66.js",
+    "main.css": "/SnapCycle/static/css/main.e8c676bb.css",
+    "main.js": "/SnapCycle/static/js/main.7b676b0d.js",
     "static/media/Years.svg": "/SnapCycle/static/media/Years.4a1b5177e34f5076fb4337037f4762e0.svg",
     "static/media/PlasticBottle.png": "/SnapCycle/static/media/PlasticBottle.db6688d15fa9e4a44a79.png",
     "static/media/PlasticBag.png": "/SnapCycle/static/media/PlasticBag.cb494f60e1f78c05f31c.png",
@@ -35,15 +35,18 @@
     "static/media/Battery.png": "/SnapCycle/static/media/Battery.720166a2b76dac860030.png",
     "static/media/CardboardBox.png": "/SnapCycle/static/media/CardboardBox.a1f92143fd465b408435.png",
     "static/media/FoodContainer.png": "/SnapCycle/static/media/FoodContainer.98cae7b221167f04c5f6.png",
+    "static/media/Luai.png": "/SnapCycle/static/media/Luai.fba1df6d133bd5b4c32e.png",
     "static/media/MainBackground2.svg": "/SnapCycle/static/media/MainBackground2.b4abcc182909ea2104bb46574c288dac.svg",
     "static/media/RocksLayer.png": "/SnapCycle/static/media/RocksLayer.96226c33a523a331b009.png",
     "static/media/SkyLayer.png": "/SnapCycle/static/media/SkyLayer.9bdc68ee1dc1c800700e.png",
     "static/media/TurtleRight.png": "/SnapCycle/static/media/TurtleRight.f684690175146a468f0f.png",
     "static/media/TurtleLeft.png": "/SnapCycle/static/media/TurtleLeft.22b3a24ea67de266424e.png",
+    "static/media/AidanBackground.png": "/SnapCycle/static/media/AidanBackground.73cae7115ea75ed14d10.png",
     "static/media/RecyclingBin.svg": "/SnapCycle/static/media/RecyclingBin.213a8738b60718e755001b4835d025de.svg",
     "static/media/TitleWhite.png": "/SnapCycle/static/media/TitleWhite.9aa461fcb460a51c25c0.png",
     "static/media/TitleBlack.png": "/SnapCycle/static/media/TitleBlack.b04ac2afec60e8e154b3.png",
     "static/media/PlasticWrapper.png": "/SnapCycle/static/media/PlasticWrapper.0b9670eef3e13c5e66bc.png",
+    "static/media/LuaiBackground.png": "/SnapCycle/static/media/LuaiBackground.a43107a70a7828de3aa1.png",
     "static/media/PaperCup.jpg": "/SnapCycle/static/media/PaperCup.66c8f81840ec1f12019e.jpg",
     "static/media/Tinfoil.jpg": "/SnapCycle/static/media/Tinfoil.e5d342050666465f1032.jpg",
     "static/media/PlasticTypes.svg": "/SnapCycle/static/media/PlasticTypes.4a1d366ebaa773989aa8914994f37b68.svg",
@@ -54,6 +57,8 @@
     "static/media/BottleAndArrow.svg": "/SnapCycle/static/media/BottleAndArrow.24bd867a6495746eeb38ad228d4ce1fc.svg",
     "static/media/Circuit.svg": "/SnapCycle/static/media/Circuit.33b682a78b92f67e41fd365c4768c507.svg",
     "static/media/PlasticBottleCrushed.svg": "/SnapCycle/static/media/PlasticBottleCrushed.f1fd30841897f5f8aa614594847c3cb1.svg",
+    "static/media/Globe.svg": "/SnapCycle/static/media/Globe.a315535515a7f5810b38ef1da54d1c35.svg",
+    "static/media/Github.svg": "/SnapCycle/static/media/Github.5531be85d7a8d6f333e5c7136944a022.svg",
     "static/media/RightArrow.svg": "/SnapCycle/static/media/RightArrow.8a912fc7048afb64bb1acb74a40d62e5.svg",
     "static/media/WhiteX.svg": "/SnapCycle/static/media/WhiteX.63bd6309a3e818f2166dacb1abde579f.svg",
     "static/media/GitHub.svg": "/SnapCycle/static/media/GitHub.98583a0a7e978c94f6a5027d2891a01d.svg",
@@ -63,11 +68,11 @@
     "static/media/YouTube.svg": "/SnapCycle/static/media/YouTube.7718be0bb97da4e845d20742da37aa4b.svg",
     "static/media/Facebook.svg": "/SnapCycle/static/media/Facebook.b91e34eaebe0060af55602702a3b4538.svg",
     "static/media/LinkedIn.svg": "/SnapCycle/static/media/LinkedIn.7fa1568cc4fcd510c8fd8203e4c66b6b.svg",
-    "main.5e63a45e.css.map": "/SnapCycle/static/css/main.5e63a45e.css.map",
-    "main.8e33ad66.js.map": "/SnapCycle/static/js/main.8e33ad66.js.map"
+    "main.e8c676bb.css.map": "/SnapCycle/static/css/main.e8c676bb.css.map",
+    "main.7b676b0d.js.map": "/SnapCycle/static/js/main.7b676b0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e63a45e.css",
-    "static/js/main.8e33ad66.js"
+    "static/css/main.e8c676bb.css",
+    "static/js/main.7b676b0d.js"
   ]
 }
