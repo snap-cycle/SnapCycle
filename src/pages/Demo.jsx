@@ -6,8 +6,9 @@ import CameraBackground from "../assets/Demo/CameraBackground.svg";
 import OutlineButton from "../components/OutlineButton";
 import Camera from "../components/Camera";
 
-const DemoPanel = () => {
+const inConstruction = true
 
+const DemoPanel = () => {
     return (
         <div className="DemoPanel">
             <div className="Title" id="DemoPanelTitle">
@@ -88,10 +89,17 @@ const TroublePanel = () => {
 const Demo = () => {
     return (
         <AnimatedPage>
-            <DemoPanel/>
-            <CameraPanel/>
-            <HowPanel/>
-            <TroublePanel/>
+            {
+                inConstruction ?
+                    <div className="flex flex-col min-h-screen justify-center text-center align-middle">In Construction...</div>
+                    :
+                    <>
+                        <DemoPanel/>
+                        <HowPanel/>
+                        <CameraPanel/>
+                        <TroublePanel/>
+                    </>
+            }
         </AnimatedPage>
     )
 }

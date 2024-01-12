@@ -11,20 +11,20 @@ import Contact from "./pages/Contact";
 import Result from "./pages/Result";
 
 function App() {
-    useEffect(() => {
-        // Load Roboflow script when the component mounts
-        const script = document.createElement('script');
-        script.src = 'https://cdn.roboflow.com/0.2.26/roboflow.js';
-        document.body.appendChild(script);
-
-        script.onload = () => {
-            console.log('Script has been loaded');
-        };
-
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []); 
+    // useEffect(() => {
+    //     // Load Roboflow script when the component mounts
+    //     const script = document.createElement('script');
+    //     script.src = 'https://cdn.roboflow.com/0.2.26/roboflow.js';
+    //     document.body.appendChild(script);
+    //
+    //     script.onload = () => {
+    //         console.log('Script has been loaded');
+    //     };
+    //
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     return (
         <div className='App'>
