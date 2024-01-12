@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SnapCycle/static/css/main.e8c676bb.css",
-    "main.js": "/SnapCycle/static/js/main.7b676b0d.js",
+    "main.js": "/SnapCycle/static/js/main.96224263.js",
     "static/media/Years.svg": "/SnapCycle/static/media/Years.4a1b5177e34f5076fb4337037f4762e0.svg",
     "static/media/PlasticBottle.png": "/SnapCycle/static/media/PlasticBottle.db6688d15fa9e4a44a79.png",
     "static/media/PlasticBag.png": "/SnapCycle/static/media/PlasticBag.cb494f60e1f78c05f31c.png",
@@ -40,6 +40,7 @@
     "static/media/RocksLayer.png": "/SnapCycle/static/media/RocksLayer.96226c33a523a331b009.png",
     "static/media/SkyLayer.png": "/SnapCycle/static/media/SkyLayer.9bdc68ee1dc1c800700e.png",
     "static/media/TurtleRight.png": "/SnapCycle/static/media/TurtleRight.f684690175146a468f0f.png",
+    "static/media/Aidan.png": "/SnapCycle/static/media/Aidan.c078315a5c0501a013ad.png",
     "static/media/TurtleLeft.png": "/SnapCycle/static/media/TurtleLeft.22b3a24ea67de266424e.png",
     "static/media/AidanBackground.png": "/SnapCycle/static/media/AidanBackground.73cae7115ea75ed14d10.png",
     "static/media/RecyclingBin.svg": "/SnapCycle/static/media/RecyclingBin.213a8738b60718e755001b4835d025de.svg",
@@ -69,10 +70,10 @@
     "static/media/Facebook.svg": "/SnapCycle/static/media/Facebook.b91e34eaebe0060af55602702a3b4538.svg",
     "static/media/LinkedIn.svg": "/SnapCycle/static/media/LinkedIn.7fa1568cc4fcd510c8fd8203e4c66b6b.svg",
     "main.e8c676bb.css.map": "/SnapCycle/static/css/main.e8c676bb.css.map",
-    "main.7b676b0d.js.map": "/SnapCycle/static/js/main.7b676b0d.js.map"
+    "main.96224263.js.map": "/SnapCycle/static/js/main.96224263.js.map"
   },
   "entrypoints": [
     "static/css/main.e8c676bb.css",
-    "static/js/main.7b676b0d.js"
+    "static/js/main.96224263.js"
   ]
 }
