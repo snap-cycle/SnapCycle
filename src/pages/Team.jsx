@@ -2,6 +2,7 @@ import { React, useRef, useEffect } from 'react';
 import '../styles/pages/Team.css';
 import AnimatedPage from "../animations/AnimatedPage";
 import Luai from '../assets/Team/Luai.png';
+import Aidan from '../assets/Team/Aidan.png';
 import LuaiBackground from '../assets/Team/LuaiBackground.png';
 import AidanBackground from '../assets/Team/AidanBackground.png';
 import LinkedIn from '../assets/Team/LinkedIn.png';
@@ -23,7 +24,7 @@ const Team = () => {
                 </div>
                 <div className='MembersContainer'>
                     <Member name="Luai Bashar" role="Software Developer" headshot={Luai} background={LuaiBackground} colour="#FF6161" linkedin='https://www.linkedin.com/in/luaibashar' github='https://github.com/luaibash' mail='mailto:luai.hawa@gmail.com'/>
-                    <Member name="Aidan Froggatt" role="Software Developer" background={AidanBackground} colour="#7299FF" linkedin='https://www.linkedin.com/in/aidanfroggatt' github='https://github.com/aidanfroggatt' globe='https://aidanfroggatt.github.io/portfolio/' mail='mailto:aidanfr@live.ca'/>
+                    <Member name="Aidan Froggatt" role="Software Developer" headshot={Aidan} background={AidanBackground} colour="#7299FF" linkedin='https://www.linkedin.com/in/aidanfroggatt' github='https://github.com/aidanfroggatt' globe='https://aidanfroggatt.github.io/portfolio/' mail='mailto:aidanfr@live.ca'/>
                 </div>
             </div>
         </AnimatedPage>
