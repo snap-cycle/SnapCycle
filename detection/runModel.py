@@ -7,6 +7,10 @@ from PIL import Image
 def fileManager(maxFolders):
     baseFolderPath = './detection/runs'
 
+    # Check if the base folder exists, if not, create it
+    if not os.path.exists(baseFolderPath):
+        os.makedirs(baseFolderPath)
+
     # Checks the count of folders in each run folder, such as detect and train, and deletes them if over maxFolders
     for item in os.listdir(baseFolderPath):
         itemPath = os.path.join(baseFolderPath, item)                #path of current folder, and takes count of it
