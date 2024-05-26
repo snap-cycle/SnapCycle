@@ -184,9 +184,9 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
     );
 };
 
-const HamburgerPage = ({show, text, page, destination, hamburgerMenu, setHamburgerMenu}) => {
+const HamburgerPage = ({showPage, text, page, destination, setHamburgerMenu}) => {
     const maxPage = 5; const interval = 0.05; const maxTime = maxPage*interval;
-    const delay = (show) ? (0.5 + page*interval) : (maxTime - page*interval);
+    const delay = (showPage) ? (0.5 + page*interval) : (maxTime - page*interval);
     const pageStyle = {
         transition: `padding-left 0.5s, color 0.5s, opacity 0.2s ease-out ${delay}s, margin-top 0.2s ease-out ${delay}s`,
     };
@@ -200,12 +200,7 @@ const HamburgerPage = ({show, text, page, destination, hamburgerMenu, setHamburg
     }
 
     return (
-        <div
-            className='HamburgerPage'
-            id={show ? 'HamburgerPageActive' : 'HamburgerPageInactive'}
-            style={pageStyle}
-            onClick={() => goToLocation(destination)}
-        >
+        <div className='HamburgerPage' id={showPage ? 'HamburgerPageActive' : 'HamburgerPageInactive'} style={pageStyle} onClick={() => goToLocation(destination)}>
             {text}
             <img src={RightArrow} alt="Arrow" className='HamburgerArrow'/>
         </div>
