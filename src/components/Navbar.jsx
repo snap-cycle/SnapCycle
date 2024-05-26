@@ -173,11 +173,11 @@ const HamburgerMenu = ({showHamburgerMenu, updateHamburgerMenu}) => {
                     <img src={WhiteX} alt="Close Button" className='WhiteX' onClick={() => updateHamburgerMenu()}/>
                 </div>
                 <div className='HamburgerPages'>
-                    <HamburgerPage show={showHamburgerMenu} text={'Home'} page={0} destination="/" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
-                    <HamburgerPage show={showHamburgerMenu} text={'Try Now'} page={1} destination="/demo" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
-                    <HamburgerPage show={showHamburgerMenu} text={'Team'} page={2} destination="/team" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
-                    <HamburgerPage show={showHamburgerMenu} text={'FAQ'} page={3} destination="/faq" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
-                    <HamburgerPage show={showHamburgerMenu} text={'Contact Us'} page={5} destination="/contact" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
+                    <HamburgerPage showPage={showHamburgerMenu} text={'Home'} page={0} destination="/" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
+                    <HamburgerPage showPage={showHamburgerMenu} text={'Try Now'} page={1} destination="/demo" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
+                    <HamburgerPage showPage={showHamburgerMenu} text={'Team'} page={2} destination="/team" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
+                    <HamburgerPage showPage={showHamburgerMenu} text={'FAQ'} page={3} destination="/faq" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
+                    <HamburgerPage showPage={showHamburgerMenu} text={'Contact Us'} page={5} destination="/contact" hamburgerMenu={showHamburgerMenu} setHamburgerMenu={updateHamburgerMenu}/>
                 </div>
             </div>
         </div>
@@ -200,7 +200,12 @@ const HamburgerPage = ({showPage, text, page, destination, setHamburgerMenu}) =>
     }
 
     return (
-        <div className='HamburgerPage' id={showPage ? 'HamburgerPageActive' : 'HamburgerPageInactive'} style={pageStyle} onClick={() => goToLocation(destination)}>
+        <div
+            className='HamburgerPage'
+            id={showPage ? 'HamburgerPageActive' : 'HamburgerPageInactive'}
+            style={pageStyle}
+            onClick={() => goToLocation(destination)}
+        >
             {text}
             <img src={RightArrow} alt="Arrow" className='HamburgerArrow'/>
         </div>
