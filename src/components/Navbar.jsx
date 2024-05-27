@@ -125,13 +125,25 @@ const ActiveNavbar = ({updateHamburgerMenu}) => {
     }
     else NavbarId = "NavbarDissapear";
 
+    // Used to redirect to home page when title or logo is clicked on
+    const curLocation = useLocation();
+    const navigate = useNavigate();
+    const goToLocation = (location) => {
+        // If user already on home page, just steadily scroll them up
+        if (curLocation.pathname === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
+        else {
+            navigate(location);
+        window.scrollTo(0,0);
+        }
+    };
+
     return (
         <div className='NavbarContainer'>
             <div className='ActiveNavbarContainer' id={NavbarId}>
                 <div className="ActiveNavbar">
                     <div className='NavbarLogoAndName'>
-                        <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogo" />
-                        <img src={BlackSnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' />
+                        <img src={BlackLogo} alt="SnapCycle Logo" className="NavbarLogo" onClick={() => goToLocation('/')}/>
+                        <img src={BlackSnapCycleTitle} alt="SnapCycle Title" className='NavbarTitle' onClick={() => goToLocation('/')}/>
                     </div>
                     <div className='NavbarPages'>
                         {PagesInfo.PagesInfo.map((page, index) => (

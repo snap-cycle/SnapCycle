@@ -53,6 +53,10 @@
     height: 25px;
 }
 
+.NavbarLogo:hover, .NavbarTitle:hover {
+    cursor: pointer;
+}
+
 .NavbarPages {
     display: flex;
     gap: 40px;
