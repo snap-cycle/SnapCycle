@@ -53,12 +53,15 @@ const Contact = () => {
                             </div>
                             <textarea placeholder="Write about anything you&#39;d like." className='Input' id='Message'></textarea>
                         </div>
-                        <div className='ContactButtonContainer' onClick={() => sendEmail(isSent, setSent)}>
-                            <div className='ContactButton'>
-                                <div className='TransitionContainer'>
-                                    Submit
-                                    <img src={Checkmark} alt="" className='Checkmark'/>
+                        <div className='ContactButtonContainer'>
+                            <div className='ContactAndErrorContainer'>
+                                <div className='ContactButton' onClick={() => sendEmail(isSent, setSent)}>
+                                    <div className='TransitionContainer'>
+                                        Submit
+                                        <img src={Checkmark} alt="" className='Checkmark'/>
+                                    </div>
                                 </div>
+                                <div className='Error'>* An error has occurred.</div>
                             </div>
                         </div>
                     </div>
@@ -69,23 +72,30 @@ const Contact = () => {
     );
 }
 
+// Function that sends email once all fields are filled in
 const sendEmail = (isSent, setSent) => {
     const setDisplay = (isVisible, index) => {
         if (isVisible) document.getElementsByClassName("Required")[index].style.display = 'block';
         else document.getElementsByClassName("Required")[index].style.display = 'none';  
     };
 
+    // Removes error message at the start of send if it is shown
+    document.getElementsByClassName("Error")[0].style.display = 'none';
+
+    // Grabs values filled into each respective box in the contact box
     const firstName = document.getElementsByClassName("Input")[0].value;
     const lastName = document.getElementsByClassName("Input")[1].value;
     const email = document.getElementsByClassName("Input")[2].value;
     const message = document.getElementsByClassName("Input")[3].value;
 
+    // If any value is empty, notify the user with a "*required"
     (firstName.trim() === "") ? setDisplay(true, 0) : setDisplay(false, 0);
     (lastName.trim() === "") ? setDisplay(true, 1) : setDisplay(false, 1);
     (email.trim() === "") ? setDisplay(true, 2) : setDisplay(false, 2);
     (message.trim() === "") ? setDisplay(true, 3) : setDisplay(false, 3);
     if (firstName.trim() === "" || lastName.trim() === "" || email.trim() === "" || message.trim() === "") return;
-
+    
+    // Template for email to send to the API
     var templateParams = {
         firstName: firstName,
         lastName: lastName,
@@ -96,6 +106,7 @@ const sendEmail = (isSent, setSent) => {
     var templateID = "template_aj3q2j6";
     var publicKey = "8AzjtoiVxirowkOtx";
     
+    // If an email has not already been sent, send the email
     if (!isSent) {
         emailjs.send(serviceID, templateID, templateParams, publicKey)
         .then(function(response) {
@@ -103,6 +114,7 @@ const sendEmail = (isSent, setSent) => {
             setSent(true);
             console.log('SUCCESS!', response.status, response.text);
         }, function(error) {
+            document.getElementsByClassName("Error")[0].style.display = 'block';  // If error has occurred, notify the user
             console.log('FAILED...', error);
         });
     }
