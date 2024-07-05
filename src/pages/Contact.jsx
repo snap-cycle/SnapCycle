@@ -3,6 +3,7 @@ import AnimatedPage from "../animations/AnimatedPage";
 import emailjs from '@emailjs/browser';
 import * as EmailValidator from 'email-validator';
 import Circuit from '../assets/Contact/Circuit.svg';
+import LoadAnimation from '../components/LoadAnimation';
 import Checkmark from '../assets/Contact/Checkmark.png';
 import '../styles/pages/Contact.css';
 
@@ -30,14 +31,14 @@ const Contact = () => {
                                     First Name
                                     <div className='Required'>* Required</div>
                                 </div>
-                                <input type="text" placeholder='e.g. John' className='Input'/>
+                                <input type="text" placeholder='e.g. John' autoComplete='given-name' className='Input'/>
                             </div>
                             <div className='InputContainer'>
                                 <div className='ContactTitle'>
                                     Last Name
                                     <div className='Required'>* Required</div>
                                 </div>
-                                <input type="text" placeholder='Smith' className='Input'/>
+                                <input type="text" placeholder='Smith' autoComplete='family-name' className='Input'/>
                             </div>
                             <div className='InputContainer'>
                                 <div className='ContactTitle'>
@@ -45,7 +46,7 @@ const Contact = () => {
                                     <div className='Required'>* Required</div>
                                     <div className='EmailWarning'>* Invalid Email</div>
                                 </div>
-                                <input type="text" placeholder='john@gmail.com' className='Input'/>
+                                <input type="text" placeholder='john@gmail.com' autoComplete='email' className='Input'/>
                             </div>
                         </div>
                         <div className='MessageContainer'>
@@ -60,6 +61,7 @@ const Contact = () => {
                                 <div className='ContactButton' onClick={() => sendEmail(isSent, setSent)}>
                                     <div className='TransitionContainer'>
                                         Submit
+                                        <LoadAnimation/>
                                         <img src={Checkmark} alt="" className='Checkmark'/>
                                     </div>
                                 </div>
@@ -76,6 +78,9 @@ const Contact = () => {
 
 // Function that sends email once all fields are filled in
 const sendEmail = (isSent, setSent) => {
+    // If an email has already been sent or is being sent, don't allow another one to be sent
+    if (isSent) return;
+
     const setDisplay = (isVisible, index) => {
         if (isVisible) document.getElementsByClassName("Required")[index].style.display = 'block';
         else document.getElementsByClassName("Required")[index].style.display = 'none';  
@@ -113,19 +118,25 @@ const sendEmail = (isSent, setSent) => {
     var serviceID = "service_7jliuze";
     var templateID = "template_aj3q2j6";
     var publicKey = "8AzjtoiVxirowkOtx";
+
+    // Set is sent to true to only force one request at a time
+    setSent(true);
     
-    // If an email has not already been sent, send the email
-    if (!isSent) {
-        emailjs.send(serviceID, templateID, templateParams, publicKey)
-        .then(function(response) {
+    // Start loading animation and attempt to send the email
+    document.getElementsByClassName("TransitionContainer")[0].style.animation = 'LoadingTransition 1s ease forwards';
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+    .then(function(response) {
+        // Wait a second to ensure that the loading transition is complete
+        setTimeout(() => {
             document.getElementsByClassName("TransitionContainer")[0].style.animation = 'CheckmarkTransition 1s ease forwards';
-            setSent(true);
             console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-            document.getElementsByClassName("Error")[0].style.display = 'block';  // If error has occurred, notify the user
-            console.log('FAILED...', error);
-        });
-    }
+        }, 1000);
+    }, function(error) {
+        setSent(false);
+        document.getElementsByClassName("Error")[0].style.display = 'block';  // If error has occurred, notify the user
+        document.getElementsByClassName("TransitionContainer")[0].style.animation = '';
+        console.log('FAILED...', error);
+    });
 };
 
 export default Contact;

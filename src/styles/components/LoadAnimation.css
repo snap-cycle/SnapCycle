@@ -1,0 +1,35 @@
+.LoadAnimation {
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+    padding-top: 10px;
+}
+
+.LoadAnimation div {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    animation: grow-shrink 1.5s infinite;
+}
+
+.LoadAnimation div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.LoadAnimation div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.LoadAnimation div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes grow-shrink {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
